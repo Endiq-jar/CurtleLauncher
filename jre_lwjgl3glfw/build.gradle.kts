@@ -7,10 +7,10 @@ group = "org.lwjgl.glfw"
 tasks.jar {
     duplicatesStrategy = DuplicatesStrategy.EXCLUDE
     archiveBaseName.set("lwjgl-glfw-classes")
-    destinationDirectory.set(file("../TurtleLauncher/src/main/assets/components/lwjgl3/"))
+    destinationDirectory.set(file("../app/src/main/assets/components/lwjgl3/"))
     // Auto update the version with a timestamp so the project jar gets updated by Turtle
     doLast {
-        val versionFile = file("../TurtleLauncher/src/main/assets/components/lwjgl3/version")
+        val versionFile = file("../app/src/main/assets/components/lwjgl3/version")
         versionFile.writeText(System.currentTimeMillis().toString())
     }
     from({
@@ -46,10 +46,10 @@ val compileFileDialogBridge by tasks.registering(JavaCompile::class) {
 val fileDialogBridgeJar by tasks.registering(Jar::class) {
     dependsOn(compileFileDialogBridge)
     archiveFileName.set("turtle-filedialogs.jar")
-    destinationDirectory.set(file("../TurtleLauncher/src/main/assets/components/lwjgl3/"))
+    destinationDirectory.set(file("../app/src/main/assets/components/lwjgl3/"))
     from(compileFileDialogBridge.flatMap { it.destinationDirectory })
     doLast {
-        file("../TurtleLauncher/src/main/assets/components/lwjgl3/version")
+        file("../app/src/main/assets/components/lwjgl3/version")
             .writeText(System.currentTimeMillis().toString())
     }
 }

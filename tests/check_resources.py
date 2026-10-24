@@ -21,7 +21,7 @@ import xml.etree.ElementTree as ET
 from collections import defaultdict
 from pathlib import Path
 
-root = Path(__file__).resolve().parents[1] / "TurtleLauncher/src/main"
+root = Path(__file__).resolve().parents[1] / "app/src/main"
 res = root / "res"
 
 # Types whose references legitimately point outside this module. Framework and

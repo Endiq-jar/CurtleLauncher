@@ -20,7 +20,7 @@ import sys
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[1]
-DRAWABLE = REPO / "TurtleLauncher/src/main/res/drawable"
+DRAWABLE = REPO / "app/src/main/res/drawable"
 
 PATH_DATA_RE = re.compile(r'android:pathData="([^"]*)"')
 

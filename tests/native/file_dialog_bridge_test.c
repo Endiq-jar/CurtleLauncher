@@ -1,6 +1,6 @@
 #include <assert.h>
 #include <stdio.h>
-#include "../../TurtleLauncher/src/main/native/file_dialog_bridge.c"
+#include "../../app/src/main/native/file_dialog_bridge.c"
 
 static PathSet *fixture(void) {
     PathSet *set = calloc(1, sizeof(*set));

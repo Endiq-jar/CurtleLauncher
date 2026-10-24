@@ -13,7 +13,7 @@ import xml.etree.ElementTree as ET
 from pathlib import Path
 
 repo = Path(__file__).resolve().parents[1]
-main = repo / "TurtleLauncher/src/main"
+main = repo / "app/src/main"
 drawable = main / "res/drawable"
 
 # --- NoBlocklist fully removed ---------------------------------------------

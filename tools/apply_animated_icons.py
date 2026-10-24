@@ -20,7 +20,7 @@ import sys
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[1]
-LAYOUTS = REPO / "TurtleLauncher/src/main/res/layout"
+LAYOUTS = REPO / "app/src/main/res/layout"
 
 SWAP = {
     "ImageView": "com.endiq.turtlelauncher.ui.view.AnimatedIconView",

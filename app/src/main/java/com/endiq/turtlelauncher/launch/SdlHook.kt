@@ -4,7 +4,7 @@ import android.util.Log
 import androidx.annotation.Keep
 
 /**
- * Loads libsdlhook.so (see TurtleLauncher/src/main/jni/sdlhook/) and installs
+ * Loads libsdlhook.so (see app/src/main/jni/sdlhook/) and installs
  * its SDL hooks. Must run before the game first touches SDL — and before
  * System.loadLibrary("SDL3") — so SdlAndroidJniPrep.setup() calls [install]
  * as its first step on SDL launches.

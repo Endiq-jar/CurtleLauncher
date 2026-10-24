@@ -1,6 +1,6 @@
 name: Build libsdlhook.so
 
-# Cross-compiles TurtleLauncher/src/main/jni/sdlhook/ for all 4 Android ABIs
+# Cross-compiles app/src/main/jni/sdlhook/ for all 4 Android ABIs
 # and commits the resulting libsdlhook.so files back to jniLibs/.
 #
 # The module is deliberately NOT part of the app's Gradle build (which stays
@@ -12,7 +12,7 @@ name: Build libsdlhook.so
 on:
   push:
     paths:
-      - 'TurtleLauncher/src/main/jni/sdlhook/**'
+      - 'app/src/main/jni/sdlhook/**'
       - '.github/workflows/build-sdlhook.yml'
   workflow_dispatch:
 
@@ -38,8 +38,8 @@ jobs:
         run: |
           set -e
           LLVM="$ANDROID_NDK_HOME/toolchains/llvm/prebuilt/linux-x86_64/bin"
-          SRC="TurtleLauncher/src/main/jni/sdlhook"
-          OUT="TurtleLauncher/src/main/jniLibs"
+          SRC="app/src/main/jni/sdlhook"
+          OUT="app/src/main/jniLibs"
           API=26  # must match the app's minSdk
           CFLAGS="-std=gnu11 -O2 -fPIC -Wall -Wextra -Werror -I$SRC -I$SRC/include"
           # abi:clang-triple-prefix
@@ -66,7 +66,7 @@ jobs:
           set -e
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -f TurtleLauncher/src/main/jniLibs/*/libsdlhook.so
+          git add -f app/src/main/jniLibs/*/libsdlhook.so
           if git diff --cached --quiet; then
             echo "No changes to libsdlhook.so, nothing to commit."
           else

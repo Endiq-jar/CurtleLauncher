@@ -8,7 +8,7 @@ import random
 from pathlib import Path
 from PIL import Image, ImageDraw, ImageChops, ImageFont
 
-ROOT = Path(__file__).resolve().parents[1] / 'TurtleLauncher/src/main/res'
+ROOT = Path(__file__).resolve().parents[1] / 'app/src/main/res'
 RAW = ROOT / 'raw'
 DRAWABLE = ROOT / 'drawable-nodpi'
 DRAWABLE.mkdir(exist_ok=True)

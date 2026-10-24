@@ -104,7 +104,7 @@ object SdlAndroidJniPrep {
             // SDL symbols (including this thread's System.loadLibrary below and
             // the game's later dlopen). Without them MC 26.3+ dies at the
             // Mojang logo (second SDL_CreateWindow refused, desktop GL profile
-            // rejected); see TurtleLauncher/src/main/jni/sdlhook/README.md.
+            // rejected); see app/src/main/jni/sdlhook/README.md.
             if (!SdlHook.install()) {
                 Log.e(TAG, "TurtleSDL3: SDL hooks did not install - continuing anyway, " +
                     "but the game will likely crash during SDL init")

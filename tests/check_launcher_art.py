@@ -4,7 +4,7 @@ import struct
 from pathlib import Path
 import xml.etree.ElementTree as ET
 
-root = Path(__file__).resolve().parents[1] / "TurtleLauncher/src/main"
+root = Path(__file__).resolve().parents[1] / "app/src/main"
 logos = ["ic_minecraft", "ic_turtle_full_animated", "ic_command_block", "app_name_title",
          "ic_old_cobblestone", "ic_old_grass_block"]
 

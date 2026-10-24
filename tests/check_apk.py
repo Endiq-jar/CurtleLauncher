@@ -14,7 +14,7 @@ libraries = (
     "liblwjgl_nfd_portal.so", "libSimpleFPEWrapper.so", "libmobileglues.so",
 )
 paths = [Path(p) for p in sys.argv[1:]] or list(
-    Path("TurtleLauncher/build/outputs/apk/release").glob("*.apk")
+    Path("app/build/outputs/apk/release").glob("*.apk")
 )
 if not paths:
     sys.exit("No release APKs found")

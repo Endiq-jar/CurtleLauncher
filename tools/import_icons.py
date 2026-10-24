@@ -2,7 +2,7 @@
 """Import launcher icons from Tabler Icons / Flowbite Icons / Simple Icons.
 
 Converts the upstream 24x24 SVGs listed in MAPPING into Android
-VectorDrawables in TurtleLauncher/src/main/res/drawable, normalising the
+VectorDrawables in app/src/main/res/drawable, normalising the
 launcher's previously mixed icon set (Material fills, odd viewports like
 16.92, strokeWidth=0 artefacts) onto one design system:
 
@@ -36,7 +36,7 @@ import sys
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[1]
-DRAWABLE = REPO / "TurtleLauncher/src/main/res/drawable"
+DRAWABLE = REPO / "app/src/main/res/drawable"
 
 # Reuse the path normalizer so that compact upstream SVGs (which Android's
 # native PathParser refuses — e.g. `00-` arc flags or `.123.456` back-to-back

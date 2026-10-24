@@ -1,6 +1,6 @@
 #include <cassert>
 #include <iostream>
-#include "../../TurtleLauncher/src/main/native/discord/discord_rpc_bridge.cpp"
+#include "../../app/src/main/native/discord/discord_rpc_bridge.cpp"
 
 template<class F> void until(F predicate) {
     auto deadline = std::chrono::steady_clock::now() + std::chrono::seconds(3);

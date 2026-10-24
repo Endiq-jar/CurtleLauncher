@@ -56,7 +56,7 @@ def members(data):
     return pool, fields, methods
 
 
-source = root / 'TurtleLauncher/src/main/assets/components/lwjgl3/lwjgl-glfw-classes.jar'
+source = root / 'app/src/main/assets/components/lwjgl3/lwjgl-glfw-classes.jar'
 source_hash = hashlib.sha256(source.read_bytes()).digest()
 with zipfile.ZipFile(source) as archive:
     original = archive.read('org/lwjgl/glfw/GLFW.class')

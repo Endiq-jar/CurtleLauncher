@@ -20,7 +20,7 @@ jobs:
           java-version: '21'
 
       # Works whether gradlew lives at the repo root or one level down
-      # (e.g. TurtleLauncher/gradlew) - no need to hardcode the layout.
+      # (e.g. app/gradlew) - no need to hardcode the layout.
       - name: Locate the Android project root
         id: locate
         run: |
@@ -120,7 +120,7 @@ jobs:
             echo "::warning::./gradlew is not usable - building with the provisioned Gradle instead."
             GRADLE_CMD=gradle
           fi
-          $GRADLE_CMD :TurtleLauncher:testDebugUnitTest :TurtleLauncher:assembleRelease --no-daemon --stacktrace 2>&1 \
+          $GRADLE_CMD :app:testDebugUnitTest :app:assembleRelease --no-daemon --stacktrace 2>&1 \
             | tee /tmp/gradle-build.log
 
       - name: Verify release APK packaging

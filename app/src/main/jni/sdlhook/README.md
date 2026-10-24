@@ -52,7 +52,7 @@ swaps SDL symbols for proxies at resolve time.
 The module is **not** part of the app's Gradle build (which stays NDK-free so it
 can be built in Termux). It is compiled by `.github/workflows/build-sdlhook.yml`
 for `arm64-v8a`, `armeabi-v7a`, `x86`, `x86_64` and the resulting
-`libsdlhook.so` files are committed to `TurtleLauncher/src/main/jniLibs/<abi>/`.
+`libsdlhook.so` files are committed to `app/src/main/jniLibs/<abi>/`.
 
 Java side: `SdlHook` loads the library and calls `nativeInit()`; see
 `com.endiq.turtlelauncher.launch.SdlHook` and

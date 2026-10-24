@@ -22,7 +22,7 @@ import re
 import zipfile
 
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
-MAIN = os.path.join(ROOT, "TurtleLauncher", "src", "main")
+MAIN = os.path.join(ROOT, "app", "src", "main")
 PACK = os.path.join(MAIN, "assets", "logo_pack.zip")
 RES = os.path.join(MAIN, "res", "mipmap-nodpi")
 MANIFEST = os.path.join(MAIN, "AndroidManifest.xml")
