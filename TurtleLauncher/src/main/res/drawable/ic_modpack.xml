@@ -1,0 +1,43 @@
+<!-- Source: Tabler Icons (MIT) icons/outline/package.svg - converted by tools/import_icons.py; see docs/ICONS.md -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:tint="@color/icon_tint"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:fillColor="@android:color/transparent"
+        android:strokeColor="#FF000000"
+        android:strokeWidth="2"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="M 12 3 l 8 4.5 l 0 9 l -8 4.5 l -8 -4.5 l 0 -9 l 8 -4.5" />
+    <path
+        android:fillColor="@android:color/transparent"
+        android:strokeColor="#FF000000"
+        android:strokeWidth="2"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="M 12 12 l 8 -4.5" />
+    <path
+        android:fillColor="@android:color/transparent"
+        android:strokeColor="#FF000000"
+        android:strokeWidth="2"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="M 12 12 l 0 9" />
+    <path
+        android:fillColor="@android:color/transparent"
+        android:strokeColor="#FF000000"
+        android:strokeWidth="2"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="M 12 12 l -8 -4.5" />
+    <path
+        android:fillColor="@android:color/transparent"
+        android:strokeColor="#FF000000"
+        android:strokeWidth="2"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="M 16 5.25 l -8 4.5" />
+</vector>
