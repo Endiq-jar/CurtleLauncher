@@ -725,6 +725,7 @@
                 android:textSize="16sp"
                 android:textColor="@color/turtle_text_on_accent"
                 android:letterSpacing="0.1"
+                android:fontFamily="@font/minecraft"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"/>
