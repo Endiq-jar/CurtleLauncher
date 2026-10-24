@@ -28,13 +28,13 @@ import android.widget.TextView;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
-import com.endiq.DefocusableScrollView;
-import com.endiq.turtlelauncher.R;
-import com.endiq.turtlelauncher.feature.log.Logging;
-import com.endiq.turtlelauncher.listener.SimpleTextWatcher;
-import com.endiq.turtlelauncher.ui.dialog.KeyboardDialog;
-import com.endiq.turtlelauncher.ui.dialog.PixelEditorDialog;
-import com.endiq.turtlelauncher.utils.path.PathManager;
+import com.app.DefocusableScrollView;
+import com.app.astralauncher.R;
+import com.app.astralauncher.feature.log.Logging;
+import com.app.astralauncher.listener.SimpleTextWatcher;
+import com.app.astralauncher.ui.dialog.KeyboardDialog;
+import com.app.astralauncher.ui.dialog.PixelEditorDialog;
+import com.app.astralauncher.utils.path.PathManager;
 
 import net.endiq.launcher.EfficientAndroidLWJGLKeycode;
 import net.endiq.launcher.colorselector.ColorSelector;

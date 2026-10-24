@@ -1,7 +1,7 @@
-import com.endiq.turtlelauncher.feature.turtle.HudRefreshPolicy
-import com.endiq.turtlelauncher.feature.turtle.ServerEndpoint
-import com.endiq.turtlelauncher.launch.GameFpsOptions
-import com.endiq.turtlelauncher.launch.PerformancePolicy
+import com.app.astralauncher.feature.astra.HudRefreshPolicy
+import com.app.astralauncher.feature.astra.ServerEndpoint
+import com.app.astralauncher.launch.GameFpsOptions
+import com.app.astralauncher.launch.PerformancePolicy
 import java.nio.file.Files
 import java.io.File
 
@@ -34,7 +34,7 @@ fun main() {
     check(!PerformancePolicy.allowUncapped(false, 0, false))
     check(PerformancePolicy.allowUncapped(true, 1, false))
 
-    val dir = Files.createTempDirectory("turtle-fps-test").toFile()
+    val dir = Files.createTempDirectory("astra-fps-test").toFile()
     try {
         val options = File(dir, "options.txt")
         val original = "maxFps:120\nenableVsync:true\nrenderDistance:8\nresourcePacks:[\"file/test:pack.zip\"]\n"
@@ -45,7 +45,7 @@ fun main() {
         GameFpsOptions.apply(dir, true) // don't back up our own override on repeated launches
         GameFpsOptions.apply(dir, false)
         check(options.readText() == original)
-        check(File(dir, ".turtle-fps-options.properties").isFile) // no backup deletion
+        check(File(dir, ".astra-fps-options.properties").isFile) // no backup deletion
         GameFpsOptions.apply(dir, false) // idempotent
         check(options.readText() == original)
         GameFpsOptions.apply(dir, true)
@@ -58,7 +58,7 @@ fun main() {
         GameFpsOptions.apply(dir, false)
         check(options.readText() == "renderDistance:12\n") // originally missing options
         // Never guess rollback data for FPS options edited by older launcher builds.
-        File(dir, ".turtle-fps-options.properties").writeText("")
+        File(dir, ".astra-fps-options.properties").writeText("")
         options.writeText("maxFps:260\nenableVsync:false\n")
         GameFpsOptions.apply(dir, false)
         check(options.readText() == "maxFps:260\nenableVsync:false\n")

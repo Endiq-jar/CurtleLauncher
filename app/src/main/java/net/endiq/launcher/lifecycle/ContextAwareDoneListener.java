@@ -8,15 +8,15 @@ import android.content.Intent;
 
 import androidx.annotation.NonNull;
 
-import com.endiq.mcgui.ProgressLayout;
-import com.endiq.turtlelauncher.R;
-import com.endiq.turtlelauncher.context.ContextExecutor;
-import com.endiq.turtlelauncher.feature.mod.parser.ModChecker;
-import com.endiq.turtlelauncher.feature.mod.parser.ModInfo;
-import com.endiq.turtlelauncher.feature.mod.parser.ModParser;
-import com.endiq.turtlelauncher.feature.mod.parser.ModParserListener;
-import com.endiq.turtlelauncher.feature.version.Version;
-import com.endiq.turtlelauncher.setting.AllSettings;
+import com.app.mcgui.ProgressLayout;
+import com.app.astralauncher.R;
+import com.app.astralauncher.context.ContextExecutor;
+import com.app.astralauncher.feature.mod.parser.ModChecker;
+import com.app.astralauncher.feature.mod.parser.ModInfo;
+import com.app.astralauncher.feature.mod.parser.ModParser;
+import com.app.astralauncher.feature.mod.parser.ModParserListener;
+import com.app.astralauncher.feature.version.Version;
+import com.app.astralauncher.setting.AllSettings;
 
 import net.endiq.launcher.MainActivity;
 import net.endiq.launcher.Tools;
@@ -71,7 +71,7 @@ public class ContextAwareDoneListener implements AsyncMinecraftDownloader.DoneLi
                 if (modInfoList.isEmpty() && !hasModJars) executeTask();
                 else {
                     ContextExecutor.executeTaskWithAllContext(context ->
-                        com.endiq.turtlelauncher.feature.mod.ModAutoMaintenance.runForVersion(
+                        com.app.astralauncher.feature.mod.ModAutoMaintenance.runForVersion(
                             context, mVersion, modInfoList, () ->
                                 new ModChecker().check(context, modInfoList, mVersion, modCheckResult -> {
                                     mVersion.setModCheckResult(modCheckResult);
@@ -94,9 +94,9 @@ public class ContextAwareDoneListener implements AsyncMinecraftDownloader.DoneLi
     public void executeWithActivity(Activity activity) {
         try {
             Intent gameStartIntent = createGameStartIntent(activity);
-            com.endiq.turtlelauncher.task.TaskExecutors.setGameSessionActive(true);
-            com.endiq.turtlelauncher.feature.turtle.BackgroundServiceManager.onGameSessionStart(activity);
-            com.endiq.turtlelauncher.feature.shizuku.ShizukuActions.applyBeforeLaunchIfEnabled();
+            com.app.astralauncher.task.TaskExecutors.setGameSessionActive(true);
+            com.app.astralauncher.feature.astra.BackgroundServiceManager.onGameSessionStart(activity);
+            com.app.astralauncher.feature.shizuku.ShizukuActions.applyBeforeLaunchIfEnabled();
             activity.startActivity(gameStartIntent);
             if (AllSettings.getQuitLauncher().getValue()) {
                 activity.finish();

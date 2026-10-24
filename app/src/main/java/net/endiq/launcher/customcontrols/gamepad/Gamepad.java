@@ -34,11 +34,11 @@ import android.widget.ImageView;
 
 import androidx.core.math.MathUtils;
 
-import com.endiq.turtlelauncher.event.single.MCOptionChangeEvent;
-import com.endiq.turtlelauncher.feature.MCOptions;
-import com.endiq.turtlelauncher.setting.AllSettings;
-import com.endiq.turtlelauncher.setting.AllStaticSettings;
-import com.endiq.turtlelauncher.utils.ZHTools;
+import com.app.astralauncher.event.single.MCOptionChangeEvent;
+import com.app.astralauncher.feature.MCOptions;
+import com.app.astralauncher.setting.AllSettings;
+import com.app.astralauncher.setting.AllStaticSettings;
+import com.app.astralauncher.utils.ZHTools;
 
 import net.endiq.launcher.GrabListener;
 import net.endiq.launcher.LwjglGlfwKeycode;

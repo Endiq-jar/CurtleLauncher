@@ -41,14 +41,14 @@ val getBuildType = {
     buildType
 }
 
-val nameId = "com.endiq.turtlelauncher"
+val nameId = "com.app.astralauncher"
 // namespace controls where the generated R/BuildConfig classes land, and must match
-// the Kotlin/Java source package (com.endiq.turtlelauncher.*) or every implicit "R"
+// the Kotlin/Java source package (com.app.astralauncher.*) or every implicit "R"
 // reference and "import ...BuildConfig" across the codebase breaks. Since the full
-// Turtle rebrand renamed the source tree to com.endiq.turtlelauncher.*, namespace and
+// Astra rebrand renamed the source tree to com.app.astralauncher.*, namespace and
 // applicationId now coincide.
-val namespaceId = "com.endiq.turtlelauncher"
-val generatedTurtleDir = file("$buildDir/generated/source/turtle/java")
+val namespaceId = "com.app.astralauncher"
+val generatedAstraDir = file("$buildDir/generated/source/astra/java")
 val launcherAPPName = project.findProperty("launcher_app_name") as? String ?: error("The \"launcher_app_name\" property is not set in gradle.properties.")
 val launcherName = project.findProperty("launcher_name") as? String ?: error("The \"launcher_name\" property is not set in gradle.properties.")
 val launcherVersionCode = (project.findProperty("launcher_version_code") as? String)?.toIntOrNull() ?: error("The \"launcher_version_code\" property is not set as an integer in gradle.properties.")
@@ -83,19 +83,22 @@ android {
     signingConfigs {
         create("releaseBuild") {
             // The launcher's own keystore is in the repo; its password is not, and lives in
-            // CI as the ENDIQ_KEYSTORE_PASSWORD secret. When the password is missing - a
+            // CI as the APP_KEYSTORE_PASSWORD secret. When the password is missing - a
             // fresh clone, or a workflow run without the secret - the release APK is signed
             // with the debug keystore instead of failing the whole build. It installs and
             // runs identically; it simply cannot update an app signed with the real key.
-            val pwd = System.getenv("ENDIQ_KEYSTORE_PASSWORD") ?: ""
+            // Renamed from ENDIQ_KEYSTORE_PASSWORD in the Astra rebrand; fall back to the old
+            // name so the existing repository secret keeps working until it is re-added.
+            val pwd = System.getenv("APP_KEYSTORE_PASSWORD")
+                ?: System.getenv("ENDIQ_KEYSTORE_PASSWORD") ?: ""
             val hasRealKey = pwd.isNotEmpty()
             if (!hasRealKey) {
                 logger.warn(
-                    "BUILD: ENDIQ_KEYSTORE_PASSWORD is not set - " +
+                    "BUILD: neither APP_KEYSTORE_PASSWORD nor ENDIQ_KEYSTORE_PASSWORD is set - " +
                         "signing the release build with the debug keystore."
                 )
             }
-            storeFile = file(if (hasRealKey) "endiq-key.jks" else "debug.keystore")
+            storeFile = file(if (hasRealKey) "app-key.jks" else "debug.keystore")
             storePassword = if (hasRealKey) pwd else "android"
             keyAlias = if (hasRealKey) "mtp" else "androiddebugkey"
             keyPassword = if (hasRealKey) pwd else "android"
@@ -113,8 +116,8 @@ android {
         externalNativeBuild {
             cmake {
                 arguments += listOf("-DANDROID_STL=c++_shared",
-                    "-DTURTLE_DISCORD_SDK_DIR=${discordSdkDir.get().asFile.absolutePath}")
-                targets += listOf("SimpleFPEWrapper", "turtlefiledialogs", "lwjgl_nfd", "lwjgl_nfd_portal", "turtlediscordrpc")
+                    "-DASTRA_DISCORD_SDK_DIR=${discordSdkDir.get().asFile.absolutePath}")
+                targets += listOf("SimpleFPEWrapper", "astrafiledialogs", "lwjgl_nfd", "lwjgl_nfd_portal", "astradiscordrpc")
             }
         }
         minSdk = 26
@@ -198,7 +201,7 @@ android {
         abortOnError = false
     }
 
-    sourceSets["main"].java.srcDirs(generatedTurtleDir)
+    sourceSets["main"].java.srcDirs(generatedAstraDir)
     // AGP 9 rejects Provider instances in the legacy SourceSet API. The explicit
     // prepareDiscordSdk dependencies below produce this known build-directory path.
     sourceSets["main"].jniLibs.srcDir(discordSdkDir.get().dir("jni").asFile)
@@ -315,7 +318,7 @@ tasks.register("generateInfoDistributor") {
     val launcherName = project.property("launcher_name").toString()
     val appName = project.property("launcher_app_name").toString()
     val buildType = getBuildType()
-    val outputDir = generatedTurtleDir
+    val outputDir = generatedAstraDir
 
     doLast {
         val constantMap = mapOf(
@@ -324,7 +327,7 @@ tasks.register("generateInfoDistributor") {
             "APP_NAME" to appName,
             "BUILD_TYPE" to buildType
         )
-        InfoDistributorGenerator.generate(outputDir, "com.endiq.turtlelauncher", "InfoDistributor", constantMap)
+        InfoDistributorGenerator.generate(outputDir, "com.app.astralauncher", "InfoDistributor", constantMap)
     }
 }
 

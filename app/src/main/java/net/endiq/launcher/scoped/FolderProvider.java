@@ -16,11 +16,11 @@ import android.webkit.MimeTypeMap;
 
 import androidx.annotation.Nullable;
 
-import com.endiq.turtlelauncher.BuildConfig;
-import com.endiq.turtlelauncher.InfoDistributor;
-import com.endiq.turtlelauncher.R;
-import com.endiq.turtlelauncher.feature.log.Logging;
-import com.endiq.turtlelauncher.utils.path.PathManager;
+import com.app.astralauncher.BuildConfig;
+import com.app.astralauncher.InfoDistributor;
+import com.app.astralauncher.R;
+import com.app.astralauncher.feature.log.Logging;
+import com.app.astralauncher.utils.path.PathManager;
 
 import net.endiq.launcher.Tools;
 

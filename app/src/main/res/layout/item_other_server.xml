@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.endiq.turtlelauncher.ui.layout.AnimRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.app.astralauncher.ui.layout.AnimRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:paddingHorizontal="@dimen/_8sdp"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <com.endiq.turtlelauncher.ui.view.AnimatedIconView
+    <com.app.astralauncher.ui.view.AnimatedIconView
         android:id="@+id/icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -21,4 +21,4 @@
         android:layout_toEndOf="@id/icon"
         android:paddingHorizontal="@dimen/_8sdp"/>
 
-</com.endiq.turtlelauncher.ui.layout.AnimRelativeLayout>
+</com.app.astralauncher.ui.layout.AnimRelativeLayout>

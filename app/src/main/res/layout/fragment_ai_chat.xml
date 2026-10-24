@@ -19,17 +19,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-        <com.endiq.turtlelauncher.ui.view.AnimatedIconButton
+        <com.app.astralauncher.ui.view.AnimatedIconButton
             android:id="@+id/back_button"
             android:layout_width="28dp"
             android:layout_height="28dp"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:src="@drawable/ic_chevron_down"
             android:rotation="90"
-            android:tint="@color/turtle_text_secondary"
+            android:tint="@color/astra_text_secondary"
             android:contentDescription="@string/generic_return"/>
 
-        <com.endiq.turtlelauncher.ui.view.AnimatedIconView
+        <com.app.astralauncher.ui.view.AnimatedIconView
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:layout_marginStart="@dimen/space_s"
@@ -49,7 +49,7 @@
                 android:text="@string/ai_chat_title"
                 android:textSize="18sp"
                 android:textStyle="bold"
-                android:textColor="@color/turtle_text_primary"/>
+                android:textColor="@color/astra_text_primary"/>
 
             <TextView
                 android:id="@+id/chat_subtitle"
@@ -57,27 +57,27 @@
                 android:layout_height="wrap_content"
                 android:text="@string/ai_chat_subtitle"
                 android:textSize="11sp"
-                android:textColor="@color/turtle_text_secondary"/>
+                android:textColor="@color/astra_text_secondary"/>
         </LinearLayout>
 
-        <com.endiq.turtlelauncher.ui.view.AnimatedIconButton
+        <com.app.astralauncher.ui.view.AnimatedIconButton
             android:id="@+id/chat_mic_button"
             android:layout_width="28dp"
             android:layout_height="28dp"
             android:layout_marginEnd="@dimen/space_s"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:src="@drawable/ic_ai_assistant"
-            android:tint="@color/turtle_text_secondary"
+            android:tint="@color/astra_text_secondary"
             android:contentDescription="@string/ai_voice_start"/>
 
-        <com.endiq.turtlelauncher.ui.view.AnimatedIconButton
+        <com.app.astralauncher.ui.view.AnimatedIconButton
             android:id="@+id/clear_button"
             android:layout_width="28dp"
             android:layout_height="28dp"
             android:layout_marginStart="@dimen/space_s"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:src="@drawable/ic_menu_close_clear_cancel"
-            android:tint="@color/turtle_text_secondary"
+            android:tint="@color/astra_text_secondary"
             android:contentDescription="@string/generic_clear"/>
     </LinearLayout>
 
@@ -137,16 +137,16 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/ai_voice_connecting"
-            android:textColor="@color/turtle_text_primary"
+            android:textColor="@color/astra_text_primary"
             android:textSize="13sp"/>
 
-        <com.endiq.turtlelauncher.ui.view.AnimatedIconButton
+        <com.app.astralauncher.ui.view.AnimatedIconButton
             android:id="@+id/voice_stop"
             android:layout_width="32dp"
             android:layout_height="32dp"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:src="@drawable/ic_close"
-            android:tint="@color/turtle_text_secondary"
+            android:tint="@color/astra_text_secondary"
             android:contentDescription="@string/ai_voice_stop"/>
     </LinearLayout>
 
@@ -163,7 +163,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-        <com.endiq.turtlelauncher.ui.view.AnimEditText
+        <com.app.astralauncher.ui.view.AnimEditText
             android:id="@+id/chat_message_input"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -172,14 +172,14 @@
             android:padding="@dimen/space_m"
             android:hint="@string/ai_chat_input_hint"
             android:textSize="14sp"
-            android:textColor="@color/turtle_text_primary"
-            android:textColorHint="@color/turtle_text_secondary"
+            android:textColor="@color/astra_text_primary"
+            android:textColorHint="@color/astra_text_secondary"
             android:maxLines="4"
             android:inputType="textMultiLine|textCapSentences"
             android:imeOptions="actionSend"
             android:importantForAutofill="no"/>
 
-        <com.endiq.turtlelauncher.ui.view.AnimatedIconButton
+        <com.app.astralauncher.ui.view.AnimatedIconButton
             android:id="@+id/chat_send_button"
             android:layout_width="44dp"
             android:layout_height="44dp"

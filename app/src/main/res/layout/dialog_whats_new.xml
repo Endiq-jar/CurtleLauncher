@@ -24,7 +24,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/whats_new_title"
-                android:textColor="@color/turtle_success"
+                android:textColor="@color/astra_success"
                 android:textSize="@dimen/_18ssp"
                 android:textStyle="bold"/>
 
@@ -33,7 +33,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="✕"
-                android:textColor="@color/turtle_error"
+                android:textColor="@color/astra_error"
                 android:textSize="@dimen/_18ssp"
                 android:padding="@dimen/_4sdp"
                 android:background="?android:attr/selectableItemBackgroundBorderless"/>
@@ -48,7 +48,7 @@
             android:textColor="@color/accent_primary"
             android:textSize="@dimen/_13ssp"
             android:textStyle="bold"
-            android:background="@color/turtle_accent_ripple"
+            android:background="@color/astra_accent_ripple"
             android:paddingHorizontal="@dimen/_8sdp"
             android:paddingVertical="@dimen/_4sdp"
             android:layout_marginBottom="@dimen/_12sdp"/>
@@ -58,7 +58,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/whats_new_feature_1"
-            android:textColor="@color/turtle_success"
+            android:textColor="@color/astra_success"
             android:textSize="@dimen/_14ssp"
             android:textStyle="bold"
             android:drawablePadding="@dimen/_6sdp"
@@ -68,7 +68,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/whats_new_feature_1_desc"
-            android:textColor="@color/turtle_text_secondary"
+            android:textColor="@color/astra_text_secondary"
             android:textSize="@dimen/_12ssp"
             android:layout_marginBottom="@dimen/_12sdp"/>
 
@@ -77,7 +77,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/whats_new_feature_2"
-            android:textColor="@color/turtle_success"
+            android:textColor="@color/astra_success"
             android:textSize="@dimen/_14ssp"
             android:textStyle="bold"
             android:layout_marginBottom="@dimen/_4sdp"/>
@@ -86,7 +86,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/whats_new_feature_2_desc"
-            android:textColor="@color/turtle_text_secondary"
+            android:textColor="@color/astra_text_secondary"
             android:textSize="@dimen/_12ssp"
             android:layout_marginBottom="@dimen/_12sdp"/>
 
@@ -95,7 +95,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/whats_new_feature_3"
-            android:textColor="@color/turtle_success"
+            android:textColor="@color/astra_success"
             android:textSize="@dimen/_14ssp"
             android:textStyle="bold"
             android:layout_marginBottom="@dimen/_4sdp"/>
@@ -104,7 +104,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/whats_new_feature_3_desc"
-            android:textColor="@color/turtle_text_secondary"
+            android:textColor="@color/astra_text_secondary"
             android:textSize="@dimen/_12ssp"
             android:layout_marginBottom="@dimen/_12sdp"/>
 
@@ -113,7 +113,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/whats_new_warning"
-            android:textColor="@color/turtle_warning"
+            android:textColor="@color/astra_warning"
             android:textSize="@dimen/_11ssp"
             android:layout_marginTop="@dimen/_4sdp"/>
 

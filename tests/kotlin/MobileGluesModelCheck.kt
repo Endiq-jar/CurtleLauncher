@@ -1,4 +1,4 @@
-package com.endiq.turtlelauncher.renderer.mobileglues
+package com.app.astralauncher.renderer.mobileglues
 
 /** Lightweight JVM regression check. Run with MGConfig.kt and the Android/annotation classpath. */
 fun main() {

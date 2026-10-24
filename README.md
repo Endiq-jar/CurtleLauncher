@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:050D08,20:0B2615,45:14532D,70:16A34A,100:86EFAC&height=280&section=header&text=AstraLauncher&fontSize=62&fontColor=FFFFFF&fontAlign=50&fontAlignY=35&animation=fadeIn&desc=MINECRAFT%20JAVA%20EDITION%20%E2%80%A2%20ANDROID&descSize=16&descAlign=50&descAlignY=56" width="100%" alt="TurtleLauncher — Minecraft Java Edition for Android" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:050D08,20:0B2615,45:14532D,70:16A34A,100:86EFAC&height=280&section=header&text=AstraLauncher&fontSize=62&fontColor=FFFFFF&fontAlign=50&fontAlignY=35&animation=fadeIn&desc=MINECRAFT%20JAVA%20EDITION%20%E2%80%A2%20ANDROID&descSize=16&descAlign=50&descAlignY=56" width="100%" alt="AstraLauncher — Minecraft Java Edition for Android" />
 </p>
 
 <h1 align="center">AstraLauncher</h1>
@@ -14,7 +14,7 @@
 
 <p align="center">
   <a href="https://github.com/Endiq-jar/TurtleLauncher/releases">
-    <img src="https://img.shields.io/badge/⬇_DOWNLOAD-LATEST_RELEASE-16A34A?style=for-the-badge&logo=android&logoColor=white" alt="Download TurtleLauncher" />
+    <img src="https://img.shields.io/badge/⬇_DOWNLOAD-LATEST_RELEASE-16A34A?style=for-the-badge&logo=android&logoColor=white" alt="Download AstraLauncher" />
   </a>
   <a href="https://github.com/Endiq-jar/TurtleLauncher/issues/new/choose">
     <img src="https://img.shields.io/badge/🐛_REPORT-A_BUG-202820?style=for-the-badge&logo=github&logoColor=4ADE80" alt="Report a bug" />
@@ -34,7 +34,7 @@
 
 <p align="center">
   <a href="https://github.com/Endiq-jar">
-    <img src="https://img.shields.io/badge/DEVELOPER-ENDIQ-166534?style=for-the-badge&logo=github&logoColor=white" alt="Developer Endiq" />
+    <img src="https://img.shields.io/badge/DEVELOPER-APP-166534?style=for-the-badge&logo=github&logoColor=white" alt="Developer App" />
   </a>
   <a href="https://github.com/Endiq-jar/TurtleLauncher">
     <img src="https://img.shields.io/badge/OPEN_SOURCE-22C55E?style=for-the-badge&logo=github&logoColor=white" alt="Open source repository" />
@@ -54,7 +54,7 @@
 ## ✦ Navigation
 
 <p align="center">
-  <a href="#-about-turtlelauncher">About</a> ·
+  <a href="#-about-astralauncher">About</a> ·
   <a href="#-features">Features</a> ·
   <a href="#%EF%B8%8F-screenshots">Screenshot</a> ·
   <a href="#-installation">Installation</a>
@@ -67,13 +67,13 @@
 
 ---
 
-## 🌿 About TurtleLauncher
+## 🌿 About AstraLauncher
 
-TurtleLauncher is an Android launcher for **Minecraft: Java Edition**, developed by **[Endiq](https://github.com/Endiq-jar)**.
+AstraLauncher is an Android launcher for **Minecraft: Java Edition**, developed by **[App](https://github.com/Endiq-jar)**.
 
-Inspired by the possibilities of open-source Minecraft launchers, TurtleLauncher aims to bring a customizable, feature-rich Java Edition experience to Android devices.
+Inspired by the possibilities of open-source Minecraft launchers, AstraLauncher aims to bring a customizable, feature-rich Java Edition experience to Android devices.
 
-From instance management and mod loaders to renderer options, Java runtimes, account management, and mobile-focused tools, TurtleLauncher brings together the features Minecraft players need in one place.
+From instance management and mod loaders to renderer options, Java runtimes, account management, and mobile-focused tools, AstraLauncher brings together the features Minecraft players need in one place.
 
 ### ⚔️ Our vision
 
@@ -85,11 +85,11 @@ From instance management and mod loaders to renderer options, Java runtimes, acc
 - 💚 Build an open-source project that can grow with its community.
 
 <p align="center">
-  <img src="1.jpg" width="92%" alt="TurtleLauncher main interface and Minecraft launcher preview" />
+  <img src="1.jpg" width="92%" alt="AstraLauncher main interface and Minecraft launcher preview" />
 </p>
 
 <p align="center">
-  <sub>Explore the world of TurtleLauncher.</sub>
+  <sub>Explore the world of AstraLauncher.</sub>
 </p>
 
 ---
@@ -182,7 +182,7 @@ Authentication availability and requirements depend on the selected provider and
 
 ### 🔓 Optional Shizuku support
 
-TurtleLauncher can use Shizuku-compatible functionality on supported Android devices.
+AstraLauncher can use Shizuku-compatible functionality on supported Android devices.
 
 Depending on the device, Android version, permissions, and implementation, this can include:
 
@@ -194,7 +194,7 @@ Depending on the device, Android version, permissions, and implementation, this 
 - System logcat access for diagnostics.
 - Compatibility with Shizuku and Sui.
 
-**Shizuku is optional.** Its availability and the permissions it can grant depend on Android restrictions, setup, and device configuration. TurtleLauncher can be used without it.
+**Shizuku is optional.** Its availability and the permissions it can grant depend on Android restrictions, setup, and device configuration. AstraLauncher can be used without it.
 
 ### 🎨 Customization and in-game tools
 
@@ -213,11 +213,11 @@ The in-game Dark Mode resource pack is intended to darken supported menus, butto
 ## 🖼️ Screenshots
 
 <p align="center">
-  <em>A look inside the TurtleLauncher experience.</em>
+  <em>A look inside the AstraLauncher experience.</em>
 </p>
 
 <p align="center">
-  <img src="1.jpg" width="90%" alt="TurtleLauncher screenshot" />
+  <img src="1.jpg" width="90%" alt="AstraLauncher screenshot" />
 </p>
 
 <p align="center">
@@ -228,7 +228,7 @@ The in-game Dark Mode resource pack is intended to darken supported menus, butto
 
 ### Option 1 — Download a release
 
-1. Open the [TurtleLauncher Releases](https://github.com/Endiq-jar/TurtleLauncher/releases) page.
+1. Open the [AstraLauncher Releases](https://github.com/Endiq-jar/TurtleLauncher/releases) page.
 2. Select the release you want to install.
 3. Download the APK asset provided by that release.
 4. Open the downloaded APK on your Android device.
@@ -240,7 +240,7 @@ Only install APKs from sources you trust. Review release notes and verify availa
 
 Developers can explore the repository and its build configuration:
 
-1. Open the [TurtleLauncher repository](https://github.com/Endiq-jar/TurtleLauncher).
+1. Open the [AstraLauncher repository](https://github.com/Endiq-jar/TurtleLauncher).
 2. Read the project's build instructions and Gradle configuration.
 3. Install the required Android development tools and compatible JDK.
 4. Build using the project's documented Gradle tasks.
@@ -252,7 +252,7 @@ The exact build commands and requirements depend on the current repository confi
 
 ## 🧰 Built With
 
-TurtleLauncher uses technologies and projects from the Android, Java, and Minecraft ecosystems.
+AstraLauncher uses technologies and projects from the Android, Java, and Minecraft ecosystems.
 
 | Technology | Purpose |
 |---|---|
@@ -277,7 +277,7 @@ Their inclusion does not imply that every component is enabled on every device o
 
 ## 🎯 Project goals
 
-TurtleLauncher aims to continually improve:
+AstraLauncher aims to continually improve:
 
 - ⚡ Faster launcher startup.
 - 🧠 Efficient memory use.
@@ -307,7 +307,7 @@ These are development goals, not guarantees of a particular FPS, launch time, te
 - [x] mclo.gs integration.
 - [ ] Cloud Sync.
 - [x] Skin and Cape Manager.
-- [x] Turtle Client integration.
+- [x] Astra Client integration.
 - [x] Real EGL implementation replacing OSMesa.
 - [x] Shizuku support.
 - [x] Beryllium integration.
@@ -320,25 +320,25 @@ These are development goals, not guarantees of a particular FPS, launch time, te
 ## ❓ FAQ
 
 <details>
-  <summary><strong>🛡️ Is TurtleLauncher safe?</strong></summary>
+  <summary><strong>🛡️ Is AstraLauncher safe?</strong></summary>
 
-  TurtleLauncher is an open-source project. You can inspect its source code and report potential security issues through GitHub. No software can be guaranteed completely risk-free.
+  AstraLauncher is an open-source project. You can inspect its source code and report potential security issues through GitHub. No software can be guaranteed completely risk-free.
 
   Download releases only from sources you trust.
 
 </details>
 
 <details>
-  <summary><strong>💚 Is TurtleLauncher free?</strong></summary>
+  <summary><strong>💚 Is AstraLauncher free?</strong></summary>
 
-  TurtleLauncher is distributed as an open-source project under the license specified in this repository. Check the official release page for downloads.
+  AstraLauncher is distributed as an open-source project under the license specified in this repository. Check the official release page for downloads.
 
 </details>
 
 <details>
-  <summary><strong>🧩 Does TurtleLauncher support Minecraft mods?</strong></summary>
+  <summary><strong>🧩 Does AstraLauncher support Minecraft mods?</strong></summary>
 
-  TurtleLauncher includes support for selected mod loaders and content-management workflows. Compatibility depends on the Minecraft version, loader, mod, runtime, and graphics environment.
+  AstraLauncher includes support for selected mod loaders and content-management workflows. Compatibility depends on the Minecraft version, loader, mod, runtime, and graphics environment.
 
 </details>
 
@@ -350,7 +350,7 @@ These are development goals, not guarantees of a particular FPS, launch time, te
 </details>
 
 <details>
-  <summary><strong>📱 Does TurtleLauncher work on every Android device?</strong></summary>
+  <summary><strong>📱 Does AstraLauncher work on every Android device?</strong></summary>
 
   No launcher can guarantee compatibility with every device. Results depend on Android version, CPU architecture, available memory, graphics drivers, renderer, and game configuration.
 
@@ -366,7 +366,7 @@ These are development goals, not guarantees of a particular FPS, launch time, te
 <details>
   <summary><strong>🔐 Do I need a Microsoft account?</strong></summary>
 
-  TurtleLauncher lists Microsoft, offline, Battly, and Ely.by account workflows. The requirements depend on the selected account provider and the current implementation. Offline accounts do not grant ownership of paid Minecraft features or bypass official authentication requirements.
+  AstraLauncher lists Microsoft, offline, Battly, and Ely.by account workflows. The requirements depend on the selected account provider and the current implementation. Offline accounts do not grant ownership of paid Minecraft features or bypass official authentication requirements.
 
 </details>
 
@@ -424,7 +424,7 @@ Please keep changes focused and include relevant testing information where possi
 
 ## 📄 License
 
-TurtleLauncher is identified in this project's documentation as licensed under **GNU General Public License v3.0 (GPL-3.0)**.
+AstraLauncher is identified in this project's documentation as licensed under **GNU General Public License v3.0 (GPL-3.0)**.
 
 See the repository's [`LICENSE`](https://github.com/Endiq-jar/TurtleLauncher) file for the exact license terms.
 
@@ -432,11 +432,11 @@ See the repository's [`LICENSE`](https://github.com/Endiq-jar/TurtleLauncher) fi
 
 ## 💚 Credits and acknowledgements
 
-TurtleLauncher builds on ideas, technologies, and open-source work from the Minecraft and Android communities.
+AstraLauncher builds on ideas, technologies, and open-source work from the Minecraft and Android communities.
 
 Projects and technologies acknowledged by this README include:
 
-- TurtleLauncher.
+- AstraLauncher.
 - HMCL.
 - Boardwalk.
 - OpenJDK.
@@ -459,15 +459,15 @@ Third-party names and projects belong to their respective owners. Their inclusio
 
 ## ⚠️ Disclaimer
 
-TurtleLauncher is an independent open-source project and is **not affiliated with, endorsed by, or sponsored by Mojang Studios or Microsoft**, unless explicitly stated otherwise by those companies.
+AstraLauncher is an independent open-source project and is **not affiliated with, endorsed by, or sponsored by Mojang Studios or Microsoft**, unless explicitly stated otherwise by those companies.
 
 Minecraft is a trademark of Mojang Studios. All relevant trademarks belong to their respective owners.
 
-TurtleLauncher does not grant ownership of Minecraft. Users are responsible for complying with applicable software licenses and the terms of the services they use.
+AstraLauncher does not grant ownership of Minecraft. Users are responsible for complying with applicable software licenses and the terms of the services they use.
 
 ---
 
-## 💚 Help grow TurtleLauncher
+## 💚 Help grow AstraLauncher
 
 <p align="center">
   <em>「 A small contribution today can create a whole new world tomorrow. 」</em>
@@ -479,10 +479,10 @@ TurtleLauncher does not grant ownership of Minecraft. Users are responsible for 
 
 <p align="center">
   <a href="https://github.com/Endiq-jar/TurtleLauncher/stargazers">
-    <img src="https://img.shields.io/badge/⭐_STAR-HELP_US_GROW-166534?style=for-the-badge&logo=github" alt="Star TurtleLauncher" />
+    <img src="https://img.shields.io/badge/⭐_STAR-HELP_US_GROW-166534?style=for-the-badge&logo=github" alt="Star AstraLauncher" />
   </a>
   <a href="https://github.com/Endiq-jar/TurtleLauncher/releases">
-    <img src="https://img.shields.io/badge/⚔️_YOUR_ADVENTURE-DOWNLOAD-22C55E?style=for-the-badge&logo=android" alt="Download TurtleLauncher" />
+    <img src="https://img.shields.io/badge/⚔️_YOUR_ADVENTURE-DOWNLOAD-22C55E?style=for-the-badge&logo=android" alt="Download AstraLauncher" />
   </a>
 </p>
 
@@ -491,14 +491,14 @@ TurtleLauncher does not grant ownership of Minecraft. Users are responsible for 
   ·
   <a href="https://github.com/Endiq-jar/TurtleLauncher/network/members">Contribute</a>
   ·
-  <a href="https://github.com/Endiq-jar">More projects by Endiq</a>
+  <a href="https://github.com/Endiq-jar">More projects by App</a>
 </p>
 
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=rect&color=0:14532D,50:22C55E,100:86EFAC&height=3&section=footer" width="80%" alt="" />
 </p>
 
-<h2 align="center">🐢 Thanks for visiting TurtleLauncher!</h2>
+<h2 align="center">🐢 Thanks for visiting AstraLauncher!</h2>
 
 <p align="center">
   <strong>One launcher. Endless possibilities.</strong>
@@ -507,7 +507,7 @@ TurtleLauncher does not grant ownership of Minecraft. Users are responsible for 
 
 <p align="center">
   <sub>
-    Made with 💚 by <a href="https://github.com/Endiq-jar">Endiq</a>
+    Made with 💚 by <a href="https://github.com/Endiq-jar">App</a>
     and the open-source community.
   </sub>
   <br />
@@ -515,7 +515,7 @@ TurtleLauncher does not grant ownership of Minecraft. Users are responsible for 
 </p>
 
 <p align="center">
-  <a href="#turtlelauncher">
+  <a href="#astralauncher">
     <img src="https://img.shields.io/badge/⬆_BACK_TO_TOP-RETURN_TO_THE_BEGINNING-14532D?style=for-the-badge" alt="Back to top" />
   </a>
 </p>

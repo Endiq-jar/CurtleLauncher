@@ -23,7 +23,7 @@
         android:visibility="gone"
         app:layout_constraintTop_toTopOf="parent">
 
-        <com.endiq.turtlelauncher.ui.view.AnimTextView
+        <com.app.astralauncher.ui.view.AnimTextView
             android:id="@+id/app_title_text"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -80,7 +80,7 @@
         app:layout_constraintTop_toTopOf="parent"/>
 
     <!-- Progress bar at bottom -->
-    <com.endiq.mcgui.ProgressLayout
+    <com.app.mcgui.ProgressLayout
         android:id="@+id/progress_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -108,7 +108,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
-            android:textColor="@color/turtle_primary_text"
+            android:textColor="@color/astra_primary_text"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"/>
@@ -128,18 +128,18 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textIsSelectable="true"
-                    android:textColor="@color/turtle_text_secondary"/>
+                    android:textColor="@color/astra_text_secondary"/>
                 <TextView
                     android:id="@+id/notice_date_view"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
                     android:gravity="end"
-                    android:textColor="@color/turtle_text_secondary"/>
+                    android:textColor="@color/astra_text_secondary"/>
             </LinearLayout>
         </ScrollView>
 
-        <com.endiq.turtlelauncher.ui.view.AnimButton
+        <com.app.astralauncher.ui.view.AnimButton
             android:id="@+id/notice_got_button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -157,7 +157,7 @@
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.38"/>
 
-    <com.endiq.turtlelauncher.ui.view.AnimatedIconView
+    <com.app.astralauncher.ui.view.AnimatedIconView
         android:id="@+id/hair"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

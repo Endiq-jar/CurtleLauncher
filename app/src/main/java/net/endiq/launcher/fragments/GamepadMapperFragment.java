@@ -1,5 +1,5 @@
 package net.endiq.launcher.fragments;
-import com.endiq.turtlelauncher.utils.anim.TurtleTransitions;
+import com.app.astralauncher.utils.anim.AstraTransitions;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -18,12 +18,12 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
-import com.endiq.anim.AnimPlayer;
-import com.endiq.anim.animations.Animations;
-import com.endiq.turtlelauncher.R;
-import com.endiq.turtlelauncher.databinding.FragmentControllerRemapperBinding;
-import com.endiq.turtlelauncher.ui.fragment.FragmentWithAnim;
-import com.endiq.turtlelauncher.utils.ZHTools;
+import com.app.anim.AnimPlayer;
+import com.app.anim.animations.Animations;
+import com.app.astralauncher.R;
+import com.app.astralauncher.databinding.FragmentControllerRemapperBinding;
+import com.app.astralauncher.ui.fragment.FragmentWithAnim;
+import com.app.astralauncher.utils.ZHTools;
 
 import net.endiq.launcher.customcontrols.gamepad.Gamepad;
 import net.endiq.launcher.customcontrols.gamepad.GamepadMapperAdapter;
@@ -139,13 +139,13 @@ public class GamepadMapperFragment extends FragmentWithAnim implements
 
     @Override
     public void slideIn(AnimPlayer animPlayer) {
-        animPlayer.apply(new AnimPlayer.Entry(binding.controllerLayout, TurtleTransitions.enter()))
-                .apply(new AnimPlayer.Entry(binding.operateLayout, TurtleTransitions.enter()));
+        animPlayer.apply(new AnimPlayer.Entry(binding.controllerLayout, AstraTransitions.enter()))
+                .apply(new AnimPlayer.Entry(binding.operateLayout, AstraTransitions.enter()));
     }
 
     @Override
     public void slideOut(AnimPlayer animPlayer) {
-        animPlayer.apply(new AnimPlayer.Entry(binding.controllerLayout, TurtleTransitions.exit()))
-                .apply(new AnimPlayer.Entry(binding.operateLayout, TurtleTransitions.exit()));
+        animPlayer.apply(new AnimPlayer.Entry(binding.controllerLayout, AstraTransitions.exit()))
+                .apply(new AnimPlayer.Entry(binding.operateLayout, AstraTransitions.exit()));
     }
 }

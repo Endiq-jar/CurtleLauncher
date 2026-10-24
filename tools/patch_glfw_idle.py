@@ -12,7 +12,7 @@ from pathlib import Path
 U2 = lambda n: struct.pack('>H', n)
 U4 = lambda n: struct.pack('>I', n)
 CLASS = 'org/lwjgl/glfw/GLFW'
-FIELD = '_turtleEventWaiter'
+FIELD = '_astraEventWaiter'
 
 
 def patch(data):
@@ -155,7 +155,7 @@ def build(source, destination):
         original = archive.read(CLASS + '.class')
     updated = patch(original)
     destination.mkdir(parents=True, exist_ok=True)
-    with zipfile.ZipFile(destination / 'turtle-performance.jar', 'w', compression=zipfile.ZIP_DEFLATED) as archive:
+    with zipfile.ZipFile(destination / 'astra-performance.jar', 'w', compression=zipfile.ZIP_DEFLATED) as archive:
         info = zipfile.ZipInfo(CLASS + '.class', (2026, 1, 1, 0, 0, 0))
         info.compress_type = zipfile.ZIP_DEFLATED
         archive.writestr(info, updated)

@@ -1,4 +1,4 @@
-package com.endiq.turtlelauncher.feature.discord
+package com.app.astralauncher.feature.discord
 
 fun main() {
     check(DiscordPresencePayload.text(" x ") == "") // SDK requires at least two characters

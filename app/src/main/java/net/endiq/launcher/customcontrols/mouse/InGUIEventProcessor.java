@@ -2,8 +2,8 @@ package net.endiq.launcher.customcontrols.mouse;
 
 import android.view.MotionEvent;
 
-import com.endiq.turtlelauncher.setting.AllSettings;
-import com.endiq.turtlelauncher.setting.AllStaticSettings;
+import com.app.astralauncher.setting.AllSettings;
+import com.app.astralauncher.setting.AllStaticSettings;
 
 import net.endiq.launcher.LwjglGlfwKeycode;
 import net.endiq.launcher.Tools;

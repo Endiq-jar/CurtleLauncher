@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- ============================================================
-         Turtle pastel-green palette — Night Mode
+         Astra pastel-green palette — Night Mode
          Same tokens as values/colors.xml. Night mode no longer
          re-introduces the old blue accent: both configurations are
          pastel green, so the launcher never flashes blue at dusk or
@@ -83,37 +83,37 @@
     <color name="palette_accent">#FFF2F2F2</color>
     <color name="palette_neutral">#FF8A9C90</color>
 
-    <color name="turtle_bg_deep">#FF000000</color>
-    <color name="turtle_bg_surface">#FF101612</color>
-    <color name="turtle_bg_card">#FF1A221C</color>
-    <color name="turtle_bg_elevated">#FF243028</color>
-    <color name="turtle_bg_input">#FF37463B</color>
-    <color name="turtle_bg_terminal">#FF0C110E</color>
-    <color name="turtle_glass_overlay">#E61A221C</color>
+    <color name="astra_bg_deep">#FF000000</color>
+    <color name="astra_bg_surface">#FF101612</color>
+    <color name="astra_bg_card">#FF1A221C</color>
+    <color name="astra_bg_elevated">#FF243028</color>
+    <color name="astra_bg_input">#FF37463B</color>
+    <color name="astra_bg_terminal">#FF0C110E</color>
+    <color name="astra_glass_overlay">#E61A221C</color>
 
-    <color name="turtle_accent">@color/pastel_green_400</color>
-    <color name="turtle_accent_bright">@color/pastel_green_200</color>
-    <color name="turtle_accent_pressed">@color/pastel_green_500</color>
-    <color name="turtle_accent_dim">#FF2D4A38</color>
-    <color name="turtle_accent_glow">#338FD9A8</color>
-    <color name="turtle_accent_subtle">@color/pastel_green_900</color>
-    <color name="turtle_accent_ripple">#2E8FD9A8</color>
-    <color name="turtle_highlight_subtle">#14FFFFFF</color>
+    <color name="astra_accent">@color/pastel_green_400</color>
+    <color name="astra_accent_bright">@color/pastel_green_200</color>
+    <color name="astra_accent_pressed">@color/pastel_green_500</color>
+    <color name="astra_accent_dim">#FF2D4A38</color>
+    <color name="astra_accent_glow">#338FD9A8</color>
+    <color name="astra_accent_subtle">@color/pastel_green_900</color>
+    <color name="astra_accent_ripple">#2E8FD9A8</color>
+    <color name="astra_highlight_subtle">#14FFFFFF</color>
 
-    <color name="turtle_border_subtle">#FF303030</color>
-    <color name="turtle_border_default">#FF404040</color>
-    <color name="turtle_border_focus">@color/pastel_green_400</color>
-    <color name="turtle_divider">#FF393939</color>
+    <color name="astra_border_subtle">#FF303030</color>
+    <color name="astra_border_default">#FF404040</color>
+    <color name="astra_border_focus">@color/pastel_green_400</color>
+    <color name="astra_divider">#FF393939</color>
 
-    <color name="turtle_text_primary">#FFF2F2F2</color>
-    <color name="turtle_text_secondary">#80FFFFFF</color>
-    <color name="turtle_text_muted">#66FFFFFF</color>
-    <color name="turtle_text_on_accent">@color/pastel_green_950</color>
+    <color name="astra_text_primary">#FFF2F2F2</color>
+    <color name="astra_text_secondary">#80FFFFFF</color>
+    <color name="astra_text_muted">#66FFFFFF</color>
+    <color name="astra_text_on_accent">@color/pastel_green_950</color>
 
-    <color name="turtle_success">#FF5FD08A</color>
-    <color name="turtle_warning">#FFFFB020</color>
-    <color name="turtle_error">#FFF12522</color>
-    <color name="turtle_info">@color/pastel_green_400</color>
+    <color name="astra_success">#FF5FD08A</color>
+    <color name="astra_warning">#FFFFB020</color>
+    <color name="astra_error">#FFF12522</color>
+    <color name="astra_info">@color/pastel_green_400</color>
 
     <color name="new_background_dark">#FF000000</color>
     <color name="new_background_cards_panels">#FF1A221C</color>
@@ -124,69 +124,69 @@
     <color name="new_success_highlight">#FF5FD08A</color>
     <color name="new_error_danger">#FFF12522</color>
 
-    <color name="bg_deep">@color/turtle_bg_deep</color>
-    <color name="bg_surface">@color/turtle_bg_surface</color>
-    <color name="bg_card">@color/turtle_bg_card</color>
-    <color name="bg_elevated">@color/turtle_bg_elevated</color>
-    <color name="glass_overlay">@color/turtle_glass_overlay</color>
-    <color name="accent_primary">@color/turtle_accent</color>
-    <color name="accent_primary_pressed">@color/turtle_accent_pressed</color>
-    <color name="accent_secondary">@color/turtle_accent_bright</color>
-    <color name="accent_glow">@color/turtle_accent_glow</color>
-    <color name="accent_subtle">@color/turtle_accent_subtle</color>
-    <color name="border_subtle">@color/turtle_border_subtle</color>
-    <color name="border_default">@color/turtle_border_default</color>
-    <color name="border_focus">@color/turtle_border_focus</color>
+    <color name="bg_deep">@color/astra_bg_deep</color>
+    <color name="bg_surface">@color/astra_bg_surface</color>
+    <color name="bg_card">@color/astra_bg_card</color>
+    <color name="bg_elevated">@color/astra_bg_elevated</color>
+    <color name="glass_overlay">@color/astra_glass_overlay</color>
+    <color name="accent_primary">@color/astra_accent</color>
+    <color name="accent_primary_pressed">@color/astra_accent_pressed</color>
+    <color name="accent_secondary">@color/astra_accent_bright</color>
+    <color name="accent_glow">@color/astra_accent_glow</color>
+    <color name="accent_subtle">@color/astra_accent_subtle</color>
+    <color name="border_subtle">@color/astra_border_subtle</color>
+    <color name="border_default">@color/astra_border_default</color>
+    <color name="border_focus">@color/astra_border_focus</color>
 
-    <color name="turtle_primary_accent">@color/turtle_accent</color>
-    <color name="turtle_secondary_accent">@color/turtle_accent_bright</color>
-    <color name="turtle_background">@color/turtle_bg_deep</color>
-    <color name="turtle_surface">@color/turtle_bg_surface</color>
-    <color name="turtle_primary_text">@color/turtle_text_primary</color>
-    <color name="turtle_secondary_text">@color/turtle_text_secondary</color>
-    <color name="turtle_accent_highlight">@color/turtle_success</color>
-    <color name="turtle_danger">@color/turtle_error</color>
+    <color name="astra_primary_accent">@color/astra_accent</color>
+    <color name="astra_secondary_accent">@color/astra_accent_bright</color>
+    <color name="astra_background">@color/astra_bg_deep</color>
+    <color name="astra_surface">@color/astra_bg_surface</color>
+    <color name="astra_primary_text">@color/astra_text_primary</color>
+    <color name="astra_secondary_text">@color/astra_text_secondary</color>
+    <color name="astra_accent_highlight">@color/astra_success</color>
+    <color name="astra_danger">@color/astra_error</color>
 
-    <color name="background_app">@color/turtle_bg_deep</color>
-    <color name="background_bottom_bar">@color/turtle_bg_surface</color>
+    <color name="background_app">@color/astra_bg_deep</color>
+    <color name="background_bottom_bar">@color/astra_bg_surface</color>
     <color name="background_status_bar">#FF000000</color>
-    <color name="background_menu_top">@color/turtle_bg_card</color>
-    <color name="background_menu_element">@color/turtle_bg_card</color>
-    <color name="background_edit_box">@color/turtle_bg_input</color>
-    <color name="background_category">@color/turtle_bg_card</color>
-    <color name="background_settings_item">@color/turtle_bg_card</color>
+    <color name="background_menu_top">@color/astra_bg_card</color>
+    <color name="background_menu_element">@color/astra_bg_card</color>
+    <color name="background_edit_box">@color/astra_bg_input</color>
+    <color name="background_category">@color/astra_bg_card</color>
+    <color name="background_settings_item">@color/astra_bg_card</color>
     <color name="background_overlay">#99000000</color>
     <color name="dialog_background">@color/miuix_background</color>
     <color name="panel_translucent">#E61A221C</color>
     <color name="game_panel_overlay">#D9181E1A</color>
 
-    <color name="primary_text">@color/turtle_text_primary</color>
-    <color name="secondary_text">@color/turtle_text_secondary</color>
-    <color name="black_or_white">@color/turtle_text_primary</color>
-    <color name="control_button_Normal">@color/turtle_bg_elevated</color>
-    <color name="control_button_pressed">@color/turtle_accent</color>
+    <color name="primary_text">@color/astra_text_primary</color>
+    <color name="secondary_text">@color/astra_text_secondary</color>
+    <color name="black_or_white">@color/astra_text_primary</color>
+    <color name="control_button_Normal">@color/astra_bg_elevated</color>
+    <color name="control_button_pressed">@color/astra_accent</color>
     <color name="button_disabled">@color/miuix_disabled_secondary_variant</color>
     <color name="divider">@color/miuix_divider_line</color>
-    <color name="menu_overlay">@color/turtle_bg_surface</color>
+    <color name="menu_overlay">@color/astra_bg_surface</color>
     <color name="menu_bar">#CC121A15</color>
     <color name="menu_progress">@color/miuix_primary</color>
     <color name="menu_button">#FF243028</color>
-    <color name="minebutton_color">@color/turtle_bg_elevated</color>
+    <color name="minebutton_color">@color/astra_bg_elevated</color>
 
     <!-- Mirrors values/colors.xml: tokens that drawables, layouts and code still reference. -->
     <color name="background_item_disabled">#55404040</color>
     <color name="background_item_selected">#AA2E4639</color>
-    <color name="background_app_error">@color/turtle_bg_deep</color>
+    <color name="background_app_error">@color/astra_bg_deep</color>
     <color name="background_sponsor_advanced">#559CCF93</color>
     <color name="background_sponsor_intermediate">#55FF8A8A</color>
     <color name="favorite_color">#FFFF8A8A</color>
     <color name="menu_bar_text">@color/miuix_on_surface</color>
-    <color name="turtle_icon_color">@color/miuix_on_surface</color>
-    <color name="turtle_stroke">@color/miuix_outline</color>
-    <!-- ThemeOverlay.Turtle.HighContrast -->
-    <color name="turtle_hc_border">@color/miuix_on_surface</color>
-    <color name="turtle_hc_text_secondary">@color/miuix_on_surface</color>
-    <color name="turtle_hc_surface">@color/turtle_bg_deep</color>
+    <color name="astra_icon_color">@color/miuix_on_surface</color>
+    <color name="astra_stroke">@color/miuix_outline</color>
+    <!-- ThemeOverlay.Astra.HighContrast -->
+    <color name="astra_hc_border">@color/miuix_on_surface</color>
+    <color name="astra_hc_text_secondary">@color/miuix_on_surface</color>
+    <color name="astra_hc_surface">@color/astra_bg_deep</color>
 
     <color name="file_icon_tint">@color/palette_secondary</color>
     <color name="icon_tint">@color/palette_secondary</color>
@@ -195,9 +195,9 @@
     <color name="background_mod_category">#FF37463B</color>
     <color name="stroke_mod_category">#FF506455</color>
 
-    <color name="version_dot_ready">@color/turtle_success</color>
+    <color name="version_dot_ready">@color/astra_success</color>
     <color name="version_dot_modded">@color/miuix_primary</color>
-    <color name="version_dot_missing">@color/turtle_warning</color>
+    <color name="version_dot_missing">@color/astra_warning</color>
 
     <color name="log_info">#FFF2F2F2</color>
     <color name="log_warn">#FFFFB020</color>

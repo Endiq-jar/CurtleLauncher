@@ -17,17 +17,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-        <com.endiq.turtlelauncher.ui.view.AnimatedIconButton
+        <com.app.astralauncher.ui.view.AnimatedIconButton
             android:id="@+id/back_button"
             android:layout_width="28dp"
             android:layout_height="28dp"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:src="@drawable/ic_chevron_down"
             android:rotation="90"
-            android:tint="@color/turtle_text_secondary"
+            android:tint="@color/astra_text_secondary"
             android:contentDescription="@string/generic_return"/>
 
-        <com.endiq.turtlelauncher.ui.view.AnimatedIconView
+        <com.app.astralauncher.ui.view.AnimatedIconView
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:layout_marginStart="@dimen/space_s"
@@ -41,7 +41,7 @@
             android:text="@string/share_logs_title"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:textColor="@color/turtle_text_primary"/>
+            android:textColor="@color/astra_text_primary"/>
     </LinearLayout>
 
     <androidx.core.widget.NestedScrollView
@@ -61,7 +61,7 @@
             android:paddingBottom="@dimen/space_xl">
 
             <!-- Latest log card -->
-            <com.endiq.turtlelauncher.ui.layout.AnimRelativeLayout
+            <com.app.astralauncher.ui.layout.AnimRelativeLayout
                 android:id="@+id/latest_log_row"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -76,7 +76,7 @@
                     android:text="@string/share_logs_latest_log"
                     android:textSize="11sp"
                     android:textStyle="bold"
-                    android:textColor="@color/turtle_text_secondary"
+                    android:textColor="@color/astra_text_secondary"
                     android:letterSpacing="0.06"/>
 
                 <TextView
@@ -88,7 +88,7 @@
                     android:layout_toStartOf="@id/latest_log_chevron"
                     android:textSize="14sp"
                     android:textStyle="bold"
-                    android:textColor="@color/turtle_text_primary"/>
+                    android:textColor="@color/astra_text_primary"/>
 
                 <TextView
                     android:id="@+id/latest_log_size"
@@ -98,9 +98,9 @@
                     android:layout_marginTop="2dp"
                     android:layout_toStartOf="@id/latest_log_chevron"
                     android:textSize="12sp"
-                    android:textColor="@color/turtle_text_secondary"/>
+                    android:textColor="@color/astra_text_secondary"/>
 
-                <com.endiq.turtlelauncher.ui.view.AnimatedIconView
+                <com.app.astralauncher.ui.view.AnimatedIconView
                     android:id="@+id/latest_log_chevron"
                     android:layout_width="16dp"
                     android:layout_height="16dp"
@@ -108,8 +108,8 @@
                     android:layout_alignParentEnd="true"
                     android:src="@drawable/ic_chevron_down"
                     android:rotation="-90"
-                    android:tint="@color/turtle_text_secondary"/>
-            </com.endiq.turtlelauncher.ui.layout.AnimRelativeLayout>
+                    android:tint="@color/astra_text_secondary"/>
+            </com.app.astralauncher.ui.layout.AnimRelativeLayout>
 
             <!-- ACTIONS header -->
             <TextView
@@ -123,101 +123,101 @@
                 android:background="@drawable/background_card"
                 android:layout_marginBottom="@dimen/space_l">
 
-                <com.endiq.turtlelauncher.ui.layout.AnimRelativeLayout
+                <com.app.astralauncher.ui.layout.AnimRelativeLayout
                     android:id="@+id/view_log_row"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/background_item"
                     android:padding="@dimen/space_m">
-                    <com.endiq.turtlelauncher.ui.view.AnimatedIconView android:id="@+id/view_log_icon" android:layout_width="22dp" android:layout_height="22dp"
+                    <com.app.astralauncher.ui.view.AnimatedIconView android:id="@+id/view_log_icon" android:layout_width="22dp" android:layout_height="22dp"
                         android:layout_centerVertical="true" android:src="@drawable/ic_eye" android:tint="@color/accent_primary"/>
                     <TextView android:id="@+id/view_log_title" android:layout_width="wrap_content" android:layout_height="wrap_content"
                         android:layout_toEndOf="@id/view_log_icon" android:layout_marginStart="@dimen/space_m"
-                        android:text="@string/share_logs_view_log" android:textStyle="bold" android:textSize="14sp" android:textColor="@color/turtle_text_primary"/>
+                        android:text="@string/share_logs_view_log" android:textStyle="bold" android:textSize="14sp" android:textColor="@color/astra_text_primary"/>
                     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
                         android:layout_below="@id/view_log_title" android:layout_toEndOf="@id/view_log_icon" android:layout_marginStart="@dimen/space_m"
-                        android:text="@string/share_logs_view_log_desc" android:textSize="12sp" android:textColor="@color/turtle_text_secondary"/>
-                    <com.endiq.turtlelauncher.ui.view.AnimatedIconView android:layout_width="16dp" android:layout_height="16dp" android:layout_centerVertical="true" android:layout_alignParentEnd="true"
-                        android:src="@drawable/ic_chevron_down" android:rotation="-90" android:tint="@color/turtle_text_secondary"/>
-                </com.endiq.turtlelauncher.ui.layout.AnimRelativeLayout>
+                        android:text="@string/share_logs_view_log_desc" android:textSize="12sp" android:textColor="@color/astra_text_secondary"/>
+                    <com.app.astralauncher.ui.view.AnimatedIconView android:layout_width="16dp" android:layout_height="16dp" android:layout_centerVertical="true" android:layout_alignParentEnd="true"
+                        android:src="@drawable/ic_chevron_down" android:rotation="-90" android:tint="@color/astra_text_secondary"/>
+                </com.app.astralauncher.ui.layout.AnimRelativeLayout>
 
-                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/turtle_divider"/>
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/astra_divider"/>
 
-                <com.endiq.turtlelauncher.ui.layout.AnimRelativeLayout
+                <com.app.astralauncher.ui.layout.AnimRelativeLayout
                     android:id="@+id/upload_mclogs_row"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/background_item"
                     android:padding="@dimen/space_m">
-                    <com.endiq.turtlelauncher.ui.view.AnimatedIconView android:id="@+id/upload_mclogs_icon" android:layout_width="22dp" android:layout_height="22dp"
+                    <com.app.astralauncher.ui.view.AnimatedIconView android:id="@+id/upload_mclogs_icon" android:layout_width="22dp" android:layout_height="22dp"
                         android:layout_centerVertical="true" android:src="@drawable/ic_launch_link" android:tint="@color/accent_primary"/>
                     <TextView android:id="@+id/upload_mclogs_title" android:layout_width="wrap_content" android:layout_height="wrap_content"
                         android:layout_toEndOf="@id/upload_mclogs_icon" android:layout_marginStart="@dimen/space_m"
-                        android:text="@string/share_logs_upload_mclogs" android:textStyle="bold" android:textSize="14sp" android:textColor="@color/turtle_text_primary"/>
+                        android:text="@string/share_logs_upload_mclogs" android:textStyle="bold" android:textSize="14sp" android:textColor="@color/astra_text_primary"/>
                     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
                         android:layout_below="@id/upload_mclogs_title" android:layout_toEndOf="@id/upload_mclogs_icon" android:layout_marginStart="@dimen/space_m"
-                        android:text="@string/share_logs_upload_mclogs_desc" android:textSize="12sp" android:textColor="@color/turtle_text_secondary"/>
-                    <com.endiq.turtlelauncher.ui.view.AnimatedIconView android:layout_width="16dp" android:layout_height="16dp" android:layout_centerVertical="true" android:layout_alignParentEnd="true"
-                        android:src="@drawable/ic_chevron_down" android:rotation="-90" android:tint="@color/turtle_text_secondary"/>
-                </com.endiq.turtlelauncher.ui.layout.AnimRelativeLayout>
+                        android:text="@string/share_logs_upload_mclogs_desc" android:textSize="12sp" android:textColor="@color/astra_text_secondary"/>
+                    <com.app.astralauncher.ui.view.AnimatedIconView android:layout_width="16dp" android:layout_height="16dp" android:layout_centerVertical="true" android:layout_alignParentEnd="true"
+                        android:src="@drawable/ic_chevron_down" android:rotation="-90" android:tint="@color/astra_text_secondary"/>
+                </com.app.astralauncher.ui.layout.AnimRelativeLayout>
 
-                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/turtle_divider"/>
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/astra_divider"/>
 
-                <com.endiq.turtlelauncher.ui.layout.AnimRelativeLayout
+                <com.app.astralauncher.ui.layout.AnimRelativeLayout
                     android:id="@+id/share_log_row"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/background_item"
                     android:padding="@dimen/space_m">
-                    <com.endiq.turtlelauncher.ui.view.AnimatedIconView android:id="@+id/share_log_icon" android:layout_width="22dp" android:layout_height="22dp"
+                    <com.app.astralauncher.ui.view.AnimatedIconView android:id="@+id/share_log_icon" android:layout_width="22dp" android:layout_height="22dp"
                         android:layout_centerVertical="true" android:src="@drawable/ic_share" android:tint="@color/accent_primary"/>
                     <TextView android:id="@+id/share_log_title" android:layout_width="wrap_content" android:layout_height="wrap_content"
                         android:layout_toEndOf="@id/share_log_icon" android:layout_marginStart="@dimen/space_m"
-                        android:text="@string/share_logs_share_log" android:textStyle="bold" android:textSize="14sp" android:textColor="@color/turtle_text_primary"/>
+                        android:text="@string/share_logs_share_log" android:textStyle="bold" android:textSize="14sp" android:textColor="@color/astra_text_primary"/>
                     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
                         android:layout_below="@id/share_log_title" android:layout_toEndOf="@id/share_log_icon" android:layout_marginStart="@dimen/space_m"
-                        android:text="@string/share_logs_share_log_desc" android:textSize="12sp" android:textColor="@color/turtle_text_secondary"/>
-                    <com.endiq.turtlelauncher.ui.view.AnimatedIconView android:layout_width="16dp" android:layout_height="16dp" android:layout_centerVertical="true" android:layout_alignParentEnd="true"
-                        android:src="@drawable/ic_chevron_down" android:rotation="-90" android:tint="@color/turtle_text_secondary"/>
-                </com.endiq.turtlelauncher.ui.layout.AnimRelativeLayout>
+                        android:text="@string/share_logs_share_log_desc" android:textSize="12sp" android:textColor="@color/astra_text_secondary"/>
+                    <com.app.astralauncher.ui.view.AnimatedIconView android:layout_width="16dp" android:layout_height="16dp" android:layout_centerVertical="true" android:layout_alignParentEnd="true"
+                        android:src="@drawable/ic_chevron_down" android:rotation="-90" android:tint="@color/astra_text_secondary"/>
+                </com.app.astralauncher.ui.layout.AnimRelativeLayout>
 
-                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/turtle_divider"/>
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/astra_divider"/>
 
-                <com.endiq.turtlelauncher.ui.layout.AnimRelativeLayout
+                <com.app.astralauncher.ui.layout.AnimRelativeLayout
                     android:id="@+id/copy_log_row"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/background_item"
                     android:padding="@dimen/space_m">
-                    <com.endiq.turtlelauncher.ui.view.AnimatedIconView android:id="@+id/copy_log_icon" android:layout_width="22dp" android:layout_height="22dp"
+                    <com.app.astralauncher.ui.view.AnimatedIconView android:id="@+id/copy_log_icon" android:layout_width="22dp" android:layout_height="22dp"
                         android:layout_centerVertical="true" android:src="@drawable/ic_copy" android:tint="@color/accent_primary"/>
                     <TextView android:id="@+id/copy_log_title" android:layout_width="wrap_content" android:layout_height="wrap_content"
                         android:layout_toEndOf="@id/copy_log_icon" android:layout_marginStart="@dimen/space_m"
-                        android:text="@string/share_logs_copy_clipboard" android:textStyle="bold" android:textSize="14sp" android:textColor="@color/turtle_text_primary"/>
+                        android:text="@string/share_logs_copy_clipboard" android:textStyle="bold" android:textSize="14sp" android:textColor="@color/astra_text_primary"/>
                     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
                         android:layout_below="@id/copy_log_title" android:layout_toEndOf="@id/copy_log_icon" android:layout_marginStart="@dimen/space_m"
-                        android:text="@string/share_logs_copy_clipboard_desc" android:textSize="12sp" android:textColor="@color/turtle_text_secondary"/>
-                    <com.endiq.turtlelauncher.ui.view.AnimatedIconView android:layout_width="16dp" android:layout_height="16dp" android:layout_centerVertical="true" android:layout_alignParentEnd="true"
-                        android:src="@drawable/ic_chevron_down" android:rotation="-90" android:tint="@color/turtle_text_secondary"/>
-                </com.endiq.turtlelauncher.ui.layout.AnimRelativeLayout>
+                        android:text="@string/share_logs_copy_clipboard_desc" android:textSize="12sp" android:textColor="@color/astra_text_secondary"/>
+                    <com.app.astralauncher.ui.view.AnimatedIconView android:layout_width="16dp" android:layout_height="16dp" android:layout_centerVertical="true" android:layout_alignParentEnd="true"
+                        android:src="@drawable/ic_chevron_down" android:rotation="-90" android:tint="@color/astra_text_secondary"/>
+                </com.app.astralauncher.ui.layout.AnimRelativeLayout>
 
-                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/turtle_divider"/>
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/astra_divider"/>
 
-                <com.endiq.turtlelauncher.ui.layout.AnimRelativeLayout
+                <com.app.astralauncher.ui.layout.AnimRelativeLayout
                     android:id="@+id/clear_log_row"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/background_item"
                     android:padding="@dimen/space_m">
-                    <com.endiq.turtlelauncher.ui.view.AnimatedIconView android:id="@+id/clear_log_icon" android:layout_width="22dp" android:layout_height="22dp"
-                        android:layout_centerVertical="true" android:src="@drawable/ic_menu_delete_forever" android:tint="@color/turtle_error"/>
+                    <com.app.astralauncher.ui.view.AnimatedIconView android:id="@+id/clear_log_icon" android:layout_width="22dp" android:layout_height="22dp"
+                        android:layout_centerVertical="true" android:src="@drawable/ic_menu_delete_forever" android:tint="@color/astra_error"/>
                     <TextView android:id="@+id/clear_log_title" android:layout_width="wrap_content" android:layout_height="wrap_content"
                         android:layout_toEndOf="@id/clear_log_icon" android:layout_marginStart="@dimen/space_m"
-                        android:text="@string/share_logs_clear" android:textStyle="bold" android:textSize="14sp" android:textColor="@color/turtle_error"/>
+                        android:text="@string/share_logs_clear" android:textStyle="bold" android:textSize="14sp" android:textColor="@color/astra_error"/>
                     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
                         android:layout_below="@id/clear_log_title" android:layout_toEndOf="@id/clear_log_icon" android:layout_marginStart="@dimen/space_m"
-                        android:text="@string/share_logs_clear_desc" android:textSize="12sp" android:textColor="@color/turtle_text_secondary"/>
-                </com.endiq.turtlelauncher.ui.layout.AnimRelativeLayout>
+                        android:text="@string/share_logs_clear_desc" android:textSize="12sp" android:textColor="@color/astra_text_secondary"/>
+                </com.app.astralauncher.ui.layout.AnimRelativeLayout>
             </LinearLayout>
 
             <TextView
@@ -225,7 +225,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/share_logs_footer_note"
                 android:textSize="12sp"
-                android:textColor="@color/turtle_text_secondary"
+                android:textColor="@color/astra_text_secondary"
                 android:gravity="center"
                 android:paddingHorizontal="@dimen/space_l"/>
 

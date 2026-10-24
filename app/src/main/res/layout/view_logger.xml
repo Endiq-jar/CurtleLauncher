@@ -8,7 +8,7 @@
         android:id="@+id/top_log_view"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_40sdp"
-        android:background="@color/turtle_bg_terminal"
+        android:background="@color/astra_bg_terminal"
         android:clickable="true"
         android:focusable="true"
         app:layout_constraintTop_toTopOf="parent" />
@@ -46,7 +46,7 @@
         app:layout_constraintEnd_toStartOf="@+id/share_log"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.endiq.turtlelauncher.ui.view.AnimatedIconButton
+    <com.app.astralauncher.ui.view.AnimatedIconButton
         android:id="@+id/cancel"
         android:layout_width="@dimen/_40sdp"
         android:layout_height="0dp"
@@ -58,7 +58,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.endiq.turtlelauncher.ui.view.AnimatedIconButton
+    <com.app.astralauncher.ui.view.AnimatedIconButton
         android:id="@+id/share_log"
         android:layout_width="@dimen/_40sdp"
         android:layout_height="0dp"
@@ -71,7 +71,7 @@
         app:layout_constraintEnd_toStartOf="@+id/cancel"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.endiq.turtlelauncher.ui.view.AnimEditText
+    <com.app.astralauncher.ui.view.AnimEditText
         android:id="@+id/log_filter"
         android:layout_width="0dp"
         android:layout_height="@dimen/_28sdp"
@@ -84,13 +84,13 @@
         android:maxLines="1"
         android:paddingHorizontal="@dimen/_8sdp"
         android:textColor="@android:color/white"
-        android:textColorHint="@color/turtle_glass_overlay"
+        android:textColorHint="@color/astra_glass_overlay"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/top_log_view" />
 
-    <com.endiq.DefocusableScrollView
+    <com.app.DefocusableScrollView
         android:id="@+id/scroll"
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -106,6 +106,6 @@
             android:textColor="@android:color/white"
             android:textIsSelectable="true" />
 
-    </com.endiq.DefocusableScrollView>
+    </com.app.DefocusableScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -19,9 +19,9 @@ package org.jackhuang.hmcl.ui.versions;
 
 import static org.jackhuang.hmcl.util.Pair.pair;
 
-import com.endiq.turtlelauncher.feature.download.enums.Classify;
-import com.endiq.turtlelauncher.feature.log.Logging;
-import com.endiq.turtlelauncher.utils.stringutils.StringUtilsKt;
+import com.app.astralauncher.feature.download.enums.Classify;
+import com.app.astralauncher.feature.log.Logging;
+import com.app.astralauncher.utils.stringutils.StringUtilsKt;
 
 import net.endiq.launcher.Tools;
 

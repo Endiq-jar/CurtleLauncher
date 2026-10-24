@@ -1,5 +1,5 @@
-import com.endiq.turtlelauncher.launch.JvmArguments
-import com.endiq.turtlelauncher.launch.FrameBudget
+import com.app.astralauncher.launch.JvmArguments
+import com.app.astralauncher.launch.FrameBudget
 
 fun checkJvmArguments() {
     check(JvmArguments.parse("-Xmx2G-XX:+UseG1GC-Dfoo=bar") == listOf("-Xmx2G", "-XX:+UseG1GC", "-Dfoo=bar"))

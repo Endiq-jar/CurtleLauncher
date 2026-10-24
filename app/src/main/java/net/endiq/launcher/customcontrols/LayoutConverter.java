@@ -3,7 +3,7 @@ package net.endiq.launcher.customcontrols;
 import android.content.Context;
 
 import com.google.gson.JsonSyntaxException;
-import com.endiq.turtlelauncher.R;
+import com.app.astralauncher.R;
 
 import net.endiq.launcher.LwjglGlfwKeycode;
 import net.endiq.launcher.Tools;

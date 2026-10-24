@@ -16,8 +16,8 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.widget.SwitchCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.endiq.turtlelauncher.R;
-import com.endiq.turtlelauncher.ui.dialog.KeyboardDialog;
+import com.app.astralauncher.R;
+import com.app.astralauncher.ui.dialog.KeyboardDialog;
 
 import net.endiq.launcher.EfficientAndroidLWJGLKeycode;
 import net.endiq.launcher.GrabListener;

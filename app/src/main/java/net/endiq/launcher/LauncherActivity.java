@@ -1,6 +1,6 @@
 package net.endiq.launcher;
 
-import static com.endiq.turtlelauncher.launch.LaunchGame.preLaunch;
+import static com.app.astralauncher.launch.LaunchGame.preLaunch;
 import static net.endiq.launcher.Tools.currentDisplayMetrics;
 import android.Manifest;
 import android.app.NotificationManager;
@@ -23,67 +23,67 @@ import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.palette.graphics.Palette;
-import com.endiq.mcgui.ProgressLayout;
-import com.endiq.anim.AnimPlayer;
-import com.endiq.anim.animations.Animations;
-import com.endiq.turtlelauncher.InfoDistributor;
-import com.endiq.turtlelauncher.R;
-import com.endiq.turtlelauncher.context.ContextExecutor;
-import com.endiq.turtlelauncher.databinding.ActivityLauncherBinding;
-import com.endiq.turtlelauncher.event.single.LaunchGameEvent;
-import com.endiq.turtlelauncher.event.single.MainBackgroundChangeEvent;
-import com.endiq.turtlelauncher.event.single.PageOpacityChangeEvent;
-import com.endiq.turtlelauncher.event.single.SwapToLoginEvent;
-import com.endiq.turtlelauncher.event.sticky.MinecraftVersionValueEvent;
-import com.endiq.turtlelauncher.event.value.AddFragmentEvent;
-import com.endiq.turtlelauncher.event.value.DownloadProgressKeyEvent;
-import com.endiq.turtlelauncher.event.value.InstallGameEvent;
-import com.endiq.turtlelauncher.event.value.InstallLocalModpackEvent;
-import com.endiq.turtlelauncher.event.value.LocalLoginEvent;
-import com.endiq.turtlelauncher.event.value.MicrosoftLoginEvent;
-import com.endiq.turtlelauncher.event.value.OtherLoginEvent;
-import com.endiq.turtlelauncher.feature.accounts.AccountType;
-import com.endiq.turtlelauncher.feature.accounts.AccountsManager;
-import com.endiq.turtlelauncher.feature.accounts.LocalAccountUtils;
-import com.endiq.turtlelauncher.feature.background.BackgroundManager;
-import com.endiq.turtlelauncher.feature.background.BackgroundType;
-import com.endiq.turtlelauncher.feature.download.item.ModLoaderWrapper;
-import com.endiq.turtlelauncher.feature.log.Logging;
-import com.endiq.turtlelauncher.feature.mod.modpack.install.InstallExtra;
-import com.endiq.turtlelauncher.feature.mod.modpack.install.InstallLocalModPack;
-import com.endiq.turtlelauncher.feature.mod.modpack.install.ModPackInfo;
-import com.endiq.turtlelauncher.feature.mod.modpack.install.ModPackUtils;
-import com.endiq.turtlelauncher.feature.notice.CheckNewNotice;
-import com.endiq.turtlelauncher.feature.notice.NoticeInfo;
-import com.endiq.turtlelauncher.feature.update.UpdateUtils;
-import com.endiq.turtlelauncher.feature.version.Version;
-import com.endiq.turtlelauncher.feature.version.VersionsManager;
-import com.endiq.turtlelauncher.feature.version.install.GameInstaller;
-import com.endiq.turtlelauncher.feature.version.install.InstallTask;
-import com.endiq.turtlelauncher.plugins.renderer.RendererPlugin;
-import com.endiq.turtlelauncher.plugins.renderer.RendererPluginManager;
-import com.endiq.turtlelauncher.setting.AllSettings;
-import com.endiq.turtlelauncher.task.Task;
-import com.endiq.turtlelauncher.task.TaskExecutors;
-import com.endiq.turtlelauncher.ui.activity.BaseActivity;
-import com.endiq.turtlelauncher.ui.activity.ErrorActivity;
-import com.endiq.turtlelauncher.ui.dialog.EditTextDialog;
-import com.endiq.turtlelauncher.ui.dialog.TipDialog;
-import com.endiq.turtlelauncher.ui.fragment.AccountFragment;
-import com.endiq.turtlelauncher.ui.fragment.BaseFragment;
-import com.endiq.turtlelauncher.ui.fragment.DownloadFragment;
-import com.endiq.turtlelauncher.ui.fragment.DownloadModFragment;
-import com.endiq.turtlelauncher.ui.fragment.settings.SettingsFragment;
-import com.endiq.turtlelauncher.ui.subassembly.settingsbutton.ButtonType;
-import com.endiq.turtlelauncher.ui.subassembly.settingsbutton.SettingsButtonWrapper;
-import com.endiq.turtlelauncher.ui.subassembly.view.DraggableViewWrapper;
-import com.endiq.turtlelauncher.utils.StoragePermissionsUtils;
-import com.endiq.turtlelauncher.utils.ZHTools;
-import com.endiq.turtlelauncher.utils.anim.ViewAnimUtils;
-import com.endiq.turtlelauncher.utils.file.FileTools;
-import com.endiq.turtlelauncher.utils.image.ImageUtils;
-import com.endiq.turtlelauncher.utils.stringutils.ShiftDirection;
-import com.endiq.turtlelauncher.utils.stringutils.StringUtils;
+import com.app.mcgui.ProgressLayout;
+import com.app.anim.AnimPlayer;
+import com.app.anim.animations.Animations;
+import com.app.astralauncher.InfoDistributor;
+import com.app.astralauncher.R;
+import com.app.astralauncher.context.ContextExecutor;
+import com.app.astralauncher.databinding.ActivityLauncherBinding;
+import com.app.astralauncher.event.single.LaunchGameEvent;
+import com.app.astralauncher.event.single.MainBackgroundChangeEvent;
+import com.app.astralauncher.event.single.PageOpacityChangeEvent;
+import com.app.astralauncher.event.single.SwapToLoginEvent;
+import com.app.astralauncher.event.sticky.MinecraftVersionValueEvent;
+import com.app.astralauncher.event.value.AddFragmentEvent;
+import com.app.astralauncher.event.value.DownloadProgressKeyEvent;
+import com.app.astralauncher.event.value.InstallGameEvent;
+import com.app.astralauncher.event.value.InstallLocalModpackEvent;
+import com.app.astralauncher.event.value.LocalLoginEvent;
+import com.app.astralauncher.event.value.MicrosoftLoginEvent;
+import com.app.astralauncher.event.value.OtherLoginEvent;
+import com.app.astralauncher.feature.accounts.AccountType;
+import com.app.astralauncher.feature.accounts.AccountsManager;
+import com.app.astralauncher.feature.accounts.LocalAccountUtils;
+import com.app.astralauncher.feature.background.BackgroundManager;
+import com.app.astralauncher.feature.background.BackgroundType;
+import com.app.astralauncher.feature.download.item.ModLoaderWrapper;
+import com.app.astralauncher.feature.log.Logging;
+import com.app.astralauncher.feature.mod.modpack.install.InstallExtra;
+import com.app.astralauncher.feature.mod.modpack.install.InstallLocalModPack;
+import com.app.astralauncher.feature.mod.modpack.install.ModPackInfo;
+import com.app.astralauncher.feature.mod.modpack.install.ModPackUtils;
+import com.app.astralauncher.feature.notice.CheckNewNotice;
+import com.app.astralauncher.feature.notice.NoticeInfo;
+import com.app.astralauncher.feature.update.UpdateUtils;
+import com.app.astralauncher.feature.version.Version;
+import com.app.astralauncher.feature.version.VersionsManager;
+import com.app.astralauncher.feature.version.install.GameInstaller;
+import com.app.astralauncher.feature.version.install.InstallTask;
+import com.app.astralauncher.plugins.renderer.RendererPlugin;
+import com.app.astralauncher.plugins.renderer.RendererPluginManager;
+import com.app.astralauncher.setting.AllSettings;
+import com.app.astralauncher.task.Task;
+import com.app.astralauncher.task.TaskExecutors;
+import com.app.astralauncher.ui.activity.BaseActivity;
+import com.app.astralauncher.ui.activity.ErrorActivity;
+import com.app.astralauncher.ui.dialog.EditTextDialog;
+import com.app.astralauncher.ui.dialog.TipDialog;
+import com.app.astralauncher.ui.fragment.AccountFragment;
+import com.app.astralauncher.ui.fragment.BaseFragment;
+import com.app.astralauncher.ui.fragment.DownloadFragment;
+import com.app.astralauncher.ui.fragment.DownloadModFragment;
+import com.app.astralauncher.ui.fragment.settings.SettingsFragment;
+import com.app.astralauncher.ui.subassembly.settingsbutton.ButtonType;
+import com.app.astralauncher.ui.subassembly.settingsbutton.SettingsButtonWrapper;
+import com.app.astralauncher.ui.subassembly.view.DraggableViewWrapper;
+import com.app.astralauncher.utils.StoragePermissionsUtils;
+import com.app.astralauncher.utils.ZHTools;
+import com.app.astralauncher.utils.anim.ViewAnimUtils;
+import com.app.astralauncher.utils.file.FileTools;
+import com.app.astralauncher.utils.image.ImageUtils;
+import com.app.astralauncher.utils.stringutils.ShiftDirection;
+import com.app.astralauncher.utils.stringutils.StringUtils;
 import net.endiq.launcher.authenticator.microsoft.MicrosoftBackgroundLogin;
 import net.endiq.launcher.contracts.OpenDocumentWithExtension;
 import net.endiq.launcher.fragments.MainMenuFragment;
@@ -366,7 +366,7 @@ public class LauncherActivity extends BaseActivity {
         // Startup/background music (see the Music screen's "Enable Startup Music" +
         // playback scope). Gated internally on AllSettings.musicEnabled and a track
         // actually being set, so this is a no-op otherwise.
-        com.endiq.turtlelauncher.feature.music.MusicManager.INSTANCE.onLauncherStarted();
+        com.app.astralauncher.feature.music.MusicManager.INSTANCE.onLauncherStarted();
 
         // Show What's New dialog on first launch of this version
         //showWhatsNewIfNeeded();
@@ -428,15 +428,15 @@ public class LauncherActivity extends BaseActivity {
             if (sharedLogPath != null || sharedAudioPath != null) {
                 bundle = new Bundle();
                 if (sharedLogPath != null) {
-                    bundle.putString(com.endiq.turtlelauncher.ui.fragment.AiChatFragment.ARG_SHARED_LOG_PATH, sharedLogPath);
+                    bundle.putString(com.app.astralauncher.ui.fragment.AiChatFragment.ARG_SHARED_LOG_PATH, sharedLogPath);
                 }
                 if (sharedAudioPath != null) {
-                    bundle.putString(com.endiq.turtlelauncher.ui.fragment.AiChatFragment.ARG_SHARED_AUDIO_PATH, sharedAudioPath);
+                    bundle.putString(com.app.astralauncher.ui.fragment.AiChatFragment.ARG_SHARED_AUDIO_PATH, sharedAudioPath);
                 }
             }
             ZHTools.swapFragmentWithAnim(currentFragment,
-                com.endiq.turtlelauncher.ui.fragment.AiChatFragment.class,
-                com.endiq.turtlelauncher.ui.fragment.AiChatFragment.TAG, bundle);
+                com.app.astralauncher.ui.fragment.AiChatFragment.class,
+                com.app.astralauncher.ui.fragment.AiChatFragment.TAG, bundle);
         });
     }
 
@@ -490,11 +490,11 @@ public class LauncherActivity extends BaseActivity {
                 if (storageFragment != null) {
                     ViewAnimUtils.setViewAnim(binding.storageButton, Animations.Pulse);
                     Bundle bundle = new Bundle();
-                    bundle.putString(com.endiq.turtlelauncher.ui.fragment.FilesFragment.BUNDLE_LIST_PATH,
-                        com.endiq.turtlelauncher.utils.path.PathManager.DIR_GAME_HOME);
+                    bundle.putString(com.app.astralauncher.ui.fragment.FilesFragment.BUNDLE_LIST_PATH,
+                        com.app.astralauncher.utils.path.PathManager.DIR_GAME_HOME);
                     ZHTools.swapFragmentWithAnim(storageFragment,
-                        com.endiq.turtlelauncher.ui.fragment.FilesFragment.class,
-                        com.endiq.turtlelauncher.ui.fragment.FilesFragment.TAG, bundle);
+                        com.app.astralauncher.ui.fragment.FilesFragment.class,
+                        com.app.astralauncher.ui.fragment.FilesFragment.TAG, bundle);
                 }
             });
         }
@@ -570,15 +570,15 @@ public class LauncherActivity extends BaseActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        com.endiq.turtlelauncher.plugins.PluginLoader.rescanIfPluginsChanged(this);
-        com.endiq.turtlelauncher.utils.anim.TurtleTransitions.onResume();
-        com.endiq.turtlelauncher.task.TaskExecutors.setGameSessionActive(false);
-        com.endiq.turtlelauncher.feature.turtle.BackgroundServiceManager.onGameSessionEnd();
+        com.app.astralauncher.plugins.PluginLoader.rescanIfPluginsChanged(this);
+        com.app.astralauncher.utils.anim.AstraTransitions.onResume();
+        com.app.astralauncher.task.TaskExecutors.setGameSessionActive(false);
+        com.app.astralauncher.feature.astra.BackgroundServiceManager.onGameSessionEnd();
         setPageOpacity(AllSettings.getPageOpacity().getValue());
         VersionsManager.INSTANCE.refresh("LauncherActivity:onResume", false);
-        com.endiq.turtlelauncher.feature.turtle.AssetPrefetcher.prefetch(this);
-        com.endiq.turtlelauncher.feature.turtle.LauncherWarmStart.warmStart(this);
-        com.endiq.turtlelauncher.feature.maintenance.AutoCleanup.runIfDue();
+        com.app.astralauncher.feature.astra.AssetPrefetcher.prefetch(this);
+        com.app.astralauncher.feature.astra.LauncherWarmStart.warmStart(this);
+        com.app.astralauncher.feature.maintenance.AutoCleanup.runIfDue();
 
         Task.runTask(() -> {
             UpdateUtils.checkDownloadedPackage(this, false, true);
@@ -595,8 +595,8 @@ public class LauncherActivity extends BaseActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == com.endiq.turtlelauncher.feature.terracotta.TerracottaVpnService.VPN_PERMISSION_REQUEST_CODE) {
-            com.endiq.turtlelauncher.feature.terracotta.Terracotta.onVpnPermissionResult(this, resultCode == RESULT_OK);
+        if (requestCode == com.app.astralauncher.feature.terracotta.TerracottaVpnService.VPN_PERMISSION_REQUEST_CODE) {
+            com.app.astralauncher.feature.terracotta.Terracotta.onVpnPermissionResult(this, resultCode == RESULT_OK);
         }
     }
 
@@ -618,7 +618,7 @@ public class LauncherActivity extends BaseActivity {
 
     private void launchGame(Version version) {
         // Stop launcher music unless the scope is set to keep playing into the game too.
-        com.endiq.turtlelauncher.feature.music.MusicManager.INSTANCE.onGameLaunching();
+        com.app.astralauncher.feature.music.MusicManager.INSTANCE.onGameLaunching();
         LocalAccountUtils.checkUsageAllowed(new LocalAccountUtils.CheckResultListener() {
             @Override
             public void onUsageAllowed() {
@@ -805,7 +805,7 @@ public class LauncherActivity extends BaseActivity {
         String shownVersion = AllSettings.getWhatsNewShownVersion().getValue();
         if (!CURRENT_VERSION.equals(shownVersion)) {
             AllSettings.getWhatsNewShownVersion().put(CURRENT_VERSION).save();
-            new com.endiq.turtlelauncher.ui.dialog.WhatsNewDialog(this).show();
+            new com.app.astralauncher.ui.dialog.WhatsNewDialog(this).show();
         }
     }
 }

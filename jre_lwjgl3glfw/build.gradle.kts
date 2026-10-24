@@ -8,7 +8,7 @@ tasks.jar {
     duplicatesStrategy = DuplicatesStrategy.EXCLUDE
     archiveBaseName.set("lwjgl-glfw-classes")
     destinationDirectory.set(file("../app/src/main/assets/components/lwjgl3/"))
-    // Auto update the version with a timestamp so the project jar gets updated by Turtle
+    // Auto update the version with a timestamp so the project jar gets updated by Astra
     doLast {
         val versionFile = file("../app/src/main/assets/components/lwjgl3/version")
         versionFile.writeText(System.currentTimeMillis().toString())
@@ -45,7 +45,7 @@ val compileFileDialogBridge by tasks.registering(JavaCompile::class) {
 }
 val fileDialogBridgeJar by tasks.registering(Jar::class) {
     dependsOn(compileFileDialogBridge)
-    archiveFileName.set("turtle-filedialogs.jar")
+    archiveFileName.set("astra-filedialogs.jar")
     destinationDirectory.set(file("../app/src/main/assets/components/lwjgl3/"))
     from(compileFileDialogBridge.flatMap { it.destinationDirectory })
     doLast {

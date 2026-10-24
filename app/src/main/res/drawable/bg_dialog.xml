@@ -4,14 +4,14 @@
     <item>
         <shape android:shape="rectangle">
             <corners android:radius="24dp" />
-            <solid android:color="@color/turtle_surface" />
+            <solid android:color="@color/astra_surface" />
         </shape>
     </item>
     <!-- Outer glowing accent stroke -->
     <item>
         <shape android:shape="rectangle">
             <corners android:radius="24dp" />
-            <stroke android:width="1dp" android:color="@color/turtle_stroke" />
+            <stroke android:width="1dp" android:color="@color/astra_stroke" />
         </shape>
     </item>
 </layer-list>

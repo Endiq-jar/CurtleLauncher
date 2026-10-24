@@ -84,7 +84,7 @@ for key, value in old_methods.items():
 with tempfile.TemporaryDirectory() as temporary:
     directory = Path(temporary)
     patcher.build(source, directory)
-    with zipfile.ZipFile(directory / 'turtle-performance.jar') as overlay:
+    with zipfile.ZipFile(directory / 'astra-performance.jar') as overlay:
         assert overlay.namelist() == ['org/lwjgl/glfw/GLFW.class']
         assert overlay.read(overlay.namelist()[0]) == updated
     assert (directory / 'version').read_text().strip() == hashlib.sha256(updated).hexdigest()

@@ -39,7 +39,7 @@
                 android:background="@drawable/background_item"
                 android:paddingVertical="@dimen/_8sdp"
                 android:paddingHorizontal="@dimen/_12sdp"
-                android:textColor="@color/turtle_primary_text"
+                android:textColor="@color/astra_primary_text"
                 android:textStyle="bold"
                 android:clickable="true"
                 android:focusable="true"
@@ -53,7 +53,7 @@
                 android:background="@drawable/background_item"
                 android:paddingVertical="@dimen/_8sdp"
                 android:paddingHorizontal="@dimen/_12sdp"
-                android:textColor="@color/turtle_primary_text"
+                android:textColor="@color/astra_primary_text"
                 android:clickable="true"
                 android:focusable="true"
                 android:text="@string/option_category_recording"/>
@@ -66,7 +66,7 @@
                 android:background="@drawable/background_item"
                 android:paddingVertical="@dimen/_8sdp"
                 android:paddingHorizontal="@dimen/_12sdp"
-                android:textColor="@color/turtle_primary_text"
+                android:textColor="@color/astra_primary_text"
                 android:clickable="true"
                 android:focusable="true"
                 android:text="@string/option_category_control"/>
@@ -79,7 +79,7 @@
                 android:background="@drawable/background_item"
                 android:paddingVertical="@dimen/_8sdp"
                 android:paddingHorizontal="@dimen/_12sdp"
-                android:textColor="@color/turtle_primary_text"
+                android:textColor="@color/astra_primary_text"
                 android:clickable="true"
                 android:focusable="true"
                 android:text="@string/option_category_hotbar"/>
@@ -109,7 +109,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
-                android:textColor="@color/turtle_primary_text"
+                android:textColor="@color/astra_primary_text"
                 android:text="@string/option_category_debug"/>
 
             <View
@@ -117,7 +117,7 @@
                 android:layout_height="@dimen/_1sdp"
                 android:background="@color/game_panel_overlay"/>
 
-            <com.endiq.turtlelauncher.ui.view.AnimTextView
+            <com.app.astralauncher.ui.view.AnimTextView
                 android:id="@+id/force_close"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -129,7 +129,7 @@
                 android:paddingHorizontal="@dimen/_8sdp"
                 app:ripple_for_text="true"/>
 
-            <com.endiq.turtlelauncher.ui.view.AnimTextView
+            <com.app.astralauncher.ui.view.AnimTextView
                 android:id="@+id/log_output"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -141,7 +141,7 @@
                 android:paddingHorizontal="@dimen/_8sdp"
                 app:ripple_for_text="true"/>
 
-            <com.endiq.turtlelauncher.ui.view.AnimTextView
+            <com.app.astralauncher.ui.view.AnimTextView
                 android:id="@+id/send_custom_key"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -164,7 +164,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_8sdp"
                 android:textStyle="bold"
-                android:textColor="@color/turtle_primary_text"
+                android:textColor="@color/astra_primary_text"
                 android:text="@string/setting_dark_mode_title"/>
 
             <View
@@ -172,7 +172,7 @@
                 android:layout_height="@dimen/_1sdp"
                 android:background="@color/game_panel_overlay"/>
 
-            <com.endiq.turtlelauncher.ui.layout.AnimRelativeLayout
+            <com.app.astralauncher.ui.layout.AnimRelativeLayout
                 android:id="@+id/dark_mode_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -190,15 +190,15 @@
                     android:layout_marginEnd="@dimen/_8sdp"
                     android:layout_toStartOf="@+id/dark_mode"
                     android:text="@string/setting_dark_mode_title"
-                    android:textColor="@color/turtle_primary_text" />
+                    android:textColor="@color/astra_primary_text" />
 
-                <com.endiq.turtlelauncher.ui.miuix.MiuixSwitch
+                <com.app.astralauncher.ui.miuix.MiuixSwitch
                     android:id="@+id/dark_mode"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true" />
-            </com.endiq.turtlelauncher.ui.layout.AnimRelativeLayout>
+            </com.app.astralauncher.ui.layout.AnimRelativeLayout>
 
             </LinearLayout>
 
@@ -214,7 +214,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_8sdp"
                 android:textStyle="bold"
-                android:textColor="@color/turtle_primary_text"
+                android:textColor="@color/astra_primary_text"
                 android:text="@string/option_category_recording"/>
 
             <View
@@ -222,7 +222,7 @@
                 android:layout_height="@dimen/_1sdp"
                 android:background="@color/game_panel_overlay"/>
 
-            <com.endiq.turtlelauncher.ui.view.AnimTextView
+            <com.app.astralauncher.ui.view.AnimTextView
                 android:id="@+id/start_recording"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -234,7 +234,7 @@
                 android:paddingHorizontal="@dimen/_8sdp"
                 app:ripple_for_text="true"/>
 
-            <com.endiq.turtlelauncher.ui.view.AnimTextView
+            <com.app.astralauncher.ui.view.AnimTextView
                 android:id="@+id/stop_recording"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -253,7 +253,7 @@
                 android:layout_marginTop="@dimen/_8sdp"
                 android:background="@color/game_panel_overlay"/>
 
-            <com.endiq.turtlelauncher.ui.layout.AnimRelativeLayout
+            <com.app.astralauncher.ui.layout.AnimRelativeLayout
                 android:id="@+id/open_memory_info_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -271,17 +271,17 @@
                     android:layout_marginEnd="@dimen/_8sdp"
                     android:layout_toStartOf="@+id/open_memory_info"
                     android:text="@string/setting_game_menu_show_memory_title"
-                    android:textColor="@color/turtle_primary_text" />
+                    android:textColor="@color/astra_primary_text" />
 
-                <com.endiq.turtlelauncher.ui.miuix.MiuixSwitch
+                <com.app.astralauncher.ui.miuix.MiuixSwitch
                     android:id="@+id/open_memory_info"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true" />
-            </com.endiq.turtlelauncher.ui.layout.AnimRelativeLayout>
+            </com.app.astralauncher.ui.layout.AnimRelativeLayout>
 
-            <com.endiq.turtlelauncher.ui.layout.AnimRelativeLayout
+            <com.app.astralauncher.ui.layout.AnimRelativeLayout
                 android:id="@+id/open_fps_info_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -299,22 +299,22 @@
                     android:layout_marginEnd="@dimen/_8sdp"
                     android:layout_toStartOf="@+id/open_fps_info"
                     android:text="@string/setting_game_menu_show_fps_title"
-                    android:textColor="@color/turtle_primary_text" />
+                    android:textColor="@color/astra_primary_text" />
 
-                <com.endiq.turtlelauncher.ui.miuix.MiuixSwitch
+                <com.app.astralauncher.ui.miuix.MiuixSwitch
                     android:id="@+id/open_fps_info"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true" />
-            </com.endiq.turtlelauncher.ui.layout.AnimRelativeLayout>
+            </com.app.astralauncher.ui.layout.AnimRelativeLayout>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_12sdp"
                 android:textStyle="bold"
-                android:textColor="@color/turtle_primary_text"
+                android:textColor="@color/astra_primary_text"
                 android:text="@string/setting_category_hud_modules"/>
 
             <View
@@ -322,7 +322,7 @@
                 android:layout_height="@dimen/_1sdp"
                 android:background="@color/game_panel_overlay"/>
 
-            <com.endiq.turtlelauncher.ui.layout.AnimRelativeLayout
+            <com.app.astralauncher.ui.layout.AnimRelativeLayout
                 android:id="@+id/show_cps_hud_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -340,17 +340,17 @@
                     android:layout_marginEnd="@dimen/_8sdp"
                     android:layout_toStartOf="@+id/show_cps_hud"
                     android:text="@string/setting_hud_cps_title"
-                    android:textColor="@color/turtle_primary_text" />
+                    android:textColor="@color/astra_primary_text" />
 
-                <com.endiq.turtlelauncher.ui.miuix.MiuixSwitch
+                <com.app.astralauncher.ui.miuix.MiuixSwitch
                     android:id="@+id/show_cps_hud"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true" />
-            </com.endiq.turtlelauncher.ui.layout.AnimRelativeLayout>
+            </com.app.astralauncher.ui.layout.AnimRelativeLayout>
 
-            <com.endiq.turtlelauncher.ui.layout.AnimRelativeLayout
+            <com.app.astralauncher.ui.layout.AnimRelativeLayout
                 android:id="@+id/show_keystrokes_hud_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -368,17 +368,17 @@
                     android:layout_marginEnd="@dimen/_8sdp"
                     android:layout_toStartOf="@+id/show_keystrokes_hud"
                     android:text="@string/setting_hud_keystrokes_title"
-                    android:textColor="@color/turtle_primary_text" />
+                    android:textColor="@color/astra_primary_text" />
 
-                <com.endiq.turtlelauncher.ui.miuix.MiuixSwitch
+                <com.app.astralauncher.ui.miuix.MiuixSwitch
                     android:id="@+id/show_keystrokes_hud"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true" />
-            </com.endiq.turtlelauncher.ui.layout.AnimRelativeLayout>
+            </com.app.astralauncher.ui.layout.AnimRelativeLayout>
 
-            <com.endiq.turtlelauncher.ui.layout.AnimRelativeLayout
+            <com.app.astralauncher.ui.layout.AnimRelativeLayout
                 android:id="@+id/show_mousestrokes_hud_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -396,17 +396,17 @@
                     android:layout_marginEnd="@dimen/_8sdp"
                     android:layout_toStartOf="@+id/show_mousestrokes_hud"
                     android:text="@string/setting_hud_mousestrokes_title"
-                    android:textColor="@color/turtle_primary_text" />
+                    android:textColor="@color/astra_primary_text" />
 
-                <com.endiq.turtlelauncher.ui.miuix.MiuixSwitch
+                <com.app.astralauncher.ui.miuix.MiuixSwitch
                     android:id="@+id/show_mousestrokes_hud"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true" />
-            </com.endiq.turtlelauncher.ui.layout.AnimRelativeLayout>
+            </com.app.astralauncher.ui.layout.AnimRelativeLayout>
 
-            <com.endiq.turtlelauncher.ui.layout.AnimRelativeLayout
+            <com.app.astralauncher.ui.layout.AnimRelativeLayout
                 android:id="@+id/show_stopwatch_hud_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -424,17 +424,17 @@
                     android:layout_marginEnd="@dimen/_8sdp"
                     android:layout_toStartOf="@+id/show_stopwatch_hud"
                     android:text="@string/setting_hud_stopwatch_title"
-                    android:textColor="@color/turtle_primary_text" />
+                    android:textColor="@color/astra_primary_text" />
 
-                <com.endiq.turtlelauncher.ui.miuix.MiuixSwitch
+                <com.app.astralauncher.ui.miuix.MiuixSwitch
                     android:id="@+id/show_stopwatch_hud"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true" />
-            </com.endiq.turtlelauncher.ui.layout.AnimRelativeLayout>
+            </com.app.astralauncher.ui.layout.AnimRelativeLayout>
 
-            <com.endiq.turtlelauncher.ui.layout.AnimRelativeLayout
+            <com.app.astralauncher.ui.layout.AnimRelativeLayout
                 android:id="@+id/show_playtime_hud_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -452,17 +452,17 @@
                     android:layout_marginEnd="@dimen/_8sdp"
                     android:layout_toStartOf="@+id/show_playtime_hud"
                     android:text="@string/setting_hud_playtime_title"
-                    android:textColor="@color/turtle_primary_text" />
+                    android:textColor="@color/astra_primary_text" />
 
-                <com.endiq.turtlelauncher.ui.miuix.MiuixSwitch
+                <com.app.astralauncher.ui.miuix.MiuixSwitch
                     android:id="@+id/show_playtime_hud"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true" />
-            </com.endiq.turtlelauncher.ui.layout.AnimRelativeLayout>
+            </com.app.astralauncher.ui.layout.AnimRelativeLayout>
 
-            <com.endiq.turtlelauncher.ui.layout.AnimRelativeLayout
+            <com.app.astralauncher.ui.layout.AnimRelativeLayout
                 android:id="@+id/show_system_resources_hud_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -480,17 +480,17 @@
                     android:layout_marginEnd="@dimen/_8sdp"
                     android:layout_toStartOf="@+id/show_system_resources_hud"
                     android:text="@string/setting_hud_system_resources_title"
-                    android:textColor="@color/turtle_primary_text" />
+                    android:textColor="@color/astra_primary_text" />
 
-                <com.endiq.turtlelauncher.ui.miuix.MiuixSwitch
+                <com.app.astralauncher.ui.miuix.MiuixSwitch
                     android:id="@+id/show_system_resources_hud"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true" />
-            </com.endiq.turtlelauncher.ui.layout.AnimRelativeLayout>
+            </com.app.astralauncher.ui.layout.AnimRelativeLayout>
 
-            <com.endiq.turtlelauncher.ui.layout.AnimRelativeLayout
+            <com.app.astralauncher.ui.layout.AnimRelativeLayout
                 android:id="@+id/show_time_hud_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -508,17 +508,17 @@
                     android:layout_marginEnd="@dimen/_8sdp"
                     android:layout_toStartOf="@+id/show_time_hud"
                     android:text="@string/setting_hud_time_title"
-                    android:textColor="@color/turtle_primary_text" />
+                    android:textColor="@color/astra_primary_text" />
 
-                <com.endiq.turtlelauncher.ui.miuix.MiuixSwitch
+                <com.app.astralauncher.ui.miuix.MiuixSwitch
                     android:id="@+id/show_time_hud"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true" />
-            </com.endiq.turtlelauncher.ui.layout.AnimRelativeLayout>
+            </com.app.astralauncher.ui.layout.AnimRelativeLayout>
 
-            <com.endiq.turtlelauncher.ui.layout.AnimRelativeLayout
+            <com.app.astralauncher.ui.layout.AnimRelativeLayout
                 android:id="@+id/show_ram_graph_hud_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -536,17 +536,17 @@
                     android:layout_marginEnd="@dimen/_8sdp"
                     android:layout_toStartOf="@+id/show_ram_graph_hud"
                     android:text="@string/setting_hud_ram_graph_title"
-                    android:textColor="@color/turtle_primary_text" />
+                    android:textColor="@color/astra_primary_text" />
 
-                <com.endiq.turtlelauncher.ui.miuix.MiuixSwitch
+                <com.app.astralauncher.ui.miuix.MiuixSwitch
                     android:id="@+id/show_ram_graph_hud"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true" />
-            </com.endiq.turtlelauncher.ui.layout.AnimRelativeLayout>
+            </com.app.astralauncher.ui.layout.AnimRelativeLayout>
 
-            <com.endiq.turtlelauncher.ui.layout.AnimRelativeLayout
+            <com.app.astralauncher.ui.layout.AnimRelativeLayout
                 android:id="@+id/show_ping_hud_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -564,17 +564,17 @@
                     android:layout_marginEnd="@dimen/_8sdp"
                     android:layout_toStartOf="@+id/show_ping_hud"
                     android:text="@string/setting_hud_ping_title"
-                    android:textColor="@color/turtle_primary_text" />
+                    android:textColor="@color/astra_primary_text" />
 
-                <com.endiq.turtlelauncher.ui.miuix.MiuixSwitch
+                <com.app.astralauncher.ui.miuix.MiuixSwitch
                     android:id="@+id/show_ping_hud"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true" />
-            </com.endiq.turtlelauncher.ui.layout.AnimRelativeLayout>
+            </com.app.astralauncher.ui.layout.AnimRelativeLayout>
 
-            <com.endiq.turtlelauncher.ui.layout.AnimRelativeLayout
+            <com.app.astralauncher.ui.layout.AnimRelativeLayout
                 android:id="@+id/show_screenshot_button_hud_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -592,15 +592,15 @@
                     android:layout_marginEnd="@dimen/_8sdp"
                     android:layout_toStartOf="@+id/show_screenshot_button_hud"
                     android:text="@string/setting_hud_screenshot_button_title"
-                    android:textColor="@color/turtle_primary_text" />
+                    android:textColor="@color/astra_primary_text" />
 
-                <com.endiq.turtlelauncher.ui.miuix.MiuixSwitch
+                <com.app.astralauncher.ui.miuix.MiuixSwitch
                     android:id="@+id/show_screenshot_button_hud"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true" />
-            </com.endiq.turtlelauncher.ui.layout.AnimRelativeLayout>
+            </com.app.astralauncher.ui.layout.AnimRelativeLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/resolution_scaler_layout"
@@ -647,7 +647,7 @@
                         android:textSize="@dimen/_16sdp"
                         tools:ignore="HardcodedText" />
 
-                    <com.endiq.turtlelauncher.ui.miuix.MiuixSlider
+                    <com.app.astralauncher.ui.miuix.MiuixSlider
                         android:id="@+id/resolution_scaler"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -699,7 +699,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_12sdp"
                 android:textStyle="bold"
-                android:textColor="@color/turtle_primary_text"
+                android:textColor="@color/astra_primary_text"
                 android:text="@string/option_category_control"/>
 
             <View
@@ -707,7 +707,7 @@
                 android:layout_height="@dimen/_1sdp"
                 android:background="@color/game_panel_overlay"/>
 
-            <com.endiq.turtlelauncher.ui.layout.AnimRelativeLayout
+            <com.app.astralauncher.ui.layout.AnimRelativeLayout
                 android:id="@+id/disableGestures_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -725,17 +725,17 @@
                     android:layout_marginEnd="@dimen/_8sdp"
                     android:layout_toStartOf="@+id/disableGestures"
                     android:text="@string/setting_disable_gestures_title"
-                    android:textColor="@color/turtle_primary_text" />
+                    android:textColor="@color/astra_primary_text" />
 
-                <com.endiq.turtlelauncher.ui.miuix.MiuixSwitch
+                <com.app.astralauncher.ui.miuix.MiuixSwitch
                     android:id="@+id/disableGestures"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true" />
-            </com.endiq.turtlelauncher.ui.layout.AnimRelativeLayout>
+            </com.app.astralauncher.ui.layout.AnimRelativeLayout>
 
-            <com.endiq.turtlelauncher.ui.layout.AnimRelativeLayout
+            <com.app.astralauncher.ui.layout.AnimRelativeLayout
                 android:id="@+id/disableDoubleTap_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -753,19 +753,19 @@
                     android:layout_marginEnd="@dimen/_8sdp"
                     android:layout_toStartOf="@+id/disableDoubleTap"
                     android:text="@string/setting_disable_swap_hand_title"
-                    android:textColor="@color/turtle_primary_text" />
+                    android:textColor="@color/astra_primary_text" />
 
-                <com.endiq.turtlelauncher.ui.miuix.MiuixSwitch
+                <com.app.astralauncher.ui.miuix.MiuixSwitch
                     android:id="@+id/disableDoubleTap"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true" />
-            </com.endiq.turtlelauncher.ui.layout.AnimRelativeLayout>
+            </com.app.astralauncher.ui.layout.AnimRelativeLayout>
 
-            <!-- TurtleLauncher Control Switcher: turns the in-game layout-swap button
+            <!-- AstraLauncher Control Switcher: turns the in-game layout-swap button
                  (activity_game.xml -> control_switcher_button) on and off. -->
-            <com.endiq.turtlelauncher.ui.layout.AnimRelativeLayout
+            <com.app.astralauncher.ui.layout.AnimRelativeLayout
                 android:id="@+id/controlSwitcher_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -783,22 +783,22 @@
                     android:layout_marginEnd="@dimen/_8sdp"
                     android:layout_toStartOf="@+id/controlSwitcher"
                     android:text="@string/setting_control_switcher_title"
-                    android:textColor="@color/turtle_primary_text" />
+                    android:textColor="@color/astra_primary_text" />
 
-                <com.endiq.turtlelauncher.ui.miuix.MiuixSwitch
+                <com.app.astralauncher.ui.miuix.MiuixSwitch
                     android:id="@+id/controlSwitcher"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true" />
-            </com.endiq.turtlelauncher.ui.layout.AnimRelativeLayout>
+            </com.app.astralauncher.ui.layout.AnimRelativeLayout>
 
-            <!-- TurtleLauncher Emotes: master toggle for the two emote actions below.
+            <!-- AstraLauncher Emotes: master toggle for the two emote actions below.
                  The wheel button sends AllSettings.emoteWheelKeycode to the game
                  (default B = Emotecraft's default emote-wheel keybind); the website
                  button opens the community emote library (emotes.kosmx.dev) in the
                  browser. Settings -> Emotes has the full download screen. -->
-            <com.endiq.turtlelauncher.ui.layout.AnimRelativeLayout
+            <com.app.astralauncher.ui.layout.AnimRelativeLayout
                 android:id="@+id/emotes_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -816,17 +816,17 @@
                     android:layout_marginEnd="@dimen/_8sdp"
                     android:layout_toStartOf="@+id/emotes"
                     android:text="@string/setting_emotes_enabled_title"
-                    android:textColor="@color/turtle_primary_text" />
+                    android:textColor="@color/astra_primary_text" />
 
-                <com.endiq.turtlelauncher.ui.miuix.MiuixSwitch
+                <com.app.astralauncher.ui.miuix.MiuixSwitch
                     android:id="@+id/emotes"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true" />
-            </com.endiq.turtlelauncher.ui.layout.AnimRelativeLayout>
+            </com.app.astralauncher.ui.layout.AnimRelativeLayout>
 
-            <com.endiq.turtlelauncher.ui.view.AnimTextView
+            <com.app.astralauncher.ui.view.AnimTextView
                 android:id="@+id/emote_wheel_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -838,7 +838,7 @@
                 android:paddingHorizontal="@dimen/_8sdp"
                 app:ripple_for_text="true"/>
 
-            <com.endiq.turtlelauncher.ui.view.AnimTextView
+            <com.app.astralauncher.ui.view.AnimTextView
                 android:id="@+id/emote_site_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -880,7 +880,7 @@
                         android:textSize="@dimen/_16sdp"
                         tools:ignore="HardcodedText" />
 
-                    <com.endiq.turtlelauncher.ui.miuix.MiuixSlider
+                    <com.app.astralauncher.ui.miuix.MiuixSlider
                         android:id="@+id/timeLongPressTrigger"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -948,7 +948,7 @@
                         android:textSize="@dimen/_16sdp"
                         tools:ignore="HardcodedText" />
 
-                    <com.endiq.turtlelauncher.ui.miuix.MiuixSlider
+                    <com.app.astralauncher.ui.miuix.MiuixSlider
                         android:id="@+id/mouse_speed"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -986,7 +986,7 @@
 
             </LinearLayout>
 
-            <com.endiq.turtlelauncher.ui.view.AnimTextView
+            <com.app.astralauncher.ui.view.AnimTextView
                 android:id="@+id/custom_mouse"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -998,7 +998,7 @@
                 android:paddingHorizontal="@dimen/_8sdp"
                 app:ripple_for_text="true"/>
 
-            <com.endiq.turtlelauncher.ui.view.AnimTextView
+            <com.app.astralauncher.ui.view.AnimTextView
                 android:id="@+id/replacement_customcontrol"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -1010,7 +1010,7 @@
                 android:paddingHorizontal="@dimen/_8sdp"
                 app:ripple_for_text="true"/>
 
-            <com.endiq.turtlelauncher.ui.view.AnimTextView
+            <com.app.astralauncher.ui.view.AnimTextView
                 android:id="@+id/edit_control"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -1027,7 +1027,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_12sdp"
                 android:textStyle="bold"
-                android:textColor="@color/turtle_primary_text"
+                android:textColor="@color/astra_primary_text"
                 android:text="@string/setting_category_gyro_controls"/>
 
             <View
@@ -1036,7 +1036,7 @@
                 android:textStyle="bold"
                 android:background="@color/game_panel_overlay"/>
 
-            <com.endiq.turtlelauncher.ui.layout.AnimRelativeLayout
+            <com.app.astralauncher.ui.layout.AnimRelativeLayout
                 android:id="@+id/enableGyro_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -1054,15 +1054,15 @@
                     android:layout_marginEnd="@dimen/_8sdp"
                     android:layout_toStartOf="@+id/enableGyro"
                     android:text="@string/setting_enable_gyro_title"
-                    android:textColor="@color/turtle_primary_text" />
+                    android:textColor="@color/astra_primary_text" />
 
-                <com.endiq.turtlelauncher.ui.miuix.MiuixSwitch
+                <com.app.astralauncher.ui.miuix.MiuixSwitch
                     android:id="@+id/enableGyro"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true" />
-            </com.endiq.turtlelauncher.ui.layout.AnimRelativeLayout>
+            </com.app.astralauncher.ui.layout.AnimRelativeLayout>
 
             <LinearLayout
                 android:id="@+id/gyro_layout"
@@ -1100,7 +1100,7 @@
                             android:textSize="@dimen/_16sdp"
                             tools:ignore="HardcodedText" />
 
-                        <com.endiq.turtlelauncher.ui.miuix.MiuixSlider
+                        <com.app.astralauncher.ui.miuix.MiuixSlider
                             android:id="@+id/gyro_sensitivity"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
@@ -1138,7 +1138,7 @@
 
                 </LinearLayout>
 
-                <com.endiq.turtlelauncher.ui.layout.AnimRelativeLayout
+                <com.app.astralauncher.ui.layout.AnimRelativeLayout
                     android:id="@+id/gyroInvertX_layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -1156,17 +1156,17 @@
                         android:layout_marginEnd="@dimen/_8sdp"
                         android:layout_toStartOf="@+id/gyroInvertX"
                         android:text="@string/setting_gyro_invert_x_axis"
-                        android:textColor="@color/turtle_primary_text" />
+                        android:textColor="@color/astra_primary_text" />
 
-                    <com.endiq.turtlelauncher.ui.miuix.MiuixSwitch
+                    <com.app.astralauncher.ui.miuix.MiuixSwitch
                         android:id="@+id/gyroInvertX"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true" />
-                </com.endiq.turtlelauncher.ui.layout.AnimRelativeLayout>
+                </com.app.astralauncher.ui.layout.AnimRelativeLayout>
 
-                <com.endiq.turtlelauncher.ui.layout.AnimRelativeLayout
+                <com.app.astralauncher.ui.layout.AnimRelativeLayout
                     android:id="@+id/gyroInvertY_layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -1184,15 +1184,15 @@
                         android:layout_marginEnd="@dimen/_8sdp"
                         android:layout_toStartOf="@+id/gyroInvertY"
                         android:text="@string/setting_gyro_invert_y_axis"
-                        android:textColor="@color/turtle_primary_text" />
+                        android:textColor="@color/astra_primary_text" />
 
-                    <com.endiq.turtlelauncher.ui.miuix.MiuixSwitch
+                    <com.app.astralauncher.ui.miuix.MiuixSwitch
                         android:id="@+id/gyroInvertY"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true" />
-                </com.endiq.turtlelauncher.ui.layout.AnimRelativeLayout>
+                </com.app.astralauncher.ui.layout.AnimRelativeLayout>
 
             </LinearLayout>
 
@@ -1210,7 +1210,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_12sdp"
                 android:textStyle="bold"
-                android:textColor="@color/turtle_primary_text"
+                android:textColor="@color/astra_primary_text"
                 android:text="@string/option_category_hotbar"/>
 
             <View
@@ -1232,7 +1232,7 @@
                 android:background="@drawable/background_item"
                 android:paddingVertical="@dimen/_12sdp"
                 android:paddingHorizontal="@dimen/padding_heavy"
-                app:spinner_arrow_tint="@color/turtle_primary_text"
+                app:spinner_arrow_tint="@color/astra_primary_text"
                 app:spinner_item_height="@dimen/_40sdp"
                 app:spinner_popup_max_height="@dimen/_240sdp"
                 app:spinner_popup_background="@drawable/background_edit_box" />
@@ -1267,7 +1267,7 @@
                         android:textSize="@dimen/_16sdp"
                         tools:ignore="HardcodedText" />
 
-                    <com.endiq.turtlelauncher.ui.miuix.MiuixSlider
+                    <com.app.astralauncher.ui.miuix.MiuixSlider
                         android:id="@+id/hotbar_width"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -1334,7 +1334,7 @@
                         android:textSize="@dimen/_16sdp"
                         tools:ignore="HardcodedText" />
 
-                    <com.endiq.turtlelauncher.ui.miuix.MiuixSlider
+                    <com.app.astralauncher.ui.miuix.MiuixSlider
                         android:id="@+id/hotbar_height"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"

@@ -4,7 +4,7 @@ import android.content.Context;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 
-import com.endiq.turtlelauncher.feature.log.Logging;
+import com.app.astralauncher.feature.log.Logging;
 
 import java.io.File;
 

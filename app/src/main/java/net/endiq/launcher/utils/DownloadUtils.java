@@ -2,10 +2,10 @@ package net.endiq.launcher.utils;
 
 import androidx.annotation.Nullable;
 
-import com.endiq.turtlelauncher.feature.log.Logging;
-import com.endiq.turtlelauncher.utils.path.PathManager;
-import com.endiq.turtlelauncher.utils.ZHTools;
-import com.endiq.turtlelauncher.utils.path.UrlManager;
+import com.app.astralauncher.feature.log.Logging;
+import com.app.astralauncher.utils.path.PathManager;
+import com.app.astralauncher.utils.ZHTools;
+import com.app.astralauncher.utils.path.UrlManager;
 
 import net.endiq.launcher.Tools;
 

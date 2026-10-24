@@ -3,13 +3,13 @@ package net.endiq.launcher.tasks;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.endiq.mcgui.ProgressLayout;
-import com.endiq.turtlelauncher.R;
-import com.endiq.turtlelauncher.feature.customprofilepath.ProfilePathHome;
-import com.endiq.turtlelauncher.feature.log.Logging;
-import com.endiq.turtlelauncher.setting.AllSettings;
-import com.endiq.turtlelauncher.task.Task;
-import com.endiq.turtlelauncher.utils.path.PathManager;
+import com.app.mcgui.ProgressLayout;
+import com.app.astralauncher.R;
+import com.app.astralauncher.feature.customprofilepath.ProfilePathHome;
+import com.app.astralauncher.feature.log.Logging;
+import com.app.astralauncher.setting.AllSettings;
+import com.app.astralauncher.task.Task;
+import com.app.astralauncher.utils.path.PathManager;
 
 import net.endiq.launcher.JAssetInfo;
 import net.endiq.launcher.JAssets;
@@ -197,7 +197,7 @@ public class MinecraftDownloader {
         File targetDirectory = new File(PathManager.DIR_CACHE, "natives/"+versionName);
         FileUtils.ensureDirectory(targetDirectory);
 
-        // TurtleLauncher Fast Boot: skip re-extraction entirely if a marker proves the
+        // AstraLauncher Fast Boot: skip re-extraction entirely if a marker proves the
         // exact same set of source AARs (path + size + mtime) was already extracted here.
         File marker = new File(targetDirectory, ".tl_natives_marker");
         String signature = buildNativesSignature();

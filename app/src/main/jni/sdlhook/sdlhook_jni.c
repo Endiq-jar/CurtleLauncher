@@ -1,4 +1,4 @@
-// JNI entry points of libsdlhook.so (Turtle package namespace).
+// JNI entry points of libsdlhook.so (Astra package namespace).
 //
 //   SdlHook.nativeInit()                        install the hooks (idempotent)
 //   SdlBridge.initializeControllerSubsystems()  SDL_Init(GAMEPAD|JOYSTICK|EVENTS)
@@ -27,14 +27,14 @@ JNIEXPORT jint JNICALL JNI_OnLoad(JavaVM *vm, void *reserved) {
 }
 
 JNIEXPORT jint JNICALL
-Java_com_endiq_turtlelauncher_launch_SdlHook_nativeInit(JNIEnv *env, jclass clazz) {
+Java_com_app_astralauncher_launch_SdlHook_nativeInit(JNIEnv *env, jclass clazz) {
     (void) env;
     (void) clazz;
     return (jint) sdlhookInstall();
 }
 
 JNIEXPORT void JNICALL
-Java_com_endiq_turtlelauncher_game_sdl_SdlBridge_initializeControllerSubsystemsNative(JNIEnv *env, jclass clazz) {
+Java_com_app_astralauncher_game_sdl_SdlBridge_initializeControllerSubsystemsNative(JNIEnv *env, jclass clazz) {
     (void) env;
     (void) clazz;
     typedef bool (*SDL_Init_Func)(unsigned int flags);
@@ -54,7 +54,7 @@ Java_com_endiq_turtlelauncher_game_sdl_SdlBridge_initializeControllerSubsystemsN
 }
 
 JNIEXPORT jboolean JNICALL
-Java_com_endiq_turtlelauncher_game_sdl_SdlBridge_isSdlRenderActiveNative(JNIEnv *env, jclass clazz) {
+Java_com_app_astralauncher_game_sdl_SdlBridge_isSdlRenderActiveNative(JNIEnv *env, jclass clazz) {
     (void) env;
     (void) clazz;
     // The SDL render path is flagged by the creation of the first SDL window;
@@ -85,7 +85,7 @@ static void sdlTextInputMainThreadCallback(void *userdata) {
 }
 
 JNIEXPORT jboolean JNICALL
-Java_com_endiq_turtlelauncher_game_sdl_SdlBridge_setNativeTextInputActiveNative(JNIEnv *env, jclass clazz, jboolean active) {
+Java_com_app_astralauncher_game_sdl_SdlBridge_setNativeTextInputActiveNative(JNIEnv *env, jclass clazz, jboolean active) {
     (void) env;
     (void) clazz;
     if (!sdlhookHasPrimaryWindow()) {

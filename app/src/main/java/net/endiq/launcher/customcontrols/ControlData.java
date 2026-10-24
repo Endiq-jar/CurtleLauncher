@@ -1,13 +1,13 @@
 package net.endiq.launcher.customcontrols;
 
-import static com.endiq.turtlelauncher.context.ContextExecutor.getString;
+import static com.app.astralauncher.context.ContextExecutor.getString;
 import static net.endiq.launcher.LwjglGlfwKeycode.GLFW_KEY_UNKNOWN;
 import android.content.Context;
 import android.util.ArrayMap;
 import androidx.annotation.Keep;
-import com.endiq.turtlelauncher.R;
-import com.endiq.turtlelauncher.setting.AllSettings;
-import com.endiq.turtlelauncher.utils.stringutils.StringUtils;
+import com.app.astralauncher.R;
+import com.app.astralauncher.setting.AllSettings;
+import com.app.astralauncher.utils.stringutils.StringUtils;
 import net.endiq.launcher.Tools;
 import net.endiq.launcher.customcontrols.buttons.ControlInterface;
 import net.endiq.launcher.utils.JSONUtils;

@@ -62,11 +62,11 @@
 # R8 must not rename or strip them.
 -keep class org.libsdl.app.** { *; }
 
-# Turtle's SDL bridge: libsdlhook.so resolves its JNI entry points by exact name,
+# Astra's SDL bridge: libsdlhook.so resolves its JNI entry points by exact name,
 # and SDLActivity/SdlImeController call the wrappers from Java.
--keep class com.endiq.turtlelauncher.game.sdl.** { *; }
--keep class com.endiq.turtlelauncher.launch.SdlHook { *; }
--keep class com.endiq.turtlelauncher.launch.SdlAndroidJniPrep { *; }
+-keep class com.app.astralauncher.game.sdl.** { *; }
+-keep class com.app.astralauncher.launch.SdlHook { *; }
+-keep class com.app.astralauncher.launch.SdlAndroidJniPrep { *; }
 
 # SDL native resolves this instance method on the host Activity by exact
 # signature (see MainActivity.messageboxShowMessageBox).
@@ -74,7 +74,7 @@
     public int messageboxShowMessageBox(...);
 }
 
--keep class com.endiq.turtlelauncher.bridge.NativeFileDialogs { *; }
+-keep class com.app.astralauncher.bridge.NativeFileDialogs { *; }
 
 # Native Discord JNI entrypoints are resolved by their exact class and method names.
--keep class com.endiq.turtlelauncher.feature.discord.DiscordSocialBridge { *; }
+-keep class com.app.astralauncher.feature.discord.DiscordSocialBridge { *; }

@@ -50,7 +50,7 @@
                 android:layout_marginStart="@dimen/_8sdp"
                 android:layout_marginTop="@dimen/_8sdp"
                 android:text="@string/custom_mouse_title"
-                android:textColor="@color/turtle_primary_text"
+                android:textColor="@color/astra_primary_text"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 

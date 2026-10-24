@@ -5,8 +5,8 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewTreeObserver;
 
-import com.endiq.turtlelauncher.setting.AllSettings;
-import com.endiq.turtlelauncher.setting.AllStaticSettings;
+import com.app.astralauncher.setting.AllSettings;
+import com.app.astralauncher.setting.AllStaticSettings;
 
 import net.endiq.launcher.MinecraftGLSurface;
 import net.endiq.launcher.Tools;
@@ -84,7 +84,7 @@ public class AndroidPointerCapture implements ViewTreeObserver.OnWindowFocusChan
             }
         } else {
             // Position is updated by many events, hence it is send regardless of the event value.
-            // TurtleLauncher (Zalith Launcher 2 mouseCaptureSensitivity port): user-adjustable
+            // AstraLauncher (Zalith Launcher 2 mouseCaptureSensitivity port): user-adjustable
             // multiplier on captured (grabbed) look movement, 25..300%, default 100 = unchanged.
             float captureSensitivity = AllSettings.getMouseCaptureSensitivity().getValue() / 100f;
             CallbackBridge.mouseX += (mVector[0] * AllStaticSettings.scaleFactor * captureSensitivity);

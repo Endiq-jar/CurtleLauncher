@@ -99,14 +99,14 @@ jobs:
         env:
           CURSEFORGE_API_KEY: ${{ secrets.CURSEFORGE_API_KEY }}
           # Baked into BuildConfig.GEMINI_API_KEY by build.gradle.kts, so the APK ships with
-          # Turtle AI working and no key to paste. Add it under
+          # Astra AI working and no key to paste. Add it under
           # Settings -> Secrets and variables -> Actions -> New repository secret, named
           # GEMINI_API_KEY. Missing secret = empty key = the app falls back to asking the user
           # (the build still succeeds).
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          # The launcher's release keystore (endiq-key.jks) is in the repo; this is its
+          # The launcher's release keystore (app-key.jks) is in the repo; this is its
           # password. Without it the build still succeeds, signed with the debug keystore.
-          ENDIQ_KEYSTORE_PASSWORD: ${{ secrets.ENDIQ_KEYSTORE_PASSWORD }}
+          APP_KEYSTORE_PASSWORD: ${{ secrets.APP_KEYSTORE_PASSWORD || secrets.ENDIQ_KEYSTORE_PASSWORD }}
           # Read by build.gradle.kts for InfoDistributor.BUILD_TYPE, which decides whether the
           # app considers itself a release build (ZHTools.isRelease/isDebug/isPreRelease).
           ZL_BUILD_TYPE: RELEASE
@@ -131,7 +131,7 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v6
         with:
-          name: TurtleLauncher-unit-test-reports
+          name: AstraLauncher-unit-test-reports
           path: "**/build/test-results/testDebugUnitTest/*.xml"
           if-no-files-found: warn
 
@@ -166,5 +166,5 @@ jobs:
       - name: Upload release APK
         uses: actions/upload-artifact@v6
         with:
-          name: TurtleLauncher-release-apk
+          name: AstraLauncher-release-apk
           path: "**/build/outputs/apk/release/*.apk"

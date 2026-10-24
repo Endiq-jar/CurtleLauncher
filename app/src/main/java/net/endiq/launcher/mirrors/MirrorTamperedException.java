@@ -6,8 +6,8 @@ import android.text.Html;
 
 import androidx.appcompat.app.AlertDialog;
 
-import com.endiq.turtlelauncher.R;
-import com.endiq.turtlelauncher.setting.AllSettings;
+import com.app.astralauncher.R;
+import com.app.astralauncher.setting.AllSettings;
 
 import net.endiq.launcher.ShowErrorActivity;
 import net.endiq.launcher.lifecycle.ContextExecutorTask;

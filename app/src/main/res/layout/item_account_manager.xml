@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.endiq.turtlelauncher.ui.layout.AnimConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.app.astralauncher.ui.layout.AnimConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -10,7 +10,7 @@
     app:ripple_for_constraint="true"
     tools:ignore="ContentDescription">
 
-    <com.endiq.turtlelauncher.ui.view.AnimatedIconView
+    <com.app.astralauncher.ui.view.AnimatedIconView
         android:id="@+id/icon"
         android:layout_width="@dimen/_38sdp"
         android:layout_height="@dimen/_38sdp"
@@ -68,7 +68,7 @@
 
         <!-- Wardrobe button: opens WardrobeDialog (live preview + Change Skin / Change
              Cape), replacing the separate skin_button/cape_button that used to be here. -->
-        <com.endiq.turtlelauncher.ui.view.AnimatedIconButton
+        <com.app.astralauncher.ui.view.AnimatedIconButton
             android:id="@+id/wardrobe_button"
             android:layout_width="@dimen/_28sdp"
             android:layout_height="@dimen/_28sdp"
@@ -76,10 +76,10 @@
             android:background="?android:attr/selectableItemBackgroundBorderless"
             android:scaleType="centerInside"
             android:src="@drawable/ic_skin_changer"
-            android:tint="@color/turtle_success"
+            android:tint="@color/astra_success"
             android:contentDescription="@string/account_wardrobe" />
 
-        <com.endiq.turtlelauncher.ui.view.AnimatedIconButton
+        <com.app.astralauncher.ui.view.AnimatedIconButton
             android:id="@+id/refresh"
             android:layout_width="@dimen/_28sdp"
             android:layout_height="@dimen/_28sdp"
@@ -88,7 +88,7 @@
             android:scaleType="centerInside"
             android:src="@drawable/ic_refresh" />
 
-        <com.endiq.turtlelauncher.ui.view.AnimatedIconButton
+        <com.app.astralauncher.ui.view.AnimatedIconButton
             android:id="@+id/delete"
             android:layout_width="@dimen/_28sdp"
             android:layout_height="@dimen/_28sdp"
@@ -98,4 +98,4 @@
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 
-</com.endiq.turtlelauncher.ui.layout.AnimConstraintLayout>
+</com.app.astralauncher.ui.layout.AnimConstraintLayout>

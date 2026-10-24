@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- TurtleLauncher v10: in-launcher text editor for a version's config files
+<!-- AstraLauncher v10: in-launcher text editor for a version's config files
      (options.txt, config/*.cfg, etc). Left: file list. Right/below: editor. -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -7,13 +7,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/turtle_bg_terminal">
+    android:background="@color/astra_bg_terminal">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/config_editor_toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="@color/turtle_bg_terminal"
+        android:background="@color/astra_bg_terminal"
         app:titleTextColor="@android:color/white" />
 
     <LinearLayout
@@ -26,8 +26,8 @@
             android:id="@+id/config_file_list"
             android:layout_width="140dp"
             android:layout_height="match_parent"
-            android:background="@color/turtle_bg_elevated"
-            android:divider="@color/turtle_border_default"
+            android:background="@color/astra_bg_elevated"
+            android:divider="@color/astra_border_default"
             android:dividerHeight="1dp" />
 
         <LinearLayout
@@ -63,9 +63,9 @@
                 android:textColor="@android:color/white"
                 android:textSize="12sp" />
 
-            <com.endiq.turtlelauncher.ui.view.AnimButton
+            <com.app.astralauncher.ui.view.AnimButton
                 android:id="@+id/config_editor_save"
-                style="@style/TurtleButton"
+                style="@style/AstraButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/space_s"

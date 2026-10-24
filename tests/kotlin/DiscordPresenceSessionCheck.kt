@@ -1,4 +1,4 @@
-package com.endiq.turtlelauncher.feature.discord
+package com.app.astralauncher.feature.discord
 
 fun main() {
     val session = DiscordPresenceSession()

@@ -7,7 +7,7 @@ import android.content.Intent;
 
 import androidx.core.app.NotificationCompat;
 
-import com.endiq.turtlelauncher.R;
+import com.app.astralauncher.R;
 
 import net.endiq.launcher.Tools;
 

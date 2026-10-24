@@ -13,8 +13,8 @@ import androidx.annotation.Nullable;
 import androidx.core.app.NotificationCompat;
 import androidx.core.content.ContextCompat;
 
-import com.endiq.turtlelauncher.R;
-import com.endiq.turtlelauncher.feature.log.Logging;
+import com.app.astralauncher.R;
+import com.app.astralauncher.feature.log.Logging;
 
 import net.endiq.launcher.Tools;
 import net.endiq.launcher.utils.NotificationUtils;

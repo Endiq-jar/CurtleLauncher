@@ -12,16 +12,16 @@ import android.view.ViewParent;
 
 import androidx.annotation.Nullable;
 
-import com.endiq.anim.AnimPlayer;
-import com.endiq.anim.animations.Animations;
-import com.endiq.turtlelauncher.event.single.MCOptionChangeEvent;
-import com.endiq.turtlelauncher.event.single.RefreshHotbarEvent;
-import com.endiq.turtlelauncher.event.value.HotbarChangeEvent;
-import com.endiq.turtlelauncher.feature.MCOptions;
-import com.endiq.turtlelauncher.setting.AllSettings;
-import com.endiq.turtlelauncher.setting.AllStaticSettings;
-import com.endiq.turtlelauncher.ui.subassembly.hotbar.HotbarType;
-import com.endiq.turtlelauncher.ui.subassembly.hotbar.HotbarUtils;
+import com.app.anim.AnimPlayer;
+import com.app.anim.animations.Animations;
+import com.app.astralauncher.event.single.MCOptionChangeEvent;
+import com.app.astralauncher.event.single.RefreshHotbarEvent;
+import com.app.astralauncher.event.value.HotbarChangeEvent;
+import com.app.astralauncher.feature.MCOptions;
+import com.app.astralauncher.setting.AllSettings;
+import com.app.astralauncher.setting.AllStaticSettings;
+import com.app.astralauncher.ui.subassembly.hotbar.HotbarType;
+import com.app.astralauncher.ui.subassembly.hotbar.HotbarUtils;
 
 import net.endiq.launcher.GrabListener;
 import net.endiq.launcher.LwjglGlfwKeycode;

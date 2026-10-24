@@ -31,7 +31,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
-                <com.endiq.turtlelauncher.ui.view.LogoImageView
+                <com.app.astralauncher.ui.view.LogoImageView
                     android:id="@+id/title"
                     android:layout_width="0dp"
                     android:layout_height="@dimen/_28sdp"
@@ -79,7 +79,7 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/dec2" />
 
-                <com.endiq.turtlelauncher.ui.view.AnimButton
+                <com.app.astralauncher.ui.view.AnimButton
                     android:id="@+id/license_button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -91,7 +91,7 @@
                     app:layout_constraintTop_toBottomOf="@id/dec3"
                     tools:ignore="HardcodedText" />
 
-                <com.endiq.turtlelauncher.ui.view.AnimButton
+                <com.app.astralauncher.ui.view.AnimButton
                     android:id="@+id/github_button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -104,7 +104,7 @@
                     app:layout_constraintTop_toBottomOf="@id/dec3"
                     tools:ignore="HardcodedText" />
 
-                <com.endiq.turtlelauncher.ui.view.AnimButton
+                <com.app.astralauncher.ui.view.AnimButton
                     android:id="@+id/qq_group_button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -116,7 +116,7 @@
                     app:layout_constraintTop_toBottomOf="@id/dec3"
                     tools:ignore="HardcodedText" />
 
-                <com.endiq.turtlelauncher.ui.view.AnimButton
+                <com.app.astralauncher.ui.view.AnimButton
                     android:id="@+id/discord_button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -155,15 +155,15 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:orientation="horizontal">
-                    <com.endiq.turtlelauncher.ui.view.LogoImageView
+                    <com.app.astralauncher.ui.view.LogoImageView
                         android:layout_width="0dp"
                         android:layout_height="56dp"
                         android:layout_weight="1"
                         android:padding="4dp"
                         android:scaleType="centerInside"
-                        android:contentDescription="@string/artwork_ic_turtle_full"
-                        android:src="@drawable/ic_turtle_full" />
-                    <com.endiq.turtlelauncher.ui.view.LogoImageView
+                        android:contentDescription="@string/artwork_ic_astra_full"
+                        android:src="@drawable/ic_astra_full" />
+                    <com.app.astralauncher.ui.view.LogoImageView
                         android:layout_width="0dp"
                         android:layout_height="56dp"
                         android:layout_weight="1"
@@ -171,7 +171,7 @@
                         android:scaleType="centerInside"
                         android:contentDescription="@string/artwork_ic_minecraft"
                         android:src="@drawable/ic_minecraft" />
-                    <com.endiq.turtlelauncher.ui.view.LogoImageView
+                    <com.app.astralauncher.ui.view.LogoImageView
                         android:layout_width="0dp"
                         android:layout_height="56dp"
                         android:layout_weight="1"
@@ -179,7 +179,7 @@
                         android:scaleType="centerInside"
                         android:contentDescription="@string/artwork_ic_command_block"
                         android:src="@drawable/ic_command_block" />
-                    <com.endiq.turtlelauncher.ui.view.LogoImageView
+                    <com.app.astralauncher.ui.view.LogoImageView
                         android:layout_width="0dp"
                         android:layout_height="56dp"
                         android:layout_weight="1"
@@ -187,7 +187,7 @@
                         android:scaleType="centerInside"
                         android:contentDescription="@string/artwork_ic_old_cobblestone"
                         android:src="@drawable/ic_old_cobblestone" />
-                    <com.endiq.turtlelauncher.ui.view.LogoImageView
+                    <com.app.astralauncher.ui.view.LogoImageView
                         android:layout_width="0dp"
                         android:layout_height="56dp"
                         android:layout_weight="1"
@@ -234,7 +234,7 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/about_title" />
 
-                <com.endiq.turtlelauncher.ui.view.AnimButton
+                <com.app.astralauncher.ui.view.AnimButton
                     android:id="@+id/sponsor"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

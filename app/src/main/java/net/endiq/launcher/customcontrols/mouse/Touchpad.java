@@ -11,11 +11,11 @@ import android.view.View;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.endiq.turtlelauncher.setting.AllSettings;
-import com.endiq.turtlelauncher.setting.AllStaticSettings;
-import com.endiq.turtlelauncher.utils.ZHTools;
-import com.endiq.turtlelauncher.utils.image.Dimension;
-import com.endiq.turtlelauncher.utils.image.ImageUtils;
+import com.app.astralauncher.setting.AllSettings;
+import com.app.astralauncher.setting.AllStaticSettings;
+import com.app.astralauncher.utils.ZHTools;
+import com.app.astralauncher.utils.image.Dimension;
+import com.app.astralauncher.utils.image.ImageUtils;
 
 import net.endiq.launcher.GrabListener;
 
@@ -81,7 +81,7 @@ public class Touchpad extends View implements GrabListener, AbstractTouchpad {
 
     @Override
     protected void onDraw(Canvas canvas) {
-        // TurtleLauncher (Zalith Launcher 2 hideMouse port): optionally don't draw the
+        // AstraLauncher (Zalith Launcher 2 hideMouse port): optionally don't draw the
         // virtual cursor overlay at all - tracking, movement and clicks keep working
         // exactly the same, only the on-screen pointer disappears (useful when the game
         // draws its own crosshair/cursor and the overlay just gets in the way).

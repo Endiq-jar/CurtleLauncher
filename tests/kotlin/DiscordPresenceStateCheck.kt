@@ -1,4 +1,4 @@
-package com.endiq.turtlelauncher.feature.discord
+package com.app.astralauncher.feature.discord
 
 /** JVM-only regression checks; no credentials, Discord connection or Android runtime required. */
 fun main() {

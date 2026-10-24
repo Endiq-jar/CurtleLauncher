@@ -11,7 +11,7 @@
     android:background="@color/background_app"
     tools:ignore="ContentDescription">
 
-    <com.endiq.turtlelauncher.ui.view.AnimTextView
+    <com.app.astralauncher.ui.view.AnimTextView
         android:id="@+id/music_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -20,11 +20,11 @@
         android:text="@string/music_title"
         android:textSize="22sp"
         android:textStyle="bold"
-        android:textColor="@color/turtle_primary_text"
+        android:textColor="@color/astra_primary_text"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.endiq.turtlelauncher.ui.view.AnimButton
+    <com.app.astralauncher.ui.view.AnimButton
         android:id="@+id/return_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -62,11 +62,11 @@
                 android:gravity="center_vertical"
                 android:padding="@dimen/space_m">
 
-                <com.endiq.turtlelauncher.ui.view.AnimatedIconView
+                <com.app.astralauncher.ui.view.AnimatedIconView
                     android:layout_width="@dimen/_24sdp"
                     android:layout_height="@dimen/_24sdp"
                     android:src="@drawable/ic_music_note"
-                    android:tint="@color/turtle_accent_dim" />
+                    android:tint="@color/astra_accent_dim" />
 
                 <androidx.appcompat.widget.LinearLayoutCompat
                     android:layout_width="0dp"
@@ -75,23 +75,23 @@
                     android:layout_weight="1"
                     android:orientation="vertical">
 
-                    <com.endiq.turtlelauncher.ui.view.AnimTextView
+                    <com.app.astralauncher.ui.view.AnimTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/music_enable_startup"
                         android:textStyle="bold"
-                        android:textColor="@color/turtle_primary_text" />
+                        android:textColor="@color/astra_primary_text" />
 
-                    <com.endiq.turtlelauncher.ui.view.AnimTextView
+                    <com.app.astralauncher.ui.view.AnimTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/music_enable_startup_desc"
                         android:textSize="@dimen/_10ssp"
-                        android:textColor="@color/turtle_text_secondary" />
+                        android:textColor="@color/astra_text_secondary" />
 
                 </androidx.appcompat.widget.LinearLayoutCompat>
 
-                <com.endiq.turtlelauncher.ui.miuix.MiuixSwitch
+                <com.app.astralauncher.ui.miuix.MiuixSwitch
                     android:id="@+id/music_enable_switch"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
@@ -107,12 +107,12 @@
                 android:orientation="vertical"
                 android:padding="@dimen/space_m">
 
-                <com.endiq.turtlelauncher.ui.view.AnimTextView
+                <com.app.astralauncher.ui.view.AnimTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/music_playback_scope"
                     android:textStyle="bold"
-                    android:textColor="@color/turtle_primary_text" />
+                    android:textColor="@color/astra_primary_text" />
 
                 <RadioGroup
                     android:id="@+id/music_scope_group"
@@ -121,19 +121,19 @@
                     android:layout_marginTop="@dimen/space_xs"
                     android:orientation="vertical">
 
-                    <com.endiq.turtlelauncher.ui.miuix.MiuixRadioButton
+                    <com.app.astralauncher.ui.miuix.MiuixRadioButton
                         android:id="@+id/scope_full_game"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/music_scope_full_game" />
 
-                    <com.endiq.turtlelauncher.ui.miuix.MiuixRadioButton
+                    <com.app.astralauncher.ui.miuix.MiuixRadioButton
                         android:id="@+id/scope_only_startup"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/music_scope_only_startup" />
 
-                    <com.endiq.turtlelauncher.ui.miuix.MiuixRadioButton
+                    <com.app.astralauncher.ui.miuix.MiuixRadioButton
                         android:id="@+id/scope_only_launcher"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -153,13 +153,13 @@
                 android:gravity="center_vertical"
                 android:padding="@dimen/space_m">
 
-                <com.endiq.turtlelauncher.ui.view.AnimatedIconView
+                <com.app.astralauncher.ui.view.AnimatedIconView
                     android:layout_width="@dimen/_36sdp"
                     android:layout_height="@dimen/_36sdp"
                     android:background="@drawable/background_grid_card"
                     android:padding="@dimen/space_xs"
                     android:src="@drawable/ic_music_note"
-                    android:tint="@color/turtle_accent_dim" />
+                    android:tint="@color/astra_accent_dim" />
 
                 <androidx.appcompat.widget.LinearLayoutCompat
                     android:layout_width="0dp"
@@ -168,30 +168,30 @@
                     android:layout_weight="1"
                     android:orientation="vertical">
 
-                    <com.endiq.turtlelauncher.ui.view.AnimTextView
+                    <com.app.astralauncher.ui.view.AnimTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/music_current_track"
                         android:textSize="@dimen/_10ssp"
-                        android:textColor="@color/turtle_text_secondary" />
+                        android:textColor="@color/astra_text_secondary" />
 
-                    <com.endiq.turtlelauncher.ui.view.AnimTextView
+                    <com.app.astralauncher.ui.view.AnimTextView
                         android:id="@+id/music_current_track_name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:ellipsize="end"
                         android:singleLine="true"
                         android:textStyle="bold"
-                        android:textColor="@color/turtle_primary_text"
+                        android:textColor="@color/astra_primary_text"
                         tools:text="Barsaat - Banjaare" />
 
                 </androidx.appcompat.widget.LinearLayoutCompat>
 
-                <com.endiq.turtlelauncher.ui.view.AnimTextView
+                <com.app.astralauncher.ui.view.AnimTextView
                     android:id="@+id/music_current_track_duration"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/turtle_text_secondary"
+                    android:textColor="@color/astra_text_secondary"
                     tools:text="03:12" />
 
             </androidx.appcompat.widget.LinearLayoutCompat>
@@ -206,20 +206,20 @@
                 android:gravity="center_vertical"
                 android:padding="@dimen/space_m">
 
-                <com.endiq.turtlelauncher.ui.view.AnimatedIconView
+                <com.app.astralauncher.ui.view.AnimatedIconView
                     android:layout_width="@dimen/_20sdp"
                     android:layout_height="@dimen/_20sdp"
                     android:src="@drawable/ic_speaker"
-                    android:tint="@color/turtle_text_secondary" />
+                    android:tint="@color/astra_text_secondary" />
 
-                <com.endiq.turtlelauncher.ui.view.AnimTextView
+                <com.app.astralauncher.ui.view.AnimTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/space_xs"
                     android:text="@string/music_volume"
-                    android:textColor="@color/turtle_primary_text" />
+                    android:textColor="@color/astra_primary_text" />
 
-                <com.endiq.turtlelauncher.ui.miuix.MiuixSlider
+                <com.app.astralauncher.ui.miuix.MiuixSlider
                     android:id="@+id/music_volume_seekbar"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -227,12 +227,12 @@
                     android:layout_weight="1"
                     android:max="100" />
 
-                <com.endiq.turtlelauncher.ui.view.AnimTextView
+                <com.app.astralauncher.ui.view.AnimTextView
                     android:id="@+id/music_volume_value"
                     android:layout_width="@dimen/_32sdp"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:textColor="@color/turtle_text_secondary"
+                    android:textColor="@color/astra_text_secondary"
                     tools:text="55" />
 
             </androidx.appcompat.widget.LinearLayoutCompat>
@@ -244,7 +244,7 @@
                 android:layout_marginTop="@dimen/space_m"
                 android:orientation="horizontal">
 
-                <com.endiq.turtlelauncher.ui.view.AnimButton
+                <com.app.astralauncher.ui.view.AnimButton
                     android:id="@+id/music_play_preview"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -253,9 +253,9 @@
                     android:background="@drawable/bg_launch_button"
                     android:paddingVertical="@dimen/space_m"
                     android:text="@string/music_play_preview"
-                    android:textColor="@color/turtle_text_on_accent" />
+                    android:textColor="@color/astra_text_on_accent" />
 
-                <com.endiq.turtlelauncher.ui.view.AnimButton
+                <com.app.astralauncher.ui.view.AnimButton
                     android:id="@+id/music_stop_preview"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -285,13 +285,13 @@
         app:layout_constraintStart_toEndOf="@id/music_settings_scroll"
         app:layout_constraintEnd_toEndOf="parent">
 
-        <com.endiq.turtlelauncher.ui.view.AnimTextView
+        <com.app.astralauncher.ui.view.AnimTextView
             android:id="@+id/music_playlist_title"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="@string/music_playlist_title"
             android:textStyle="bold"
-            android:textColor="@color/turtle_primary_text"
+            android:textColor="@color/astra_primary_text"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toStartOf="@id/music_add_group" />
@@ -304,7 +304,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent">
 
-            <com.endiq.turtlelauncher.ui.view.AnimButton
+            <com.app.astralauncher.ui.view.AnimButton
                 android:id="@+id/music_select_file"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -314,7 +314,7 @@
                 android:text="@string/music_select_file"
                 android:textSize="@dimen/_10ssp" />
 
-            <com.endiq.turtlelauncher.ui.view.AnimButton
+            <com.app.astralauncher.ui.view.AnimButton
                 android:id="@+id/music_add_url"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -327,14 +327,14 @@
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 
-        <com.endiq.turtlelauncher.ui.view.AnimTextView
+        <com.app.astralauncher.ui.view.AnimTextView
             android:id="@+id/music_empty_hint"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/space_xl"
             android:gravity="center"
             android:text="@string/music_empty_hint"
-            android:textColor="@color/turtle_text_secondary"
+            android:textColor="@color/astra_text_secondary"
             android:visibility="gone"
             app:layout_constraintTop_toBottomOf="@id/music_playlist_title"
             app:layout_constraintStart_toStartOf="parent"

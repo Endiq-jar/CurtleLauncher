@@ -1,7 +1,7 @@
 package net.endiq.launcher.fragments;
-import com.endiq.turtlelauncher.utils.anim.TurtleTransitions;
+import com.app.astralauncher.utils.anim.AstraTransitions;
 
-import static com.endiq.turtlelauncher.event.single.RefreshVersionsEvent.MODE.END;
+import static com.app.astralauncher.event.single.RefreshVersionsEvent.MODE.END;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -16,42 +16,42 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 
-import com.endiq.anim.AnimPlayer;
-import com.endiq.anim.animations.Animations;
-import com.endiq.turtlelauncher.InfoCenter;
-import com.endiq.turtlelauncher.R;
-import com.endiq.turtlelauncher.databinding.FragmentLauncherBinding;
-import com.endiq.turtlelauncher.event.single.AccountUpdateEvent;
-import com.endiq.turtlelauncher.event.single.LaunchGameEvent;
-import com.endiq.turtlelauncher.event.single.RefreshVersionsEvent;
-import com.endiq.turtlelauncher.event.value.InstallLocalModpackEvent;
-import com.endiq.turtlelauncher.feature.mod.modpack.install.InstallExtra;
-import com.endiq.turtlelauncher.feature.log.CrashAnalyzer;
-import com.endiq.turtlelauncher.feature.turtle.DailyPlaytimeStats;
-import com.endiq.turtlelauncher.feature.version.Version;
-import com.endiq.turtlelauncher.feature.version.utils.VersionIconUtils;
-import com.endiq.turtlelauncher.feature.version.VersionInfo;
-import com.endiq.turtlelauncher.feature.version.VersionsManager;
-import com.endiq.turtlelauncher.task.TaskExecutors;
-import com.endiq.turtlelauncher.ui.fragment.AboutFragment;
-import com.endiq.turtlelauncher.ui.fragment.ControlButtonFragment;
-import com.endiq.turtlelauncher.ui.fragment.FilesFragment;
-import com.endiq.turtlelauncher.ui.fragment.FragmentWithAnim;
-import com.endiq.turtlelauncher.ui.fragment.LogViewerFragment;
-import com.endiq.turtlelauncher.ui.fragment.AccountFragment;
-import com.endiq.turtlelauncher.ui.fragment.VersionsListFragment;
-import com.endiq.turtlelauncher.ui.subassembly.version.VersionManagerDropdown;
-import com.endiq.turtlelauncher.feature.accounts.AccountsManager;
-import com.endiq.turtlelauncher.feature.log.Logging;
-import com.endiq.turtlelauncher.utils.skin.SkinLoader;
+import com.app.anim.AnimPlayer;
+import com.app.anim.animations.Animations;
+import com.app.astralauncher.InfoCenter;
+import com.app.astralauncher.R;
+import com.app.astralauncher.databinding.FragmentLauncherBinding;
+import com.app.astralauncher.event.single.AccountUpdateEvent;
+import com.app.astralauncher.event.single.LaunchGameEvent;
+import com.app.astralauncher.event.single.RefreshVersionsEvent;
+import com.app.astralauncher.event.value.InstallLocalModpackEvent;
+import com.app.astralauncher.feature.mod.modpack.install.InstallExtra;
+import com.app.astralauncher.feature.log.CrashAnalyzer;
+import com.app.astralauncher.feature.astra.DailyPlaytimeStats;
+import com.app.astralauncher.feature.version.Version;
+import com.app.astralauncher.feature.version.utils.VersionIconUtils;
+import com.app.astralauncher.feature.version.VersionInfo;
+import com.app.astralauncher.feature.version.VersionsManager;
+import com.app.astralauncher.task.TaskExecutors;
+import com.app.astralauncher.ui.fragment.AboutFragment;
+import com.app.astralauncher.ui.fragment.ControlButtonFragment;
+import com.app.astralauncher.ui.fragment.FilesFragment;
+import com.app.astralauncher.ui.fragment.FragmentWithAnim;
+import com.app.astralauncher.ui.fragment.LogViewerFragment;
+import com.app.astralauncher.ui.fragment.AccountFragment;
+import com.app.astralauncher.ui.fragment.VersionsListFragment;
+import com.app.astralauncher.ui.subassembly.version.VersionManagerDropdown;
+import com.app.astralauncher.feature.accounts.AccountsManager;
+import com.app.astralauncher.feature.log.Logging;
+import com.app.astralauncher.utils.skin.SkinLoader;
 
 import androidx.core.content.ContextCompat;
 
 import net.endiq.launcher.value.MinecraftAccount;
-import com.endiq.turtlelauncher.utils.file.FileTools;
-import com.endiq.turtlelauncher.utils.path.PathManager;
-import com.endiq.turtlelauncher.utils.ZHTools;
-import com.endiq.turtlelauncher.utils.anim.ViewAnimUtils;
+import com.app.astralauncher.utils.file.FileTools;
+import com.app.astralauncher.utils.path.PathManager;
+import com.app.astralauncher.utils.ZHTools;
+import com.app.astralauncher.utils.anim.ViewAnimUtils;
 
 import net.endiq.launcher.Tools;
 import net.endiq.launcher.contracts.OpenDocumentWithExtension;
@@ -100,9 +100,9 @@ public class MainMenuFragment extends FragmentWithAnim {
             return true;
         });
         binding.terracottaButton.setOnClickListener(v -> ZHTools.swapFragmentWithAnim(this,
-            com.endiq.turtlelauncher.ui.fragment.TerracottaFragment.class,
-            com.endiq.turtlelauncher.ui.fragment.TerracottaFragment.TAG, null));
-        binding.shareLogsButton.setOnClickListener(v -> ZHTools.swapFragmentWithAnim(this, com.endiq.turtlelauncher.ui.fragment.ShareLogsFragment.class, com.endiq.turtlelauncher.ui.fragment.ShareLogsFragment.TAG, null));
+            com.app.astralauncher.ui.fragment.TerracottaFragment.class,
+            com.app.astralauncher.ui.fragment.TerracottaFragment.TAG, null));
+        binding.shareLogsButton.setOnClickListener(v -> ZHTools.swapFragmentWithAnim(this, com.app.astralauncher.ui.fragment.ShareLogsFragment.class, com.app.astralauncher.ui.fragment.ShareLogsFragment.TAG, null));
         binding.modpackImportButton.setOnClickListener(v -> {
             if (ProgressKeeper.getTaskCount() == 0) {
                 modpackImportLauncher.launch(null);
@@ -111,10 +111,10 @@ public class MainMenuFragment extends FragmentWithAnim {
             }
         });
         // Footer: launcher name, version string, and GitHub link
-        binding.footerAppName.setText(com.endiq.turtlelauncher.InfoDistributor.LAUNCHER_NAME);
-        binding.footerVersionText.setText("v" + com.endiq.turtlelauncher.BuildConfig.VERSION_NAME);
+        binding.footerAppName.setText(com.app.astralauncher.InfoDistributor.LAUNCHER_NAME);
+        binding.footerVersionText.setText("v" + com.app.astralauncher.BuildConfig.VERSION_NAME);
         binding.footerGithubButton.setOnClickListener(v ->
-            ZHTools.openLink(requireActivity(), com.endiq.turtlelauncher.utils.path.UrlManager.URL_HOME));
+            ZHTools.openLink(requireActivity(), com.app.astralauncher.utils.path.UrlManager.URL_HOME));
 
         binding.version.setOnClickListener(v -> {
             if (!isTaskRunning()) {
@@ -138,17 +138,17 @@ public class MainMenuFragment extends FragmentWithAnim {
 
         // Community links
         binding.linkDiscordButton.setOnClickListener(v -> openUrl("https://discord.gg/8TfuMhM8tD"));
-        binding.linkWebsiteButton.setOnClickListener(v -> openUrl("https://endiq-jar.github.io/endiq-shop/"));
-        binding.linkYoutubeButton.setOnClickListener(v -> openUrl("https://youtube.com/@endiq-jar?si=9sb9OnKDJG2kUnO1"));
+        binding.linkWebsiteButton.setOnClickListener(v -> openUrl("https://app-jar.github.io/app-shop/"));
+        binding.linkYoutubeButton.setOnClickListener(v -> openUrl("https://youtube.com/@app-jar?si=9sb9OnKDJG2kUnO1"));
 
         binding.versionName.setSelected(true);
         binding.versionInfo.setSelected(true);
 
         // Top app bar: title/subtitle + quick-action icon row
-        binding.homeTopBarTitle.setText(com.endiq.turtlelauncher.InfoDistributor.LAUNCHER_NAME);
+        binding.homeTopBarTitle.setText(com.app.astralauncher.InfoDistributor.LAUNCHER_NAME);
         binding.topBarLogoButton.setOnClickListener(v -> ZHTools.swapFragmentWithAnim(this,
-            com.endiq.turtlelauncher.ui.fragment.LogoPickerFragment.class,
-            com.endiq.turtlelauncher.ui.fragment.LogoPickerFragment.TAG, null));
+            com.app.astralauncher.ui.fragment.LogoPickerFragment.class,
+            com.app.astralauncher.ui.fragment.LogoPickerFragment.TAG, null));
         binding.topBarAccountButton.setOnClickListener(v ->
             ZHTools.swapFragmentWithAnim(this, AccountFragment.class, AccountFragment.TAG, null));
         refreshAccountButton();
@@ -158,23 +158,23 @@ public class MainMenuFragment extends FragmentWithAnim {
             ZHTools.swapFragmentWithAnim(this, FilesFragment.class, FilesFragment.TAG, bundle);
         });
         binding.topBarDownloadButton.setOnClickListener(v -> ZHTools.swapFragmentWithAnim(this,
-            com.endiq.turtlelauncher.ui.fragment.DownloadFragment.class,
-            com.endiq.turtlelauncher.ui.fragment.DownloadFragment.TAG, null));
+            com.app.astralauncher.ui.fragment.DownloadFragment.class,
+            com.app.astralauncher.ui.fragment.DownloadFragment.TAG, null));
         binding.topBarCursorButton.setOnClickListener(v -> ZHTools.swapFragmentWithAnim(this,
-            com.endiq.turtlelauncher.ui.fragment.CustomMouseFragment.class,
-            com.endiq.turtlelauncher.ui.fragment.CustomMouseFragment.TAG, null));
+            com.app.astralauncher.ui.fragment.CustomMouseFragment.class,
+            com.app.astralauncher.ui.fragment.CustomMouseFragment.TAG, null));
         binding.topBarMusicButton.setOnClickListener(v -> ZHTools.swapFragmentWithAnim(this,
-            com.endiq.turtlelauncher.ui.fragment.MusicFragment.class,
-            com.endiq.turtlelauncher.ui.fragment.MusicFragment.TAG, null));
+            com.app.astralauncher.ui.fragment.MusicFragment.class,
+            com.app.astralauncher.ui.fragment.MusicFragment.TAG, null));
         binding.topBarSettingsButton.setOnClickListener(v -> ZHTools.swapFragmentWithAnim(this,
-            com.endiq.turtlelauncher.ui.fragment.settings.SettingsFragment.class,
-            com.endiq.turtlelauncher.ui.fragment.settings.SettingsFragment.TAG, null));
+            com.app.astralauncher.ui.fragment.settings.SettingsFragment.class,
+            com.app.astralauncher.ui.fragment.settings.SettingsFragment.TAG, null));
         binding.topBarAiButton.setVisibility(
-            com.endiq.turtlelauncher.setting.AllSettings.getAiAssistantEnabled().getValue()
+            com.app.astralauncher.setting.AllSettings.getAiAssistantEnabled().getValue()
                 ? View.VISIBLE : View.GONE);
         binding.topBarAiButton.setOnClickListener(v -> ZHTools.swapFragmentWithAnim(this,
-            com.endiq.turtlelauncher.ui.fragment.AiChatFragment.class,
-            com.endiq.turtlelauncher.ui.fragment.AiChatFragment.TAG, null));
+            com.app.astralauncher.ui.fragment.AiChatFragment.class,
+            com.app.astralauncher.ui.fragment.AiChatFragment.TAG, null));
         binding.topBarTasksButton.setOnClickListener(v -> showRunningTasksDialog());
         updateTasksBadge(ProgressKeeper.getTaskCount());
 
@@ -204,7 +204,7 @@ public class MainMenuFragment extends FragmentWithAnim {
 
     private void refreshLastGameLog() {
         String lastLogText = CrashAnalyzer.INSTANCE.getLastLogText();
-        File logFile = com.endiq.turtlelauncher.feature.log.LatestLogResolver.resolveLastGameLogFile();
+        File logFile = com.app.astralauncher.feature.log.LatestLogResolver.resolveLastGameLogFile();
 
         if ((lastLogText == null || lastLogText.isEmpty()) && logFile == null) {
             binding.lastLogPreview.setText(R.string.main_last_log_none);
@@ -226,7 +226,7 @@ public class MainMenuFragment extends FragmentWithAnim {
         binding.lastLogCard.setOnClickListener(v -> {
             File toOpen = targetLogFile != null
                     ? targetLogFile
-                    : com.endiq.turtlelauncher.feature.log.LatestLogResolver.resolveLatestLogFile();
+                    : com.app.astralauncher.feature.log.LatestLogResolver.resolveLatestLogFile();
             if (toOpen != null && toOpen.isFile()) {
                 ZHTools.swapFragmentWithAnim(this, LogViewerFragment.class, LogViewerFragment.TAG,
                     LogViewerFragment.Companion.createArgs(toOpen));
@@ -247,8 +247,8 @@ public class MainMenuFragment extends FragmentWithAnim {
     }
 
     private void populateFeaturePlugins() {
-        java.util.List<com.endiq.turtlelauncher.plugins.feature.FeaturePlugin> plugins =
-                com.endiq.turtlelauncher.plugins.feature.FeaturePluginManager.getFeaturePluginList();
+        java.util.List<com.app.astralauncher.plugins.feature.FeaturePlugin> plugins =
+                com.app.astralauncher.plugins.feature.FeaturePluginManager.getFeaturePluginList();
         binding.featurePluginsContainer.removeAllViews();
         if (plugins.isEmpty()) {
             binding.featurePluginsContainer.setVisibility(View.GONE);
@@ -256,7 +256,7 @@ public class MainMenuFragment extends FragmentWithAnim {
         }
         binding.featurePluginsContainer.setVisibility(View.VISIBLE);
         android.content.pm.PackageManager packageManager = requireContext().getPackageManager();
-        for (com.endiq.turtlelauncher.plugins.feature.FeaturePlugin plugin : plugins) {
+        for (com.app.astralauncher.plugins.feature.FeaturePlugin plugin : plugins) {
             View row = getLayoutInflater().inflate(R.layout.item_feature_plugin, binding.featurePluginsContainer, false);
             android.widget.ImageView icon = row.findViewById(R.id.feature_plugin_icon);
             android.widget.TextView title = row.findViewById(R.id.feature_plugin_title);
@@ -334,7 +334,7 @@ public class MainMenuFragment extends FragmentWithAnim {
         MinecraftAccount account = AccountsManager.INSTANCE.getCurrentAccount();
         if (account == null) {
             binding.topBarAccountButton.setImageTintList(
-                ContextCompat.getColorStateList(requireContext(), R.color.turtle_text_secondary));
+                ContextCompat.getColorStateList(requireContext(), R.color.astra_text_secondary));
             binding.topBarAccountButton.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.ic_add));
             return;
         }
@@ -382,10 +382,10 @@ public class MainMenuFragment extends FragmentWithAnim {
      * old always-visible bottom ProgressLayout bar.
      */
     private void showRunningTasksDialog() {
-        com.endiq.turtlelauncher.databinding.DialogRunningTasksBinding dialogBinding =
-                com.endiq.turtlelauncher.databinding.DialogRunningTasksBinding.inflate(getLayoutInflater());
+        com.app.astralauncher.databinding.DialogRunningTasksBinding dialogBinding =
+                com.app.astralauncher.databinding.DialogRunningTasksBinding.inflate(getLayoutInflater());
 
-        java.util.Map<String, com.endiq.mcgui.TextProgressBar> rowsByKey = new java.util.HashMap<>();
+        java.util.Map<String, com.app.mcgui.TextProgressBar> rowsByKey = new java.util.HashMap<>();
         android.os.Handler refreshHandler = TaskExecutors.getUIHandler();
         Runnable[] refreshRunnableHolder = new Runnable[1];
 
@@ -398,9 +398,9 @@ public class MainMenuFragment extends FragmentWithAnim {
             java.util.Set<String> stillRunning = new java.util.HashSet<>();
             for (ProgressKeeper.Snapshot snapshot : snapshots) {
                 stillRunning.add(snapshot.progressKey);
-                com.endiq.mcgui.TextProgressBar row = rowsByKey.get(snapshot.progressKey);
+                com.app.mcgui.TextProgressBar row = rowsByKey.get(snapshot.progressKey);
                 if (row == null) {
-                    row = new com.endiq.mcgui.TextProgressBar(requireContext());
+                    row = new com.app.mcgui.TextProgressBar(requireContext());
                     row.setTextPadding(getResources().getDimensionPixelOffset(R.dimen._6sdp));
                     android.widget.LinearLayout.LayoutParams params = new android.widget.LinearLayout.LayoutParams(
                             android.widget.LinearLayout.LayoutParams.MATCH_PARENT,
@@ -413,9 +413,9 @@ public class MainMenuFragment extends FragmentWithAnim {
                 row.setText(describeSnapshot(snapshot));
             }
 
-            java.util.Iterator<java.util.Map.Entry<String, com.endiq.mcgui.TextProgressBar>> it = rowsByKey.entrySet().iterator();
+            java.util.Iterator<java.util.Map.Entry<String, com.app.mcgui.TextProgressBar>> it = rowsByKey.entrySet().iterator();
             while (it.hasNext()) {
-                java.util.Map.Entry<String, com.endiq.mcgui.TextProgressBar> entry = it.next();
+                java.util.Map.Entry<String, com.app.mcgui.TextProgressBar> entry = it.next();
                 if (!stillRunning.contains(entry.getKey())) {
                     dialogBinding.tasksDialogList.removeView(entry.getValue());
                     it.remove();
@@ -478,7 +478,7 @@ public class MainMenuFragment extends FragmentWithAnim {
         // The two big content panels take the configured screen transition, one beat
         // apart. Chrome (app bar, rail, footer) fades instead of sliding the full
         // screen height, and still arrives in sequence so the screen assembles itself.
-        com.endiq.turtlelauncher.utils.anim.TurtleTransitions.stagger(
+        com.app.astralauncher.utils.anim.AstraTransitions.stagger(
                 animPlayer,
                 java.util.Arrays.asList(binding.launcherMenu, binding.playLayout),
                 55L);
@@ -490,8 +490,8 @@ public class MainMenuFragment extends FragmentWithAnim {
 
     @Override
     public void slideOut(AnimPlayer animPlayer) {
-        animPlayer.apply(new AnimPlayer.Entry(binding.launcherMenu, TurtleTransitions.exit()))
-                .apply(new AnimPlayer.Entry(binding.playLayout, TurtleTransitions.exit()))
+        animPlayer.apply(new AnimPlayer.Entry(binding.launcherMenu, AstraTransitions.exit()))
+                .apply(new AnimPlayer.Entry(binding.playLayout, AstraTransitions.exit()))
                 .apply(new AnimPlayer.Entry(binding.playButtonsLayout, Animations.BounceShrink));
         addDelayed(animPlayer, binding.homeTopBar, Animations.FadeOut, 0L);
         addDelayed(animPlayer, binding.quickActionsRail, Animations.FadeOut, 20L);

@@ -1,6 +1,6 @@
 package net.endiq.launcher.tasks;
 
-import com.endiq.turtlelauncher.utils.path.PathManager;
+import com.app.astralauncher.utils.path.PathManager;
 
 import net.endiq.launcher.Architecture;
 import net.endiq.launcher.utils.FileUtils;

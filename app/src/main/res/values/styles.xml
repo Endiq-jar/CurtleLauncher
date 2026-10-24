@@ -5,7 +5,7 @@
          The night resources in values-night/ still apply, but the app renders dark
          even if a device (or an OEM skin) reports light mode. -->
     <style name="AppTheme" parent="Theme.MaterialComponents.NoActionBar">
-        <item name="viewInflaterClass">com.endiq.turtlelauncher.ui.miuix.MiuixViewInflater</item>
+        <item name="viewInflaterClass">com.app.astralauncher.ui.miuix.MiuixViewInflater</item>
         <!-- No `preferenceTheme` here: attr/preferenceTheme and
              style/PreferenceThemeOverlay.v14.Material both live in androidx.preference, which is
              not a dependency of this module (settings are custom fragments over
@@ -37,22 +37,22 @@
         <item name="colorError">@color/miuix_error</item>
         <item name="colorControlNormal">@color/miuix_on_surface_variant_summary</item>
         <item name="colorControlActivated">@color/miuix_primary</item>
-        <item name="colorControlHighlight">@color/turtle_accent_ripple</item>
+        <item name="colorControlHighlight">@color/astra_accent_ripple</item>
         <item name="android:colorControlNormal">@color/miuix_on_surface_variant_summary</item>
         <item name="android:colorControlActivated">@color/miuix_primary</item>
-        <item name="android:colorControlHighlight">@color/turtle_accent_ripple</item>
+        <item name="android:colorControlHighlight">@color/astra_accent_ripple</item>
 
         <!-- Miuix Widget Styles -->
-        <item name="android:seekBarStyle">@style/Widget.Turtle.SeekBar</item>
-        <item name="seekBarStyle">@style/Widget.Turtle.SeekBar</item>
-        <item name="android:switchStyle">@style/Widget.Turtle.Switch</item>
-        <item name="switchStyle">@style/Widget.Turtle.Switch</item>
+        <item name="android:seekBarStyle">@style/Widget.Astra.SeekBar</item>
+        <item name="seekBarStyle">@style/Widget.Astra.SeekBar</item>
+        <item name="android:switchStyle">@style/Widget.Astra.Switch</item>
+        <item name="switchStyle">@style/Widget.Astra.Switch</item>
         <item name="alertDialogTheme">@style/CustomAlertDialogTheme</item>
         <item name="android:alertDialogTheme">@style/CustomAlertDialogTheme</item>
 
         <!-- Window transitions: restored app-wide (activities, dialogs and the
              full-screen dialog surface all animate instead of hard-cutting). -->
-        <item name="android:windowAnimationStyle">@style/TurtleActivityAnimation</item>
+        <item name="android:windowAnimationStyle">@style/AstraActivityAnimation</item>
 
         <!-- Dark window chrome: light status/navigation icons (never dark-on-dark) and
              dark surfaces for the Material widgets that read theme attrs directly
@@ -76,7 +76,7 @@
     </style>
 
     <!-- Miuix SeekBar / Slider Style -->
-    <style name="Widget.Turtle.SeekBar" parent="Widget.AppCompat.SeekBar">
+    <style name="Widget.Astra.SeekBar" parent="Widget.AppCompat.SeekBar">
         <item name="android:progressDrawable">@drawable/seekbar_progress</item>
         <item name="android:thumb">@drawable/seekbar_thumb</item>
         <item name="android:splitTrack">false</item>
@@ -87,7 +87,7 @@
     </style>
 
     <!-- Miuix Switch Style -->
-    <style name="Widget.Turtle.Switch" parent="android:Widget.Material.CompoundButton.Switch">
+    <style name="Widget.Astra.Switch" parent="android:Widget.Material.CompoundButton.Switch">
         <item name="android:thumb">@drawable/switch_thumb</item>
         <item name="android:track">@drawable/switch_track_selector</item>
         <item name="android:switchMinWidth">49dp</item>
@@ -109,7 +109,7 @@
     </style>
 
     <!-- Miuix Primary Button Style -->
-    <style name="TurtleButton" parent="Widget.AppCompat.Button">
+    <style name="AstraButton" parent="Widget.AppCompat.Button">
         <item name="android:background">@drawable/bg_launch_button</item>
         <item name="android:textColor">@color/miuix_on_primary</item>
         <item name="android:textAllCaps">false</item>
@@ -120,7 +120,7 @@
     </style>
 
     <!-- Miuix Secondary Button Style -->
-    <style name="TurtleButtonOutline" parent="Widget.AppCompat.Button">
+    <style name="AstraButtonOutline" parent="Widget.AppCompat.Button">
         <item name="android:background">@drawable/background_pill_outline</item>
         <item name="android:textColor">@color/miuix_on_secondary_variant</item>
         <item name="android:textAllCaps">false</item>
@@ -137,7 +137,7 @@
 
     <!-- Shape tokens still referenced by layouts (item_version_series_card, the about/sponsor
          and mod-download ShapeableImageViews). -->
-    <style name="ShapeAppearance.Turtle.SeriesCard" parent="ShapeAppearance.Material3.Corner.Large">
+    <style name="ShapeAppearance.Astra.SeriesCard" parent="ShapeAppearance.Material3.Corner.Large">
         <item name="cornerSize">@dimen/radius_panel</item>
     </style>
 
@@ -155,25 +155,25 @@
          colorOutline/colorSurfaceVariant are Material3 attributes, so under AppTheme's
          MaterialComponents parent only textColorSecondary takes effect today - kept as-is so the
          overlay keeps working if the base theme moves back to Material3. -->
-    <style name="ThemeOverlay.Turtle.HighContrast" parent="">
-        <item name="colorOutline">@color/turtle_hc_border</item>
-        <item name="android:textColorSecondary">@color/turtle_hc_text_secondary</item>
-        <item name="colorSurfaceVariant">@color/turtle_hc_surface</item>
+    <style name="ThemeOverlay.Astra.HighContrast" parent="">
+        <item name="colorOutline">@color/astra_hc_border</item>
+        <item name="android:textColorSecondary">@color/astra_hc_text_secondary</item>
+        <item name="colorSurfaceVariant">@color/astra_hc_surface</item>
     </style>
 
-    <style name="ThemeOverlay.Turtle.Font.Sans" parent="">
+    <style name="ThemeOverlay.Astra.Font.Sans" parent="">
         <item name="android:fontFamily">sans-serif</item>
         <item name="fontFamily">sans-serif</item>
     </style>
-    <style name="ThemeOverlay.Turtle.Font.Condensed" parent="">
+    <style name="ThemeOverlay.Astra.Font.Condensed" parent="">
         <item name="android:fontFamily">sans-serif-condensed</item>
         <item name="fontFamily">sans-serif-condensed</item>
     </style>
-    <style name="ThemeOverlay.Turtle.Font.Serif" parent="">
+    <style name="ThemeOverlay.Astra.Font.Serif" parent="">
         <item name="android:fontFamily">serif</item>
         <item name="fontFamily">serif</item>
     </style>
-    <style name="ThemeOverlay.Turtle.Font.Monospace" parent="">
+    <style name="ThemeOverlay.Astra.Font.Monospace" parent="">
         <item name="android:fontFamily">monospace</item>
         <item name="fontFamily">monospace</item>
     </style>
@@ -200,8 +200,8 @@
     </style>
 
     <style name="FullScreenDialog" parent="Theme.MaterialComponents.Dialog">
-        <item name="viewInflaterClass">com.endiq.turtlelauncher.ui.miuix.MiuixViewInflater</item>
-        <item name="android:windowAnimationStyle">@style/TurtleDialogSurfaceAnimation</item>
+        <item name="viewInflaterClass">com.app.astralauncher.ui.miuix.MiuixViewInflater</item>
+        <item name="android:windowAnimationStyle">@style/AstraDialogSurfaceAnimation</item>
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowFullscreen">true</item>
         <item name="android:windowIsTranslucent">true</item>
@@ -215,7 +215,7 @@
 
     <!-- Miuix AlertDialog Theme -->
     <style name="CustomAlertDialogTheme" parent="Theme.AppCompat.Dialog.Alert">
-        <item name="viewInflaterClass">com.endiq.turtlelauncher.ui.miuix.MiuixViewInflater</item>
+        <item name="viewInflaterClass">com.app.astralauncher.ui.miuix.MiuixViewInflater</item>
         <item name="android:background">@color/miuix_background</item>
         <item name="android:windowBackground">@drawable/background_card</item>
         <item name="android:textColorPrimary">@color/miuix_on_background</item>
@@ -223,7 +223,7 @@
         <item name="colorAccent">@color/miuix_primary</item>
         <item name="colorPrimary">@color/miuix_primary</item>
         <item name="colorControlActivated">@color/miuix_primary</item>
-        <item name="android:windowAnimationStyle">@style/TurtleDialogAnimation</item>
+        <item name="android:windowAnimationStyle">@style/AstraDialogAnimation</item>
         <item name="buttonBarPositiveButtonStyle">@style/AlertDialogButtonStyle</item>
         <item name="buttonBarNegativeButtonStyle">@style/AlertDialogButtonStyle</item>
         <item name="buttonBarNeutralButtonStyle">@style/AlertDialogButtonStyle</item>
@@ -237,7 +237,7 @@
 
     <!-- Activity transitions: every activity launch, finish and task switch slides and
          fades instead of cutting. The matching @anim files live in res/anim/. -->
-    <style name="TurtleActivityAnimation" parent="@android:style/Animation.Activity">
+    <style name="AstraActivityAnimation" parent="@android:style/Animation.Activity">
         <item name="android:activityOpenEnterAnimation">@anim/activity_open_enter</item>
         <item name="android:activityOpenExitAnimation">@anim/activity_open_exit</item>
         <item name="android:activityCloseEnterAnimation">@anim/activity_close_enter</item>
@@ -253,25 +253,25 @@
     </style>
 
     <!-- Alert dialog windows (Material/Miuix): a small pop in, a quicker fade out. -->
-    <style name="TurtleDialogAnimation" parent="@android:style/Animation.Dialog">
+    <style name="AstraDialogAnimation" parent="@android:style/Animation.Dialog">
         <item name="android:windowEnterAnimation">@anim/dialog_enter</item>
         <item name="android:windowExitAnimation">@anim/dialog_exit</item>
     </style>
 
     <!-- FullScreenDialog's window surface: the dialog content springs in/out itself
          (see FullScreenDialog.kt), so the window only fades to avoid double motion. -->
-    <style name="TurtleDialogSurfaceAnimation" parent="@android:style/Animation.Dialog">
+    <style name="AstraDialogSurfaceAnimation" parent="@android:style/Animation.Dialog">
         <item name="android:windowEnterAnimation">@anim/fade_in</item>
         <item name="android:windowExitAnimation">@anim/fade_out</item>
     </style>
 
     <!-- Crash/error activity: dialog-styled window, so give it the dialog pop. -->
-    <style name="TurtleErrorDialogTheme" parent="Theme.AppCompat.Dialog">
-        <item name="android:windowAnimationStyle">@style/TurtleDialogAnimation</item>
+    <style name="AstraErrorDialogTheme" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowAnimationStyle">@style/AstraDialogAnimation</item>
     </style>
 
     <!-- PopupWindow menus: same pop-out vocabulary as dialogs, anchored at the top. -->
-    <style name="TurtlePopupAnimation" parent="@android:style/Animation.Dialog">
+    <style name="AstraPopupAnimation" parent="@android:style/Animation.Dialog">
         <item name="android:windowEnterAnimation">@anim/popup_in</item>
         <item name="android:windowExitAnimation">@anim/popup_out</item>
     </style>

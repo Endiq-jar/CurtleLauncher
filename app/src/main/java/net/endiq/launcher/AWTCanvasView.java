@@ -18,10 +18,10 @@ import java.util.LinkedList;
 public class AWTCanvasView extends TextureView implements TextureView.SurfaceTextureListener, Runnable {
     public static final int AWT_CANVAS_WIDTH = Math.min(
             (int) (Tools.currentDisplayMetrics.widthPixels * 0.8),
-            com.endiq.turtlelauncher.setting.AllSettings.getAwtCanvasSizeCap().getValue());
+            com.app.astralauncher.setting.AllSettings.getAwtCanvasSizeCap().getValue());
     public static final int AWT_CANVAS_HEIGHT = Math.min(
             (int) (Tools.currentDisplayMetrics.heightPixels * 0.8),
-            com.endiq.turtlelauncher.setting.AllSettings.getAwtCanvasSizeCap().getValue());
+            com.app.astralauncher.setting.AllSettings.getAwtCanvasSizeCap().getValue());
     private static final int MAX_SIZE = 100;
     private static final double NANOS = 1000000000.0;
     private volatile boolean mIsDestroyed = false;
@@ -140,7 +140,7 @@ public class AWTCanvasView extends TextureView implements TextureView.SurfaceTex
                 // This is the Swing/AWT installer canvas, NOT Minecraft's render surface.
                 // Avoid copying huge pixel arrays as fast as the CPU can spin.
                 java.util.concurrent.locks.LockSupport.parkNanos(
-                        com.endiq.turtlelauncher.launch.FrameBudget.remainingNanos(started, System.nanoTime(), 60));
+                        com.app.astralauncher.launch.FrameBudget.remainingNanos(started, System.nanoTime(), 60));
             }
         } catch (InterruptedException expected) {
             // Surface replacement or teardown wakes a paused worker immediately.

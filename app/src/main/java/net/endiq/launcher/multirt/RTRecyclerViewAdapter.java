@@ -14,11 +14,11 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.endiq.turtlelauncher.R;
-import com.endiq.turtlelauncher.setting.AllSettings;
-import com.endiq.turtlelauncher.task.Task;
-import com.endiq.turtlelauncher.ui.dialog.SelectRuntimeDialog;
-import com.endiq.turtlelauncher.utils.runtime.RuntimeSelectedListener;
+import com.app.astralauncher.R;
+import com.app.astralauncher.setting.AllSettings;
+import com.app.astralauncher.task.Task;
+import com.app.astralauncher.ui.dialog.SelectRuntimeDialog;
+import com.app.astralauncher.utils.runtime.RuntimeSelectedListener;
 
 import net.endiq.launcher.Architecture;
 import net.endiq.launcher.Tools;

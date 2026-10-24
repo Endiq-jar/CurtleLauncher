@@ -16,11 +16,11 @@ import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
 import androidx.core.content.ContextCompat;
 
-import com.endiq.turtlelauncher.InfoCenter;
-import com.endiq.turtlelauncher.R;
-import com.endiq.turtlelauncher.feature.log.Logging;
-import com.endiq.turtlelauncher.task.TaskExecutors;
-import com.endiq.turtlelauncher.utils.ZHTools;
+import com.app.astralauncher.InfoCenter;
+import com.app.astralauncher.R;
+import com.app.astralauncher.feature.log.Logging;
+import com.app.astralauncher.task.TaskExecutors;
+import com.app.astralauncher.utils.ZHTools;
 
 import net.endiq.launcher.Tools;
 import net.endiq.launcher.progresskeeper.ProgressKeeper;

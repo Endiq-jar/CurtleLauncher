@@ -1,4 +1,4 @@
-/* TurtleLauncher Android/HotSpot file-dialog bridge. GPL-3.0-or-later.
+/* AstraLauncher Android/HotSpot file-dialog bridge. GPL-3.0-or-later.
  * JNI registration is signature-checked: LWJGL 3.2 legacy NFD and 3.3+ NFD have different ABIs.
  * Never pass a JNIEnv or local JNI reference between the two VMs.
  */
@@ -25,7 +25,7 @@ static void free_set(PathSet *set) {
     free(set);
 }
 
-JNIEXPORT void JNICALL Java_com_endiq_turtlelauncher_bridge_NativeFileDialogs_bind(JNIEnv *env, jclass cls) {
+JNIEXPORT void JNICALL Java_com_app_astralauncher_bridge_NativeFileDialogs_bind(JNIEnv *env, jclass cls) {
     pthread_mutex_lock(&bind_lock);
     (*env)->GetJavaVM(env, &android_vm);
     if (!android_bridge) android_bridge = (*env)->NewGlobalRef(env, cls);
@@ -255,7 +255,7 @@ static void reg(JNIEnv *env, jclass cls, const char *name, const char *signature
     JNINativeMethod method = {(char *)name, (char *)signature, fn};
     if ((*env)->RegisterNatives(env, cls, &method, 1) != JNI_OK) (*env)->ExceptionClear(env);
 }
-void turtle_install_nfd(JNIEnv *env) {
+void astra_install_nfd(JNIEnv *env) {
     jclass cls = (*env)->FindClass(env, "org/lwjgl/util/nfd/NativeFileDialog");
     if (!cls) { (*env)->ExceptionClear(env); return; }
     int extended = (*env)->GetStaticMethodID(env, cls, "NFD_Init", "()I") != NULL;
@@ -294,7 +294,7 @@ void turtle_install_nfd(JNIEnv *env) {
     }
     (*env)->DeleteLocalRef(env, cls);
 }
-JNIEXPORT void JNICALL Java_com_endiq_turtlelauncher_bridge_GameFileDialogs_nativeInstallFileDialogs(JNIEnv *env, jclass cls) {
+JNIEXPORT void JNICALL Java_com_app_astralauncher_bridge_GameFileDialogs_nativeInstallFileDialogs(JNIEnv *env, jclass cls) {
     jclass tiny = (*env)->FindClass(env, "org/lwjgl/util/tinyfd/TinyFileDialogs");
     if (!tiny) { (*env)->ExceptionClear(env); return; }
     reg(env, tiny, "ntinyfd_openFileDialog", "(JJIJJI)J", tiny_open);

@@ -6,13 +6,13 @@ import android.util.ArrayMap;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.endiq.mcgui.ProgressLayout;
-import com.endiq.turtlelauncher.R;
-import com.endiq.turtlelauncher.feature.accounts.AccountType;
-import com.endiq.turtlelauncher.feature.log.Logging;
-import com.endiq.turtlelauncher.task.Task;
-import com.endiq.turtlelauncher.task.TaskExecutors;
-import com.endiq.turtlelauncher.utils.path.UrlManager;
+import com.app.mcgui.ProgressLayout;
+import com.app.astralauncher.R;
+import com.app.astralauncher.feature.accounts.AccountType;
+import com.app.astralauncher.feature.log.Logging;
+import com.app.astralauncher.task.Task;
+import com.app.astralauncher.task.TaskExecutors;
+import com.app.astralauncher.utils.path.UrlManager;
 
 import net.endiq.launcher.Tools;
 import net.endiq.launcher.authenticator.listener.DoneListener;

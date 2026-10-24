@@ -39,48 +39,48 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
-import com.endiq.anim.AnimPlayer;
-import com.endiq.anim.animations.Animations;
-import com.endiq.turtlelauncher.R;
-import com.endiq.turtlelauncher.context.ContextExecutor;
-import com.endiq.turtlelauncher.databinding.ActivityGameBinding;
-import com.endiq.turtlelauncher.databinding.ViewControlMenuBinding;
-import com.endiq.turtlelauncher.databinding.ViewGameMenuBinding;
-import com.endiq.turtlelauncher.event.single.RefreshHotbarEvent;
-import com.endiq.turtlelauncher.event.value.HotbarChangeEvent;
-import com.endiq.turtlelauncher.feature.MCOptions;
-import com.endiq.turtlelauncher.feature.DarkModeManager;
-import com.endiq.turtlelauncher.feature.ProfileLanguageSelector;
-import com.endiq.turtlelauncher.feature.background.BackgroundManager;
-import com.endiq.turtlelauncher.feature.background.BackgroundType;
-import com.endiq.turtlelauncher.feature.log.Logging;
-import com.endiq.turtlelauncher.feature.version.Version;
-import com.endiq.turtlelauncher.game.sdl.SdlBridge;
-import com.endiq.turtlelauncher.feature.version.VersionInfo;
-import com.endiq.turtlelauncher.launch.LaunchGame;
-import com.endiq.turtlelauncher.listener.SimpleTextWatcher;
-import com.endiq.turtlelauncher.plugins.driver.DriverPluginManager;
-import com.endiq.turtlelauncher.renderer.Renderers;
-import com.endiq.turtlelauncher.setting.AllSettings;
-import com.endiq.turtlelauncher.setting.AllStaticSettings;
-import com.endiq.turtlelauncher.task.Task;
-import com.endiq.turtlelauncher.task.TaskExecutors;
-import com.endiq.turtlelauncher.ui.activity.BaseActivity;
-import com.endiq.turtlelauncher.ui.dialog.KeyboardDialog;
-import com.endiq.turtlelauncher.ui.dialog.SelectControlsDialog;
-import com.endiq.turtlelauncher.ui.dialog.SelectMouseDialog;
-import com.endiq.turtlelauncher.ui.fragment.settings.VideoSettingsFragment;
-import com.endiq.turtlelauncher.ui.subassembly.adapter.ObjectSpinnerAdapter;
-import com.endiq.turtlelauncher.ui.subassembly.hotbar.HotbarType;
-import com.endiq.turtlelauncher.ui.subassembly.hotbar.HotbarUtils;
-import com.endiq.turtlelauncher.ui.subassembly.menu.ControlMenu;
-import com.endiq.turtlelauncher.ui.subassembly.menu.MenuUtils;
-import com.endiq.turtlelauncher.ui.subassembly.view.GameMenuViewWrapper;
-import com.endiq.turtlelauncher.utils.path.PathManager;
-import com.endiq.turtlelauncher.utils.ZHTools;
-import com.endiq.turtlelauncher.utils.anim.AnimUtils;
-import com.endiq.turtlelauncher.utils.file.FileTools;
-import com.endiq.turtlelauncher.utils.stringutils.StringUtils;
+import com.app.anim.AnimPlayer;
+import com.app.anim.animations.Animations;
+import com.app.astralauncher.R;
+import com.app.astralauncher.context.ContextExecutor;
+import com.app.astralauncher.databinding.ActivityGameBinding;
+import com.app.astralauncher.databinding.ViewControlMenuBinding;
+import com.app.astralauncher.databinding.ViewGameMenuBinding;
+import com.app.astralauncher.event.single.RefreshHotbarEvent;
+import com.app.astralauncher.event.value.HotbarChangeEvent;
+import com.app.astralauncher.feature.MCOptions;
+import com.app.astralauncher.feature.DarkModeManager;
+import com.app.astralauncher.feature.ProfileLanguageSelector;
+import com.app.astralauncher.feature.background.BackgroundManager;
+import com.app.astralauncher.feature.background.BackgroundType;
+import com.app.astralauncher.feature.log.Logging;
+import com.app.astralauncher.feature.version.Version;
+import com.app.astralauncher.game.sdl.SdlBridge;
+import com.app.astralauncher.feature.version.VersionInfo;
+import com.app.astralauncher.launch.LaunchGame;
+import com.app.astralauncher.listener.SimpleTextWatcher;
+import com.app.astralauncher.plugins.driver.DriverPluginManager;
+import com.app.astralauncher.renderer.Renderers;
+import com.app.astralauncher.setting.AllSettings;
+import com.app.astralauncher.setting.AllStaticSettings;
+import com.app.astralauncher.task.Task;
+import com.app.astralauncher.task.TaskExecutors;
+import com.app.astralauncher.ui.activity.BaseActivity;
+import com.app.astralauncher.ui.dialog.KeyboardDialog;
+import com.app.astralauncher.ui.dialog.SelectControlsDialog;
+import com.app.astralauncher.ui.dialog.SelectMouseDialog;
+import com.app.astralauncher.ui.fragment.settings.VideoSettingsFragment;
+import com.app.astralauncher.ui.subassembly.adapter.ObjectSpinnerAdapter;
+import com.app.astralauncher.ui.subassembly.hotbar.HotbarType;
+import com.app.astralauncher.ui.subassembly.hotbar.HotbarUtils;
+import com.app.astralauncher.ui.subassembly.menu.ControlMenu;
+import com.app.astralauncher.ui.subassembly.menu.MenuUtils;
+import com.app.astralauncher.ui.subassembly.view.GameMenuViewWrapper;
+import com.app.astralauncher.utils.path.PathManager;
+import com.app.astralauncher.utils.ZHTools;
+import com.app.astralauncher.utils.anim.AnimUtils;
+import com.app.astralauncher.utils.file.FileTools;
+import com.app.astralauncher.utils.stringutils.StringUtils;
 import com.skydoves.powerspinner.OnSpinnerItemSelectedListener;
 import net.endiq.launcher.customcontrols.ControlButtonMenuListener;
 import net.endiq.launcher.customcontrols.ControlLayout;
@@ -128,7 +128,7 @@ public class MainActivity extends BaseActivity implements ControlButtonMenuListe
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        com.endiq.turtlelauncher.bridge.NativeFileDialogs.install(this);
+        com.app.astralauncher.bridge.NativeFileDialogs.install(this);
         minecraftVersion = getIntent().getParcelableExtra(INTENT_VERSION);
         if (minecraftVersion == null) throw new RuntimeException("The game version is not selected!");
 
@@ -182,13 +182,13 @@ public class MainActivity extends BaseActivity implements ControlButtonMenuListe
 
         binding.mainControlLayout.setModifiable(false);
 
-        // TurtleLauncher Control Switcher: tap to jump to the next control layout without
+        // AstraLauncher Control Switcher: tap to jump to the next control layout without
         // opening the game menu. Visibility follows AllSettings.controlSwitcherEnabled, which
         // the in-game menu's "Control Switcher" row (Control tab) toggles - see
         // MenuSettingsInitListener below. Icon is the keyboard's Tab key.
         refreshControlSwitcherButton();
         binding.controlSwitcherButton.setOnClickListener(v -> {
-            String switchedTo = com.endiq.turtlelauncher.feature.turtle.ControlSwitcher
+            String switchedTo = com.app.astralauncher.feature.astra.ControlSwitcher
                     .cycleToNext(MainActivity.this, binding.mainControlLayout);
             // Only re-evaluate the menu button when the layout actually changed: a layout can
             // bring its own menu button, which is what hides the launcher's own.
@@ -364,7 +364,7 @@ public class MainActivity extends BaseActivity implements ControlButtonMenuListe
                 Logging.i("Rendering Game", "The game rendering has started, " +
                         "and the background image has been cleared to prevent certain issues from occurring.");
 
-                com.endiq.turtlelauncher.feature.inputstats.SessionStatsTracker.start();
+                com.app.astralauncher.feature.inputstats.SessionStatsTracker.start();
             });
 
             if (AllSettings.getEnableLogOutput().getValue()) binding.mainLoggerView.setVisibilityWithAnim(true);
@@ -496,18 +496,18 @@ public class MainActivity extends BaseActivity implements ControlButtonMenuListe
     @Override
     protected void onDestroy() {
         if (mGameMenuWrapper != null) mGameMenuWrapper.dispose();
-        com.endiq.turtlelauncher.bridge.NativeFileDialogs.release(this);
+        com.app.astralauncher.bridge.NativeFileDialogs.release(this);
         super.onDestroy();
-        com.endiq.turtlelauncher.feature.inputstats.SessionStatsTracker.stop();
-        com.endiq.turtlelauncher.feature.inputstats.InputStatsTracker.reset();
+        com.app.astralauncher.feature.inputstats.SessionStatsTracker.stop();
+        com.app.astralauncher.feature.inputstats.InputStatsTracker.reset();
         if (mMenuSettingsInitListener != null) mMenuSettingsInitListener.closeSpinner();
         if (binding != null) {
             CallbackBridge.removeGrabListener(binding.mainTouchpad);
             CallbackBridge.removeGrabListener(binding.mainGameRenderView);
         }
         if (mKeyboardOffsetAnimator != null) mKeyboardOffsetAnimator.cancel();
-        if (com.endiq.turtlelauncher.feature.turtle.ScreenRecorder.INSTANCE.isRecording()) {
-            com.endiq.turtlelauncher.feature.turtle.ScreenRecorder.INSTANCE.stop(null);
+        if (com.app.astralauncher.feature.astra.ScreenRecorder.INSTANCE.isRecording()) {
+            com.app.astralauncher.feature.astra.ScreenRecorder.INSTANCE.stop(null);
         }
         ContextExecutor.clearActivity();
     }
@@ -540,7 +540,7 @@ public class MainActivity extends BaseActivity implements ControlButtonMenuListe
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (com.endiq.turtlelauncher.bridge.NativeFileDialogs.onResult(this, requestCode, resultCode, data)) return;
+        if (com.app.astralauncher.bridge.NativeFileDialogs.onResult(this, requestCode, resultCode, data)) return;
 
         if (requestCode == 1 && resultCode == Activity.RESULT_OK) {
             try {
@@ -548,8 +548,8 @@ public class MainActivity extends BaseActivity implements ControlButtonMenuListe
             } catch (IOException e) {
                 Logging.e("LoadLayout", Tools.printToString(e));
             }
-        } else if (requestCode == com.endiq.turtlelauncher.feature.turtle.ScreenRecorder.REQUEST_CODE_AUDIO_CAPTURE) {
-            com.endiq.turtlelauncher.feature.turtle.ScreenRecorder.INSTANCE.onActivityResult(this, requestCode, resultCode, data);
+        } else if (requestCode == com.app.astralauncher.feature.astra.ScreenRecorder.REQUEST_CODE_AUDIO_CAPTURE) {
+            com.app.astralauncher.feature.astra.ScreenRecorder.INSTANCE.onActivityResult(this, requestCode, resultCode, data);
         }
     }
 
@@ -784,7 +784,7 @@ public class MainActivity extends BaseActivity implements ControlButtonMenuListe
             this.binding.disableGestures.setChecked(AllSettings.getDisableGestures().getValue());
             this.binding.disableDoubleTap.setChecked(AllSettings.getDisableDoubleTap().getValue());
             this.binding.controlSwitcher.setChecked(AllSettings.getControlSwitcherEnabled().getValue());
-            // TurtleLauncher Emotes row state.
+            // AstraLauncher Emotes row state.
             this.binding.emotes.setChecked(AllSettings.getEmotesEnabled().getValue());
             refreshEmotesRows();
             this.binding.enableGyro.setChecked(AllSettings.getEnableGyro().getValue());
@@ -847,7 +847,7 @@ public class MainActivity extends BaseActivity implements ControlButtonMenuListe
             this.binding.controlSwitcher.setOnCheckedChangeListener(this);
             this.binding.controlSwitcherLayout.setOnClickListener(this);
 
-            // TurtleLauncher Emotes: toggle + wheel trigger + website shortcut.
+            // AstraLauncher Emotes: toggle + wheel trigger + website shortcut.
             this.binding.emotes.setOnCheckedChangeListener(this);
             this.binding.emotesLayout.setOnClickListener(this);
             this.binding.emoteWheelButton.setOnClickListener(this);
@@ -973,11 +973,11 @@ public class MainActivity extends BaseActivity implements ControlButtonMenuListe
             else if (v == binding.logOutput) MainActivity.binding.mainLoggerView.toggleViewWithAnim();
             else if (v == binding.sendCustomKey) dialogSendCustomKey();
             else if (v == binding.startRecording) {
-                com.endiq.turtlelauncher.feature.turtle.ScreenRecorder.INSTANCE.start(MainActivity.this);
+                com.app.astralauncher.feature.astra.ScreenRecorder.INSTANCE.start(MainActivity.this);
                 refreshRecordingButtons();
             }
             else if (v == binding.stopRecording) {
-                com.endiq.turtlelauncher.feature.turtle.ScreenRecorder.INSTANCE.stop(MainActivity.this);
+                com.app.astralauncher.feature.astra.ScreenRecorder.INSTANCE.stop(MainActivity.this);
                 refreshRecordingButtons();
             }
             else if (v == binding.openMemoryInfoLayout) MenuUtils.toggleSwitchState(binding.openMemoryInfo);
@@ -1151,7 +1151,7 @@ public class MainActivity extends BaseActivity implements ControlButtonMenuListe
             view.setVisibility(visible ? View.VISIBLE : View.GONE);
         }
 
-        /** TurtleLauncher Emotes: show/hide the emote action rows per the Emote button
+        /** AstraLauncher Emotes: show/hide the emote action rows per the Emote button
          *  toggle. The toggle row itself always stays visible - it IS the toggle. */
         private void refreshEmotesRows() {
             boolean on = AllSettings.getEmotesEnabled().getValue();
@@ -1169,13 +1169,13 @@ public class MainActivity extends BaseActivity implements ControlButtonMenuListe
             }
         }
 
-        /** TurtleLauncher Emotes: open the community emote library (the same site the
+        /** AstraLauncher Emotes: open the community emote library (the same site the
          *  Settings -> Emotes screen embeds) in the browser, for when downloading from the
          *  WebView or managing files is not what the player wants right now. */
         private void openEmoteWebsite() {
             try {
                 MainActivity.binding.mainDrawerOptions.closeDrawers();
-                ZHTools.openLink(MainActivity.this, com.endiq.turtlelauncher.feature.emotes.Emotes.EMOTE_SITE_URL);
+                ZHTools.openLink(MainActivity.this, com.app.astralauncher.feature.emotes.Emotes.EMOTE_SITE_URL);
             } catch (Throwable t) {
                 Logging.w("MainActivity", "Could not open the emote website", t);
             }
@@ -1219,7 +1219,7 @@ public class MainActivity extends BaseActivity implements ControlButtonMenuListe
         }
 
         public void refreshRecordingButtons() {
-            boolean recording = com.endiq.turtlelauncher.feature.turtle.ScreenRecorder.INSTANCE.isRecording();
+            boolean recording = com.app.astralauncher.feature.astra.ScreenRecorder.INSTANCE.isRecording();
             binding.startRecording.setVisibility(recording ? View.GONE : View.VISIBLE);
             binding.stopRecording.setVisibility(recording ? View.VISIBLE : View.GONE);
         }
