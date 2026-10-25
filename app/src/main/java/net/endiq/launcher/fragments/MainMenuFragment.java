@@ -95,6 +95,7 @@ public class MainMenuFragment extends FragmentWithAnim {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         binding.aboutText.setText(InfoCenter.replaceName(requireActivity(), R.string.about_tab));
         setupBottomNav();
+        setupHomeTabs();
         binding.aboutButton.setOnClickListener(v -> ZHTools.swapFragmentWithAnim(this, AboutFragment.class, AboutFragment.TAG, null));
         binding.customControlButton.setOnClickListener(v -> ZHTools.swapFragmentWithAnim(this, ControlButtonFragment.class, ControlButtonFragment.TAG, null));
         binding.installJarButton.setOnClickListener(v -> runInstallerWithConfirmation(false));
@@ -230,6 +231,37 @@ public class MainMenuFragment extends FragmentWithAnim {
 
         binding.bottomNavBar.navPlayLabel.setTextColor(accent);
         binding.bottomNavBar.navPlayIndicator.setVisibility(View.VISIBLE);
+    }
+
+    /** Cubiq-style top tab strip: Play / Installations / Skins / Patch Notes.
+     *  Additive only. This screen is the "Play" tab's content so Play stays
+     *  active here; Installations and Skins route to the closest existing
+     *  screen/dialog, Patch Notes has no backing screen yet so it toasts. */
+    private void setupHomeTabs() {
+        // tabPlay: already this screen, nothing to do on tap.
+
+        binding.tabInstallations.setOnClickListener(v ->
+                ZHTools.swapFragmentWithAnim(this, VersionsListFragment.class, VersionsListFragment.TAG, null));
+
+        binding.tabSkins.setOnClickListener(v -> {
+            MinecraftAccount account = AccountsManager.INSTANCE.getCurrentAccount();
+            android.content.Context toastContext = getContext();
+            if (account == null) {
+                if (toastContext != null) {
+                    Toast.makeText(toastContext, R.string.main_tab_skins_no_account, Toast.LENGTH_SHORT).show();
+                }
+                return;
+            }
+            new com.app.crutlelauncher.ui.dialog.WardrobeDialog(
+                    (androidx.appcompat.app.AppCompatActivity) requireActivity(), account).show();
+        });
+
+        binding.tabPatchNotes.setOnClickListener(v -> {
+            android.content.Context toastContext = getContext();
+            if (toastContext != null) {
+                Toast.makeText(toastContext, R.string.main_tab_patch_notes_coming_soon, Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     @Override

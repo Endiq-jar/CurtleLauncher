@@ -531,6 +531,12 @@
     <string name="main_nav_mods">Mods</string>
     <string name="main_nav_profile">Profile</string>
     <string name="main_nav_news_coming_soon">News is coming soon</string>
+    <string name="main_tab_play">Play</string>
+    <string name="main_tab_installations">Installations</string>
+    <string name="main_tab_skins">Skins</string>
+    <string name="main_tab_patch_notes">Patch Notes</string>
+    <string name="main_tab_patch_notes_coming_soon">Patch notes are coming soon</string>
+    <string name="main_tab_skins_no_account">Add an account first to manage skins</string>
     <string name="main_tasks_dialog_title">Running tasks</string>
     <string name="main_tasks_dialog_empty">No tasks running right now.</string>
     <string name="main_section_quick_actions">Quick Actions</string>

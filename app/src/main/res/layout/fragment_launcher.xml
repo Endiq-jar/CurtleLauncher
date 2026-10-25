@@ -176,6 +176,133 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <!-- Cubiq-style top tab strip: Play / Installations / Skins / Patch Notes.
+         Additive — this screen is the "Play" tab's content, the other three
+         route to the closest existing screen/dialog, or a toast when none
+         exists yet (Patch Notes). -->
+    <LinearLayout
+        android:id="@+id/home_tab_strip"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/space_l"
+        android:paddingTop="@dimen/space_xs"
+        android:paddingBottom="@dimen/space_s"
+        app:layout_constraintTop_toBottomOf="@id/home_top_bar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:id="@+id/tab_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/space_l"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tab_play_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/minecraft"
+                android:text="@string/main_tab_play"
+                android:textColor="@color/accent_primary"
+                android:textSize="14sp"/>
+
+            <View
+                android:id="@+id/tab_play_indicator"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="4dp"
+                android:background="@color/accent_primary"
+                android:visibility="visible"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tab_installations"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/space_l"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/minecraft"
+                android:text="@string/main_tab_installations"
+                android:textColor="@color/crutle_text_secondary"
+                android:textSize="14sp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="4dp"
+                android:background="@color/accent_primary"
+                android:visibility="invisible"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tab_skins"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/space_l"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/minecraft"
+                android:text="@string/main_tab_skins"
+                android:textColor="@color/crutle_text_secondary"
+                android:textSize="14sp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="4dp"
+                android:background="@color/accent_primary"
+                android:visibility="invisible"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tab_patch_notes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/minecraft"
+                android:text="@string/main_tab_patch_notes"
+                android:textColor="@color/crutle_text_secondary"
+                android:textSize="14sp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="4dp"
+                android:background="@color/accent_primary"
+                android:visibility="invisible"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
     <!-- LEFT PANEL -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/left_panel"
@@ -185,7 +312,7 @@
         app:layout_constraintBottom_toTopOf="@+id/bottom_nav_bar"
         app:layout_constraintEnd_toStartOf="@+id/play_layout"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/home_top_bar">
+        app:layout_constraintTop_toBottomOf="@id/home_tab_strip">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/launcher_content_row"
@@ -618,7 +745,7 @@
         android:paddingBottom="@dimen/space_m"
         app:layout_constraintBottom_toTopOf="@+id/bottom_nav_bar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/home_top_bar">
+        app:layout_constraintTop_toBottomOf="@id/home_tab_strip">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/play_buttons_layout"
