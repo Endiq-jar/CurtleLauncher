@@ -1,0 +1,15 @@
+<!-- Source: Tabler Icons (MIT) icons/outline/pointer.svg - converted by tools/import_icons.py; see docs/ICONS.md -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:tint="@color/icon_tint"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:fillColor="@android:color/transparent"
+        android:strokeColor="#FF000000"
+        android:strokeWidth="2"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="M 7.904 17.563 a 1.2 1.2 0 0 0 2.228 .308 l 2.09 -3.093 l 4.907 4.907 a 1.067 1.067 0 0 0 1.509 0 l 1.047 -1.047 a 1.067 1.067 0 0 0 0 -1.509 l -4.907 -4.907 l 3.113 -2.09 a 1.2 1.2 0 0 0 -.309 -2.228 l -13.582 -3.904 l 3.904 13.563" />
+</vector>

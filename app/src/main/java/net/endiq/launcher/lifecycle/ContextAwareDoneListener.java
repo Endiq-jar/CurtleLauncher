@@ -1,0 +1,127 @@
+package net.endiq.launcher.lifecycle;
+
+import static net.endiq.launcher.MainActivity.INTENT_VERSION;
+
+import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
+
+import androidx.annotation.NonNull;
+
+import com.app.mcgui.ProgressLayout;
+import com.app.crutlelauncher.R;
+import com.app.crutlelauncher.context.ContextExecutor;
+import com.app.crutlelauncher.feature.mod.parser.ModChecker;
+import com.app.crutlelauncher.feature.mod.parser.ModInfo;
+import com.app.crutlelauncher.feature.mod.parser.ModParser;
+import com.app.crutlelauncher.feature.mod.parser.ModParserListener;
+import com.app.crutlelauncher.feature.version.Version;
+import com.app.crutlelauncher.setting.AllSettings;
+
+import net.endiq.launcher.MainActivity;
+import net.endiq.launcher.Tools;
+import net.endiq.launcher.progresskeeper.ProgressKeeper;
+import net.endiq.launcher.tasks.AsyncMinecraftDownloader;
+import net.endiq.launcher.utils.NotificationUtils;
+
+import java.io.File;
+import java.util.List;
+import java.util.concurrent.atomic.AtomicInteger;
+
+public class ContextAwareDoneListener implements AsyncMinecraftDownloader.DoneListener, ContextExecutorTask {
+    private final String mErrorString;
+    private final Version mVersion;
+
+    public ContextAwareDoneListener(Context baseContext, Version version) {
+        this.mErrorString = baseContext.getString(R.string.mc_download_failed);
+        this.mVersion = version;
+    }
+
+    private Intent createGameStartIntent(Context context) {
+        Intent mainIntent = new Intent(context, MainActivity.class);
+        mainIntent.putExtra(INTENT_VERSION, mVersion);
+        mainIntent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+        return mainIntent;
+    }
+
+    private void executeTask() {
+        ProgressKeeper.waitUntilDone(() -> ContextExecutor.executeTask(this));
+    }
+
+    @Override
+    public void onDownloadDone() {
+        AtomicInteger progressCount = new AtomicInteger(0);
+        ModParser.checkAllMods(mVersion, new ModParserListener() {
+            @Override
+            public void onProgress(@NonNull ModInfo recentlyParsedModInfo, int totalFileCount) {
+                int i = progressCount.incrementAndGet();
+                int percent = totalFileCount > 0 ? i * 100 / totalFileCount : 100;
+                ProgressLayout.setProgress(ProgressLayout.CHECKING_MODS, percent,
+                        R.string.mod_check_progress_message, i, totalFileCount);
+            }
+
+            @Override
+            public void onParseEnded(@NonNull List<? extends ModInfo> modInfoList) {
+                ProgressLayout.clearProgress(ProgressLayout.CHECKING_MODS);
+                File modsFolder = new File(mVersion.getGameDir(), "mods");
+                File[] modFiles = modsFolder.listFiles();
+                boolean hasModJars = modFiles != null &&
+                        java.util.Arrays.stream(modFiles)
+                                .anyMatch(file -> file.isFile() && file.getName().toLowerCase(java.util.Locale.ROOT).endsWith(".jar"));
+                if (modInfoList.isEmpty() && !hasModJars) executeTask();
+                else {
+                    ContextExecutor.executeTaskWithAllContext(context ->
+                        com.app.crutlelauncher.feature.mod.ModAutoMaintenance.runForVersion(
+                            context, mVersion, modInfoList, () ->
+                                new ModChecker().check(context, modInfoList, mVersion, modCheckResult -> {
+                                    mVersion.setModCheckResult(modCheckResult);
+                                    executeTask();
+                                    return null;
+                                })
+                        )
+                    );
+                }
+            }
+        });
+    }
+
+    @Override
+    public void onDownloadFailed(Throwable throwable) {
+        Tools.showErrorRemote(mErrorString, throwable);
+    }
+
+    @Override
+    public void executeWithActivity(Activity activity) {
+        try {
+            Intent gameStartIntent = createGameStartIntent(activity);
+            com.app.crutlelauncher.task.TaskExecutors.setGameSessionActive(true);
+            com.app.crutlelauncher.feature.crutle.BackgroundServiceManager.onGameSessionStart(activity);
+            com.app.crutlelauncher.feature.shizuku.ShizukuActions.applyBeforeLaunchIfEnabled();
+            activity.startActivity(gameStartIntent);
+            if (AllSettings.getQuitLauncher().getValue()) {
+                activity.finish();
+                android.os.Process.killProcess(android.os.Process.myPid()); //You should kill yourself, NOW!
+            }
+        } catch (Throwable e) {
+            Tools.showError(activity.getBaseContext(), e);
+        }
+    }
+
+    @Override
+    public void executeWithApplication(Context context) {
+        Intent gameStartIntent = createGameStartIntent(context);
+        // Since the game is a separate process anyway, it does not matter if it gets invoked
+        // from somewhere other than the launcher activity.
+        // The only problem may arise if the launcher starts doing something when the user starts the notification.
+        // So, the notification is automatically removed once there are tasks ongoing in the ProgressKeeper
+        NotificationUtils.sendBasicNotification(context,
+                R.string.notif_download_finished,
+                R.string.notif_download_finished_desc,
+                gameStartIntent,
+                NotificationUtils.PENDINGINTENT_CODE_GAME_START,
+                NotificationUtils.NOTIFICATION_ID_GAME_START
+        );
+        // You should keep yourself safe, NOW!
+        // otherwise android does weird things...
+    }
+}

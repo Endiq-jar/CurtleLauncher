@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    tools:ignore="ContentDescription">
+
+    <!-- Horizontal pill tab bar (same DslTabLayout pattern/colors as account_type_tab in
+         fragment_account.xml) replacing the old left-hand vertical sidebar. Tab item ids,
+         DownloadFragment.kt's classify_tab/download_viewpager wiring and ViewPager2 paging
+         are unchanged - this is a layout/orientation restyle only. -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/classify_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:layout_marginHorizontal="@dimen/_12sdp"
+        android:background="@drawable/background_card"
+        android:padding="@dimen/_2sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.angcyo.tablayout.DslTabLayout
+            android:id="@+id/classify_tab"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingVertical="@dimen/_4sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tab_deselect_color="@color/miuix_on_surface_variant_summary"
+            app:tab_select_color="@color/miuix_primary">
+
+            <com.app.crutlelauncher.ui.layout.AnimRelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_8sdp">
+
+                <com.app.crutlelauncher.ui.view.AnimatedIconView
+                    android:id="@+id/mod_image"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_centerVertical="true"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitCenter"
+                    android:scaleX="0.95"
+                    android:scaleY="0.95"
+                    app:srcCompat="@drawable/ic_profile_mods" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_6sdp"
+                    android:layout_toEndOf="@+id/mod_image"
+                    android:text="@string/download_classify_mod"
+                    android:textColor="@color/crutle_primary_text" />
+            </com.app.crutlelauncher.ui.layout.AnimRelativeLayout>
+
+            <com.app.crutlelauncher.ui.layout.AnimRelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_8sdp">
+
+                <com.app.crutlelauncher.ui.view.AnimatedIconView
+                    android:id="@+id/modpack_image"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_centerVertical="true"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitCenter"
+                    android:scaleX="0.82"
+                    android:scaleY="0.82"
+                    app:srcCompat="@drawable/ic_zip" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_6sdp"
+                    android:layout_toEndOf="@+id/modpack_image"
+                    android:text="@string/download_classify_modpack"
+                    android:textColor="@color/crutle_primary_text" />
+            </com.app.crutlelauncher.ui.layout.AnimRelativeLayout>
+
+            <com.app.crutlelauncher.ui.layout.AnimRelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_8sdp">
+
+                <com.app.crutlelauncher.ui.view.AnimatedIconView
+                    android:id="@+id/resource_pack_image"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_centerVertical="true"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitCenter"
+                    android:scaleX="0.82"
+                    android:scaleY="0.82"
+                    app:srcCompat="@drawable/ic_profile_resource_pack" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_6sdp"
+                    android:layout_toEndOf="@+id/resource_pack_image"
+                    android:text="@string/download_classify_resource_pack"
+                    android:textColor="@color/crutle_primary_text" />
+            </com.app.crutlelauncher.ui.layout.AnimRelativeLayout>
+
+            <com.app.crutlelauncher.ui.layout.AnimRelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_8sdp">
+
+                <com.app.crutlelauncher.ui.view.AnimatedIconView
+                    android:id="@+id/shader_pack_image"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_centerVertical="true"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitCenter"
+                    android:scaleX="0.95"
+                    android:scaleY="0.95"
+                    app:srcCompat="@drawable/ic_profile_shader_pack" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_6sdp"
+                    android:layout_toEndOf="@+id/shader_pack_image"
+                    android:text="@string/download_classify_shader_pack"
+                    android:textColor="@color/crutle_primary_text" />
+            </com.app.crutlelauncher.ui.layout.AnimRelativeLayout>
+
+            <com.app.crutlelauncher.ui.layout.AnimRelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_8sdp">
+
+                <com.app.crutlelauncher.ui.view.AnimatedIconView
+                    android:id="@+id/world_image"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_centerVertical="true"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitCenter"
+                    android:scaleX="0.78"
+                    android:scaleY="0.78"
+                    app:srcCompat="@drawable/ic_profile_saves" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_6sdp"
+                    android:layout_toEndOf="@+id/world_image"
+                    android:text="@string/download_classify_world"
+                    android:textColor="@color/crutle_primary_text" />
+            </com.app.crutlelauncher.ui.layout.AnimRelativeLayout>
+        </com.angcyo.tablayout.DslTabLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/download_viewpager"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/classify_layout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

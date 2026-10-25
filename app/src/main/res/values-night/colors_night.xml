@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ============================================================
+         Crutle pastel-green palette — Night Mode
+         Same tokens as values/colors.xml. Night mode no longer
+         re-introduces the old blue accent: both configurations are
+         pastel green, so the launcher never flashes blue at dusk or
+         while a fragment is recreating.
+         ============================================================ -->
+    <color name="miuix_primary">@color/pastel_green_400</color>
+    <color name="miuix_on_primary">@color/pastel_green_950</color>
+    <color name="miuix_primary_variant">@color/pastel_green_500</color>
+    <color name="miuix_on_primary_variant">@color/pastel_green_100</color>
+    <color name="miuix_primary_container">@color/pastel_green_300</color>
+    <color name="miuix_on_primary_container">@color/pastel_green_950</color>
+    <color name="miuix_disabled_primary">#FF194411</color>
+    <color name="miuix_disabled_on_primary">#FF888888</color>
+    <color name="miuix_disabled_primary_button">#FF194411</color>
+    <color name="miuix_disabled_on_primary_button">#FF888888</color>
+    <color name="miuix_disabled_primary_slider">#FF3C8527</color>
+
+    <color name="miuix_secondary">#FF383838</color>
+    <color name="miuix_on_secondary">#FFFFFFFF</color>
+    <color name="miuix_secondary_variant">#FF333333</color>
+    <color name="miuix_on_secondary_variant">#FFD9D9D9</color>
+    <color name="miuix_disabled_secondary">#FF404040</color>
+    <color name="miuix_disabled_on_secondary">#FF707070</color>
+    <color name="miuix_disabled_secondary_variant">#FF404040</color>
+    <color name="miuix_disabled_on_secondary_variant">#FF717171</color>
+
+    <color name="miuix_secondary_container">#FF333333</color>
+    <color name="miuix_on_secondary_container">#FF7C7C7C</color>
+    <color name="miuix_secondary_container_variant">#FF4F4F4F</color>
+    <color name="miuix_on_secondary_container_variant">#FF959595</color>
+
+    <color name="miuix_tertiary_container">@color/pastel_green_900</color>
+    <color name="miuix_on_tertiary_container">@color/pastel_green_200</color>
+    <color name="miuix_tertiary_container_variant">#FF383838</color>
+
+    <color name="miuix_background">#FF141416</color>
+    <color name="miuix_on_background">#E6FFFFFF</color>
+    <color name="miuix_on_background_variant">#FFAAAAAA</color>
+
+    <color name="miuix_surface">#FF000000</color>
+    <color name="miuix_on_surface">#FFF2F2F2</color>
+    <color name="miuix_surface_variant">#FF242426</color>
+    <color name="miuix_on_surface_secondary">#CCFFFFFF</color>
+    <color name="miuix_on_surface_variant_summary">#80FFFFFF</color>
+    <color name="miuix_on_surface_variant_actions">#66FFFFFF</color>
+    <color name="miuix_disabled_on_surface">#FF666666</color>
+
+    <color name="miuix_surface_container">#FF242426</color>
+    <color name="miuix_on_surface_container">#E6FFFFFF</color>
+    <color name="miuix_surface_container_high">#FF242426</color>
+    <color name="miuix_on_surface_container_high">#FF666666</color>
+    <color name="miuix_surface_container_highest">#FF28282A</color>
+    <color name="miuix_on_surface_container_highest">#FFE9E9E9</color>
+
+    <color name="miuix_outline">#FF404040</color>
+    <color name="miuix_divider_line">#FF393939</color>
+    <color name="miuix_window_dimming">#99000000</color>
+
+    <color name="miuix_error">#FFF12522</color>
+    <color name="miuix_on_error">#FF690005</color>
+    <color name="miuix_error_container">#FF2E0603</color>
+    <color name="miuix_on_error_container">#FFFFDAD6</color>
+
+    <color name="miuix_slider_key_point">#4D777777</color>
+    <color name="miuix_slider_key_point_foreground">@color/pastel_green_300</color>
+    <color name="miuix_slider_background">#26FFFFFF</color>
+
+    <color name="miuix_light_primary">@color/pastel_green_600</color>
+    <color name="miuix_light_surface">#FFFFFFFF</color>
+    <color name="miuix_light_surface_container">#FFFFFFFF</color>
+    <color name="miuix_light_secondary_container">#FFFFFFFF</color>
+    <color name="miuix_light_on_surface">@color/pastel_green_950</color>
+
+    <!-- ============================================================
+         Core Semantic Tokens mapped to Miuix
+         ============================================================ -->
+    <color name="palette_primary">#FF000000</color>
+    <color name="palette_secondary">@color/pastel_green_300</color>
+    <color name="palette_accent">#FFF2F2F2</color>
+    <color name="palette_neutral">#FFAAAAAA</color>
+
+    <color name="crutle_bg_deep">#FF000000</color>
+    <color name="crutle_bg_surface">#FF161618</color>
+    <color name="crutle_bg_card">#FF242426</color>
+    <color name="crutle_bg_elevated">#FF28282A</color>
+    <color name="crutle_bg_input">#FF3E3E44</color>
+    <color name="crutle_bg_terminal">#FF141416</color>
+    <color name="crutle_glass_overlay">#E6242426</color>
+
+    <color name="crutle_accent">@color/pastel_green_400</color>
+    <color name="crutle_accent_bright">@color/pastel_green_200</color>
+    <color name="crutle_accent_pressed">@color/pastel_green_500</color>
+    <color name="crutle_accent_dim">#FF194411</color>
+    <color name="crutle_accent_glow">#335AC636</color>
+    <color name="crutle_accent_subtle">@color/pastel_green_900</color>
+    <color name="crutle_accent_ripple">#2E5AC636</color>
+    <color name="crutle_highlight_subtle">#14FFFFFF</color>
+
+    <color name="crutle_border_subtle">#FF303030</color>
+    <color name="crutle_border_default">#FF404040</color>
+    <color name="crutle_border_focus">@color/pastel_green_400</color>
+    <color name="crutle_divider">#FF393939</color>
+
+    <color name="crutle_text_primary">#FFF2F2F2</color>
+    <color name="crutle_text_secondary">#80FFFFFF</color>
+    <color name="crutle_text_muted">#66FFFFFF</color>
+    <color name="crutle_text_on_accent">@color/pastel_green_950</color>
+
+    <color name="crutle_success">#FF55FF55</color>
+    <color name="crutle_warning">#FFFFB020</color>
+    <color name="crutle_error">#FFF12522</color>
+    <color name="crutle_info">@color/pastel_green_400</color>
+
+    <color name="new_background_dark">#FF000000</color>
+    <color name="new_background_cards_panels">#FF242426</color>
+    <color name="new_accent_primary">@color/pastel_green_400</color>
+    <color name="new_accent_secondary">@color/pastel_green_300</color>
+    <color name="new_text_primary">#FFF2F2F2</color>
+    <color name="new_text_secondary">#80FFFFFF</color>
+    <color name="new_success_highlight">#FF55FF55</color>
+    <color name="new_error_danger">#FFF12522</color>
+
+    <color name="bg_deep">@color/crutle_bg_deep</color>
+    <color name="bg_surface">@color/crutle_bg_surface</color>
+    <color name="bg_card">@color/crutle_bg_card</color>
+    <color name="bg_elevated">@color/crutle_bg_elevated</color>
+    <color name="glass_overlay">@color/crutle_glass_overlay</color>
+    <color name="accent_primary">@color/crutle_accent</color>
+    <color name="accent_primary_pressed">@color/crutle_accent_pressed</color>
+    <color name="accent_secondary">@color/crutle_accent_bright</color>
+    <color name="accent_glow">@color/crutle_accent_glow</color>
+    <color name="accent_subtle">@color/crutle_accent_subtle</color>
+    <color name="border_subtle">@color/crutle_border_subtle</color>
+    <color name="border_default">@color/crutle_border_default</color>
+    <color name="border_focus">@color/crutle_border_focus</color>
+
+    <color name="crutle_primary_accent">@color/crutle_accent</color>
+    <color name="crutle_secondary_accent">@color/crutle_accent_bright</color>
+    <color name="crutle_background">@color/crutle_bg_deep</color>
+    <color name="crutle_surface">@color/crutle_bg_surface</color>
+    <color name="crutle_primary_text">@color/crutle_text_primary</color>
+    <color name="crutle_secondary_text">@color/crutle_text_secondary</color>
+    <color name="crutle_accent_highlight">@color/crutle_success</color>
+    <color name="crutle_danger">@color/crutle_error</color>
+
+    <color name="background_app">@color/crutle_bg_deep</color>
+    <color name="background_bottom_bar">@color/crutle_bg_surface</color>
+    <color name="background_status_bar">#FF000000</color>
+    <color name="background_menu_top">@color/crutle_bg_card</color>
+    <color name="background_menu_element">@color/crutle_bg_card</color>
+    <color name="background_edit_box">@color/crutle_bg_input</color>
+    <color name="background_category">@color/crutle_bg_card</color>
+    <color name="background_settings_item">@color/crutle_bg_card</color>
+    <color name="background_overlay">#99000000</color>
+    <color name="dialog_background">@color/miuix_background</color>
+    <color name="panel_translucent">#E6242426</color>
+    <color name="game_panel_overlay">#D91C1C1E</color>
+
+    <color name="primary_text">@color/crutle_text_primary</color>
+    <color name="secondary_text">@color/crutle_text_secondary</color>
+    <color name="black_or_white">@color/crutle_text_primary</color>
+    <color name="control_button_Normal">@color/crutle_bg_elevated</color>
+    <color name="control_button_pressed">@color/crutle_accent</color>
+    <color name="button_disabled">@color/miuix_disabled_secondary_variant</color>
+    <color name="divider">@color/miuix_divider_line</color>
+    <color name="menu_overlay">@color/crutle_bg_surface</color>
+    <color name="menu_bar">#CC1A1A1C</color>
+    <color name="menu_progress">@color/miuix_primary</color>
+    <color name="menu_button">#FF28282A</color>
+    <color name="minebutton_color">@color/crutle_bg_elevated</color>
+
+    <!-- Mirrors values/colors.xml: tokens that drawables, layouts and code still reference. -->
+    <color name="background_item_disabled">#55404040</color>
+    <color name="background_item_selected">#AA262628</color>
+    <color name="background_app_error">@color/crutle_bg_deep</color>
+    <color name="background_sponsor_advanced">#555AC636</color>
+    <color name="background_sponsor_intermediate">#55FF5555</color>
+    <color name="favorite_color">#FFFF5555</color>
+    <color name="menu_bar_text">@color/miuix_on_surface</color>
+    <color name="crutle_icon_color">@color/miuix_on_surface</color>
+    <color name="crutle_stroke">@color/miuix_outline</color>
+    <!-- ThemeOverlay.Crutle.HighContrast -->
+    <color name="crutle_hc_border">@color/miuix_on_surface</color>
+    <color name="crutle_hc_text_secondary">@color/miuix_on_surface</color>
+    <color name="crutle_hc_surface">@color/crutle_bg_deep</color>
+
+    <color name="file_icon_tint">@color/palette_secondary</color>
+    <color name="icon_tint">@color/palette_secondary</color>
+    <color name="ic_launcher_background">@color/pastel_green_950</color>
+
+    <color name="background_mod_category">#FF3E3E44</color>
+    <color name="stroke_mod_category">#FF666666</color>
+
+    <color name="version_dot_ready">@color/crutle_success</color>
+    <color name="version_dot_modded">@color/miuix_primary</color>
+    <color name="version_dot_missing">@color/crutle_warning</color>
+
+    <color name="log_info">#FFF2F2F2</color>
+    <color name="log_warn">#FFFFB020</color>
+    <color name="log_error">#FFF12522</color>
+    <color name="log_fatal">#FFFF5252</color>
+    <color name="log_debug">#80FFFFFF</color>
+</resources>

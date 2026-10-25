@@ -1,0 +1,22 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <!-- Stone background chip -->
+    <path
+        android:pathData="M 4 2 H 20 A 2 2 0 0 1 22 4 V 20 A 2 2 0 0 1 20 22 H 4 A 2 2 0 0 1 2 20 V 4 A 2 2 0 0 1 4 2 Z"
+        android:fillColor="#9AA0A6" />
+    <!-- Ears -->
+    <path android:fillColor="#C9601E" android:pathData="M 5 7 L 7 3 L 9 7 Z" />
+    <path android:fillColor="#C9601E" android:pathData="M 15 7 L 17 3 L 19 7 Z" />
+    <!-- Face -->
+    <path
+        android:fillColor="#F2A65A"
+        android:pathData="M 12 6.5 A 6.5 6.5 0 0 1 18.5 13 A 6.5 6.5 0 0 1 12 19.5 A 6.5 6.5 0 0 1 5.5 13 A 6.5 6.5 0 0 1 12 6.5 Z" />
+    <!-- Eyes -->
+    <path android:fillColor="#2B1B12" android:pathData="M 8.5 11 A 1 1 0 0 1 10.5 11 A 1 1 0 0 1 8.5 11 Z" />
+    <path android:fillColor="#2B1B12" android:pathData="M 13.5 11 A 1 1 0 0 1 15.5 11 A 1 1 0 0 1 13.5 11 Z" />
+    <!-- Nose -->
+    <path android:fillColor="#2B1B12" android:pathData="M 11 14.5 H 13 V 16 H 11 Z" />
+</vector>

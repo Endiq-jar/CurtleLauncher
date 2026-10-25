@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Launcher logo picker: a single scrolling list (thumbnail + name + selected
+     checkmark per row), Discord "App Icon" settings style. Tapping any row applies
+     it immediately - no separate preview pane and no per-item rename/share/delete
+     menu, unlike the file-browser-style pickers elsewhere in this app (e.g. the
+     virtual-mouse picker). "Add Logo" in the header still lets the user import
+     their own image alongside the bundled pack. -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_app"
+    tools:ignore="ContentDescription">
+
+    <com.app.crutlelauncher.ui.view.AnimTextView
+        android:id="@+id/logo_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_l"
+        android:layout_marginTop="@dimen/space_m"
+        android:text="@string/custom_logo_title"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@color/crutle_primary_text"
+        app:layout_constraintEnd_toStartOf="@+id/logo_add_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.app.crutlelauncher.ui.view.AnimButton
+        android:id="@+id/logo_add_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_m"
+        android:background="@drawable/background_grid_card"
+        android:paddingHorizontal="@dimen/space_m"
+        android:paddingVertical="@dimen/space_xs"
+        android:text="@string/custom_logo_add"
+        android:textSize="@dimen/_10ssp"
+        app:layout_constraintEnd_toStartOf="@+id/return_button"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.app.crutlelauncher.ui.view.AnimButton
+        android:id="@+id/return_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/space_l"
+        android:layout_marginTop="@dimen/space_m"
+        android:paddingHorizontal="@dimen/space_m"
+        android:text="@string/generic_return"
+        android:textAllCaps="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/logo_list_card"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/space_l"
+        android:background="@drawable/background_card"
+        android:padding="@dimen/space_m"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo_title">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/logo_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:scrollbars="vertical"
+            tools:listitem="@layout/item_logo_entry" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

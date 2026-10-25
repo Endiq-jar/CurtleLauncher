@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/crutle_surface"
+    android:padding="@dimen/_16sdp">
+
+    <TextView
+        android:id="@+id/center_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_32ssp"
+        android:textStyle="bold"
+        android:textColor="@android:color/holo_red_dark"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- ══════════════════════════ Left card: tabs + log/AI content ══════════════════════════ -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/crash_card"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_card_white"
+        android:padding="@dimen/_16sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/action_rail"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintWidth_percent="0.76">
+
+        <!-- Short plain-language status line (error_title) shown above the tabs -->
+        <TextView
+            android:id="@+id/error_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="#111111"
+            android:textSize="@dimen/_14ssp"
+            android:textStyle="bold"
+            android:layout_marginEnd="@dimen/_32sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <!-- Collapse / return-to-launcher control (the small ◁ in the reference design) -->
+        <com.app.crutlelauncher.ui.view.AnimatedIconButton
+            android:id="@+id/error_confirm"
+            android:layout_width="@dimen/_28sdp"
+            android:layout_height="@dimen/_28sdp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_chevron_down"
+            android:rotation="90"
+            android:tint="#111111"
+            android:contentDescription="@string/generic_confirm"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <!-- Extra context lines (tip / no-screenshot warning), hidden unless relevant -->
+        <TextView
+            android:id="@+id/error_text"
+            android:text="Error"
+            android:textSize="@dimen/_11ssp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:textColor="#555555"
+            tools:ignore="HardcodedText"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/error_title"/>
+
+        <TextView
+            android:id="@+id/error_tip"
+            android:text="@string/game_exit_note"
+            android:textSize="@dimen/_11ssp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:textColor="#555555"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/error_text"/>
+
+        <TextView
+            android:id="@+id/error_no_screenshot"
+            android:text="@string/game_exit_no_screenshot"
+            android:textSize="@dimen/_11ssp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:textColor="@color/crutle_error"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/error_tip"/>
+
+        <!-- Tab row: Game Logs / AI Analysis -->
+        <LinearLayout
+            android:id="@+id/crash_tab_row"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/_12sdp"
+            app:layout_constraintTop_toBottomOf="@id/error_no_screenshot"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <TextView
+                android:id="@+id/tab_game_logs"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingVertical="@dimen/_8sdp"
+                android:text="@string/crash_tab_game_logs"
+                android:textStyle="bold"
+                android:textSize="@dimen/_13ssp"
+                android:textColor="#111111"/>
+
+            <TextView
+                android:id="@+id/tab_ai_analysis"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingVertical="@dimen/_8sdp"
+                android:text="@string/crash_tab_ai_analysis"
+                android:textStyle="bold"
+                android:textSize="@dimen/_13ssp"
+                android:textColor="#111111"/>
+        </LinearLayout>
+
+        <!-- Underline indicator, slid between the two tabs -->
+        <View
+            android:id="@+id/crash_tab_indicator"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:background="#111111"
+            app:layout_constraintTop_toBottomOf="@id/crash_tab_row"
+            app:layout_constraintStart_toStartOf="@id/tab_game_logs"
+            app:layout_constraintEnd_toEndOf="@id/tab_game_logs"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="#E0E0E0"
+            app:layout_constraintTop_toTopOf="@id/crash_tab_indicator"
+            app:layout_constraintBottom_toBottomOf="@id/crash_tab_indicator"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <!-- ── Tab content: Game Logs ──────────────────────────────────────────── -->
+        <ScrollView
+            android:id="@+id/log_tab_content"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_12sdp"
+            app:layout_constraintTop_toBottomOf="@id/crash_tab_indicator"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/advanced_log_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="monospace"
+                    android:textIsSelectable="true"
+                    android:textSize="@dimen/_10ssp"
+                    android:textColor="#333333"
+                    tools:ignore="HardcodedText"/>
+
+                <com.app.crutlelauncher.ui.view.AnimButton
+                    android:id="@+id/copy_log"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="0dp"
+                    android:paddingVertical="@dimen/_4sdp"
+                    android:textSize="@dimen/_11ssp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:text="@string/crash_copy_log"/>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- ── Tab content: AI Analysis ────────────────────────────────────────── -->
+        <ScrollView
+            android:id="@+id/ai_tab_content"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/crash_tab_indicator"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/self_heal_status"
+                    android:textSize="@dimen/_12ssp"
+                    android:textStyle="bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_8sdp"
+                    android:textColor="@color/accent_primary"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/fix_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_12ssp"
+                    android:textColor="#333333"
+                    android:textIsSelectable="true"/>
+
+                <!-- "Inspect with AI" is still loading / hasn't been requested yet -->
+                <TextView
+                    android:id="@+id/ai_analysis_placeholder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_12ssp"
+                    android:textColor="#777777"
+                    android:text="@string/crash_ai_analysis_placeholder"/>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- ══════════════════════════ Right action rail ══════════════════════════ -->
+    <LinearLayout
+        android:id="@+id/action_rail"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginStart="@dimen/_12sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.22">
+
+        <com.app.crutlelauncher.ui.view.AnimButton
+            android:id="@+id/ai_inspect_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="0dp"
+            android:paddingVertical="@dimen/_12sdp"
+            android:background="@drawable/background_pill_filled"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            android:textSize="@dimen/_12ssp"
+            android:text="@string/crash_inspect_with_ai"/>
+
+        <com.app.crutlelauncher.ui.view.AnimButton
+            android:id="@+id/crash_export_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="0dp"
+            android:paddingVertical="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/background_pill_outline"
+            android:textColor="#111111"
+            android:textAllCaps="false"
+            android:textSize="@dimen/_12ssp"
+            android:visibility="gone"
+            android:text="@string/crash_export_button"/>
+
+        <com.app.crutlelauncher.ui.view.AnimButton
+            android:id="@+id/share_log"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="0dp"
+            android:paddingVertical="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/background_pill_outline"
+            android:textColor="#111111"
+            android:textAllCaps="false"
+            android:textSize="@dimen/_12ssp"
+            android:text="@string/main_share_logs"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/_10sdp">
+
+            <com.app.crutlelauncher.ui.view.AnimatedIconButton
+                android:id="@+id/toggle_advanced_log"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_36sdp"
+                android:layout_weight="1"
+                android:background="@drawable/background_pill_outline"
+                android:src="@drawable/ic_copy"
+                android:tint="#111111"
+                android:contentDescription="@string/crash_show_advanced_log"
+                android:padding="@dimen/_8sdp"/>
+
+            <com.app.crutlelauncher.ui.view.AnimatedIconButton
+                android:id="@+id/crash_more_button"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_36sdp"
+                android:layout_weight="1"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:background="@drawable/background_pill_outline"
+                android:src="@drawable/ic_more"
+                android:tint="#111111"
+                android:contentDescription="@string/crash_more_actions"
+                android:padding="@dimen/_8sdp"/>
+
+        </LinearLayout>
+
+        <!-- Hidden triggers kept for logic reuse (repair / search-online), surfaced via the
+             overflow (⋯) button above through a PopupMenu instead of being shown inline. -->
+        <com.app.crutlelauncher.ui.view.AnimButton
+            android:id="@+id/crash_repair_button"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            android:text="@string/crash_repair_button"/>
+
+        <com.app.crutlelauncher.ui.view.AnimButton
+            android:id="@+id/crash_search_online_button"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            android:text="@string/crash_search_online_button"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <com.app.crutlelauncher.ui.view.AnimButton
+            android:id="@+id/error_restart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="0dp"
+            android:paddingVertical="@dimen/_12sdp"
+            android:background="@drawable/background_pill_filled"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            android:textSize="@dimen/_13ssp"
+            android:drawableStart="@drawable/ic_refresh"
+            android:drawableTint="@android:color/white"
+            android:drawablePadding="@dimen/_6sdp"
+            android:gravity="center"
+            android:text="@string/generic_restart"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

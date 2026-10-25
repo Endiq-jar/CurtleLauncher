@@ -1,0 +1,15 @@
+<!-- Source: Flowbite Icons (MIT) src/outline/**/file-video.svg - converted by tools/import_icons.py; see docs/ICONS.md -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:tint="@color/file_icon_tint"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:fillColor="@android:color/transparent"
+        android:strokeColor="#FF000000"
+        android:strokeWidth="2"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="M 10 3 v 4 a 1 1 0 0 1 -1 1 H 5 m 14 -4 v 16 a 1 1 0 0 1 -1 1 H 6 a 1 1 0 0 1 -1 -1 V 7.914 a 1 1 0 0 1 .293 -.707 l 3.914 -3.914 A 1 1 0 0 1 9.914 3 H 18 a 1 1 0 0 1 1 1 Z M 9 12 h 2 a 1 1 0 0 1 1 1 v 2 a 1 1 0 0 1 -1 1 H 9 a 1 1 0 0 1 -1 -1 v -2 a 1 1 0 0 1 1 -1 Z m 5.697 2.395 v -.733 l 1.269 -1.219 v 2.984 l -1.268 -1.032 Z" />
+</vector>
