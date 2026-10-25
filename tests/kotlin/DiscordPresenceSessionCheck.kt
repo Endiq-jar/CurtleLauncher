@@ -1,4 +1,4 @@
-package com.app.astralauncher.feature.discord
+package com.app.crutlelauncher.feature.discord
 
 fun main() {
     val session = DiscordPresenceSession()

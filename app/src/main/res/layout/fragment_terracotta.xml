@@ -18,17 +18,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-        <com.app.astralauncher.ui.view.AnimatedIconButton
+        <com.app.crutlelauncher.ui.view.AnimatedIconButton
             android:id="@+id/back_button"
             android:layout_width="28dp"
             android:layout_height="28dp"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:src="@drawable/ic_chevron_down"
             android:rotation="90"
-            android:tint="@color/astra_text_secondary"
+            android:tint="@color/crutle_text_secondary"
             android:contentDescription="@string/generic_return"/>
 
-        <com.app.astralauncher.ui.view.AnimatedIconView
+        <com.app.crutlelauncher.ui.view.AnimatedIconView
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:layout_marginStart="@dimen/space_s"
@@ -42,7 +42,7 @@
             android:text="@string/terracotta_title"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:textColor="@color/astra_text_primary"/>
+            android:textColor="@color/crutle_text_primary"/>
     </LinearLayout>
 
     <!-- ===================== Waiting: host / join entry ===================== -->
@@ -70,17 +70,17 @@
             android:layout_height="wrap_content"
             android:text="@string/terracotta_waiting_subtitle"
             android:textSize="13sp"
-            android:textColor="@color/astra_text_secondary"
+            android:textColor="@color/crutle_text_secondary"
             android:layout_marginBottom="@dimen/space_l"/>
 
-        <com.app.astralauncher.ui.layout.AnimRelativeLayout
+        <com.app.crutlelauncher.ui.layout.AnimRelativeLayout
             android:id="@+id/host_button"
             android:layout_width="match_parent"
             android:layout_height="64dp"
             android:background="@drawable/background_grid_card"
             android:layout_marginBottom="@dimen/space_s"
             app:ripple_for_relative="true">
-            <com.app.astralauncher.ui.view.AnimatedIconView
+            <com.app.crutlelauncher.ui.view.AnimatedIconView
                 android:layout_width="22dp"
                 android:layout_height="22dp"
                 android:layout_centerVertical="true"
@@ -95,17 +95,17 @@
                 android:text="@string/terracotta_host_button"
                 android:textSize="14sp"
                 android:textStyle="bold"
-                android:textColor="@color/astra_text_primary"/>
-        </com.app.astralauncher.ui.layout.AnimRelativeLayout>
+                android:textColor="@color/crutle_text_primary"/>
+        </com.app.crutlelauncher.ui.layout.AnimRelativeLayout>
 
-        <com.app.astralauncher.ui.layout.AnimRelativeLayout
+        <com.app.crutlelauncher.ui.layout.AnimRelativeLayout
             android:id="@+id/join_button"
             android:layout_width="match_parent"
             android:layout_height="64dp"
             android:background="@drawable/background_grid_card"
             android:layout_marginBottom="@dimen/space_s"
             app:ripple_for_relative="true">
-            <com.app.astralauncher.ui.view.AnimatedIconView
+            <com.app.crutlelauncher.ui.view.AnimatedIconView
                 android:layout_width="22dp"
                 android:layout_height="22dp"
                 android:layout_centerVertical="true"
@@ -120,8 +120,8 @@
                 android:text="@string/terracotta_join_button"
                 android:textSize="14sp"
                 android:textStyle="bold"
-                android:textColor="@color/astra_text_primary"/>
-        </com.app.astralauncher.ui.layout.AnimRelativeLayout>
+                android:textColor="@color/crutle_text_primary"/>
+        </com.app.crutlelauncher.ui.layout.AnimRelativeLayout>
 
         <!-- Revealed under Join - code entry, no separate dialog -->
         <LinearLayout
@@ -133,7 +133,7 @@
             android:visibility="gone"
             android:layout_marginTop="@dimen/space_s">
 
-            <com.app.astralauncher.ui.view.AnimEditText
+            <com.app.crutlelauncher.ui.view.AnimEditText
                 android:id="@+id/join_code_input"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -145,14 +145,14 @@
                 android:gravity="center_vertical"
                 android:hint="@string/terracotta_join_code_hint"
                 android:textSize="14sp"
-                android:textColor="@color/astra_text_primary"
-                android:textColorHint="@color/astra_text_secondary"
+                android:textColor="@color/crutle_text_primary"
+                android:textColorHint="@color/crutle_text_secondary"
                 android:maxLines="1"
                 android:imeOptions="actionGo"
                 android:inputType="textNoSuggestions"
                 android:importantForAutofill="no"/>
 
-            <com.app.astralauncher.ui.view.AnimatedIconButton
+            <com.app.crutlelauncher.ui.view.AnimatedIconButton
                 android:id="@+id/join_code_submit"
                 android:layout_width="56dp"
                 android:layout_height="56dp"
@@ -184,14 +184,14 @@
                 android:layout_weight="1"
                 android:text="@string/terracotta_custom_node_list"
                 android:textSize="13sp"
-                android:textColor="@color/astra_text_primary"/>
-            <com.app.astralauncher.ui.miuix.MiuixSwitch
+                android:textColor="@color/crutle_text_primary"/>
+            <com.app.crutlelauncher.ui.miuix.MiuixSwitch
                 android:id="@+id/custom_node_switch"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
         </LinearLayout>
 
-        <com.app.astralauncher.ui.view.AnimEditText
+        <com.app.crutlelauncher.ui.view.AnimEditText
             android:id="@+id/custom_node_input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -199,8 +199,8 @@
             android:padding="@dimen/space_m"
             android:hint="@string/terracotta_custom_node_list_hint"
             android:textSize="14sp"
-            android:textColor="@color/astra_text_primary"
-            android:textColorHint="@color/astra_text_secondary"
+            android:textColor="@color/crutle_text_primary"
+            android:textColorHint="@color/crutle_text_secondary"
             android:maxLines="1"
             android:imeOptions="actionDone"
             android:inputType="textUri"
@@ -228,7 +228,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="12sp"
-            android:textColor="@color/astra_text_secondary"
+            android:textColor="@color/crutle_text_secondary"
             android:layout_marginTop="@dimen/space_m"
             android:text="@string/terracotta_relay_status_checking"/>
 
@@ -240,7 +240,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="11sp"
-            android:textColor="@color/astra_text_secondary"
+            android:textColor="@color/crutle_text_secondary"
             android:layout_marginTop="@dimen/space_xs"
             android:visibility="gone"/>
 
@@ -260,7 +260,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-        <com.app.astralauncher.ui.miuix.MiuixProgressBar
+        <com.app.crutlelauncher.ui.miuix.MiuixProgressBar
             android:layout_width="36dp"
             android:layout_height="36dp"/>
 
@@ -270,7 +270,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/space_m"
             android:textSize="13sp"
-            android:textColor="@color/astra_text_secondary"/>
+            android:textColor="@color/crutle_text_secondary"/>
 
         <TextView
             android:id="@+id/loading_cancel"
@@ -311,7 +311,7 @@
                 android:textSize="11sp"
                 android:textStyle="bold"
                 android:letterSpacing="0.08"
-                android:textColor="@color/astra_text_secondary"/>
+                android:textColor="@color/crutle_text_secondary"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -328,10 +328,10 @@
                     android:textSize="16sp"
                     android:textStyle="bold"
                     android:fontFamily="monospace"
-                    android:textColor="@color/astra_text_primary"
+                    android:textColor="@color/crutle_text_primary"
                     android:textIsSelectable="true"/>
 
-                <com.app.astralauncher.ui.view.AnimatedIconButton
+                <com.app.crutlelauncher.ui.view.AnimatedIconButton
                     android:id="@+id/connected_info_copy"
                     android:layout_width="32dp"
                     android:layout_height="32dp"
@@ -347,7 +347,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/space_s"
                 android:textSize="12sp"
-                android:textColor="@color/astra_text_secondary"/>
+                android:textColor="@color/crutle_text_secondary"/>
 
             <TextView
                 android:id="@+id/connected_leave"
@@ -358,7 +358,7 @@
                 android:text="@string/terracotta_leave"
                 android:textSize="12sp"
                 android:textStyle="bold"
-                android:textColor="@color/astra_error"/>
+                android:textColor="@color/crutle_error"/>
         </LinearLayout>
 
         <androidx.recyclerview.widget.RecyclerView
@@ -378,7 +378,7 @@
             android:paddingHorizontal="@dimen/space_l"
             android:paddingVertical="@dimen/space_m">
 
-            <com.app.astralauncher.ui.view.AnimEditText
+            <com.app.crutlelauncher.ui.view.AnimEditText
                 android:id="@+id/chat_message_input"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -387,13 +387,13 @@
                 android:padding="@dimen/space_m"
                 android:hint="@string/terracotta_chat_input_hint"
                 android:textSize="14sp"
-                android:textColor="@color/astra_text_primary"
-                android:textColorHint="@color/astra_text_secondary"
+                android:textColor="@color/crutle_text_primary"
+                android:textColorHint="@color/crutle_text_secondary"
                 android:maxLines="4"
                 android:inputType="textMultiLine|textCapSentences"
                 android:importantForAutofill="no"/>
 
-            <com.app.astralauncher.ui.view.AnimatedIconButton
+            <com.app.crutlelauncher.ui.view.AnimatedIconButton
                 android:id="@+id/chat_send_button"
                 android:layout_width="44dp"
                 android:layout_height="44dp"
@@ -420,11 +420,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-        <com.app.astralauncher.ui.view.AnimatedIconView
+        <com.app.crutlelauncher.ui.view.AnimatedIconView
             android:layout_width="32dp"
             android:layout_height="32dp"
             android:src="@drawable/ic_warning"
-            android:tint="@color/astra_error"/>
+            android:tint="@color/crutle_error"/>
 
         <TextView
             android:id="@+id/exception_text"
@@ -432,7 +432,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/space_m"
             android:textSize="13sp"
-            android:textColor="@color/astra_text_secondary"
+            android:textColor="@color/crutle_text_secondary"
             android:gravity="center"/>
 
         <LinearLayout
@@ -459,7 +459,7 @@
                 android:padding="@dimen/space_s"
                 android:text="@string/terracotta_export_logs"
                 android:textSize="13sp"
-                android:textColor="@color/astra_text_secondary"/>
+                android:textColor="@color/crutle_text_secondary"/>
         </LinearLayout>
     </LinearLayout>
 

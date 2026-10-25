@@ -1,11 +1,11 @@
 package net.endiq.launcher;
 
-import static com.app.astralauncher.context.ContextExecutor.getString;
+import static com.app.crutlelauncher.context.ContextExecutor.getString;
 import static org.lwjgl.glfw.CallbackBridge.sendKeyPress;
 
 import android.view.KeyEvent;
 
-import com.app.astralauncher.R;
+import com.app.crutlelauncher.R;
 
 import org.lwjgl.glfw.CallbackBridge;
 

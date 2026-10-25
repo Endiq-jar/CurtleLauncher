@@ -8,7 +8,7 @@
     android:paddingHorizontal="@dimen/_12sdp"
     android:minWidth="@dimen/dialog_min_width">
 
-    <com.app.astralauncher.ui.miuix.MiuixProgressBar
+    <com.app.crutlelauncher.ui.miuix.MiuixProgressBar
         android:id="@+id/progressView"
         style="?android:attr/progressBarStyleSmall"
         android:layout_width="wrap_content"
@@ -54,7 +54,7 @@
             app:layout_constraintHorizontal_weight="1.5"
             tools:ignore="HardcodedText" />
 
-        <com.app.astralauncher.ui.miuix.MiuixProgressBar
+        <com.app.crutlelauncher.ui.miuix.MiuixProgressBar
             android:id="@+id/progressBar"
             style="?android:attr/progressBarStyleHorizontal"
             android:layout_width="0dp"
@@ -69,7 +69,7 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <com.app.astralauncher.ui.view.AnimButton
+    <com.app.crutlelauncher.ui.view.AnimButton
         android:id="@+id/cancel_button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"

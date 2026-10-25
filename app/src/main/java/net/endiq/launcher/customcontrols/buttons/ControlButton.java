@@ -20,8 +20,8 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.TextView;
 
-import com.app.astralauncher.R;
-import com.app.astralauncher.setting.AllSettings;
+import com.app.crutlelauncher.R;
+import com.app.crutlelauncher.setting.AllSettings;
 
 import net.endiq.launcher.LauncherActivity;
 import net.endiq.launcher.LwjglGlfwKeycode;

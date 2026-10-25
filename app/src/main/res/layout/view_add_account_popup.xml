@@ -25,14 +25,14 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <com.app.astralauncher.ui.view.AnimatedIconView
+        <com.app.crutlelauncher.ui.view.AnimatedIconView
             android:layout_width="@dimen/_24sdp"
             android:layout_height="@dimen/_24sdp"
             android:layout_marginStart="@dimen/_4sdp"
             android:layout_gravity="center_vertical"
             android:src="@drawable/ic_add" />
 
-        <com.app.astralauncher.ui.view.AnimTextView
+        <com.app.crutlelauncher.ui.view.AnimTextView
             android:id="@+id/popup_add_microsoft_account"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -53,14 +53,14 @@
         android:layout_marginTop="@dimen/_8sdp"
         android:orientation="horizontal">
 
-        <com.app.astralauncher.ui.view.AnimatedIconView
+        <com.app.crutlelauncher.ui.view.AnimatedIconView
             android:layout_width="@dimen/_24sdp"
             android:layout_height="@dimen/_24sdp"
             android:layout_marginStart="@dimen/_4sdp"
             android:layout_gravity="center_vertical"
             android:src="@drawable/ic_add" />
 
-        <com.app.astralauncher.ui.view.AnimTextView
+        <com.app.crutlelauncher.ui.view.AnimTextView
             android:id="@+id/popup_add_local_account"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -97,14 +97,14 @@
         android:layout_marginTop="@dimen/_8sdp"
         android:orientation="horizontal">
 
-        <com.app.astralauncher.ui.view.AnimatedIconView
+        <com.app.crutlelauncher.ui.view.AnimatedIconView
             android:layout_width="@dimen/_24sdp"
             android:layout_height="@dimen/_24sdp"
             android:layout_marginStart="@dimen/_4sdp"
             android:layout_gravity="center_vertical"
             android:src="@drawable/ic_more" />
 
-        <com.app.astralauncher.ui.view.AnimTextView
+        <com.app.crutlelauncher.ui.view.AnimTextView
             android:id="@+id/popup_add_server"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

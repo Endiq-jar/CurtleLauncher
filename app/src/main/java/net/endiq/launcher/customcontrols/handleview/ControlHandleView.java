@@ -12,7 +12,7 @@ import android.view.ViewTreeObserver;
 import androidx.annotation.Nullable;
 import androidx.core.content.res.ResourcesCompat;
 
-import com.app.astralauncher.R;
+import com.app.crutlelauncher.R;
 
 import net.endiq.launcher.customcontrols.buttons.ControlInterface;
 

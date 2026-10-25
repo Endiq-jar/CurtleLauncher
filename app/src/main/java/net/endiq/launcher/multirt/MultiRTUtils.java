@@ -5,11 +5,11 @@ import static org.apache.commons.io.FileUtils.listFiles;
 import android.system.Os;
 
 import com.app.mcgui.ProgressLayout;
-import com.app.astralauncher.R;
-import com.app.astralauncher.feature.log.Logging;
-import com.app.astralauncher.feature.unpack.Jre;
-import com.app.astralauncher.utils.path.PathManager;
-import com.app.astralauncher.utils.stringutils.SortStrings;
+import com.app.crutlelauncher.R;
+import com.app.crutlelauncher.feature.log.Logging;
+import com.app.crutlelauncher.feature.unpack.Jre;
+import com.app.crutlelauncher.utils.path.PathManager;
+import com.app.crutlelauncher.utils.stringutils.SortStrings;
 
 import net.endiq.launcher.Tools;
 import net.endiq.launcher.utils.MathUtils;
@@ -125,7 +125,7 @@ public class MultiRTUtils {
 
         unpack200(PathManager.DIR_NATIVE_LIB,RUNTIME_FOLDER + "/" + name);
 
-        File binpack_verfile = new File(RUNTIME_FOLDER,"/"+name+"/astra_version");
+        File binpack_verfile = new File(RUNTIME_FOLDER,"/"+name+"/crutle_version");
         FileOutputStream fos = new FileOutputStream(binpack_verfile);
         fos.write(binpackVersion.getBytes());
         fos.close();
@@ -137,7 +137,7 @@ public class MultiRTUtils {
 
 
     public static String readInternalRuntimeVersion(String name) {
-        File versionFile = new File(RUNTIME_FOLDER,"/" + name + "/astra_version");
+        File versionFile = new File(RUNTIME_FOLDER,"/" + name + "/crutle_version");
         try {
             if (versionFile.exists()) {
                 return Tools.read(versionFile.getAbsolutePath());

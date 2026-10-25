@@ -52,38 +52,38 @@
             android:layout_height="wrap_content"
             android:ellipsize="middle"
             android:singleLine="true"
-            android:textColor="@color/astra_text_primary"
+            android:textColor="@color/crutle_text_primary"
             android:textSize="14sp"
             android:textStyle="bold"
-            tools:text="astra_2026-10-18_12.00.00.000.mp4"/>
+            tools:text="crutle_2026-10-18_12.00.00.000.mp4"/>
 
         <TextView
             android:id="@+id/recording_meta"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="2dp"
-            android:textColor="@color/astra_text_secondary"
+            android:textColor="@color/crutle_text_secondary"
             android:textSize="12sp"
             tools:text="128.4 MB  Oct 18, 2026  12:00"/>
     </LinearLayout>
 
-    <com.app.astralauncher.ui.view.AnimatedIconView
+    <com.app.crutlelauncher.ui.view.AnimatedIconView
         android:id="@+id/recording_share"
         android:layout_width="24dp"
         android:layout_height="24dp"
         android:layout_marginStart="@dimen/_8sdp"
         android:background="?attr/selectableItemBackgroundBorderless"
         android:src="@drawable/ic_share"
-        android:tint="@color/astra_text_secondary"
+        android:tint="@color/crutle_text_secondary"
         android:contentDescription="@string/generic_share"/>
 
-    <com.app.astralauncher.ui.view.AnimatedIconView
+    <com.app.crutlelauncher.ui.view.AnimatedIconView
         android:id="@+id/recording_delete"
         android:layout_width="24dp"
         android:layout_height="24dp"
         android:layout_marginStart="@dimen/_8sdp"
         android:background="?attr/selectableItemBackgroundBorderless"
         android:src="@drawable/ic_menu_delete_forever"
-        android:tint="@color/astra_text_secondary"
+        android:tint="@color/crutle_text_secondary"
         android:contentDescription="@string/generic_delete"/>
 </LinearLayout>

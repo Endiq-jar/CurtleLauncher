@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.app.astralauncher.ui.layout.AnimConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.app.crutlelauncher.ui.layout.AnimConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -44,7 +44,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="@dimen/_8ssp"
-            tools:text="Astra"
+            tools:text="Crutle"
             tools:ignore="SmallSp" />
 
     </LinearLayout>
@@ -55,7 +55,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/_8sdp"
-        android:textColor="@color/astra_primary_text"
+        android:textColor="@color/crutle_primary_text"
         android:textSize="@dimen/_11ssp"
         android:singleLine="true"
         app:layout_constraintEnd_toStartOf="@+id/platform_layout"
@@ -108,7 +108,7 @@
 
     <!-- One-tap shortcut to the same version/detail screen the row itself opens (see
          InfoAdapter.ViewHolder.setStateLimited) - purely additive, doesn't change navigation. -->
-    <com.app.astralauncher.ui.view.AnimButton
+    <com.app.crutlelauncher.ui.view.AnimButton
         android:id="@+id/install_button"
         android:layout_width="wrap_content"
         android:layout_height="@dimen/_26sdp"
@@ -124,4 +124,4 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-</com.app.astralauncher.ui.layout.AnimConstraintLayout>
+</com.app.crutlelauncher.ui.layout.AnimConstraintLayout>

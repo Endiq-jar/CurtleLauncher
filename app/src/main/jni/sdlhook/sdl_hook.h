@@ -1,5 +1,5 @@
-#ifndef ASTRA_SDL_HOOK_H
-#define ASTRA_SDL_HOOK_H
+#ifndef CRUTLE_SDL_HOOK_H
+#define CRUTLE_SDL_HOOK_H
 
 // dlsym helper macros (adapted from ZalithLauncher2's jni/utils.h).
 // DECL_DLSYM(SDL_Foo) declares the SDL_Foo_t function-pointer type;
@@ -51,4 +51,4 @@ struct SDL_Window *sdlhookGetPrimaryWindow(void);
 // sdl_dlsym_hook.c, called from JNI_OnLoad.
 void sdlhookSetArtVm(JavaVM *vm);
 
-#endif // ASTRA_SDL_HOOK_H
+#endif // CRUTLE_SDL_HOOK_H

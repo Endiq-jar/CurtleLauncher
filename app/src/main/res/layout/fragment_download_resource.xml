@@ -44,7 +44,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-            <com.app.astralauncher.ui.miuix.MiuixProgressBar
+            <com.app.crutlelauncher.ui.miuix.MiuixProgressBar
                 android:id="@+id/loading_progress"
                 style="?android:attr/progressBarStyle"
                 android:layout_width="wrap_content"
@@ -77,7 +77,7 @@
             app:layout_constraintTop_toTopOf="@+id/recycler_view"
             tools:ignore="HardcodedText" />
 
-        <com.app.astralauncher.ui.view.AnimatedIconButton
+        <com.app.crutlelauncher.ui.view.AnimatedIconButton
             android:id="@+id/back_to_top"
             android:layout_width="@dimen/_40sdp"
             android:layout_height="@dimen/_40sdp"
@@ -132,7 +132,7 @@
                 android:text="@string/download_ui_search"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <com.app.astralauncher.ui.view.AnimEditText
+            <com.app.crutlelauncher.ui.view.AnimEditText
                 android:id="@+id/name_edit"
                 android:layout_width="0dp"
                 android:layout_height="@dimen/_40sdp"
@@ -145,7 +145,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/search_title" />
 
-            <com.app.astralauncher.ui.view.AnimatedIconButton
+            <com.app.crutlelauncher.ui.view.AnimatedIconButton
                 android:id="@+id/search_view"
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
@@ -172,7 +172,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <com.app.astralauncher.ui.view.AnimButton
+                    <com.app.crutlelauncher.ui.view.AnimButton
                         android:id="@+id/install_button"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -193,7 +193,7 @@
                             android:text="@string/download_ui_mc_version"
                             app:layout_constraintTop_toTopOf="parent" />
 
-                        <com.app.astralauncher.ui.view.AnimTextView
+                        <com.app.crutlelauncher.ui.view.AnimTextView
                             android:id="@+id/selected_mc_version_view"
                             android:layout_width="0dp"
                             android:layout_height="@dimen/_40sdp"
@@ -230,7 +230,7 @@
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@id/platform_textview"
-                            app:spinner_arrow_tint="@color/astra_primary_text"
+                            app:spinner_arrow_tint="@color/crutle_primary_text"
                             app:spinner_popup_background="@drawable/background_edit_box"
                             app:spinner_popup_height="@dimen/_80sdp"
                             tools:paddingVertical="@dimen/_12sdp" />
@@ -260,7 +260,7 @@
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@id/sort_textview"
-                            app:spinner_arrow_tint="@color/astra_primary_text"
+                            app:spinner_arrow_tint="@color/crutle_primary_text"
                             app:spinner_popup_background="@drawable/background_edit_box"
                             app:spinner_popup_height="@dimen/_200sdp"
                             tools:paddingVertical="@dimen/_12sdp" />
@@ -290,7 +290,7 @@
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/category_textview"
-                            app:spinner_arrow_tint="@color/astra_primary_text"
+                            app:spinner_arrow_tint="@color/crutle_primary_text"
                             app:spinner_popup_background="@drawable/background_edit_box"
                             app:spinner_popup_height="@dimen/_200sdp"
                             tools:paddingVertical="@dimen/_12sdp" />
@@ -320,7 +320,7 @@
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/modloader_textview"
-                            app:spinner_arrow_tint="@color/astra_primary_text"
+                            app:spinner_arrow_tint="@color/crutle_primary_text"
                             app:spinner_popup_background="@drawable/background_edit_box"
                             app:spinner_popup_height="@dimen/_200sdp"
                             tools:paddingVertical="@dimen/_12sdp" />
@@ -329,7 +329,7 @@
                 </LinearLayout>
             </ScrollView>
 
-            <com.app.astralauncher.ui.view.AnimButton
+            <com.app.crutlelauncher.ui.view.AnimButton
                 android:id="@+id/reset"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -340,7 +340,7 @@
                 app:layout_constraintEnd_toStartOf="@+id/return_button"
                 app:layout_constraintStart_toStartOf="parent" />
 
-            <com.app.astralauncher.ui.view.AnimButton
+            <com.app.crutlelauncher.ui.view.AnimButton
                 android:id="@+id/return_button"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"

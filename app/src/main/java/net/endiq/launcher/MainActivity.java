@@ -41,46 +41,46 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import com.app.anim.AnimPlayer;
 import com.app.anim.animations.Animations;
-import com.app.astralauncher.R;
-import com.app.astralauncher.context.ContextExecutor;
-import com.app.astralauncher.databinding.ActivityGameBinding;
-import com.app.astralauncher.databinding.ViewControlMenuBinding;
-import com.app.astralauncher.databinding.ViewGameMenuBinding;
-import com.app.astralauncher.event.single.RefreshHotbarEvent;
-import com.app.astralauncher.event.value.HotbarChangeEvent;
-import com.app.astralauncher.feature.MCOptions;
-import com.app.astralauncher.feature.DarkModeManager;
-import com.app.astralauncher.feature.ProfileLanguageSelector;
-import com.app.astralauncher.feature.background.BackgroundManager;
-import com.app.astralauncher.feature.background.BackgroundType;
-import com.app.astralauncher.feature.log.Logging;
-import com.app.astralauncher.feature.version.Version;
-import com.app.astralauncher.game.sdl.SdlBridge;
-import com.app.astralauncher.feature.version.VersionInfo;
-import com.app.astralauncher.launch.LaunchGame;
-import com.app.astralauncher.listener.SimpleTextWatcher;
-import com.app.astralauncher.plugins.driver.DriverPluginManager;
-import com.app.astralauncher.renderer.Renderers;
-import com.app.astralauncher.setting.AllSettings;
-import com.app.astralauncher.setting.AllStaticSettings;
-import com.app.astralauncher.task.Task;
-import com.app.astralauncher.task.TaskExecutors;
-import com.app.astralauncher.ui.activity.BaseActivity;
-import com.app.astralauncher.ui.dialog.KeyboardDialog;
-import com.app.astralauncher.ui.dialog.SelectControlsDialog;
-import com.app.astralauncher.ui.dialog.SelectMouseDialog;
-import com.app.astralauncher.ui.fragment.settings.VideoSettingsFragment;
-import com.app.astralauncher.ui.subassembly.adapter.ObjectSpinnerAdapter;
-import com.app.astralauncher.ui.subassembly.hotbar.HotbarType;
-import com.app.astralauncher.ui.subassembly.hotbar.HotbarUtils;
-import com.app.astralauncher.ui.subassembly.menu.ControlMenu;
-import com.app.astralauncher.ui.subassembly.menu.MenuUtils;
-import com.app.astralauncher.ui.subassembly.view.GameMenuViewWrapper;
-import com.app.astralauncher.utils.path.PathManager;
-import com.app.astralauncher.utils.ZHTools;
-import com.app.astralauncher.utils.anim.AnimUtils;
-import com.app.astralauncher.utils.file.FileTools;
-import com.app.astralauncher.utils.stringutils.StringUtils;
+import com.app.crutlelauncher.R;
+import com.app.crutlelauncher.context.ContextExecutor;
+import com.app.crutlelauncher.databinding.ActivityGameBinding;
+import com.app.crutlelauncher.databinding.ViewControlMenuBinding;
+import com.app.crutlelauncher.databinding.ViewGameMenuBinding;
+import com.app.crutlelauncher.event.single.RefreshHotbarEvent;
+import com.app.crutlelauncher.event.value.HotbarChangeEvent;
+import com.app.crutlelauncher.feature.MCOptions;
+import com.app.crutlelauncher.feature.DarkModeManager;
+import com.app.crutlelauncher.feature.ProfileLanguageSelector;
+import com.app.crutlelauncher.feature.background.BackgroundManager;
+import com.app.crutlelauncher.feature.background.BackgroundType;
+import com.app.crutlelauncher.feature.log.Logging;
+import com.app.crutlelauncher.feature.version.Version;
+import com.app.crutlelauncher.game.sdl.SdlBridge;
+import com.app.crutlelauncher.feature.version.VersionInfo;
+import com.app.crutlelauncher.launch.LaunchGame;
+import com.app.crutlelauncher.listener.SimpleTextWatcher;
+import com.app.crutlelauncher.plugins.driver.DriverPluginManager;
+import com.app.crutlelauncher.renderer.Renderers;
+import com.app.crutlelauncher.setting.AllSettings;
+import com.app.crutlelauncher.setting.AllStaticSettings;
+import com.app.crutlelauncher.task.Task;
+import com.app.crutlelauncher.task.TaskExecutors;
+import com.app.crutlelauncher.ui.activity.BaseActivity;
+import com.app.crutlelauncher.ui.dialog.KeyboardDialog;
+import com.app.crutlelauncher.ui.dialog.SelectControlsDialog;
+import com.app.crutlelauncher.ui.dialog.SelectMouseDialog;
+import com.app.crutlelauncher.ui.fragment.settings.VideoSettingsFragment;
+import com.app.crutlelauncher.ui.subassembly.adapter.ObjectSpinnerAdapter;
+import com.app.crutlelauncher.ui.subassembly.hotbar.HotbarType;
+import com.app.crutlelauncher.ui.subassembly.hotbar.HotbarUtils;
+import com.app.crutlelauncher.ui.subassembly.menu.ControlMenu;
+import com.app.crutlelauncher.ui.subassembly.menu.MenuUtils;
+import com.app.crutlelauncher.ui.subassembly.view.GameMenuViewWrapper;
+import com.app.crutlelauncher.utils.path.PathManager;
+import com.app.crutlelauncher.utils.ZHTools;
+import com.app.crutlelauncher.utils.anim.AnimUtils;
+import com.app.crutlelauncher.utils.file.FileTools;
+import com.app.crutlelauncher.utils.stringutils.StringUtils;
 import com.skydoves.powerspinner.OnSpinnerItemSelectedListener;
 import net.endiq.launcher.customcontrols.ControlButtonMenuListener;
 import net.endiq.launcher.customcontrols.ControlLayout;
@@ -128,7 +128,7 @@ public class MainActivity extends BaseActivity implements ControlButtonMenuListe
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        com.app.astralauncher.bridge.NativeFileDialogs.install(this);
+        com.app.crutlelauncher.bridge.NativeFileDialogs.install(this);
         minecraftVersion = getIntent().getParcelableExtra(INTENT_VERSION);
         if (minecraftVersion == null) throw new RuntimeException("The game version is not selected!");
 
@@ -182,13 +182,13 @@ public class MainActivity extends BaseActivity implements ControlButtonMenuListe
 
         binding.mainControlLayout.setModifiable(false);
 
-        // AstraLauncher Control Switcher: tap to jump to the next control layout without
+        // CrutleLauncher Control Switcher: tap to jump to the next control layout without
         // opening the game menu. Visibility follows AllSettings.controlSwitcherEnabled, which
         // the in-game menu's "Control Switcher" row (Control tab) toggles - see
         // MenuSettingsInitListener below. Icon is the keyboard's Tab key.
         refreshControlSwitcherButton();
         binding.controlSwitcherButton.setOnClickListener(v -> {
-            String switchedTo = com.app.astralauncher.feature.astra.ControlSwitcher
+            String switchedTo = com.app.crutlelauncher.feature.crutle.ControlSwitcher
                     .cycleToNext(MainActivity.this, binding.mainControlLayout);
             // Only re-evaluate the menu button when the layout actually changed: a layout can
             // bring its own menu button, which is what hides the launcher's own.
@@ -364,7 +364,7 @@ public class MainActivity extends BaseActivity implements ControlButtonMenuListe
                 Logging.i("Rendering Game", "The game rendering has started, " +
                         "and the background image has been cleared to prevent certain issues from occurring.");
 
-                com.app.astralauncher.feature.inputstats.SessionStatsTracker.start();
+                com.app.crutlelauncher.feature.inputstats.SessionStatsTracker.start();
             });
 
             if (AllSettings.getEnableLogOutput().getValue()) binding.mainLoggerView.setVisibilityWithAnim(true);
@@ -496,18 +496,18 @@ public class MainActivity extends BaseActivity implements ControlButtonMenuListe
     @Override
     protected void onDestroy() {
         if (mGameMenuWrapper != null) mGameMenuWrapper.dispose();
-        com.app.astralauncher.bridge.NativeFileDialogs.release(this);
+        com.app.crutlelauncher.bridge.NativeFileDialogs.release(this);
         super.onDestroy();
-        com.app.astralauncher.feature.inputstats.SessionStatsTracker.stop();
-        com.app.astralauncher.feature.inputstats.InputStatsTracker.reset();
+        com.app.crutlelauncher.feature.inputstats.SessionStatsTracker.stop();
+        com.app.crutlelauncher.feature.inputstats.InputStatsTracker.reset();
         if (mMenuSettingsInitListener != null) mMenuSettingsInitListener.closeSpinner();
         if (binding != null) {
             CallbackBridge.removeGrabListener(binding.mainTouchpad);
             CallbackBridge.removeGrabListener(binding.mainGameRenderView);
         }
         if (mKeyboardOffsetAnimator != null) mKeyboardOffsetAnimator.cancel();
-        if (com.app.astralauncher.feature.astra.ScreenRecorder.INSTANCE.isRecording()) {
-            com.app.astralauncher.feature.astra.ScreenRecorder.INSTANCE.stop(null);
+        if (com.app.crutlelauncher.feature.crutle.ScreenRecorder.INSTANCE.isRecording()) {
+            com.app.crutlelauncher.feature.crutle.ScreenRecorder.INSTANCE.stop(null);
         }
         ContextExecutor.clearActivity();
     }
@@ -540,7 +540,7 @@ public class MainActivity extends BaseActivity implements ControlButtonMenuListe
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (com.app.astralauncher.bridge.NativeFileDialogs.onResult(this, requestCode, resultCode, data)) return;
+        if (com.app.crutlelauncher.bridge.NativeFileDialogs.onResult(this, requestCode, resultCode, data)) return;
 
         if (requestCode == 1 && resultCode == Activity.RESULT_OK) {
             try {
@@ -548,8 +548,8 @@ public class MainActivity extends BaseActivity implements ControlButtonMenuListe
             } catch (IOException e) {
                 Logging.e("LoadLayout", Tools.printToString(e));
             }
-        } else if (requestCode == com.app.astralauncher.feature.astra.ScreenRecorder.REQUEST_CODE_AUDIO_CAPTURE) {
-            com.app.astralauncher.feature.astra.ScreenRecorder.INSTANCE.onActivityResult(this, requestCode, resultCode, data);
+        } else if (requestCode == com.app.crutlelauncher.feature.crutle.ScreenRecorder.REQUEST_CODE_AUDIO_CAPTURE) {
+            com.app.crutlelauncher.feature.crutle.ScreenRecorder.INSTANCE.onActivityResult(this, requestCode, resultCode, data);
         }
     }
 
@@ -784,7 +784,7 @@ public class MainActivity extends BaseActivity implements ControlButtonMenuListe
             this.binding.disableGestures.setChecked(AllSettings.getDisableGestures().getValue());
             this.binding.disableDoubleTap.setChecked(AllSettings.getDisableDoubleTap().getValue());
             this.binding.controlSwitcher.setChecked(AllSettings.getControlSwitcherEnabled().getValue());
-            // AstraLauncher Emotes row state.
+            // CrutleLauncher Emotes row state.
             this.binding.emotes.setChecked(AllSettings.getEmotesEnabled().getValue());
             refreshEmotesRows();
             this.binding.enableGyro.setChecked(AllSettings.getEnableGyro().getValue());
@@ -847,7 +847,7 @@ public class MainActivity extends BaseActivity implements ControlButtonMenuListe
             this.binding.controlSwitcher.setOnCheckedChangeListener(this);
             this.binding.controlSwitcherLayout.setOnClickListener(this);
 
-            // AstraLauncher Emotes: toggle + wheel trigger + website shortcut.
+            // CrutleLauncher Emotes: toggle + wheel trigger + website shortcut.
             this.binding.emotes.setOnCheckedChangeListener(this);
             this.binding.emotesLayout.setOnClickListener(this);
             this.binding.emoteWheelButton.setOnClickListener(this);
@@ -973,11 +973,11 @@ public class MainActivity extends BaseActivity implements ControlButtonMenuListe
             else if (v == binding.logOutput) MainActivity.binding.mainLoggerView.toggleViewWithAnim();
             else if (v == binding.sendCustomKey) dialogSendCustomKey();
             else if (v == binding.startRecording) {
-                com.app.astralauncher.feature.astra.ScreenRecorder.INSTANCE.start(MainActivity.this);
+                com.app.crutlelauncher.feature.crutle.ScreenRecorder.INSTANCE.start(MainActivity.this);
                 refreshRecordingButtons();
             }
             else if (v == binding.stopRecording) {
-                com.app.astralauncher.feature.astra.ScreenRecorder.INSTANCE.stop(MainActivity.this);
+                com.app.crutlelauncher.feature.crutle.ScreenRecorder.INSTANCE.stop(MainActivity.this);
                 refreshRecordingButtons();
             }
             else if (v == binding.openMemoryInfoLayout) MenuUtils.toggleSwitchState(binding.openMemoryInfo);
@@ -1151,7 +1151,7 @@ public class MainActivity extends BaseActivity implements ControlButtonMenuListe
             view.setVisibility(visible ? View.VISIBLE : View.GONE);
         }
 
-        /** AstraLauncher Emotes: show/hide the emote action rows per the Emote button
+        /** CrutleLauncher Emotes: show/hide the emote action rows per the Emote button
          *  toggle. The toggle row itself always stays visible - it IS the toggle. */
         private void refreshEmotesRows() {
             boolean on = AllSettings.getEmotesEnabled().getValue();
@@ -1169,13 +1169,13 @@ public class MainActivity extends BaseActivity implements ControlButtonMenuListe
             }
         }
 
-        /** AstraLauncher Emotes: open the community emote library (the same site the
+        /** CrutleLauncher Emotes: open the community emote library (the same site the
          *  Settings -> Emotes screen embeds) in the browser, for when downloading from the
          *  WebView or managing files is not what the player wants right now. */
         private void openEmoteWebsite() {
             try {
                 MainActivity.binding.mainDrawerOptions.closeDrawers();
-                ZHTools.openLink(MainActivity.this, com.app.astralauncher.feature.emotes.Emotes.EMOTE_SITE_URL);
+                ZHTools.openLink(MainActivity.this, com.app.crutlelauncher.feature.emotes.Emotes.EMOTE_SITE_URL);
             } catch (Throwable t) {
                 Logging.w("MainActivity", "Could not open the emote website", t);
             }
@@ -1219,7 +1219,7 @@ public class MainActivity extends BaseActivity implements ControlButtonMenuListe
         }
 
         public void refreshRecordingButtons() {
-            boolean recording = com.app.astralauncher.feature.astra.ScreenRecorder.INSTANCE.isRecording();
+            boolean recording = com.app.crutlelauncher.feature.crutle.ScreenRecorder.INSTANCE.isRecording();
             binding.startRecording.setVisibility(recording ? View.GONE : View.VISIBLE);
             binding.stopRecording.setVisibility(recording ? View.VISIBLE : View.GONE);
         }

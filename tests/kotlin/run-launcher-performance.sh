@@ -7,8 +7,8 @@ TEMP=$(mktemp -d)
 trap 'rm -rf "$TEMP"' EXIT
 "$KOTLINC" \
   tests/kotlin/stubs/android/os/Process.kt \
-  app/src/main/java/com/app/astralauncher/feature/astra/{HudRefreshPolicy,ServerEndpoint,PingTracker}.kt \
-  app/src/main/java/com/app/astralauncher/launch/{PerformancePolicy,GameFpsOptions,JvmArguments,FrameBudget}.kt \
+  app/src/main/java/com/app/crutlelauncher/feature/crutle/{HudRefreshPolicy,ServerEndpoint,PingTracker}.kt \
+  app/src/main/java/com/app/crutlelauncher/launch/{PerformancePolicy,GameFpsOptions,JvmArguments,FrameBudget}.kt \
   tests/kotlin/{LauncherPerformanceCheck,PingTrackerCheck,JvmArgumentsCheck}.kt \
   -include-runtime -d "$TEMP/launcher-performance.jar"
 "$JAVA_HOME/bin/java" -jar "$TEMP/launcher-performance.jar"

@@ -14,13 +14,13 @@
     android:orientation="vertical"
     android:padding="@dimen/space_l">
 
-    <com.app.astralauncher.ui.view.AnimTextView
+    <com.app.crutlelauncher.ui.view.AnimTextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/account_wardrobe"
         android:textSize="@dimen/_16ssp"
         android:textStyle="bold"
-        android:textColor="@color/astra_text_primary" />
+        android:textColor="@color/crutle_text_primary" />
 
     <androidx.core.widget.NestedScrollView
         android:id="@+id/scroll_view"
@@ -45,7 +45,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" />
 
-                <com.app.astralauncher.ui.miuix.MiuixProgressBar
+                <com.app.crutlelauncher.ui.miuix.MiuixProgressBar
                     android:id="@+id/wardrobe_loading"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -53,7 +53,7 @@
 
             </FrameLayout>
 
-            <com.app.astralauncher.ui.view.AnimButton
+            <com.app.crutlelauncher.ui.view.AnimButton
                 android:id="@+id/wardrobe_change_skin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -61,13 +61,13 @@
                 android:background="@drawable/bg_launch_button"
                 android:drawableStart="@drawable/ic_skin_changer"
                 android:drawablePadding="@dimen/space_xs"
-                android:drawableTint="@color/astra_text_primary"
+                android:drawableTint="@color/crutle_text_primary"
                 android:gravity="center"
                 android:paddingVertical="@dimen/space_m"
                 android:text="@string/skin_cape_change_skin"
-                android:textColor="@color/astra_text_primary" />
+                android:textColor="@color/crutle_text_primary" />
 
-            <com.app.astralauncher.ui.view.AnimButton
+            <com.app.crutlelauncher.ui.view.AnimButton
                 android:id="@+id/wardrobe_change_cape"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -79,7 +79,7 @@
                 android:paddingVertical="@dimen/space_m"
                 android:text="@string/skin_cape_change_cape" />
 
-            <com.app.astralauncher.ui.view.AnimButton
+            <com.app.crutlelauncher.ui.view.AnimButton
                 android:id="@+id/wardrobe_close"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

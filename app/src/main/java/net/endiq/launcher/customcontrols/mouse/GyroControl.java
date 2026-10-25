@@ -10,8 +10,8 @@ import android.view.OrientationEventListener;
 import android.view.Surface;
 import android.view.WindowManager;
 
-import com.app.astralauncher.setting.AllSettings;
-import com.app.astralauncher.setting.AllStaticSettings;
+import com.app.crutlelauncher.setting.AllSettings;
+import com.app.crutlelauncher.setting.AllStaticSettings;
 
 import net.endiq.launcher.GrabListener;
 

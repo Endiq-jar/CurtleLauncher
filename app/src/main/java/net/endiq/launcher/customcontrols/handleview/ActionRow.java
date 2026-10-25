@@ -12,7 +12,7 @@ import android.widget.LinearLayout;
 import androidx.annotation.Nullable;
 import androidx.core.math.MathUtils;
 
-import com.app.astralauncher.R;
+import com.app.crutlelauncher.R;
 
 import net.endiq.launcher.customcontrols.buttons.ControlInterface;
 

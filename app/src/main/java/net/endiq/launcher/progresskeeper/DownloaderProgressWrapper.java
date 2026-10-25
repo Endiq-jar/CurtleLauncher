@@ -2,8 +2,8 @@ package net.endiq.launcher.progresskeeper;
 
 import static net.endiq.launcher.Tools.BYTE_TO_MB;
 
-import com.app.astralauncher.utils.ZHTools;
-import com.app.astralauncher.utils.file.FileTools;
+import com.app.crutlelauncher.utils.ZHTools;
+import com.app.crutlelauncher.utils.file.FileTools;
 
 import net.endiq.launcher.Tools;
 import net.endiq.launcher.tasks.SpeedCalculator;

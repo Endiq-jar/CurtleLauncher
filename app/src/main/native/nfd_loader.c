@@ -1,9 +1,9 @@
 #include <jni.h>
-extern void astra_install_nfd(JNIEnv *env);
+extern void crutle_install_nfd(JNIEnv *env);
 JNIEXPORT jint JNICALL JNI_OnLoad(JavaVM *vm, void *reserved) {
     JNIEnv *env = NULL;
     if ((*vm)->GetEnv(vm, (void **)&env, JNI_VERSION_1_6) != JNI_OK) return JNI_ERR;
-    astra_install_nfd(env);
+    crutle_install_nfd(env);
     return JNI_VERSION_1_6;
 }
 /* The bridge owns its malloc/free pairs; LWJGL's optional allocator must not free these paths. */

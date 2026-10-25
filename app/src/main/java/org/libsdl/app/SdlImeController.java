@@ -30,7 +30,7 @@ import android.view.ViewParent;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.FrameLayout;
 
-import com.app.astralauncher.game.sdl.SdlBridge;
+import com.app.crutlelauncher.game.sdl.SdlBridge;
 import net.endiq.launcher.customcontrols.keyboard.TouchCharInput;
 
 /**

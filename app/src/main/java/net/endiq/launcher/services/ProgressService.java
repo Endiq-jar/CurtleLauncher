@@ -16,11 +16,11 @@ import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
 import androidx.core.content.ContextCompat;
 
-import com.app.astralauncher.InfoCenter;
-import com.app.astralauncher.R;
-import com.app.astralauncher.feature.log.Logging;
-import com.app.astralauncher.task.TaskExecutors;
-import com.app.astralauncher.utils.ZHTools;
+import com.app.crutlelauncher.InfoCenter;
+import com.app.crutlelauncher.R;
+import com.app.crutlelauncher.feature.log.Logging;
+import com.app.crutlelauncher.task.TaskExecutors;
+import com.app.crutlelauncher.utils.ZHTools;
 
 import net.endiq.launcher.Tools;
 import net.endiq.launcher.progresskeeper.ProgressKeeper;

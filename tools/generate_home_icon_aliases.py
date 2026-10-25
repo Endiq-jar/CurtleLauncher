@@ -35,13 +35,13 @@ DEFAULT_ALIAS = """        <!-- Home-screen icon choices. Exactly one launcher e
              HomeScreenIcon enables the one matching the picked logo; the rest are
              generated below by tools/generate_home_icon_aliases.py. -->
         <activity-alias
-            android:name="com.app.astralauncher.HomeIconDefault"
+            android:name="com.app.crutlelauncher.HomeIconDefault"
             android:enabled="true"
             android:exported="true"
             android:icon="@mipmap/ic_launcher"
             android:roundIcon="@mipmap/ic_launcher_round"
-            android:label="Astra Launcher"
-            android:targetActivity="com.app.astralauncher.ui.activity.SplashActivity">
+            android:label="Crutle Launcher"
+            android:targetActivity="com.app.crutlelauncher.ui.activity.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -52,12 +52,12 @@ DEFAULT_ALIAS = """        <!-- Home-screen icon choices. Exactly one launcher e
 
 def alias_xml(key: str) -> str:
     return f"""        <activity-alias
-            android:name="com.app.astralauncher.{PREFIX_ALIAS}{key}"
+            android:name="com.app.crutlelauncher.{PREFIX_ALIAS}{key}"
             android:enabled="false"
             android:exported="true"
             android:icon="@mipmap/{PREFIX_RES}{key}"
-            android:label="Astra Launcher"
-            android:targetActivity="com.app.astralauncher.ui.activity.SplashActivity">
+            android:label="Crutle Launcher"
+            android:targetActivity="com.app.crutlelauncher.ui.activity.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

@@ -5,7 +5,7 @@
     android:id="@+id/background"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/astra_surface"
+    android:background="@color/crutle_surface"
     android:padding="@dimen/_16sdp">
 
     <TextView
@@ -49,7 +49,7 @@
             app:layout_constraintEnd_toEndOf="parent"/>
 
         <!-- Collapse / return-to-launcher control (the small ◁ in the reference design) -->
-        <com.app.astralauncher.ui.view.AnimatedIconButton
+        <com.app.crutlelauncher.ui.view.AnimatedIconButton
             android:id="@+id/error_confirm"
             android:layout_width="@dimen/_28sdp"
             android:layout_height="@dimen/_28sdp"
@@ -96,7 +96,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_2sdp"
-            android:textColor="@color/astra_error"
+            android:textColor="@color/crutle_error"
             android:textStyle="bold"
             android:visibility="gone"
             app:layout_constraintEnd_toEndOf="parent"
@@ -184,7 +184,7 @@
                     android:textColor="#333333"
                     tools:ignore="HardcodedText"/>
 
-                <com.app.astralauncher.ui.view.AnimButton
+                <com.app.crutlelauncher.ui.view.AnimButton
                     android:id="@+id/copy_log"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -258,7 +258,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintWidth_percent="0.22">
 
-        <com.app.astralauncher.ui.view.AnimButton
+        <com.app.crutlelauncher.ui.view.AnimButton
             android:id="@+id/ai_inspect_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -271,7 +271,7 @@
             android:textSize="@dimen/_12ssp"
             android:text="@string/crash_inspect_with_ai"/>
 
-        <com.app.astralauncher.ui.view.AnimButton
+        <com.app.crutlelauncher.ui.view.AnimButton
             android:id="@+id/crash_export_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -285,7 +285,7 @@
             android:visibility="gone"
             android:text="@string/crash_export_button"/>
 
-        <com.app.astralauncher.ui.view.AnimButton
+        <com.app.crutlelauncher.ui.view.AnimButton
             android:id="@+id/share_log"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -304,7 +304,7 @@
             android:orientation="horizontal"
             android:layout_marginTop="@dimen/_10sdp">
 
-            <com.app.astralauncher.ui.view.AnimatedIconButton
+            <com.app.crutlelauncher.ui.view.AnimatedIconButton
                 android:id="@+id/toggle_advanced_log"
                 android:layout_width="0dp"
                 android:layout_height="@dimen/_36sdp"
@@ -315,7 +315,7 @@
                 android:contentDescription="@string/crash_show_advanced_log"
                 android:padding="@dimen/_8sdp"/>
 
-            <com.app.astralauncher.ui.view.AnimatedIconButton
+            <com.app.crutlelauncher.ui.view.AnimatedIconButton
                 android:id="@+id/crash_more_button"
                 android:layout_width="0dp"
                 android:layout_height="@dimen/_36sdp"
@@ -331,14 +331,14 @@
 
         <!-- Hidden triggers kept for logic reuse (repair / search-online), surfaced via the
              overflow (⋯) button above through a PopupMenu instead of being shown inline. -->
-        <com.app.astralauncher.ui.view.AnimButton
+        <com.app.crutlelauncher.ui.view.AnimButton
             android:id="@+id/crash_repair_button"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:visibility="gone"
             android:text="@string/crash_repair_button"/>
 
-        <com.app.astralauncher.ui.view.AnimButton
+        <com.app.crutlelauncher.ui.view.AnimButton
             android:id="@+id/crash_search_online_button"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -350,7 +350,7 @@
             android:layout_height="0dp"
             android:layout_weight="1"/>
 
-        <com.app.astralauncher.ui.view.AnimButton
+        <com.app.crutlelauncher.ui.view.AnimButton
             android:id="@+id/error_restart"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

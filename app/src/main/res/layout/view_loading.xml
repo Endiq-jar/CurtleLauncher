@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.app.astralauncher.ui.miuix.MiuixProgressBar xmlns:android="http://schemas.android.com/apk/res/android"
+<com.app.crutlelauncher.ui.miuix.MiuixProgressBar xmlns:android="http://schemas.android.com/apk/res/android"
     style="?android:attr/progressBarStyleHorizontal"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:indeterminate="true"
     android:padding="@dimen/_4sdp">
-</com.app.astralauncher.ui.miuix.MiuixProgressBar>
+</com.app.crutlelauncher.ui.miuix.MiuixProgressBar>

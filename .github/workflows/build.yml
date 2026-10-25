@@ -99,7 +99,7 @@ jobs:
         env:
           CURSEFORGE_API_KEY: ${{ secrets.CURSEFORGE_API_KEY }}
           # Baked into BuildConfig.GEMINI_API_KEY by build.gradle.kts, so the APK ships with
-          # Astra AI working and no key to paste. Add it under
+          # Crutle AI working and no key to paste. Add it under
           # Settings -> Secrets and variables -> Actions -> New repository secret, named
           # GEMINI_API_KEY. Missing secret = empty key = the app falls back to asking the user
           # (the build still succeeds).
@@ -131,7 +131,7 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v6
         with:
-          name: AstraLauncher-unit-test-reports
+          name: CrutleLauncher-unit-test-reports
           path: "**/build/test-results/testDebugUnitTest/*.xml"
           if-no-files-found: warn
 
@@ -166,5 +166,5 @@ jobs:
       - name: Upload release APK
         uses: actions/upload-artifact@v6
         with:
-          name: AstraLauncher-release-apk
+          name: CrutleLauncher-release-apk
           path: "**/build/outputs/apk/release/*.apk"

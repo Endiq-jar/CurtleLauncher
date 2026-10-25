@@ -39,24 +39,24 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-    <!-- Animated astra logo: static poster at rest, WebP frames + a slow glide
+    <!-- Animated crutle logo: static poster at rest, WebP frames + a slow glide
          transform while hovered, pressed, focused or clicked (see AnimatedLogo /
          AnimatedIcon). -->
-    <com.app.astralauncher.ui.view.LogoImageView
+    <com.app.crutlelauncher.ui.view.LogoImageView
         android:id="@+id/splash_logo"
         android:layout_width="112dp"
         android:layout_height="112dp"
-        android:contentDescription="@string/artwork_ic_astra_full"
+        android:contentDescription="@string/artwork_ic_crutle_full"
         android:padding="4dp"
         android:scaleType="centerInside"
-        android:src="@drawable/ic_astra_full"
+        android:src="@drawable/ic_crutle_full"
         app:layout_constraintBottom_toTopOf="@id/setup_progress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_chainStyle="packed" />
 
-    <com.app.astralauncher.ui.miuix.MiuixProgressBar
+    <com.app.crutlelauncher.ui.miuix.MiuixProgressBar
         android:id="@+id/setup_progress"
         style="?android:attr/progressBarStyleLarge"
         android:layout_width="56dp"
@@ -76,7 +76,7 @@
         android:layout_marginHorizontal="32dp"
         android:layout_marginTop="16dp"
         android:gravity="center"
-        android:textColor="@color/astra_text_secondary"
+        android:textColor="@color/crutle_text_secondary"
         android:textSize="14sp"
         android:lineSpacingExtra="2dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -93,14 +93,14 @@
         app:layout_constraintStart_toStartOf="parent"/>
 
     <!-- Setup Launcher button -->
-    <com.app.astralauncher.ui.view.AnimButton
+    <com.app.crutlelauncher.ui.view.AnimButton
         android:id="@+id/start_button"
         android:layout_width="0dp"
         android:layout_height="48dp"
         android:layout_margin="16dp"
         android:background="@drawable/bg_button_gradient"
         android:text="@string/splash_screen_setup_launcher"
-        android:textColor="@color/astra_text_on_accent"
+        android:textColor="@color/crutle_text_on_accent"
         android:textStyle="bold"
         android:textSize="14sp"
         android:letterSpacing="0.08"

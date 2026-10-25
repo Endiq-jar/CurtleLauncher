@@ -46,7 +46,7 @@
                 app:tabIndicatorHeight="@dimen/_3sdp"
                 app:tabMode="fixed" />
 
-            <com.app.astralauncher.ui.subassembly.filelist.FileRecyclerView
+            <com.app.crutlelauncher.ui.subassembly.filelist.FileRecyclerView
                 android:id="@+id/file_recycler_view"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
@@ -115,7 +115,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"/>
 
-            <com.app.astralauncher.ui.view.AnimButton
+            <com.app.crutlelauncher.ui.view.AnimButton
                 android:id="@+id/built_in_background_button"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"

@@ -31,7 +31,7 @@ import android.view.View;
 import android.view.WindowInsets;
 import android.view.WindowManager;
 
-import com.app.astralauncher.game.sdl.SdlBridge;
+import com.app.crutlelauncher.game.sdl.SdlBridge;
 
 
 /**

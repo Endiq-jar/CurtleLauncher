@@ -9,14 +9,14 @@ import android.content.Intent;
 import androidx.annotation.NonNull;
 
 import com.app.mcgui.ProgressLayout;
-import com.app.astralauncher.R;
-import com.app.astralauncher.context.ContextExecutor;
-import com.app.astralauncher.feature.mod.parser.ModChecker;
-import com.app.astralauncher.feature.mod.parser.ModInfo;
-import com.app.astralauncher.feature.mod.parser.ModParser;
-import com.app.astralauncher.feature.mod.parser.ModParserListener;
-import com.app.astralauncher.feature.version.Version;
-import com.app.astralauncher.setting.AllSettings;
+import com.app.crutlelauncher.R;
+import com.app.crutlelauncher.context.ContextExecutor;
+import com.app.crutlelauncher.feature.mod.parser.ModChecker;
+import com.app.crutlelauncher.feature.mod.parser.ModInfo;
+import com.app.crutlelauncher.feature.mod.parser.ModParser;
+import com.app.crutlelauncher.feature.mod.parser.ModParserListener;
+import com.app.crutlelauncher.feature.version.Version;
+import com.app.crutlelauncher.setting.AllSettings;
 
 import net.endiq.launcher.MainActivity;
 import net.endiq.launcher.Tools;
@@ -71,7 +71,7 @@ public class ContextAwareDoneListener implements AsyncMinecraftDownloader.DoneLi
                 if (modInfoList.isEmpty() && !hasModJars) executeTask();
                 else {
                     ContextExecutor.executeTaskWithAllContext(context ->
-                        com.app.astralauncher.feature.mod.ModAutoMaintenance.runForVersion(
+                        com.app.crutlelauncher.feature.mod.ModAutoMaintenance.runForVersion(
                             context, mVersion, modInfoList, () ->
                                 new ModChecker().check(context, modInfoList, mVersion, modCheckResult -> {
                                     mVersion.setModCheckResult(modCheckResult);
@@ -94,9 +94,9 @@ public class ContextAwareDoneListener implements AsyncMinecraftDownloader.DoneLi
     public void executeWithActivity(Activity activity) {
         try {
             Intent gameStartIntent = createGameStartIntent(activity);
-            com.app.astralauncher.task.TaskExecutors.setGameSessionActive(true);
-            com.app.astralauncher.feature.astra.BackgroundServiceManager.onGameSessionStart(activity);
-            com.app.astralauncher.feature.shizuku.ShizukuActions.applyBeforeLaunchIfEnabled();
+            com.app.crutlelauncher.task.TaskExecutors.setGameSessionActive(true);
+            com.app.crutlelauncher.feature.crutle.BackgroundServiceManager.onGameSessionStart(activity);
+            com.app.crutlelauncher.feature.shizuku.ShizukuActions.applyBeforeLaunchIfEnabled();
             activity.startActivity(gameStartIntent);
             if (AllSettings.getQuitLauncher().getValue()) {
                 activity.finish();

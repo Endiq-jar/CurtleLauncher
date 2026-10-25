@@ -30,7 +30,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-            <com.app.astralauncher.ui.subassembly.filelist.FileRecyclerView
+            <com.app.crutlelauncher.ui.subassembly.filelist.FileRecyclerView
                 android:id="@+id/file_recycler_view"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
@@ -61,7 +61,7 @@
                     android:text="@string/file_nothing"
                     android:layout_marginStart="@dimen/_8sdp" />
 
-                <com.app.astralauncher.ui.view.AnimTextView
+                <com.app.crutlelauncher.ui.view.AnimTextView
                     android:id="@+id/go_download_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -87,11 +87,11 @@
                     android:layout_marginStart="@dimen/_8sdp"
                     android:layout_marginTop="@dimen/_8sdp"
                     android:text="@string/version_manager_shortcuts_mods"
-                    android:textColor="@color/astra_primary_text"
+                    android:textColor="@color/crutle_primary_text"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <com.app.astralauncher.ui.view.AnimCheckBox
+                <com.app.crutlelauncher.ui.view.AnimCheckBox
                     android:id="@+id/select_all"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -141,7 +141,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <com.app.astralauncher.ui.layout.AnimRelativeLayout
+                <com.app.crutlelauncher.ui.layout.AnimRelativeLayout
                     android:id="@+id/external_storage"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -151,7 +151,7 @@
                     app:layout_constraintBottom_toTopOf="@+id/software_private"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent">
-                    <com.app.astralauncher.ui.view.AnimatedIconView
+                    <com.app.crutlelauncher.ui.view.AnimatedIconView
                         android:id="@+id/imageView"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -166,11 +166,11 @@
                         android:layout_centerVertical="true"
                         android:layout_marginStart="@dimen/_12sdp"
                         android:layout_toEndOf="@+id/imageView"
-                        android:textColor="@color/astra_primary_text"
+                        android:textColor="@color/crutle_primary_text"
                         android:text="@string/file_external_storage" />
-                </com.app.astralauncher.ui.layout.AnimRelativeLayout>
+                </com.app.crutlelauncher.ui.layout.AnimRelativeLayout>
 
-                <com.app.astralauncher.ui.layout.AnimRelativeLayout
+                <com.app.crutlelauncher.ui.layout.AnimRelativeLayout
                     android:id="@+id/software_private"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -180,7 +180,7 @@
                     app:layout_constraintBottom_toTopOf="@id/multi_select_files"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent">
-                    <com.app.astralauncher.ui.view.AnimatedIconView
+                    <com.app.crutlelauncher.ui.view.AnimatedIconView
                         android:id="@+id/imageView1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -195,11 +195,11 @@
                         android:layout_centerVertical="true"
                         android:layout_marginStart="@dimen/_12sdp"
                         android:layout_toEndOf="@+id/imageView1"
-                        android:textColor="@color/astra_primary_text"
+                        android:textColor="@color/crutle_primary_text"
                         android:text="@string/file_software_private" />
-                </com.app.astralauncher.ui.layout.AnimRelativeLayout>
+                </com.app.crutlelauncher.ui.layout.AnimRelativeLayout>
 
-                <com.app.astralauncher.ui.view.AnimCheckBox
+                <com.app.crutlelauncher.ui.view.AnimCheckBox
                     android:id="@+id/multi_select_files"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"

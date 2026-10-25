@@ -1,6 +1,6 @@
 {
   "$comment": [
-    "Remote rendezvous/relay node list for AstraLauncher's Friends/LAN play (Terracotta",
+    "Remote rendezvous/relay node list for CrutleLauncher's Friends/LAN play (Terracotta",
     "over EasyTier). Fetched at runtime by TerracottaNodeList so a dead relay node can be",
     "replaced WITHOUT shipping a new APK - edit this file, merge to main, and every client",
     "picks it up on its next host/join. Entries are tried in order; the app additionally",

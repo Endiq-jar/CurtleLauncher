@@ -26,7 +26,7 @@
             android:textSize="@dimen/_14ssp"
             android:textStyle="bold" />
 
-        <com.app.astralauncher.ui.view.AnimatedIconButton
+        <com.app.crutlelauncher.ui.view.AnimatedIconButton
             android:id="@+id/edit_button"
             android:layout_width="@dimen/_20sdp"
             android:layout_height="@dimen/_20sdp"
@@ -163,7 +163,7 @@
 
             </TableLayout>
 
-            <com.app.astralauncher.ui.view.AnimButton
+            <com.app.crutlelauncher.ui.view.AnimButton
                 android:id="@+id/close_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

@@ -16,17 +16,17 @@
         android:paddingHorizontal="@dimen/space_l"
         android:paddingVertical="@dimen/space_m">
 
-        <com.app.astralauncher.ui.view.AnimatedIconButton
+        <com.app.crutlelauncher.ui.view.AnimatedIconButton
             android:id="@+id/sub_settings_back_button"
             android:layout_width="28dp"
             android:layout_height="28dp"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:src="@drawable/ic_chevron_down"
             android:rotation="90"
-            android:tint="@color/astra_text_secondary"
+            android:tint="@color/crutle_text_secondary"
             android:contentDescription="@string/generic_return"/>
 
-        <com.app.astralauncher.ui.view.AnimatedIconView
+        <com.app.crutlelauncher.ui.view.AnimatedIconView
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:layout_marginStart="@dimen/space_s"
@@ -40,7 +40,7 @@
             android:text="@string/setting_category_optimization"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:textColor="@color/astra_text_primary"/>
+            android:textColor="@color/crutle_text_primary"/>
     </LinearLayout>
 
     <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
@@ -58,7 +58,7 @@
             android:paddingVertical="@dimen/_12sdp">
 
             <!-- ═══════════════════════════════════════════════════════════
-                 FPS BOOST CARD  (AstraLauncher)
+                 FPS BOOST CARD  (CrutleLauncher)
             ════════════════════════════════════════════════════════════════ -->
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:id="@+id/fps_boost_category"
@@ -78,7 +78,7 @@
                     android:textColor="@color/accent_primary" />
     
                 <!-- Unlimited FPS -->
-                <com.app.astralauncher.ui.layout.AnimRelativeLayout
+                <com.app.crutlelauncher.ui.layout.AnimRelativeLayout
                     android:id="@+id/unlimitedFps_layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -93,7 +93,7 @@
                         android:layout_marginEnd="@dimen/_8sdp"
                         android:layout_toStartOf="@+id/unlimitedFps"
                         android:text="@string/setting_fps_unlimited_title"
-                        android:textColor="@color/astra_primary_text" />
+                        android:textColor="@color/crutle_primary_text" />
     
                     <TextView
                         android:id="@+id/unlimitedFps_summary"
@@ -105,16 +105,16 @@
                         android:layout_toStartOf="@+id/unlimitedFps"
                         android:text="@string/setting_fps_unlimited_desc" />
     
-                    <com.app.astralauncher.ui.miuix.MiuixSwitch
+                    <com.app.crutlelauncher.ui.miuix.MiuixSwitch
                         android:id="@+id/unlimitedFps"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true" />
-                </com.app.astralauncher.ui.layout.AnimRelativeLayout>
+                </com.app.crutlelauncher.ui.layout.AnimRelativeLayout>
     
                 <!-- Low Latency Rendering -->
-                <com.app.astralauncher.ui.layout.AnimRelativeLayout
+                <com.app.crutlelauncher.ui.layout.AnimRelativeLayout
                     android:id="@+id/lowLatencyRendering_layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -129,7 +129,7 @@
                         android:layout_marginEnd="@dimen/_8sdp"
                         android:layout_toStartOf="@+id/lowLatencyRendering"
                         android:text="@string/setting_fps_low_latency_title"
-                        android:textColor="@color/astra_primary_text" />
+                        android:textColor="@color/crutle_primary_text" />
     
                     <TextView
                         android:id="@+id/lowLatencyRendering_summary"
@@ -141,16 +141,16 @@
                         android:layout_toStartOf="@+id/lowLatencyRendering"
                         android:text="@string/setting_fps_low_latency_desc" />
     
-                    <com.app.astralauncher.ui.miuix.MiuixSwitch
+                    <com.app.crutlelauncher.ui.miuix.MiuixSwitch
                         android:id="@+id/lowLatencyRendering"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true" />
-                </com.app.astralauncher.ui.layout.AnimRelativeLayout>
+                </com.app.crutlelauncher.ui.layout.AnimRelativeLayout>
     
                 <!-- Frame Pacing -->
-                <com.app.astralauncher.ui.layout.AnimRelativeLayout
+                <com.app.crutlelauncher.ui.layout.AnimRelativeLayout
                     android:id="@+id/framePacing_layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -165,7 +165,7 @@
                         android:layout_marginEnd="@dimen/_8sdp"
                         android:layout_toStartOf="@+id/framePacing"
                         android:text="@string/setting_fps_frame_pacing_title"
-                        android:textColor="@color/astra_primary_text" />
+                        android:textColor="@color/crutle_primary_text" />
     
                     <TextView
                         android:id="@+id/framePacing_summary"
@@ -177,16 +177,16 @@
                         android:layout_toStartOf="@+id/framePacing"
                         android:text="@string/setting_fps_frame_pacing_desc" />
     
-                    <com.app.astralauncher.ui.miuix.MiuixSwitch
+                    <com.app.crutlelauncher.ui.miuix.MiuixSwitch
                         android:id="@+id/framePacing"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true" />
-                </com.app.astralauncher.ui.layout.AnimRelativeLayout>
+                </com.app.crutlelauncher.ui.layout.AnimRelativeLayout>
     
                 <!-- Frame Skipping -->
-                <com.app.astralauncher.ui.layout.AnimRelativeLayout
+                <com.app.crutlelauncher.ui.layout.AnimRelativeLayout
                     android:id="@+id/frameSkipping_layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -201,7 +201,7 @@
                         android:layout_marginEnd="@dimen/_8sdp"
                         android:layout_toStartOf="@+id/frameSkipping"
                         android:text="@string/setting_fps_frame_skipping_title"
-                        android:textColor="@color/astra_primary_text" />
+                        android:textColor="@color/crutle_primary_text" />
     
                     <TextView
                         android:id="@+id/frameSkipping_summary"
@@ -213,16 +213,16 @@
                         android:layout_toStartOf="@+id/frameSkipping"
                         android:text="@string/setting_fps_frame_skipping_desc" />
     
-                    <com.app.astralauncher.ui.miuix.MiuixSwitch
+                    <com.app.crutlelauncher.ui.miuix.MiuixSwitch
                         android:id="@+id/frameSkipping"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true" />
-                </com.app.astralauncher.ui.layout.AnimRelativeLayout>
+                </com.app.crutlelauncher.ui.layout.AnimRelativeLayout>
     
                 <!-- Adaptive Frame Timing -->
-                <com.app.astralauncher.ui.layout.AnimRelativeLayout
+                <com.app.crutlelauncher.ui.layout.AnimRelativeLayout
                     android:id="@+id/adaptiveFrameTiming_layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -237,7 +237,7 @@
                         android:layout_marginEnd="@dimen/_8sdp"
                         android:layout_toStartOf="@+id/adaptiveFrameTiming"
                         android:text="@string/setting_fps_adaptive_title"
-                        android:textColor="@color/astra_primary_text" />
+                        android:textColor="@color/crutle_primary_text" />
     
                     <TextView
                         android:id="@+id/adaptiveFrameTiming_summary"
@@ -249,16 +249,16 @@
                         android:layout_toStartOf="@+id/adaptiveFrameTiming"
                         android:text="@string/setting_fps_adaptive_desc" />
     
-                    <com.app.astralauncher.ui.miuix.MiuixSwitch
+                    <com.app.crutlelauncher.ui.miuix.MiuixSwitch
                         android:id="@+id/adaptiveFrameTiming"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true" />
-                </com.app.astralauncher.ui.layout.AnimRelativeLayout>
+                </com.app.crutlelauncher.ui.layout.AnimRelativeLayout>
 
                 <!-- Auto Memory Cleanup -->
-                <com.app.astralauncher.ui.layout.AnimRelativeLayout
+                <com.app.crutlelauncher.ui.layout.AnimRelativeLayout
                     android:id="@+id/autoMemoryCleanup_layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -273,7 +273,7 @@
                         android:layout_marginEnd="@dimen/_8sdp"
                         android:layout_toStartOf="@+id/autoMemoryCleanup"
                         android:text="@string/setting_fps_auto_memory_cleanup_title"
-                        android:textColor="@color/astra_primary_text" />
+                        android:textColor="@color/crutle_primary_text" />
 
                     <TextView
                         android:id="@+id/autoMemoryCleanup_summary"
@@ -285,15 +285,15 @@
                         android:layout_toStartOf="@+id/autoMemoryCleanup"
                         android:text="@string/setting_fps_auto_memory_cleanup_desc" />
 
-                    <com.app.astralauncher.ui.miuix.MiuixSwitch
+                    <com.app.crutlelauncher.ui.miuix.MiuixSwitch
                         android:id="@+id/autoMemoryCleanup"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true" />
-                </com.app.astralauncher.ui.layout.AnimRelativeLayout>
+                </com.app.crutlelauncher.ui.layout.AnimRelativeLayout>
 
-                <com.app.astralauncher.ui.layout.AnimRelativeLayout
+                <com.app.crutlelauncher.ui.layout.AnimRelativeLayout
                     android:id="@+id/rendererShaderCache_layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -308,7 +308,7 @@
                         android:layout_marginEnd="@dimen/_8sdp"
                         android:layout_toStartOf="@+id/rendererShaderCache"
                         android:text="@string/setting_renderer_shader_cache_title"
-                        android:textColor="@color/astra_primary_text" />
+                        android:textColor="@color/crutle_primary_text" />
 
                     <TextView
                         android:id="@+id/rendererShaderCache_summary"
@@ -320,15 +320,15 @@
                         android:layout_toStartOf="@+id/rendererShaderCache"
                         android:text="@string/setting_renderer_shader_cache_desc" />
 
-                    <com.app.astralauncher.ui.miuix.MiuixSwitch
+                    <com.app.crutlelauncher.ui.miuix.MiuixSwitch
                         android:id="@+id/rendererShaderCache"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true" />
-                </com.app.astralauncher.ui.layout.AnimRelativeLayout>
+                </com.app.crutlelauncher.ui.layout.AnimRelativeLayout>
 
-                <com.app.astralauncher.ui.layout.AnimRelativeLayout
+                <com.app.crutlelauncher.ui.layout.AnimRelativeLayout
                     android:id="@+id/rendererDebugLogging_layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -343,7 +343,7 @@
                         android:layout_marginEnd="@dimen/_8sdp"
                         android:layout_toStartOf="@+id/rendererDebugLogging"
                         android:text="@string/setting_renderer_debug_logging_title"
-                        android:textColor="@color/astra_primary_text" />
+                        android:textColor="@color/crutle_primary_text" />
 
                     <TextView
                         android:id="@+id/rendererDebugLogging_summary"
@@ -355,13 +355,13 @@
                         android:layout_toStartOf="@+id/rendererDebugLogging"
                         android:text="@string/setting_renderer_debug_logging_desc" />
 
-                    <com.app.astralauncher.ui.miuix.MiuixSwitch
+                    <com.app.crutlelauncher.ui.miuix.MiuixSwitch
                         android:id="@+id/rendererDebugLogging"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true" />
-                </com.app.astralauncher.ui.layout.AnimRelativeLayout>
+                </com.app.crutlelauncher.ui.layout.AnimRelativeLayout>
 
                 <!-- GL4ES LIBGL_* JNI tweaks moved to Phone Settings > JNI Optimization (four
                      granular switches instead of this one combined toggle). -->

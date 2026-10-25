@@ -4,7 +4,7 @@ import static org.lwjgl.glfw.CallbackBridge.sendMouseButton;
 
 import android.os.Handler;
 
-import com.app.astralauncher.setting.AllStaticSettings;
+import com.app.crutlelauncher.setting.AllStaticSettings;
 
 import net.endiq.launcher.Tools;
 import net.endiq.launcher.utils.MathUtils;

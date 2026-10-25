@@ -2,8 +2,8 @@
 // Created by maks on 21.09.2022.
 //
 #include <EGL/egl.h>
-#ifndef ASTRALAUNCHER_EGL_LOADER_H
-#define ASTRALAUNCHER_EGL_LOADER_H
+#ifndef CRUTLELAUNCHER_EGL_LOADER_H
+#define CRUTLELAUNCHER_EGL_LOADER_H
 
 extern EGLBoolean (*eglMakeCurrent_p) (EGLDisplay dpy, EGLSurface draw, EGLSurface read, EGLContext ctx);
 extern EGLBoolean (*eglDestroyContext_p) (EGLDisplay dpy, EGLContext ctx);
@@ -30,4 +30,4 @@ extern __eglMustCastToProperFunctionPointerType (*eglGetProcAddress_p) (const ch
 
 void dlsym_EGL();
 
-#endif //ASTRALAUNCHER_EGL_LOADER_H
+#endif //CRUTLELAUNCHER_EGL_LOADER_H

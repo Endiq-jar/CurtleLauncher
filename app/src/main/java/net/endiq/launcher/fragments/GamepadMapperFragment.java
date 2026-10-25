@@ -1,5 +1,5 @@
 package net.endiq.launcher.fragments;
-import com.app.astralauncher.utils.anim.AstraTransitions;
+import com.app.crutlelauncher.utils.anim.CrutleTransitions;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -20,10 +20,10 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.app.anim.AnimPlayer;
 import com.app.anim.animations.Animations;
-import com.app.astralauncher.R;
-import com.app.astralauncher.databinding.FragmentControllerRemapperBinding;
-import com.app.astralauncher.ui.fragment.FragmentWithAnim;
-import com.app.astralauncher.utils.ZHTools;
+import com.app.crutlelauncher.R;
+import com.app.crutlelauncher.databinding.FragmentControllerRemapperBinding;
+import com.app.crutlelauncher.ui.fragment.FragmentWithAnim;
+import com.app.crutlelauncher.utils.ZHTools;
 
 import net.endiq.launcher.customcontrols.gamepad.Gamepad;
 import net.endiq.launcher.customcontrols.gamepad.GamepadMapperAdapter;
@@ -139,13 +139,13 @@ public class GamepadMapperFragment extends FragmentWithAnim implements
 
     @Override
     public void slideIn(AnimPlayer animPlayer) {
-        animPlayer.apply(new AnimPlayer.Entry(binding.controllerLayout, AstraTransitions.enter()))
-                .apply(new AnimPlayer.Entry(binding.operateLayout, AstraTransitions.enter()));
+        animPlayer.apply(new AnimPlayer.Entry(binding.controllerLayout, CrutleTransitions.enter()))
+                .apply(new AnimPlayer.Entry(binding.operateLayout, CrutleTransitions.enter()));
     }
 
     @Override
     public void slideOut(AnimPlayer animPlayer) {
-        animPlayer.apply(new AnimPlayer.Entry(binding.controllerLayout, AstraTransitions.exit()))
-                .apply(new AnimPlayer.Entry(binding.operateLayout, AstraTransitions.exit()));
+        animPlayer.apply(new AnimPlayer.Entry(binding.controllerLayout, CrutleTransitions.exit()))
+                .apply(new AnimPlayer.Entry(binding.operateLayout, CrutleTransitions.exit()));
     }
 }

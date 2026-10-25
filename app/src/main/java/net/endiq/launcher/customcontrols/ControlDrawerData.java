@@ -8,8 +8,8 @@ import static net.endiq.launcher.customcontrols.ControlDrawerData.Orientation.UP
 
 import android.content.Context;
 
-import com.app.astralauncher.R;
-import com.app.astralauncher.context.ContextExecutor;
+import com.app.crutlelauncher.R;
+import com.app.crutlelauncher.context.ContextExecutor;
 
 import net.endiq.launcher.Tools;
 

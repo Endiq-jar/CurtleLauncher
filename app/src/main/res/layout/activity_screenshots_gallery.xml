@@ -14,14 +14,14 @@
         android:paddingHorizontal="@dimen/space_l"
         android:paddingVertical="@dimen/space_m">
 
-        <com.app.astralauncher.ui.view.AnimatedIconButton
+        <com.app.crutlelauncher.ui.view.AnimatedIconButton
             android:id="@+id/screenshots_back_button"
             android:layout_width="28dp"
             android:layout_height="28dp"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:src="@drawable/ic_chevron_down"
             android:rotation="90"
-            android:tint="@color/astra_text_secondary"
+            android:tint="@color/crutle_text_secondary"
             android:contentDescription="@string/generic_return"/>
 
         <TextView
@@ -31,7 +31,7 @@
             android:text="@string/screenshots_gallery_title"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:textColor="@color/astra_text_primary"/>
+            android:textColor="@color/crutle_text_primary"/>
 
         <TextView
             android:id="@+id/screenshots_count"
@@ -40,7 +40,7 @@
             android:layout_weight="1"
             android:gravity="end"
             android:textSize="13sp"
-            android:textColor="@color/astra_text_secondary"
+            android:textColor="@color/crutle_text_secondary"
             tools:text="12 screenshots"/>
     </LinearLayout>
 
@@ -67,7 +67,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/screenshots_gallery_empty"
-            android:textColor="@color/astra_text_secondary"
+            android:textColor="@color/crutle_text_secondary"
             android:textSize="14sp"/>
     </LinearLayout>
 </LinearLayout>

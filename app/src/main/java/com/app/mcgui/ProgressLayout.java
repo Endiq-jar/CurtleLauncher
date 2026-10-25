@@ -16,8 +16,8 @@ import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
-import com.app.astralauncher.R;
-import com.app.astralauncher.feature.log.Logging;
+import com.app.crutlelauncher.R;
+import com.app.crutlelauncher.feature.log.Logging;
 
 import net.endiq.launcher.progresskeeper.ProgressKeeper;
 import net.endiq.launcher.progresskeeper.ProgressListener;

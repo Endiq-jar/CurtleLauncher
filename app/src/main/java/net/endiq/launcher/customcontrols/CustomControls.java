@@ -2,7 +2,7 @@ package net.endiq.launcher.customcontrols;
 
 import androidx.annotation.Keep;
 
-import com.app.astralauncher.ui.subassembly.customcontrols.ControlInfoData;
+import com.app.crutlelauncher.ui.subassembly.customcontrols.ControlInfoData;
 
 import net.endiq.launcher.Tools;
 

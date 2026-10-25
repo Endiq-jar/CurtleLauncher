@@ -2,8 +2,8 @@
 // Created by maks on 18.10.2023.
 //
 
-#ifndef ASTRALAUNCHER_BRIDGE_TBL_H
-#define ASTRALAUNCHER_BRIDGE_TBL_H
+#ifndef CRUTLELAUNCHER_BRIDGE_TBL_H
+#define CRUTLELAUNCHER_BRIDGE_TBL_H
 
 #include <ctxbridges/common.h>
 #include <ctxbridges/gl_bridge.h>
@@ -42,4 +42,4 @@ void set_gl_bridge_tbl() {
     br_swap_interval = gl_swap_interval;
 }
 
-#endif //ASTRALAUNCHER_BRIDGE_TBL_H
+#endif //CRUTLELAUNCHER_BRIDGE_TBL_H

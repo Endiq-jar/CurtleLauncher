@@ -2,8 +2,8 @@ package net.endiq.launcher.modloaders.modpacks.api;
 
 import androidx.annotation.Nullable;
 
-import com.app.astralauncher.feature.log.Logging;
-import com.app.astralauncher.setting.AllSettings;
+import com.app.crutlelauncher.feature.log.Logging;
+import com.app.crutlelauncher.setting.AllSettings;
 
 import net.endiq.launcher.Tools;
 import net.endiq.launcher.utils.DownloadUtils;

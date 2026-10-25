@@ -13,7 +13,7 @@
         android:layout_weight="0"
         android:padding="12dp"
         android:textSize="14sp"
-        android:textColor="@color/astra_text_primary"
+        android:textColor="@color/crutle_text_primary"
         android:textIsSelectable="true"/>
 
     <!-- Generated video/audio: a tappable row, since neither can be shown inline. -->

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Reproducible Astra art. Requires Pillow with libwebp; never overwrites original art.
+"""Reproducible Crutle art. Requires Pillow with libwebp; never overwrites original art.
 Run: python tools/generate_launcher_art.py
 Animated logos are short, finite light sweeps (not perpetual render loops).
 """
@@ -12,7 +12,7 @@ ROOT = Path(__file__).resolve().parents[1] / 'app/src/main/res'
 RAW = ROOT / 'raw'
 DRAWABLE = ROOT / 'drawable-nodpi'
 DRAWABLE.mkdir(exist_ok=True)
-SOURCES = ['ic_minecraft', 'ic_astra_full', 'ic_command_block', 'app_name_title',
+SOURCES = ['ic_minecraft', 'ic_crutle_full', 'ic_command_block', 'app_name_title',
            'ic_old_cobblestone', 'ic_old_grass_block']
 for name in SOURCES:
     source = Image.open(ROOT / 'drawable' / (name + '.webp')).convert('RGBA')
@@ -29,12 +29,12 @@ for name in SOURCES:
         sweep.putalpha(ImageChops.multiply(sweep.getchannel('A'), source.getchannel('A')))
         frame = Image.alpha_composite(frame, sweep)
         frames.append(frame)
-    out = 'ic_astra_full_animated' if name == 'ic_astra_full' else name
+    out = 'ic_crutle_full_animated' if name == 'ic_crutle_full' else name
     frames[0].save(RAW / (out + '.webp'), save_all=True, append_images=frames[1:], duration=85, loop=1, lossless=True, method=6)
 
 # Small native-resolution voxel landscapes: nearest-neighbour pixels, no GPU animation.
 palettes = {
-    'image_background_astra_coast': ((13, 32, 43), (67, 134, 139), (137, 208, 159), (18, 73, 63), (20, 108, 111)),
+    'image_background_crutle_coast': ((13, 32, 43), (67, 134, 139), (137, 208, 159), (18, 73, 63), (20, 108, 111)),
     'image_background_amethyst_night': ((13, 15, 37), (81, 57, 114), (195, 160, 232), (48, 34, 76), (64, 63, 113)),
     'image_background_ember_peaks': ((34, 20, 34), (156, 70, 65), (255, 199, 135), (79, 37, 47), (111, 52, 50)),
 }
@@ -60,7 +60,7 @@ for seed, (name, (top, horizon, light, land, water)) in enumerate(palettes.items
     for _ in range(30):
         x, y = rng.randrange(320), rng.randrange(145, 180)
         d.rectangle((x, y, x + 2, y), fill=light)
-    # Astra silhouette at the shore, subtle enough to leave UI text legible.
+    # Crutle silhouette at the shore, subtle enough to leave UI text legible.
     d.rectangle((228, 140, 245, 151), fill=(32, 109, 77))
     d.rectangle((233, 137, 241, 154), fill=(43, 133, 89))
     d.rectangle((245, 142, 251, 148), fill=(116, 190, 130))

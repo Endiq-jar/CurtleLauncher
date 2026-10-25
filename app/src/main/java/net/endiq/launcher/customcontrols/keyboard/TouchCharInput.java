@@ -13,8 +13,8 @@ import android.view.inputmethod.InputMethodManager;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.app.astralauncher.R;
-import com.app.astralauncher.game.sdl.SdlBridge;
+import com.app.crutlelauncher.R;
+import com.app.crutlelauncher.game.sdl.SdlBridge;
 
 import net.endiq.launcher.MainActivity;
 
@@ -66,7 +66,7 @@ public class TouchCharInput extends androidx.appcompat.widget.AppCompatEditText 
     /**
      * Closes the launcher-side chat editor. Called by SDL's IME controller when
      * the game opens its own SDL text input, so the two editors never fight.
-     * (Port of ZalithLauncher2's TouchCharInput.disableActiveInput; Astra keeps
+     * (Port of ZalithLauncher2's TouchCharInput.disableActiveInput; Crutle keeps
      * no per-view active flag, so this goes through MainActivity's editor,
      * whose disable() is a no-op when already hidden.)
      */

@@ -30,7 +30,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-            <com.app.astralauncher.ui.subassembly.filelist.FileRecyclerView
+            <com.app.crutlelauncher.ui.subassembly.filelist.FileRecyclerView
                 android:id="@+id/file_recycler_view"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
@@ -66,7 +66,7 @@
                      segmented pill row (External Storage / App Private). Same ids as
                      before - FilesFragment.kt's externalStorage/softwarePrivate click
                      wiring is unchanged. -->
-                <com.app.astralauncher.ui.layout.AnimRelativeLayout
+                <com.app.crutlelauncher.ui.layout.AnimRelativeLayout
                     android:id="@+id/external_storage"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -79,7 +79,7 @@
                     app:layout_constraintEnd_toStartOf="@+id/software_private"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
-                    <com.app.astralauncher.ui.view.AnimatedIconView
+                    <com.app.crutlelauncher.ui.view.AnimatedIconView
                         android:id="@+id/imageView"
                         android:layout_width="@dimen/_20sdp"
                         android:layout_height="@dimen/_20sdp"
@@ -92,12 +92,12 @@
                         android:layout_centerVertical="true"
                         android:layout_marginStart="@dimen/_8sdp"
                         android:layout_toEndOf="@+id/imageView"
-                        android:textColor="@color/astra_primary_text"
+                        android:textColor="@color/crutle_primary_text"
                         android:textSize="@dimen/_11ssp"
                         android:text="@string/file_external_storage" />
-                </com.app.astralauncher.ui.layout.AnimRelativeLayout>
+                </com.app.crutlelauncher.ui.layout.AnimRelativeLayout>
 
-                <com.app.astralauncher.ui.layout.AnimRelativeLayout
+                <com.app.crutlelauncher.ui.layout.AnimRelativeLayout
                     android:id="@+id/software_private"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -109,7 +109,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/external_storage"
                     app:layout_constraintTop_toTopOf="parent">
-                    <com.app.astralauncher.ui.view.AnimatedIconView
+                    <com.app.crutlelauncher.ui.view.AnimatedIconView
                         android:id="@+id/imageView1"
                         android:layout_width="@dimen/_20sdp"
                         android:layout_height="@dimen/_20sdp"
@@ -122,13 +122,13 @@
                         android:layout_centerVertical="true"
                         android:layout_marginStart="@dimen/_8sdp"
                         android:layout_toEndOf="@+id/imageView1"
-                        android:textColor="@color/astra_primary_text"
+                        android:textColor="@color/crutle_primary_text"
                         android:textSize="@dimen/_11ssp"
                         android:text="@string/file_software_private" />
-                </com.app.astralauncher.ui.layout.AnimRelativeLayout>
+                </com.app.crutlelauncher.ui.layout.AnimRelativeLayout>
 
                 <!-- Breadcrumb-style path bar (was a bare bold title) -->
-                <com.app.astralauncher.ui.view.AnimTextView
+                <com.app.crutlelauncher.ui.view.AnimTextView
                     android:id="@+id/current_path"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -136,7 +136,7 @@
                     android:layout_marginTop="@dimen/_8sdp"
                     android:layout_marginEnd="@dimen/_8sdp"
                     android:text="."
-                    android:textColor="@color/astra_text_primary"
+                    android:textColor="@color/crutle_text_primary"
                     android:textSize="13sp"
                     android:background="@drawable/background_edit_box"
                     android:padding="@dimen/space_xs"
@@ -147,7 +147,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/external_storage"
                     tools:ignore="HardcodedText" />
 
-                <com.app.astralauncher.ui.view.AnimCheckBox
+                <com.app.crutlelauncher.ui.view.AnimCheckBox
                     android:id="@+id/select_all"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -200,7 +200,7 @@
                 <!-- External Storage / App Private now live as a pill row in title_layout
                      above the file list (see fragment-top edit) instead of here. -->
 
-                <com.app.astralauncher.ui.view.AnimCheckBox
+                <com.app.crutlelauncher.ui.view.AnimCheckBox
                     android:id="@+id/multi_select_files"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"

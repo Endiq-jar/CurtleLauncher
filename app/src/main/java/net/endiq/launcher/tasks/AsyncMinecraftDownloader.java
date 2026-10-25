@@ -1,6 +1,6 @@
 package net.endiq.launcher.tasks;
 
-import com.app.astralauncher.event.sticky.MinecraftVersionValueEvent;
+import com.app.crutlelauncher.event.sticky.MinecraftVersionValueEvent;
 
 import net.endiq.launcher.JMinecraftVersionList;
 

@@ -3,7 +3,7 @@
      overlapping the icon's corner when selected) - used in a GridLayoutManager so
      the picker makes use of the launcher's landscape width instead of one long
      column of full-width rows. -->
-<com.app.astralauncher.ui.layout.AnimConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.app.crutlelauncher.ui.layout.AnimConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -23,9 +23,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:src="@drawable/ic_astra_full" />
+        tools:src="@drawable/ic_crutle_full" />
 
-    <com.app.astralauncher.ui.view.AnimatedIconView
+    <com.app.crutlelauncher.ui.view.AnimatedIconView
         android:id="@+id/logo_selected_check"
         android:layout_width="@dimen/_18sdp"
         android:layout_height="@dimen/_18sdp"
@@ -38,7 +38,7 @@
         app:layout_constraintEnd_toEndOf="@+id/logo_thumb"
         tools:visibility="visible" />
 
-    <com.app.astralauncher.ui.view.AnimTextView
+    <com.app.crutlelauncher.ui.view.AnimTextView
         android:id="@+id/logo_name"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -47,10 +47,10 @@
         android:gravity="center"
         android:maxLines="2"
         android:textSize="@dimen/_10ssp"
-        android:textColor="@color/astra_primary_text"
+        android:textColor="@color/crutle_primary_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logo_thumb"
         tools:text="Blurple (Default)" />
 
-</com.app.astralauncher.ui.layout.AnimConstraintLayout>
+</com.app.crutlelauncher.ui.layout.AnimConstraintLayout>

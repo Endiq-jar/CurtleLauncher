@@ -84,7 +84,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/shadowView">
 
-            <com.app.astralauncher.ui.view.AnimEditText
+            <com.app.crutlelauncher.ui.view.AnimEditText
                 android:id="@+id/search_version_detail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -95,7 +95,7 @@
                 android:paddingHorizontal="@dimen/_8sdp"
                 app:layout_constraintTop_toTopOf="parent"/>
 
-            <com.app.astralauncher.ui.view.AnimButton
+            <com.app.crutlelauncher.ui.view.AnimButton
                 android:id="@+id/return_button_detail"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"

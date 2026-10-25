@@ -35,7 +35,7 @@
             <!-- Single visible entry point now - see add_account_button below, which
                  opens a popup proxying to this tab layout's (hidden) children and to
                  add_server, rather than showing every account option directly here. -->
-            <com.app.astralauncher.ui.view.AnimButton
+            <com.app.crutlelauncher.ui.view.AnimButton
                 android:id="@+id/add_account_button"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -64,13 +64,13 @@
                 app:tab_select_color="@color/miuix_primary"
                 tools:visibility="visible">
 
-                <com.app.astralauncher.ui.layout.AnimRelativeLayout
+                <com.app.crutlelauncher.ui.layout.AnimRelativeLayout
                     android:id="@+id/add_microsoft_account"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingHorizontal="@dimen/_8sdp">
 
-                    <com.app.astralauncher.ui.view.AnimatedIconView
+                    <com.app.crutlelauncher.ui.view.AnimatedIconView
                         android:id="@+id/add_microsoft_image"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -86,15 +86,15 @@
                         android:paddingHorizontal="@dimen/_8sdp"
                         android:text="@string/account_microsoft_account"/>
 
-                </com.app.astralauncher.ui.layout.AnimRelativeLayout>
+                </com.app.crutlelauncher.ui.layout.AnimRelativeLayout>
 
-                <com.app.astralauncher.ui.layout.AnimRelativeLayout
+                <com.app.crutlelauncher.ui.layout.AnimRelativeLayout
                     android:id="@+id/add_local_account"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingHorizontal="@dimen/_8sdp">
 
-                    <com.app.astralauncher.ui.view.AnimatedIconView
+                    <com.app.crutlelauncher.ui.view.AnimatedIconView
                         android:id="@+id/add_local_image"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -110,11 +110,11 @@
                         android:paddingHorizontal="@dimen/_8sdp"
                         android:text="@string/account_local_account"/>
 
-                </com.app.astralauncher.ui.layout.AnimRelativeLayout>
+                </com.app.crutlelauncher.ui.layout.AnimRelativeLayout>
 
             </com.angcyo.tablayout.DslTabLayout>
 
-            <com.app.astralauncher.ui.view.AnimatedIconView
+            <com.app.crutlelauncher.ui.view.AnimatedIconView
                 android:id="@+id/add_server"
                 android:layout_width="@dimen/_24sdp"
                 android:layout_height="@dimen/_24sdp"
@@ -178,7 +178,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/shadowView">
 
-            <com.app.astralauncher.ui.view.AnimButton
+            <com.app.crutlelauncher.ui.view.AnimButton
                 android:id="@+id/return_button"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"

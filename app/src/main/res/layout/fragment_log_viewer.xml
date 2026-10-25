@@ -18,14 +18,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-        <com.app.astralauncher.ui.view.AnimatedIconButton
+        <com.app.crutlelauncher.ui.view.AnimatedIconButton
             android:id="@+id/back_button"
             android:layout_width="28dp"
             android:layout_height="28dp"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:src="@drawable/ic_chevron_down"
             android:rotation="90"
-            android:tint="@color/astra_text_secondary"
+            android:tint="@color/crutle_text_secondary"
             android:contentDescription="@string/generic_return"/>
 
         <TextView
@@ -39,9 +39,9 @@
             android:textStyle="bold"
             android:maxLines="1"
             android:ellipsize="middle"
-            android:textColor="@color/astra_text_primary"/>
+            android:textColor="@color/crutle_text_primary"/>
 
-        <com.app.astralauncher.ui.view.AnimatedIconButton
+        <com.app.crutlelauncher.ui.view.AnimatedIconButton
             android:id="@+id/log_viewer_copy_button"
             android:layout_width="32dp"
             android:layout_height="32dp"
@@ -52,7 +52,7 @@
             android:tint="@color/accent_primary"
             android:contentDescription="@string/share_logs_copy_clipboard"/>
 
-        <com.app.astralauncher.ui.view.AnimatedIconButton
+        <com.app.crutlelauncher.ui.view.AnimatedIconButton
             android:id="@+id/log_viewer_share_button"
             android:layout_width="32dp"
             android:layout_height="32dp"
@@ -63,7 +63,7 @@
             android:tint="@color/accent_primary"
             android:contentDescription="@string/share_logs_share_log"/>
 
-        <com.app.astralauncher.ui.view.AnimatedIconButton
+        <com.app.crutlelauncher.ui.view.AnimatedIconButton
             android:id="@+id/log_viewer_upload_button"
             android:layout_width="32dp"
             android:layout_height="32dp"
@@ -87,7 +87,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-        <com.app.astralauncher.ui.view.AnimEditText
+        <com.app.crutlelauncher.ui.view.AnimEditText
             android:id="@+id/log_search_edit"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -100,17 +100,17 @@
             android:autofillHints=""
             android:imeOptions="actionSearch"
             android:maxLines="1"
-            android:textColor="@color/astra_text_primary"
+            android:textColor="@color/crutle_text_primary"
             tools:ignore="LabelFor"/>
 
-        <com.app.astralauncher.ui.view.AnimCheckBox
+        <com.app.crutlelauncher.ui.view.AnimCheckBox
             android:id="@+id/log_errors_only_checkbox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/space_m"
             android:singleLine="true"
             android:text="@string/log_viewer_errors_only"
-            android:textColor="@color/astra_text_primary"/>
+            android:textColor="@color/crutle_text_primary"/>
     </LinearLayout>
 
     <TextView
@@ -120,7 +120,7 @@
         android:paddingHorizontal="@dimen/space_l"
         android:paddingBottom="@dimen/space_s"
         android:textSize="12sp"
-        android:textColor="@color/astra_text_secondary"
+        android:textColor="@color/crutle_text_secondary"
         app:layout_constraintTop_toBottomOf="@id/log_viewer_search_row"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
@@ -146,7 +146,7 @@
             android:typeface="monospace"
             android:textSize="11sp"
             android:lineSpacingExtra="2dp"
-            android:textColor="@color/astra_text_primary"/>
+            android:textColor="@color/crutle_text_primary"/>
 
     </androidx.core.widget.NestedScrollView>
 

@@ -115,11 +115,11 @@ int virglInit() {
         return 0;
     }
 
-    ANativeWindow_setBuffersGeometry(pojav_environ->astraWindow, 0, 0, vid);
+    ANativeWindow_setBuffersGeometry(pojav_environ->crutleWindow, 0, 0, vid);
 
     eglBindAPI_p(EGL_OPENGL_ES_API);
 
-    potatoBridge.eglSurface = eglCreateWindowSurface_p(potatoBridge.eglDisplay, config, pojav_environ->astraWindow, NULL);
+    potatoBridge.eglSurface = eglCreateWindowSurface_p(potatoBridge.eglDisplay, config, pojav_environ->crutleWindow, NULL);
 
     if (!potatoBridge.eglSurface)
     {

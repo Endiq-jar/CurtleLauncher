@@ -14,7 +14,7 @@
         android:text="@string/main_tasks_dialog_title"
         android:textSize="16sp"
         android:textStyle="bold"
-        android:textColor="@color/astra_primary_text"/>
+        android:textColor="@color/crutle_primary_text"/>
 
     <TextView
         android:id="@+id/tasks_dialog_empty"
@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_12sdp"
         android:text="@string/main_tasks_dialog_empty"
-        android:textColor="@color/astra_text_secondary"
+        android:textColor="@color/crutle_text_secondary"
         android:visibility="gone"/>
 
     <LinearLayout

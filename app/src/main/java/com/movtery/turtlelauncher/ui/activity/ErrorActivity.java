@@ -12,6 +12,6 @@ public class ErrorActivity {
      * {@code showExitMessage(Landroid/content/Context;IZ)V}.
      */
     public static void showExitMessage(Context ctx, int code, boolean isSignal) {
-        com.app.astralauncher.ui.activity.ErrorActivity.showExitMessage(ctx, code, isSignal);
+        com.app.crutlelauncher.ui.activity.ErrorActivity.showExitMessage(ctx, code, isSignal);
     }
 }

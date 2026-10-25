@@ -32,7 +32,7 @@
 
 namespace {
 
-constexpr const char* kLogTag = "Astra-DiscordRPC-Native";
+constexpr const char* kLogTag = "Crutle-DiscordRPC-Native";
 constexpr auto kPumpInterval = std::chrono::milliseconds(150);
 constexpr auto kRefreshInterval = std::chrono::seconds(30);
 
@@ -211,7 +211,7 @@ void RpcThreadMain(uint64_t applicationId) {
 }  // namespace
 
 extern "C" JNIEXPORT jboolean JNICALL
-Java_com_app_astralauncher_feature_discord_DiscordSocialBridge_nativeInit(
+Java_com_app_crutlelauncher_feature_discord_DiscordSocialBridge_nativeInit(
         JNIEnv*, jclass, jlong applicationId) {
     {
         std::lock_guard<std::mutex> lock(gMutex);
@@ -234,7 +234,7 @@ Java_com_app_astralauncher_feature_discord_DiscordSocialBridge_nativeInit(
 }
 
 extern "C" JNIEXPORT void JNICALL
-Java_com_app_astralauncher_feature_discord_DiscordSocialBridge_nativeUpdatePresence(
+Java_com_app_crutlelauncher_feature_discord_DiscordSocialBridge_nativeUpdatePresence(
         JNIEnv* env, jclass,
         jstring jName, jstring jDetails, jstring jState, jint jActivityType,
         jboolean jHasTimestamp, jlong jStartTimestampMs,
@@ -275,7 +275,7 @@ Java_com_app_astralauncher_feature_discord_DiscordSocialBridge_nativeUpdatePrese
 }
 
 extern "C" JNIEXPORT void JNICALL
-Java_com_app_astralauncher_feature_discord_DiscordSocialBridge_nativeClear(
+Java_com_app_crutlelauncher_feature_discord_DiscordSocialBridge_nativeClear(
         JNIEnv*, jclass) {
     if (!gRunning.load()) return;
     PresenceCommand cmd;
@@ -288,7 +288,7 @@ Java_com_app_astralauncher_feature_discord_DiscordSocialBridge_nativeClear(
 }
 
 extern "C" JNIEXPORT void JNICALL
-Java_com_app_astralauncher_feature_discord_DiscordSocialBridge_nativeShutdown(
+Java_com_app_crutlelauncher_feature_discord_DiscordSocialBridge_nativeShutdown(
         JNIEnv*, jclass) {
     {
         std::lock_guard<std::mutex> lock(gMutex);
@@ -306,7 +306,7 @@ Java_com_app_astralauncher_feature_discord_DiscordSocialBridge_nativeShutdown(
 }
 
 extern "C" JNIEXPORT jboolean JNICALL
-Java_com_app_astralauncher_feature_discord_DiscordSocialBridge_nativeLastResultOk(
+Java_com_app_crutlelauncher_feature_discord_DiscordSocialBridge_nativeLastResultOk(
         JNIEnv*, jclass) {
     return gLastResult.load() == 1 ? JNI_TRUE : JNI_FALSE;
 }

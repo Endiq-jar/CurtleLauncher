@@ -7,7 +7,7 @@ import android.content.Intent;
 
 import androidx.core.app.NotificationCompat;
 
-import com.app.astralauncher.R;
+import com.app.crutlelauncher.R;
 
 import net.endiq.launcher.Tools;
 

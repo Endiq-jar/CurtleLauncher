@@ -5,9 +5,9 @@ import android.os.Looper;
 import android.view.MotionEvent;
 import android.view.View;
 
-import com.app.astralauncher.setting.AllSettings;
-import com.app.astralauncher.setting.AllStaticSettings;
-import com.app.astralauncher.support.touch_controller.ContactHandler;
+import com.app.crutlelauncher.setting.AllSettings;
+import com.app.crutlelauncher.setting.AllStaticSettings;
+import com.app.crutlelauncher.support.touch_controller.ContactHandler;
 
 import org.lwjgl.glfw.CallbackBridge;
 

@@ -625,7 +625,7 @@ public class GLFW
         Init = apiGetFunctionAddress(GLFW, "pojavInit"),
         CreateContext = apiGetFunctionAddress(GLFW, "pojavCreateContext"),
         GetCurrentContext = apiGetFunctionAddress(GLFW, "pojavGetCurrentContext"),
-        //DetachOnCurrentThread = apiGetFunctionAddress(GLFW, "astraDetachOnCurrentThread"),
+        //DetachOnCurrentThread = apiGetFunctionAddress(GLFW, "crutleDetachOnCurrentThread"),
         MakeContextCurrent = apiGetFunctionAddress(GLFW, "pojavMakeCurrent"),
         Terminate = apiGetFunctionAddress(GLFW, "pojavTerminate"),
         SetWindowHint = apiGetFunctionAddress(GLFW, "pojavSetWindowHint"),
@@ -1241,10 +1241,10 @@ public class GLFW
         }
     }
 
-    private static volatile Thread _astraEventWaiter;
+    private static volatile Thread _crutleEventWaiter;
 
     public static void glfwWaitEvents() {
-        _astraEventWaiter = Thread.currentThread();
+        _crutleEventWaiter = Thread.currentThread();
         // The legacy native input queue has no wake primitive. A bounded wait avoids
         // spinning while still polling native touch/key events within 8ms.
         java.util.concurrent.locks.LockSupport.parkNanos(8_000_000L);
@@ -1252,13 +1252,13 @@ public class GLFW
     }
 
     public static void glfwWaitEventsTimeout(double timeout) {
-        _astraEventWaiter = Thread.currentThread();
+        _crutleEventWaiter = Thread.currentThread();
         java.util.concurrent.locks.LockSupport.parkNanos((long) (Math.min(timeout, .008) * 1_000_000_000.0));
         glfwPollEvents();
     }
 
     public static void glfwPostEmptyEvent() {
-        java.util.concurrent.locks.LockSupport.unpark(_astraEventWaiter);
+        java.util.concurrent.locks.LockSupport.unpark(_crutleEventWaiter);
     }
 
     public static int glfwGetInputMode(@NativeType("GLFWwindow *") long window, int mode) {

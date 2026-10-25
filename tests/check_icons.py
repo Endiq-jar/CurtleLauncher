@@ -51,7 +51,7 @@ assert "MAPPING" in import_script and "tabler" in import_script and "flowbite" i
 assert (repo / "docs/ICONS.md").is_file()
 
 # --- Animation wiring --------------------------------------------------------
-anim = main / "java/com/app/astralauncher/utils/anim"
+anim = main / "java/com/app/crutlelauncher/utils/anim"
 icon = (anim / "AnimatedIcon.kt").read_text()
 logo = (anim / "AnimatedLogo.kt").read_text()
 wiring = (anim / "InteractionWiring.kt").read_text()
@@ -68,7 +68,7 @@ assert "setOnHoverListener" in wiring and "resolveTarget" in wiring
 ids = (main / "res/values/launcher_art_ids.xml").read_text()
 assert "animated_icon_request" in ids
 
-views = main / "java/com/app/astralauncher/ui/view"
+views = main / "java/com/app/crutlelauncher/ui/view"
 assert "AnimatedIcon.bindAny" in (views / "AnimatedIconView.kt").read_text()
 assert "AnimatedIcon.bindAny" in (views / "AnimatedIconButton.kt").read_text()
 
@@ -90,12 +90,12 @@ for path in filetypes:
 colors = (main / "res/values/colors.xml").read_text()
 assert 'name="file_icon_tint">@color/palette_secondary' in colors, "pastel-green tint missing"
 
-resolver = (main / "java/com/app/astralauncher/ui/subassembly/filelist/FileTypeIcons.kt").read_text()
+resolver = (main / "java/com/app/crutlelauncher/ui/subassembly/filelist/FileTypeIcons.kt").read_text()
 for needle in ("ic_filetype_jar", "ic_filetype_zip", "ic_filetype_json", "ic_filetype_data"):
     assert needle in resolver, f"resolver missing {needle}"
-creator = (main / "java/com/app/astralauncher/ui/subassembly/filelist/FileRecyclerViewCreator.kt").read_text()
+creator = (main / "java/com/app/crutlelauncher/ui/subassembly/filelist/FileRecyclerViewCreator.kt").read_text()
 assert "FileTypeIcons.iconResFor" in creator and "fileIconRes" in creator
-adapter = (main / "java/com/app/astralauncher/ui/subassembly/filelist/FileRecyclerAdapter.java").read_text()
+adapter = (main / "java/com/app/crutlelauncher/ui/subassembly/filelist/FileRecyclerAdapter.java").read_text()
 assert "fileIconRes" in adapter and "setImageResource(fileItemBean.fileIconRes)" in adapter
 assert "filetype_zip" in icon and "Style.POP" in icon, "per-filetype animation styles missing"
 
@@ -109,9 +109,9 @@ assert 'android:tint="@color/icon_tint"' in (drawable / "ic_search.xml").read_te
 # --- Floating record button removed from the in-game HUD ---------------------
 hud = (main / "res/layout/view_game_info_hud.xml").read_text()
 assert "record_button" not in hud and "record_timer" not in hud
-wrapper = (main / "java/com/app/astralauncher/ui/subassembly/view/GameMenuViewWrapper.kt").read_text()
+wrapper = (main / "java/com/app/crutlelauncher/ui/subassembly/view/GameMenuViewWrapper.kt").read_text()
 assert "showRecordButton" not in wrapper
-assert "showRecordButtonHud" not in (main / "java/com/app/astralauncher/setting/AllSettings.kt").read_text()
+assert "showRecordButtonHud" not in (main / "java/com/app/crutlelauncher/setting/AllSettings.kt").read_text()
 
 print(f"{converted} converted icons on the 24dp grid, {animated} animated icon views, "
       "hover/press/click wiring and NoBlocklist removal passed")

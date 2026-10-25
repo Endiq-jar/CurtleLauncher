@@ -16,11 +16,11 @@ import android.webkit.MimeTypeMap;
 
 import androidx.annotation.Nullable;
 
-import com.app.astralauncher.BuildConfig;
-import com.app.astralauncher.InfoDistributor;
-import com.app.astralauncher.R;
-import com.app.astralauncher.feature.log.Logging;
-import com.app.astralauncher.utils.path.PathManager;
+import com.app.crutlelauncher.BuildConfig;
+import com.app.crutlelauncher.InfoDistributor;
+import com.app.crutlelauncher.R;
+import com.app.crutlelauncher.feature.log.Logging;
+import com.app.crutlelauncher.utils.path.PathManager;
 
 import net.endiq.launcher.Tools;
 

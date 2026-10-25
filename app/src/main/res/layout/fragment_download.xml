@@ -34,12 +34,12 @@
             app:tab_deselect_color="@color/miuix_on_surface_variant_summary"
             app:tab_select_color="@color/miuix_primary">
 
-            <com.app.astralauncher.ui.layout.AnimRelativeLayout
+            <com.app.crutlelauncher.ui.layout.AnimRelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="@dimen/_8sdp">
 
-                <com.app.astralauncher.ui.view.AnimatedIconView
+                <com.app.crutlelauncher.ui.view.AnimatedIconView
                     android:id="@+id/mod_image"
                     android:layout_width="@dimen/_20sdp"
                     android:layout_height="@dimen/_20sdp"
@@ -57,15 +57,15 @@
                     android:layout_marginStart="@dimen/_6sdp"
                     android:layout_toEndOf="@+id/mod_image"
                     android:text="@string/download_classify_mod"
-                    android:textColor="@color/astra_primary_text" />
-            </com.app.astralauncher.ui.layout.AnimRelativeLayout>
+                    android:textColor="@color/crutle_primary_text" />
+            </com.app.crutlelauncher.ui.layout.AnimRelativeLayout>
 
-            <com.app.astralauncher.ui.layout.AnimRelativeLayout
+            <com.app.crutlelauncher.ui.layout.AnimRelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="@dimen/_8sdp">
 
-                <com.app.astralauncher.ui.view.AnimatedIconView
+                <com.app.crutlelauncher.ui.view.AnimatedIconView
                     android:id="@+id/modpack_image"
                     android:layout_width="@dimen/_20sdp"
                     android:layout_height="@dimen/_20sdp"
@@ -83,15 +83,15 @@
                     android:layout_marginStart="@dimen/_6sdp"
                     android:layout_toEndOf="@+id/modpack_image"
                     android:text="@string/download_classify_modpack"
-                    android:textColor="@color/astra_primary_text" />
-            </com.app.astralauncher.ui.layout.AnimRelativeLayout>
+                    android:textColor="@color/crutle_primary_text" />
+            </com.app.crutlelauncher.ui.layout.AnimRelativeLayout>
 
-            <com.app.astralauncher.ui.layout.AnimRelativeLayout
+            <com.app.crutlelauncher.ui.layout.AnimRelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="@dimen/_8sdp">
 
-                <com.app.astralauncher.ui.view.AnimatedIconView
+                <com.app.crutlelauncher.ui.view.AnimatedIconView
                     android:id="@+id/resource_pack_image"
                     android:layout_width="@dimen/_20sdp"
                     android:layout_height="@dimen/_20sdp"
@@ -109,15 +109,15 @@
                     android:layout_marginStart="@dimen/_6sdp"
                     android:layout_toEndOf="@+id/resource_pack_image"
                     android:text="@string/download_classify_resource_pack"
-                    android:textColor="@color/astra_primary_text" />
-            </com.app.astralauncher.ui.layout.AnimRelativeLayout>
+                    android:textColor="@color/crutle_primary_text" />
+            </com.app.crutlelauncher.ui.layout.AnimRelativeLayout>
 
-            <com.app.astralauncher.ui.layout.AnimRelativeLayout
+            <com.app.crutlelauncher.ui.layout.AnimRelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="@dimen/_8sdp">
 
-                <com.app.astralauncher.ui.view.AnimatedIconView
+                <com.app.crutlelauncher.ui.view.AnimatedIconView
                     android:id="@+id/shader_pack_image"
                     android:layout_width="@dimen/_20sdp"
                     android:layout_height="@dimen/_20sdp"
@@ -135,15 +135,15 @@
                     android:layout_marginStart="@dimen/_6sdp"
                     android:layout_toEndOf="@+id/shader_pack_image"
                     android:text="@string/download_classify_shader_pack"
-                    android:textColor="@color/astra_primary_text" />
-            </com.app.astralauncher.ui.layout.AnimRelativeLayout>
+                    android:textColor="@color/crutle_primary_text" />
+            </com.app.crutlelauncher.ui.layout.AnimRelativeLayout>
 
-            <com.app.astralauncher.ui.layout.AnimRelativeLayout
+            <com.app.crutlelauncher.ui.layout.AnimRelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="@dimen/_8sdp">
 
-                <com.app.astralauncher.ui.view.AnimatedIconView
+                <com.app.crutlelauncher.ui.view.AnimatedIconView
                     android:id="@+id/world_image"
                     android:layout_width="@dimen/_20sdp"
                     android:layout_height="@dimen/_20sdp"
@@ -161,8 +161,8 @@
                     android:layout_marginStart="@dimen/_6sdp"
                     android:layout_toEndOf="@+id/world_image"
                     android:text="@string/download_classify_world"
-                    android:textColor="@color/astra_primary_text" />
-            </com.app.astralauncher.ui.layout.AnimRelativeLayout>
+                    android:textColor="@color/crutle_primary_text" />
+            </com.app.crutlelauncher.ui.layout.AnimRelativeLayout>
         </com.angcyo.tablayout.DslTabLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 

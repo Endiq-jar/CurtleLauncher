@@ -9,18 +9,18 @@
     android:padding="@dimen/space_m"
     tools:ignore="ContentDescription">
 
-    <com.app.astralauncher.ui.view.AnimatedIconView
+    <com.app.crutlelauncher.ui.view.AnimatedIconView
         android:id="@+id/track_icon"
         android:layout_width="@dimen/_32sdp"
         android:layout_height="@dimen/_32sdp"
         android:padding="@dimen/_6sdp"
         android:src="@drawable/ic_music_note"
-        android:tint="@color/astra_text_secondary"
+        android:tint="@color/crutle_text_secondary"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent" />
 
-    <com.app.astralauncher.ui.view.AnimTextView
+    <com.app.crutlelauncher.ui.view.AnimTextView
         android:id="@+id/track_title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -28,13 +28,13 @@
         android:ellipsize="end"
         android:singleLine="true"
         android:textStyle="bold"
-        android:textColor="@color/astra_primary_text"
+        android:textColor="@color/crutle_primary_text"
         app:layout_constraintStart_toEndOf="@id/track_icon"
         app:layout_constraintTop_toTopOf="@id/track_icon"
         app:layout_constraintEnd_toStartOf="@id/track_duration"
         tools:text="LUZ ROJA" />
 
-    <com.app.astralauncher.ui.view.AnimTextView
+    <com.app.crutlelauncher.ui.view.AnimTextView
         android:id="@+id/track_artist"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -42,24 +42,24 @@
         android:ellipsize="end"
         android:singleLine="true"
         android:textSize="@dimen/_10ssp"
-        android:textColor="@color/astra_text_secondary"
+        android:textColor="@color/crutle_text_secondary"
         app:layout_constraintStart_toEndOf="@id/track_icon"
         app:layout_constraintTop_toBottomOf="@id/track_title"
         app:layout_constraintEnd_toStartOf="@id/track_duration"
         tools:text="Unknown Artist" />
 
-    <com.app.astralauncher.ui.view.AnimTextView
+    <com.app.crutlelauncher.ui.view.AnimTextView
         android:id="@+id/track_duration"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/space_xs"
-        android:textColor="@color/astra_text_secondary"
+        android:textColor="@color/crutle_text_secondary"
         app:layout_constraintEnd_toStartOf="@id/track_select"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:text="04:42" />
 
-    <com.app.astralauncher.ui.miuix.MiuixRadioButton
+    <com.app.crutlelauncher.ui.miuix.MiuixRadioButton
         android:id="@+id/track_select"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -67,7 +67,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent" />
 
-    <com.app.astralauncher.ui.view.AnimatedIconButton
+    <com.app.crutlelauncher.ui.view.AnimatedIconButton
         android:id="@+id/track_delete"
         android:layout_width="@dimen/_28sdp"
         android:layout_height="@dimen/_28sdp"
@@ -75,7 +75,7 @@
         android:background="?attr/selectableItemBackgroundBorderless"
         android:padding="@dimen/_4sdp"
         android:src="@drawable/ic_close"
-        android:tint="@color/astra_text_secondary"
+        android:tint="@color/crutle_text_secondary"
         android:contentDescription="@string/music_delete_track"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"

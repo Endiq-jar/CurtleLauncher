@@ -16,17 +16,17 @@
         android:paddingHorizontal="@dimen/space_l"
         android:paddingVertical="@dimen/space_m">
 
-        <com.app.astralauncher.ui.view.AnimatedIconButton
+        <com.app.crutlelauncher.ui.view.AnimatedIconButton
             android:id="@+id/sub_settings_back_button"
             android:layout_width="28dp"
             android:layout_height="28dp"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:src="@drawable/ic_chevron_down"
             android:rotation="90"
-            android:tint="@color/astra_text_secondary"
+            android:tint="@color/crutle_text_secondary"
             android:contentDescription="@string/generic_return"/>
 
-        <com.app.astralauncher.ui.view.AnimatedIconView
+        <com.app.crutlelauncher.ui.view.AnimatedIconView
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:layout_marginStart="@dimen/space_s"
@@ -40,7 +40,7 @@
             android:text="@string/setting_category_recording"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:textColor="@color/astra_text_primary"/>
+            android:textColor="@color/crutle_text_primary"/>
     </LinearLayout>
 
     <ScrollView
@@ -81,7 +81,7 @@
                         android:layout_marginEnd="@dimen/_8sdp"
                         android:layout_toStartOf="@+id/openRecordingsGallery_chevron"
                         android:text="@string/settings_row_recordings_gallery_title"
-                        android:textColor="@color/astra_primary_text" />
+                        android:textColor="@color/crutle_primary_text" />
 
                     <TextView
                         android:id="@+id/openRecordingsGallery_summary"
@@ -93,7 +93,7 @@
                         android:layout_toStartOf="@+id/openRecordingsGallery_chevron"
                         android:text="@string/settings_row_recordings_gallery_desc" />
 
-                    <com.app.astralauncher.ui.view.AnimatedIconView
+                    <com.app.crutlelauncher.ui.view.AnimatedIconView
                         android:id="@+id/openRecordingsGallery_chevron"
                         android:layout_width="20dp"
                         android:layout_height="20dp"
@@ -101,13 +101,13 @@
                         android:layout_centerVertical="true"
                         android:src="@drawable/ic_chevron_down"
                         android:rotation="-90"
-                        android:tint="@color/astra_text_secondary"
+                        android:tint="@color/crutle_text_secondary"
                         tools:ignore="ContentDescription" />
                 </RelativeLayout>
 
 
                 <!-- Capture audio -->
-                <com.app.astralauncher.ui.layout.AnimRelativeLayout
+                <com.app.crutlelauncher.ui.layout.AnimRelativeLayout
                     android:id="@+id/recordingCaptureAudio_layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -122,7 +122,7 @@
                         android:layout_marginEnd="@dimen/_8sdp"
                         android:layout_toStartOf="@+id/recordingCaptureAudio"
                         android:text="@string/setting_recording_capture_audio_title"
-                        android:textColor="@color/astra_primary_text" />
+                        android:textColor="@color/crutle_primary_text" />
 
                     <TextView
                         android:id="@+id/recordingCaptureAudio_summary"
@@ -134,17 +134,17 @@
                         android:layout_toStartOf="@+id/recordingCaptureAudio"
                         android:text="@string/setting_recording_capture_audio_desc" />
 
-                    <com.app.astralauncher.ui.miuix.MiuixSwitch
+                    <com.app.crutlelauncher.ui.miuix.MiuixSwitch
                         android:id="@+id/recordingCaptureAudio"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true" />
-                </com.app.astralauncher.ui.layout.AnimRelativeLayout>
+                </com.app.crutlelauncher.ui.layout.AnimRelativeLayout>
 
 
                 <!-- Frame rate -->
-                <com.app.astralauncher.ui.layout.AnimRelativeLayout
+                <com.app.crutlelauncher.ui.layout.AnimRelativeLayout
                     android:id="@+id/recordingFrameRate_layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -159,7 +159,7 @@
                         android:layout_marginHorizontal="@dimen/_12sdp"
                         android:layout_marginTop="@dimen/_12sdp"
                         android:text="@string/setting_recording_frame_rate_title"
-                        android:textColor="@color/astra_primary_text" />
+                        android:textColor="@color/crutle_primary_text" />
 
                     <TextView
                         android:id="@+id/recordingFrameRate_summary"
@@ -171,7 +171,7 @@
                         android:layout_marginHorizontal="@dimen/_12sdp"
                         android:text="@string/setting_recording_frame_rate_desc" />
 
-                    <com.app.astralauncher.ui.miuix.MiuixSlider
+                    <com.app.crutlelauncher.ui.miuix.MiuixSlider
                         android:id="@+id/recordingFrameRate"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -191,10 +191,10 @@
                         android:layout_marginVertical="@dimen/_8sdp"
                         android:layout_marginEnd="@dimen/_12sdp"
                         tools:text="30 fps" />
-                </com.app.astralauncher.ui.layout.AnimRelativeLayout>
+                </com.app.crutlelauncher.ui.layout.AnimRelativeLayout>
 
                 <!-- Bitrate -->
-                <com.app.astralauncher.ui.layout.AnimRelativeLayout
+                <com.app.crutlelauncher.ui.layout.AnimRelativeLayout
                     android:id="@+id/recordingBitrateMbps_layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -209,7 +209,7 @@
                         android:layout_marginHorizontal="@dimen/_12sdp"
                         android:layout_marginTop="@dimen/_12sdp"
                         android:text="@string/setting_recording_bitrate_title"
-                        android:textColor="@color/astra_primary_text" />
+                        android:textColor="@color/crutle_primary_text" />
 
                     <TextView
                         android:id="@+id/recordingBitrateMbps_summary"
@@ -221,7 +221,7 @@
                         android:layout_marginHorizontal="@dimen/_12sdp"
                         android:text="@string/setting_recording_bitrate_desc" />
 
-                    <com.app.astralauncher.ui.miuix.MiuixSlider
+                    <com.app.crutlelauncher.ui.miuix.MiuixSlider
                         android:id="@+id/recordingBitrateMbps"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -241,10 +241,10 @@
                         android:layout_marginVertical="@dimen/_8sdp"
                         android:layout_marginEnd="@dimen/_12sdp"
                         tools:text="8 Mbps" />
-                </com.app.astralauncher.ui.layout.AnimRelativeLayout>
+                </com.app.crutlelauncher.ui.layout.AnimRelativeLayout>
 
                 <!-- Resolution scale -->
-                <com.app.astralauncher.ui.layout.AnimRelativeLayout
+                <com.app.crutlelauncher.ui.layout.AnimRelativeLayout
                     android:id="@+id/recordingResolutionScale_layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -259,7 +259,7 @@
                         android:layout_marginHorizontal="@dimen/_12sdp"
                         android:layout_marginTop="@dimen/_12sdp"
                         android:text="@string/setting_recording_resolution_title"
-                        android:textColor="@color/astra_primary_text" />
+                        android:textColor="@color/crutle_primary_text" />
 
                     <TextView
                         android:id="@+id/recordingResolutionScale_summary"
@@ -271,7 +271,7 @@
                         android:layout_marginHorizontal="@dimen/_12sdp"
                         android:text="@string/setting_recording_resolution_desc" />
 
-                    <com.app.astralauncher.ui.miuix.MiuixSlider
+                    <com.app.crutlelauncher.ui.miuix.MiuixSlider
                         android:id="@+id/recordingResolutionScale"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -291,10 +291,10 @@
                         android:layout_marginVertical="@dimen/_8sdp"
                         android:layout_marginEnd="@dimen/_12sdp"
                         tools:text="100 %" />
-                </com.app.astralauncher.ui.layout.AnimRelativeLayout>
+                </com.app.crutlelauncher.ui.layout.AnimRelativeLayout>
 
                 <!-- Max duration -->
-                <com.app.astralauncher.ui.layout.AnimRelativeLayout
+                <com.app.crutlelauncher.ui.layout.AnimRelativeLayout
                     android:id="@+id/recordingMaxDurationMin_layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -309,7 +309,7 @@
                         android:layout_marginHorizontal="@dimen/_12sdp"
                         android:layout_marginTop="@dimen/_12sdp"
                         android:text="@string/setting_recording_max_duration_title"
-                        android:textColor="@color/astra_primary_text" />
+                        android:textColor="@color/crutle_primary_text" />
 
                     <TextView
                         android:id="@+id/recordingMaxDurationMin_summary"
@@ -321,7 +321,7 @@
                         android:layout_marginHorizontal="@dimen/_12sdp"
                         android:text="@string/setting_recording_max_duration_desc" />
 
-                    <com.app.astralauncher.ui.miuix.MiuixSlider
+                    <com.app.crutlelauncher.ui.miuix.MiuixSlider
                         android:id="@+id/recordingMaxDurationMin"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -341,7 +341,7 @@
                         android:layout_marginVertical="@dimen/_8sdp"
                         android:layout_marginEnd="@dimen/_12sdp"
                         tools:text="0 min" />
-                </com.app.astralauncher.ui.layout.AnimRelativeLayout>
+                </com.app.crutlelauncher.ui.layout.AnimRelativeLayout>
 
             </androidx.appcompat.widget.LinearLayoutCompat>
 

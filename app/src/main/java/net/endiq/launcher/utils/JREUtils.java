@@ -1,6 +1,6 @@
 package net.endiq.launcher.utils;
 
-import static com.app.astralauncher.utils.path.PathManager.DIR_NATIVE_LIB;
+import static com.app.crutlelauncher.utils.path.PathManager.DIR_NATIVE_LIB;
 import static net.endiq.launcher.Architecture.ARCH_X86;
 import static net.endiq.launcher.Architecture.is64BitsDevice;
 import static net.endiq.launcher.Tools.currentDisplayMetrics;
@@ -15,26 +15,26 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.app.astralauncher.InfoDistributor;
-import com.app.astralauncher.R;
-import com.app.astralauncher.event.value.JvmExitEvent;
-import com.app.astralauncher.feature.customprofilepath.ProfilePathHome;
-import com.app.astralauncher.feature.customprofilepath.ProfilePathManager;
-import com.app.astralauncher.feature.log.Logging;
-import com.app.astralauncher.feature.version.Version;
-import com.app.astralauncher.feature.version.VersionInfo;
-import com.app.astralauncher.plugins.driver.DriverPluginManager;
-import com.app.astralauncher.plugins.renderer.RendererPluginManager;
-import com.app.astralauncher.plugins.renderer.RendererPlugin;
-import com.app.astralauncher.renderer.RendererInterface;
-import com.app.astralauncher.renderer.Renderers;
-import com.app.astralauncher.renderer.renderers.HolyGL4ESRenderer;
-import com.app.astralauncher.renderer.renderers.ZinkRenderer;
-import com.app.astralauncher.setting.AllSettings;
-import com.app.astralauncher.ui.activity.ErrorActivity;
-import com.app.astralauncher.utils.ZHTools;
-import com.app.astralauncher.utils.path.LibPath;
-import com.app.astralauncher.utils.path.PathManager;
+import com.app.crutlelauncher.InfoDistributor;
+import com.app.crutlelauncher.R;
+import com.app.crutlelauncher.event.value.JvmExitEvent;
+import com.app.crutlelauncher.feature.customprofilepath.ProfilePathHome;
+import com.app.crutlelauncher.feature.customprofilepath.ProfilePathManager;
+import com.app.crutlelauncher.feature.log.Logging;
+import com.app.crutlelauncher.feature.version.Version;
+import com.app.crutlelauncher.feature.version.VersionInfo;
+import com.app.crutlelauncher.plugins.driver.DriverPluginManager;
+import com.app.crutlelauncher.plugins.renderer.RendererPluginManager;
+import com.app.crutlelauncher.plugins.renderer.RendererPlugin;
+import com.app.crutlelauncher.renderer.RendererInterface;
+import com.app.crutlelauncher.renderer.Renderers;
+import com.app.crutlelauncher.renderer.renderers.HolyGL4ESRenderer;
+import com.app.crutlelauncher.renderer.renderers.ZinkRenderer;
+import com.app.crutlelauncher.setting.AllSettings;
+import com.app.crutlelauncher.ui.activity.ErrorActivity;
+import com.app.crutlelauncher.utils.ZHTools;
+import com.app.crutlelauncher.utils.path.LibPath;
+import com.app.crutlelauncher.utils.path.PathManager;
 import com.oracle.dalvik.VMLauncher;
 
 import net.endiq.launcher.Architecture;
@@ -253,7 +253,7 @@ public final class JREUtils {
             envMap.put("POJAV_LOW_LATENCY_RENDERING", "1");
         if (AllSettings.getBigCoreAffinity().getValue())
             envMap.put("POJAV_BIG_CORE_AFFINITY", "1");
-        // AstraLauncher Phone Settings: Scheduler Tuning - only meaningful once Advanced
+        // CrutleLauncher Phone Settings: Scheduler Tuning - only meaningful once Advanced
         // CPU Tuning is expanded; same env-var-handoff pattern as POJAV_BIG_CORE_AFFINITY
         // above (native side reads the flag, this launcher only signals intent).
         if (AllSettings.getAdvancedCpuTuning().getValue() && AllSettings.getSchedulerTuning().getValue())
@@ -275,13 +275,13 @@ public final class JREUtils {
             envMap.put("LIBGL_NOINTOVLHACK", "1");
             envMap.put("LIBGL_NORMALIZE", "1");
 
-            if (com.app.astralauncher.setting.AllSettings.getJniBatching().getValue())
+            if (com.app.crutlelauncher.setting.AllSettings.getJniBatching().getValue())
                 envMap.put("LIBGL_BATCH", "1"); // batch GL calls instead of dispatching each one immediately
-            if (com.app.astralauncher.setting.AllSettings.getJniCachedReferences().getValue())
+            if (com.app.crutlelauncher.setting.AllSettings.getJniCachedReferences().getValue())
                 envMap.put("LIBGL_USEVBO", "1"); // keep vertex data in VBOs instead of re-uploading client-side arrays
-            if (com.app.astralauncher.setting.AllSettings.getReducedJniCalls().getValue())
+            if (com.app.crutlelauncher.setting.AllSettings.getReducedJniCalls().getValue())
                 envMap.put("LIBGL_SKIPTEXCOPIES", "1"); // skip a redundant texture copy on upload
-            if (com.app.astralauncher.setting.AllSettings.getNativeObjectPooling().getValue())
+            if (com.app.crutlelauncher.setting.AllSettings.getNativeObjectPooling().getValue())
                 envMap.put("LIBGL_RECYCLEFBO", "1"); // reuse framebuffer objects instead of recreating them
         }
 
@@ -296,7 +296,7 @@ public final class JREUtils {
         if (RendererPluginManager.getSelectedRendererPlugin() != null) return;
 
         boolean isZinkRenderer = rendererId.equals(ZinkRenderer.ID);
-        boolean shaderCacheEnabled = com.app.astralauncher.setting.AllSettings.getRendererShaderCacheEnabled().getValue();
+        boolean shaderCacheEnabled = com.app.crutlelauncher.setting.AllSettings.getRendererShaderCacheEnabled().getValue();
 
         if (isZinkRenderer) {
             envMap.put("MESA_LOADER_DRIVER_OVERRIDE", "zink");
@@ -317,13 +317,13 @@ public final class JREUtils {
             envMap.put("LIB_MESA_NAME", loadGraphicsLibrary());
         }
 
-        if (com.app.astralauncher.setting.AllSettings.getRendererDebugLogging().getValue()) {
+        if (com.app.crutlelauncher.setting.AllSettings.getRendererDebugLogging().getValue()) {
             Logging.i("RendererDebug", "renderer=" + rendererId + " gl4esFamily=" + isGl4esRenderer +
                     " zink=" + isZinkRenderer + " shaderCache=" + shaderCacheEnabled +
-                    " jni=[batch=" + com.app.astralauncher.setting.AllSettings.getJniBatching().getValue() +
-                    ",cache=" + com.app.astralauncher.setting.AllSettings.getJniCachedReferences().getValue() +
-                    ",pool=" + com.app.astralauncher.setting.AllSettings.getNativeObjectPooling().getValue() +
-                    ",reduced=" + com.app.astralauncher.setting.AllSettings.getReducedJniCalls().getValue() + "]" +
+                    " jni=[batch=" + com.app.crutlelauncher.setting.AllSettings.getJniBatching().getValue() +
+                    ",cache=" + com.app.crutlelauncher.setting.AllSettings.getJniCachedReferences().getValue() +
+                    ",pool=" + com.app.crutlelauncher.setting.AllSettings.getNativeObjectPooling().getValue() +
+                    ",reduced=" + com.app.crutlelauncher.setting.AllSettings.getReducedJniCalls().getValue() + "]" +
                     " env=" + envMap);
         }
 
@@ -399,8 +399,8 @@ public final class JREUtils {
 
             if (Renderers.INSTANCE.isCurrentRendererValid()) {
                 RendererInterface renderer = Renderers.INSTANCE.getCurrentRenderer();
-                if (renderer instanceof com.app.astralauncher.renderer.renderers.SFPEWRenderer) {
-                    ((com.app.astralauncher.renderer.renderers.SFPEWRenderer) renderer).prepareForGame(gameVersion.getGameDir());
+                if (renderer instanceof com.app.crutlelauncher.renderer.renderers.SFPEWRenderer) {
+                    ((com.app.crutlelauncher.renderer.renderers.SFPEWRenderer) renderer).prepareForGame(gameVersion.getGameDir());
                 }
                 setRendererEnv(envMap, gameVersion.getVersionName());
             }
@@ -418,7 +418,7 @@ public final class JREUtils {
                 envMap.put("SDL_OPENGL_LIBRARY", sdlGraphicsLib);
             }
 
-            envMap.put("ASTRA_VERSION_CODE", String.valueOf(ZHTools.getVersionCode()));
+            envMap.put("CRUTLE_VERSION_CODE", String.valueOf(ZHTools.getVersionCode()));
         }
 
         for (Map.Entry<String, String> env : envMap.entrySet()) {
@@ -473,17 +473,17 @@ public final class JREUtils {
         purgeArg(userArgs, "-Dorg.lwjgl.freetype.libname");
         // Overridden by us to specify the exact number of cores that the android system has
         purgeArg(userArgs, "-XX:ActiveProcessorCount");
-        // Overridden below by AstraLauncher's GC Statistics toggle, if it's on
+        // Overridden below by CrutleLauncher's GC Statistics toggle, if it's on
         purgeArg(userArgs, "-Xlog:gc");
 
         userArgs.add("-javaagent:" + LibPath.MIO_LIB_PATCHER.getAbsolutePath());
 
         //Add automatically generated args
         int ramAllocationMb = AllSettings.getRamAllocation().getValue().getValue();
-        // AstraLauncher Memory Optimizer: Equal Heap Sizes (-Xms = -Xmx) reserves the whole
+        // CrutleLauncher Memory Optimizer: Equal Heap Sizes (-Xms = -Xmx) reserves the whole
         // heap up front, trading a bigger initial commit for fewer heap-resize GC pauses mid
         // game. Off instead starts small (half of -Xmx) and lets the JVM grow it on demand.
-        boolean equalHeapSizes = com.app.astralauncher.setting.AllSettings.getEqualHeapSizes().getValue();
+        boolean equalHeapSizes = com.app.crutlelauncher.setting.AllSettings.getEqualHeapSizes().getValue();
         int xmsMb = equalHeapSizes ? ramAllocationMb : Math.max(256, ramAllocationMb / 2);
         userArgs.add("-Xms" + xmsMb + "M");
         userArgs.add("-Xmx" + ramAllocationMb + "M");
@@ -494,21 +494,21 @@ public final class JREUtils {
         userArgs.add("-Dorg.lwjgl.freetype.libname="+ DIR_NATIVE_LIB +"/libfreetype.so");
 
         int coreCount;
-        int perInstanceCores = (gameVersion != null && com.app.astralauncher.setting.AllSettings.getPerInstanceCpuOverride().getValue())
+        int perInstanceCores = (gameVersion != null && com.app.crutlelauncher.setting.AllSettings.getPerInstanceCpuOverride().getValue())
                 ? gameVersion.getVersionConfig().getCpuCoreOverride() : -1;
         if (perInstanceCores > 0) {
             coreCount = perInstanceCores;
-        } else if (com.app.astralauncher.setting.AllSettings.getManualCoreOverride().getValue()) {
-            coreCount = com.app.astralauncher.setting.AllSettings.getManualCoreCount().getValue();
+        } else if (com.app.crutlelauncher.setting.AllSettings.getManualCoreOverride().getValue()) {
+            coreCount = com.app.crutlelauncher.setting.AllSettings.getManualCoreCount().getValue();
         } else {
             coreCount = java.lang.Runtime.getRuntime().availableProcessors();
         }
         if (coreCount <= 0 || coreCount > 16) coreCount = 8;
         userArgs.add("-XX:ActiveProcessorCount=" + coreCount);
 
-        // AstraLauncher Phone Settings: GC Statistics - JDK unified logging of every GC
+        // CrutleLauncher Phone Settings: GC Statistics - JDK unified logging of every GC
         // pause to the launcher log, so a slow session can be diagnosed after the fact.
-        if (com.app.astralauncher.setting.AllSettings.getGcStatistics().getValue()) {
+        if (com.app.crutlelauncher.setting.AllSettings.getGcStatistics().getValue()) {
             userArgs.add("-Xlog:gc:file=" + PathManager.DIR_CACHE.getAbsolutePath() + "/gc.log::filecount=0");
         }
 
@@ -528,31 +528,31 @@ public final class JREUtils {
         chdir(gameVersion == null ? ProfilePathHome.getGameHome() : gameVersion.getGameDir().getAbsolutePath());
         userArgs.add(0,"java");
         if (gameVersion != null && Tools.resolveLwjglMode(Tools.getVersionInfo(gameVersion)) == Tools.LwjglMode.NEW_SDL) {
-            com.app.astralauncher.launch.SdlAndroidJniPrep.ensureSingleSdl3Source(gameVersion.getVersionName());
-            com.app.astralauncher.launch.SdlAndroidJniPrep.ensureMobileGluesShaderErrorIgnore();
-            com.app.astralauncher.launch.SdlAndroidJniPrep.setup(activity);
+            com.app.crutlelauncher.launch.SdlAndroidJniPrep.ensureSingleSdl3Source(gameVersion.getVersionName());
+            com.app.crutlelauncher.launch.SdlAndroidJniPrep.ensureMobileGluesShaderErrorIgnore();
+            com.app.crutlelauncher.launch.SdlAndroidJniPrep.setup(activity);
         }
 
-        com.app.astralauncher.feature.log.GameLogcat.start();
+        com.app.crutlelauncher.feature.log.GameLogcat.start();
 
-        com.app.astralauncher.feature.log.GameOutputCapture.install();
+        com.app.crutlelauncher.feature.log.GameOutputCapture.install();
 
         final int exitCode = VMLauncher.launchJVM(userArgs.toArray(new String[0]));
         // SDL launches: tear down the ART-side SDL state (posted to the UI thread,
         // fire-and-forget) so a later launch in the same process starts clean.
         // No-op for GLFW launches.
-        com.app.astralauncher.launch.SdlAndroidJniPrep.resetAfterJvmExit(activity);
+        com.app.crutlelauncher.launch.SdlAndroidJniPrep.resetAfterJvmExit(activity);
         // Reached only on a graceful JVM exit - on a signal the process is already gone and
         // the drain dies with it, which is exactly the case the captured file exists for.
-        com.app.astralauncher.feature.log.GameOutputCapture.uninstall();
-        com.app.astralauncher.feature.log.GameLogcat.stop();
+        com.app.crutlelauncher.feature.log.GameOutputCapture.uninstall();
+        com.app.crutlelauncher.feature.log.GameLogcat.stop();
         Logger.appendToLog("Java Exit code: " + exitCode);
         if (exitCode != 0) {
-            if (com.app.astralauncher.setting.AllSettings.getFastBoot().getValue()) {
-                com.app.astralauncher.setting.AllSettings.getFastBoot().put(false).save();
+            if (com.app.crutlelauncher.setting.AllSettings.getFastBoot().getValue()) {
+                com.app.crutlelauncher.setting.AllSettings.getFastBoot().put(false).save();
                 Logger.appendToLog("Fast Boot auto-disabled after a crash, so the next launch re-verifies files.");
             }
-            String diagnosis = com.app.astralauncher.feature.log.CrashAnalyzer.analyzeGameExit(gameVersion, exitCode);
+            String diagnosis = com.app.crutlelauncher.feature.log.CrashAnalyzer.analyzeGameExit(gameVersion, exitCode);
             ErrorActivity.showExitMessage(activity, exitCode, false, diagnosis);
         }
         EventBus.getDefault().post(new JvmExitEvent(exitCode));
@@ -599,8 +599,8 @@ public final class JREUtils {
                 "-Dos.name=Linux",
                 "-Dos.arch=aarch64",
                 "-Dos.version=Android-" + Build.VERSION.RELEASE,
-                "-Dastra.path.minecraft=" + ProfilePathHome.getGameHome(),
-                "-Dastra.path.private.account=" + PathManager.DIR_ACCOUNT_NEW,
+                "-Dcrutle.path.minecraft=" + ProfilePathHome.getGameHome(),
+                "-Dcrutle.path.private.account=" + PathManager.DIR_ACCOUNT_NEW,
                 "-Duser.timezone=" + TimeZone.getDefault().getID(),
 
                 "-Dorg.lwjgl.vulkan.libname=libvulkan.so",
@@ -653,7 +653,7 @@ public final class JREUtils {
      * @return Parsed args as an ArrayList
      */
     public static ArrayList<String> parseJavaArguments(String args){
-        return com.app.astralauncher.launch.JvmArguments.parse(args);
+        return com.app.crutlelauncher.launch.JvmArguments.parse(args);
     }
 
     /**

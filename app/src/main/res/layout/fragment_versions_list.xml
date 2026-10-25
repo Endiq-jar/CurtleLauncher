@@ -26,7 +26,7 @@
             android:layout_marginVertical="@dimen/_12sdp"
             app:layout_constraintTop_toTopOf="parent">
 
-            <com.app.astralauncher.ui.layout.AnimRelativeLayout
+            <com.app.crutlelauncher.ui.layout.AnimRelativeLayout
                 android:id="@+id/install_new"
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
@@ -37,7 +37,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:ripple_for_relative="true">
 
-                <com.app.astralauncher.ui.view.AnimatedIconView
+                <com.app.crutlelauncher.ui.view.AnimatedIconView
                     android:id="@+id/install_icon"
                     android:layout_width="@dimen/_24sdp"
                     android:layout_height="@dimen/_24sdp"
@@ -51,10 +51,10 @@
                     android:layout_centerVertical="true"
                     android:layout_toEndOf="@id/install_icon"
                     android:layout_marginHorizontal="@dimen/_8sdp"
-                    android:textColor="@color/astra_primary_text"
+                    android:textColor="@color/crutle_primary_text"
                     android:text="@string/version_install_new" />
 
-            </com.app.astralauncher.ui.layout.AnimRelativeLayout>
+            </com.app.crutlelauncher.ui.layout.AnimRelativeLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="0dp"
@@ -80,7 +80,7 @@
                     app:tab_indicator_drawable="@drawable/selector_bar_horizontal"
                     app:tab_indicator_y_offset="@dimen/_4sdp">
 
-                    <com.app.astralauncher.ui.layout.AnimRelativeLayout
+                    <com.app.crutlelauncher.ui.layout.AnimRelativeLayout
                         android:id="@+id/all_category"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -93,13 +93,13 @@
                             android:paddingHorizontal="@dimen/_8sdp"
                             android:maxLines="2"
                             android:text="@string/generic_all"
-                            android:textColor="@color/astra_primary_text"/>
+                            android:textColor="@color/crutle_primary_text"/>
 
-                    </com.app.astralauncher.ui.layout.AnimRelativeLayout>
+                    </com.app.crutlelauncher.ui.layout.AnimRelativeLayout>
 
                 </com.angcyo.tablayout.DslTabLayout>
 
-                <com.app.astralauncher.ui.view.AnimatedIconView
+                <com.app.crutlelauncher.ui.view.AnimatedIconView
                     android:id="@+id/favorites_actions"
                     android:layout_width="@dimen/_24sdp"
                     android:layout_height="@dimen/_24sdp"
@@ -138,7 +138,7 @@
                 android:layout_marginStart="@dimen/_8sdp"
                 android:layout_marginTop="@dimen/_8sdp"
                 android:text="@string/version_manager_title"
-                android:textColor="@color/astra_primary_text"
+                android:textColor="@color/crutle_primary_text"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -153,7 +153,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/title_view" />
 
-            <com.app.astralauncher.ui.miuix.MiuixProgressBar
+            <com.app.crutlelauncher.ui.miuix.MiuixProgressBar
                 android:id="@+id/refresh_versions"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -203,7 +203,7 @@
                 android:layout_marginStart="@dimen/_12sdp"
                 android:layout_marginTop="@dimen/_8sdp"
                 android:text="@string/profiles_path_title"
-                android:textColor="@color/astra_primary_text"
+                android:textColor="@color/crutle_primary_text"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -227,19 +227,19 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent">
 
-                <com.app.astralauncher.ui.view.AnimButton
+                <com.app.crutlelauncher.ui.view.AnimButton
                     android:id="@+id/create_path_button"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/profiles_path_create_new"/>
 
-                <com.app.astralauncher.ui.view.AnimButton
+                <com.app.crutlelauncher.ui.view.AnimButton
                     android:id="@+id/refresh_button"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/generic_refresh"/>
 
-                <com.app.astralauncher.ui.view.AnimButton
+                <com.app.crutlelauncher.ui.view.AnimButton
                     android:id="@+id/return_button"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

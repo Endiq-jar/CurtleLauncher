@@ -41,14 +41,14 @@ val getBuildType = {
     buildType
 }
 
-val nameId = "com.app.astralauncher"
+val nameId = "com.app.crutlelauncher"
 // namespace controls where the generated R/BuildConfig classes land, and must match
-// the Kotlin/Java source package (com.app.astralauncher.*) or every implicit "R"
+// the Kotlin/Java source package (com.app.crutlelauncher.*) or every implicit "R"
 // reference and "import ...BuildConfig" across the codebase breaks. Since the full
-// Astra rebrand renamed the source tree to com.app.astralauncher.*, namespace and
+// Crutle rebrand renamed the source tree to com.app.crutlelauncher.*, namespace and
 // applicationId now coincide.
-val namespaceId = "com.app.astralauncher"
-val generatedAstraDir = file("$buildDir/generated/source/astra/java")
+val namespaceId = "com.app.crutlelauncher"
+val generatedCrutleDir = file("$buildDir/generated/source/crutle/java")
 val launcherAPPName = project.findProperty("launcher_app_name") as? String ?: error("The \"launcher_app_name\" property is not set in gradle.properties.")
 val launcherName = project.findProperty("launcher_name") as? String ?: error("The \"launcher_name\" property is not set in gradle.properties.")
 val launcherVersionCode = (project.findProperty("launcher_version_code") as? String)?.toIntOrNull() ?: error("The \"launcher_version_code\" property is not set as an integer in gradle.properties.")
@@ -87,7 +87,7 @@ android {
             // fresh clone, or a workflow run without the secret - the release APK is signed
             // with the debug keystore instead of failing the whole build. It installs and
             // runs identically; it simply cannot update an app signed with the real key.
-            // Renamed from ENDIQ_KEYSTORE_PASSWORD in the Astra rebrand; fall back to the old
+            // Renamed from ENDIQ_KEYSTORE_PASSWORD in the Crutle rebrand; fall back to the old
             // name so the existing repository secret keeps working until it is re-added.
             val pwd = System.getenv("APP_KEYSTORE_PASSWORD")
                 ?: System.getenv("ENDIQ_KEYSTORE_PASSWORD") ?: ""
@@ -116,8 +116,8 @@ android {
         externalNativeBuild {
             cmake {
                 arguments += listOf("-DANDROID_STL=c++_shared",
-                    "-DASTRA_DISCORD_SDK_DIR=${discordSdkDir.get().asFile.absolutePath}")
-                targets += listOf("SimpleFPEWrapper", "astrafiledialogs", "lwjgl_nfd", "lwjgl_nfd_portal", "astradiscordrpc")
+                    "-DCRUTLE_DISCORD_SDK_DIR=${discordSdkDir.get().asFile.absolutePath}")
+                targets += listOf("SimpleFPEWrapper", "crutlefiledialogs", "lwjgl_nfd", "lwjgl_nfd_portal", "crutlediscordrpc")
             }
         }
         minSdk = 26
@@ -201,7 +201,7 @@ android {
         abortOnError = false
     }
 
-    sourceSets["main"].java.srcDirs(generatedAstraDir)
+    sourceSets["main"].java.srcDirs(generatedCrutleDir)
     // AGP 9 rejects Provider instances in the legacy SourceSet API. The explicit
     // prepareDiscordSdk dependencies below produce this known build-directory path.
     sourceSets["main"].jniLibs.srcDir(discordSdkDir.get().dir("jni").asFile)
@@ -318,7 +318,7 @@ tasks.register("generateInfoDistributor") {
     val launcherName = project.property("launcher_name").toString()
     val appName = project.property("launcher_app_name").toString()
     val buildType = getBuildType()
-    val outputDir = generatedAstraDir
+    val outputDir = generatedCrutleDir
 
     doLast {
         val constantMap = mapOf(
@@ -327,7 +327,7 @@ tasks.register("generateInfoDistributor") {
             "APP_NAME" to appName,
             "BUILD_TYPE" to buildType
         )
-        InfoDistributorGenerator.generate(outputDir, "com.app.astralauncher", "InfoDistributor", constantMap)
+        InfoDistributorGenerator.generate(outputDir, "com.app.crutlelauncher", "InfoDistributor", constantMap)
     }
 }
 

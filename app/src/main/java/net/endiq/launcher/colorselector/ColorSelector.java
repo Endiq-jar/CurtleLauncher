@@ -11,8 +11,8 @@ import android.widget.EditText;
 
 import androidx.annotation.Nullable;
 
-import com.app.astralauncher.R;
-import com.app.astralauncher.listener.SimpleTextWatcher;
+import com.app.crutlelauncher.R;
+import com.app.crutlelauncher.listener.SimpleTextWatcher;
 
 public class ColorSelector implements HueSelectionListener, RectangleSelectionListener, AlphaSelectionListener, SimpleTextWatcher {
     private static final int ALPHA_MASK = ~(0xFF << 24);

@@ -7,12 +7,12 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.app.mcgui.ProgressLayout;
-import com.app.astralauncher.R;
-import com.app.astralauncher.feature.accounts.AccountType;
-import com.app.astralauncher.feature.log.Logging;
-import com.app.astralauncher.task.Task;
-import com.app.astralauncher.task.TaskExecutors;
-import com.app.astralauncher.utils.path.UrlManager;
+import com.app.crutlelauncher.R;
+import com.app.crutlelauncher.feature.accounts.AccountType;
+import com.app.crutlelauncher.feature.log.Logging;
+import com.app.crutlelauncher.task.Task;
+import com.app.crutlelauncher.task.TaskExecutors;
+import com.app.crutlelauncher.utils.path.UrlManager;
 
 import net.endiq.launcher.Tools;
 import net.endiq.launcher.authenticator.listener.DoneListener;

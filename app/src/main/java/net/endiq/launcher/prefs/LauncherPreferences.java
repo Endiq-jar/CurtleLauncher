@@ -9,12 +9,12 @@ import android.content.res.Configuration;
 import android.graphics.Rect;
 import android.os.Build;
 
-import com.app.astralauncher.feature.log.Logging;
-import com.app.astralauncher.feature.unpack.Jre;
-import com.app.astralauncher.setting.AllSettings;
-import com.app.astralauncher.setting.AllStaticSettings;
-import com.app.astralauncher.setting.Settings;
-import com.app.astralauncher.ui.activity.BaseActivity;
+import com.app.crutlelauncher.feature.log.Logging;
+import com.app.crutlelauncher.feature.unpack.Jre;
+import com.app.crutlelauncher.setting.AllSettings;
+import com.app.crutlelauncher.setting.AllStaticSettings;
+import com.app.crutlelauncher.setting.Settings;
+import com.app.crutlelauncher.ui.activity.BaseActivity;
 
 import net.endiq.launcher.Tools;
 import net.endiq.launcher.multirt.MultiRTUtils;

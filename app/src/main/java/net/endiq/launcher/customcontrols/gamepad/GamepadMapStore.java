@@ -3,7 +3,7 @@ package net.endiq.launcher.customcontrols.gamepad;
 import android.util.Log;
 
 import com.google.gson.JsonParseException;
-import com.app.astralauncher.utils.path.PathManager;
+import com.app.crutlelauncher.utils.path.PathManager;
 
 import net.endiq.launcher.Tools;
 import net.endiq.launcher.utils.FileUtils;

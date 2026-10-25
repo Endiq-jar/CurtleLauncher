@@ -16,17 +16,17 @@
         android:paddingHorizontal="@dimen/space_l"
         android:paddingVertical="@dimen/space_m">
 
-        <com.app.astralauncher.ui.view.AnimatedIconButton
+        <com.app.crutlelauncher.ui.view.AnimatedIconButton
             android:id="@+id/sub_settings_back_button"
             android:layout_width="28dp"
             android:layout_height="28dp"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:src="@drawable/ic_chevron_down"
             android:rotation="90"
-            android:tint="@color/astra_text_secondary"
+            android:tint="@color/crutle_text_secondary"
             android:contentDescription="@string/generic_return"/>
 
-        <com.app.astralauncher.ui.view.AnimatedIconView
+        <com.app.crutlelauncher.ui.view.AnimatedIconView
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:layout_marginStart="@dimen/space_s"
@@ -40,7 +40,7 @@
             android:text="@string/setting_category_game"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:textColor="@color/astra_text_primary"/>
+            android:textColor="@color/crutle_text_primary"/>
     </LinearLayout>
 
     <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
@@ -73,7 +73,7 @@
                     android:text="@string/setting_category_version"
                     android:textColor="@color/accent_primary" />
     
-                <com.app.astralauncher.ui.layout.AnimRelativeLayout
+                <com.app.crutlelauncher.ui.layout.AnimRelativeLayout
                     android:id="@+id/version_isolation_layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -88,7 +88,7 @@
                         android:layout_marginEnd="@dimen/_8sdp"
                         android:layout_toStartOf="@+id/version_isolation"
                         android:text="@string/setting_version_isolation_title"
-                        android:textColor="@color/astra_primary_text" />
+                        android:textColor="@color/crutle_primary_text" />
     
                     <TextView
                         android:id="@+id/version_isolation_summary"
@@ -100,16 +100,16 @@
                         android:layout_toStartOf="@+id/version_isolation"
                         android:text="@string/setting_version_isolation_desc" />
     
-                    <com.app.astralauncher.ui.miuix.MiuixSwitch
+                    <com.app.crutlelauncher.ui.miuix.MiuixSwitch
                         android:id="@+id/version_isolation"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true" />
-                </com.app.astralauncher.ui.layout.AnimRelativeLayout>
+                </com.app.crutlelauncher.ui.layout.AnimRelativeLayout>
 
     
-                <com.app.astralauncher.ui.layout.AnimRelativeLayout
+                <com.app.crutlelauncher.ui.layout.AnimRelativeLayout
                     android:id="@+id/versionCustomInfo_layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -123,7 +123,7 @@
                         android:layout_alignParentStart="true"
                         android:layout_alignParentEnd="true"
                         android:text="@string/setting_version_custom_info_title"
-                        android:textColor="@color/astra_primary_text" />
+                        android:textColor="@color/crutle_primary_text" />
     
                     <TextView
                         android:id="@+id/versionCustomInfo_summary"
@@ -134,7 +134,7 @@
                         android:layout_alignParentEnd="true"
                         android:text="@string/setting_version_custom_info_desc" />
     
-                    <com.app.astralauncher.ui.view.AnimEditText
+                    <com.app.crutlelauncher.ui.view.AnimEditText
                         android:id="@+id/versionCustomInfo_edittext"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -142,9 +142,9 @@
                         android:layout_marginTop="@dimen/_8sdp"
                         android:background="@drawable/background_edit_box"
                         android:paddingHorizontal="@dimen/_8sdp" />
-                </com.app.astralauncher.ui.layout.AnimRelativeLayout>
+                </com.app.crutlelauncher.ui.layout.AnimRelativeLayout>
 
-                <com.app.astralauncher.ui.layout.AnimRelativeLayout
+                <com.app.crutlelauncher.ui.layout.AnimRelativeLayout
                     android:id="@+id/curseForgeApiKey_layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -158,7 +158,7 @@
                         android:layout_alignParentStart="true"
                         android:layout_alignParentEnd="true"
                         android:text="@string/setting_curseforge_api_key_title"
-                        android:textColor="@color/astra_primary_text" />
+                        android:textColor="@color/crutle_primary_text" />
 
                     <TextView
                         android:id="@+id/curseForgeApiKey_summary"
@@ -169,7 +169,7 @@
                         android:layout_alignParentEnd="true"
                         android:text="@string/setting_curseforge_api_key_desc" />
 
-                    <com.app.astralauncher.ui.view.AnimEditText
+                    <com.app.crutlelauncher.ui.view.AnimEditText
                         android:id="@+id/curseForgeApiKey_edittext"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -178,7 +178,7 @@
                         android:background="@drawable/background_edit_box"
                         android:inputType="textPassword"
                         android:paddingHorizontal="@dimen/_8sdp" />
-                </com.app.astralauncher.ui.layout.AnimRelativeLayout>
+                </com.app.crutlelauncher.ui.layout.AnimRelativeLayout>
     
             </androidx.appcompat.widget.LinearLayoutCompat>
     
@@ -199,7 +199,7 @@
                     android:text="@string/setting_category_language"
                     android:textColor="@color/accent_primary" />
     
-                <com.app.astralauncher.ui.layout.AnimRelativeLayout
+                <com.app.crutlelauncher.ui.layout.AnimRelativeLayout
                     android:id="@+id/autoSetGameLanguage_layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -214,7 +214,7 @@
                         android:layout_marginEnd="@dimen/_8sdp"
                         android:layout_toStartOf="@+id/autoSetGameLanguage"
                         android:text="@string/setting_set_game_language_title"
-                        android:textColor="@color/astra_primary_text" />
+                        android:textColor="@color/crutle_primary_text" />
     
                     <TextView
                         android:id="@+id/autoSetGameLanguage_summary"
@@ -226,16 +226,16 @@
                         android:layout_toStartOf="@+id/autoSetGameLanguage"
                         android:text="@string/setting_set_game_language_desc" />
     
-                    <com.app.astralauncher.ui.miuix.MiuixSwitch
+                    <com.app.crutlelauncher.ui.miuix.MiuixSwitch
                         android:id="@+id/autoSetGameLanguage"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
                         android:checked="true" />
-                </com.app.astralauncher.ui.layout.AnimRelativeLayout>
+                </com.app.crutlelauncher.ui.layout.AnimRelativeLayout>
     
-                <com.app.astralauncher.ui.layout.AnimRelativeLayout
+                <com.app.crutlelauncher.ui.layout.AnimRelativeLayout
                     android:id="@+id/gameLanguageOverridden_layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -250,7 +250,7 @@
                         android:layout_marginEnd="@dimen/_8sdp"
                         android:layout_toStartOf="@+id/gameLanguageOverridden"
                         android:text="@string/setting_set_game_language_overridden_title"
-                        android:textColor="@color/astra_primary_text" />
+                        android:textColor="@color/crutle_primary_text" />
     
                     <TextView
                         android:id="@+id/gameLanguageOverridden_summary"
@@ -262,15 +262,15 @@
                         android:layout_toStartOf="@+id/gameLanguageOverridden"
                         android:text="@string/setting_set_game_language_overridden_desc" />
     
-                    <com.app.astralauncher.ui.miuix.MiuixSwitch
+                    <com.app.crutlelauncher.ui.miuix.MiuixSwitch
                         android:id="@+id/gameLanguageOverridden"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true" />
-                </com.app.astralauncher.ui.layout.AnimRelativeLayout>
+                </com.app.crutlelauncher.ui.layout.AnimRelativeLayout>
     
-                <com.app.astralauncher.ui.layout.AnimRelativeLayout
+                <com.app.crutlelauncher.ui.layout.AnimRelativeLayout
                     android:id="@+id/setGameLanguage_layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -284,7 +284,7 @@
                         android:layout_alignParentStart="true"
                         android:layout_alignParentEnd="true"
                         android:text="@string/setting_set_game_language_list"
-                        android:textColor="@color/astra_primary_text" />
+                        android:textColor="@color/crutle_primary_text" />
     
                     <TextView
                         android:id="@+id/setGameLanguage_value"
@@ -294,7 +294,7 @@
                         android:layout_alignParentStart="true"
                         android:layout_alignParentEnd="true"
                         android:text="@string/generic_default" />
-                </com.app.astralauncher.ui.layout.AnimRelativeLayout>
+                </com.app.crutlelauncher.ui.layout.AnimRelativeLayout>
     
             </androidx.appcompat.widget.LinearLayoutCompat>
 

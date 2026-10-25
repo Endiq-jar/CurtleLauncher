@@ -8,7 +8,7 @@
     android:background="@drawable/background_grid_card"
     android:padding="@dimen/space_l">
 
-    <com.app.astralauncher.ui.view.AnimatedIconView
+    <com.app.crutlelauncher.ui.view.AnimatedIconView
         android:id="@+id/detail_icon"
         android:layout_width="@dimen/_72sdp"
         android:layout_height="@dimen/_72sdp"
@@ -27,7 +27,7 @@
         android:ellipsize="end"
         android:textSize="@dimen/_18ssp"
         android:textStyle="bold"
-        android:textColor="@color/astra_text_primary"
+        android:textColor="@color/crutle_text_primary"
         app:layout_constraintStart_toEndOf="@id/detail_icon"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/detail_icon"
@@ -54,7 +54,7 @@
         android:layout_width="0dp"
         android:layout_height="1dp"
         android:layout_marginTop="@dimen/space_m"
-        android:background="@color/astra_divider"
+        android:background="@color/crutle_divider"
         app:layout_constraintTop_toBottomOf="@id/detail_icon"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -66,7 +66,7 @@
         android:layout_marginTop="@dimen/space_m"
         android:text="@string/account_detail_uuid"
         android:textSize="@dimen/_10ssp"
-        android:textColor="@color/astra_text_secondary"
+        android:textColor="@color/crutle_text_secondary"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/divider_top" />
 
@@ -78,13 +78,13 @@
         android:singleLine="true"
         android:ellipsize="middle"
         android:textSize="@dimen/_12ssp"
-        android:textColor="@color/astra_text_primary"
+        android:textColor="@color/crutle_text_primary"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@id/copy_uuid"
         app:layout_constraintTop_toBottomOf="@id/uuid_label"
         tools:text="e3c8f3e1-c0d3-48f8-a8b1-e3d9c6f4b2a7" />
 
-    <com.app.astralauncher.ui.view.AnimatedIconView
+    <com.app.crutlelauncher.ui.view.AnimatedIconView
         android:id="@+id/copy_uuid"
         android:layout_width="@dimen/_20sdp"
         android:layout_height="@dimen/_20sdp"
@@ -114,7 +114,7 @@
         android:orientation="horizontal"
         app:layout_constraintTop_toBottomOf="@id/detail_skin_preview">
 
-        <com.app.astralauncher.ui.view.AnimButton
+        <com.app.crutlelauncher.ui.view.AnimButton
             android:id="@+id/detail_play"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -122,11 +122,11 @@
             android:layout_marginEnd="@dimen/space_xs"
             android:background="@drawable/bg_launch_button"
             android:text="@string/account_detail_play"
-            android:textColor="@color/astra_text_primary"
+            android:textColor="@color/crutle_text_primary"
             android:textStyle="bold"
             android:textAllCaps="true" />
 
-        <com.app.astralauncher.ui.view.AnimButton
+        <com.app.crutlelauncher.ui.view.AnimButton
             android:id="@+id/detail_refresh"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -135,7 +135,7 @@
             android:background="@drawable/background_grid_card"
             android:text="@string/generic_refresh" />
 
-        <com.app.astralauncher.ui.view.AnimButton
+        <com.app.crutlelauncher.ui.view.AnimButton
             android:id="@+id/detail_wardrobe"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -144,17 +144,17 @@
             android:background="@drawable/background_grid_card"
             android:drawableStart="@drawable/ic_skin_changer"
             android:drawablePadding="@dimen/space_xs"
-            android:drawableTint="@color/astra_success"
+            android:drawableTint="@color/crutle_success"
             android:text="@string/account_wardrobe" />
 
-        <com.app.astralauncher.ui.view.AnimButton
+        <com.app.crutlelauncher.ui.view.AnimButton
             android:id="@+id/detail_remove"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_marginStart="@dimen/space_xs"
             android:background="@drawable/background_grid_card"
-            android:textColor="@color/astra_error"
+            android:textColor="@color/crutle_error"
             android:text="@string/generic_delete" />
 
     </LinearLayout>

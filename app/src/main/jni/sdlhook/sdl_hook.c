@@ -1,4 +1,4 @@
-// Astra Launcher - SDL3 compatibility hooks for Minecraft 26.3+ (RenderPearl/SDL backend).
+// Crutle Launcher - SDL3 compatibility hooks for Minecraft 26.3+ (RenderPearl/SDL backend).
 //
 // What was crashing:
 //   MC 26.3-snapshot-4+ replaced GLFW with SDL3. On Android that crashes in several
@@ -37,7 +37,7 @@
 // referencing AngelAuraMC/Amethyst-Android and FCL-Team/FoldCraftLauncher), adapted
 // so it does NOT depend on libpojavexec internals:
 //   * No pojav_environ access. The ART-side SDL init that upstream triggers from the
-//     SDL_Init hook (notifyLauncher) is already done eagerly by Astra's
+//     SDL_Init hook (notifyLauncher) is already done eagerly by Crutle's
 //     SdlAndroidJniPrep.setup() before the JVM starts, so the hook only applies the
 //     SDL hints here.
 //   * No link dependency on libpojavexec. The FPS counter (calculateFPS) is resolved
@@ -450,8 +450,8 @@ static void custom_SDL_DestroyWindow_Func(SDL_Window *window) {
 // Launcher-side preparation for SDL_InitSubSystem, shared by the bytehook layer
 // and the dlsym-proxy layer.
 //
-// NOTE (Astra adaptation): upstream notifies the ART side here to load SDL and
-// set up JNI lazily. Astra instead initializes the ART side eagerly in
+// NOTE (Crutle adaptation): upstream notifies the ART side here to load SDL and
+// set up JNI lazily. Crutle instead initializes the ART side eagerly in
 // SdlAndroidJniPrep.setup() before the JVM starts (that is also what guarantees
 // a single SDL3 instance shared with the game), so this hook only applies hints.
 static bool sdlInitSubSystemPrepare(SDL_InitFlags flags) {

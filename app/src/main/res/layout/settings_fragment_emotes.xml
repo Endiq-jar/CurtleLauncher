@@ -16,17 +16,17 @@
         android:paddingHorizontal="@dimen/space_l"
         android:paddingVertical="@dimen/space_m">
 
-        <com.app.astralauncher.ui.view.AnimatedIconButton
+        <com.app.crutlelauncher.ui.view.AnimatedIconButton
             android:id="@+id/sub_settings_back_button"
             android:layout_width="28dp"
             android:layout_height="28dp"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:src="@drawable/ic_chevron_down"
             android:rotation="90"
-            android:tint="@color/astra_text_secondary"
+            android:tint="@color/crutle_text_secondary"
             android:contentDescription="@string/generic_return"/>
 
-        <com.app.astralauncher.ui.view.AnimatedIconView
+        <com.app.crutlelauncher.ui.view.AnimatedIconView
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:layout_marginStart="@dimen/space_s"
@@ -41,7 +41,7 @@
             android:text="@string/emotes_screen_title"
             android:textSize="17sp"
             android:textStyle="bold"
-            android:textColor="@color/astra_text_primary"/>
+            android:textColor="@color/crutle_text_primary"/>
     </LinearLayout>
 
     <androidx.core.widget.NestedScrollView
@@ -63,7 +63,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="13sp"
-                android:textColor="@color/astra_text_secondary"
+                android:textColor="@color/crutle_text_secondary"
                 android:layout_marginBottom="@dimen/space_s"
                 tools:text="@string/emotes_status_missing"/>
 
@@ -84,7 +84,7 @@
                     android:text="@string/emotes_wheel_key_title"
                     android:textStyle="bold"
                     android:textSize="14sp"
-                    android:textColor="@color/astra_text_primary"/>
+                    android:textColor="@color/crutle_text_primary"/>
 
                 <TextView
                     android:layout_width="match_parent"
@@ -92,7 +92,7 @@
                     android:layout_marginTop="2dp"
                     android:text="@string/emotes_wheel_key_summary"
                     android:textSize="11sp"
-                    android:textColor="@color/astra_text_secondary"/>
+                    android:textColor="@color/crutle_text_secondary"/>
 
                 <TextView
                     android:id="@+id/emotes_wheel_key_value"
@@ -110,9 +110,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="11sp"
-                android:textColor="@color/astra_text_secondary"
+                android:textColor="@color/crutle_text_secondary"
                 android:layout_marginBottom="@dimen/space_s"
-                tools:text="Emotes are saved to: /storage/emulated/0/games/AstraLauncher/.minecraft/emotes"/>
+                tools:text="Emotes are saved to: /storage/emulated/0/games/CrutleLauncher/.minecraft/emotes"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -120,7 +120,7 @@
                 android:orientation="horizontal"
                 android:layout_marginBottom="@dimen/space_s">
 
-                <com.app.astralauncher.ui.view.AnimButton
+                <com.app.crutlelauncher.ui.view.AnimButton
                     android:id="@+id/install_emotecraft_button"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -129,7 +129,7 @@
                     android:visibility="gone"
                     android:text="@string/emotes_install_button"/>
 
-                <com.app.astralauncher.ui.view.AnimButton
+                <com.app.crutlelauncher.ui.view.AnimButton
                     android:id="@+id/open_browser_button"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -142,7 +142,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/emotes_site_hint"
                 android:textSize="11sp"
-                android:textColor="@color/astra_text_secondary"
+                android:textColor="@color/crutle_text_secondary"
                 android:layout_marginBottom="@dimen/space_s"/>
 
             <FrameLayout
@@ -154,14 +154,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"/>
 
-                <com.app.astralauncher.ui.miuix.MiuixProgressBar
+                <com.app.crutlelauncher.ui.miuix.MiuixProgressBar
                     android:id="@+id/emotes_progress"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:visibility="gone"/>
 
-                <!-- AstraLauncher NESTED-SCROLL FIX: this WebView sits inside the outer
+                <!-- CrutleLauncher NESTED-SCROLL FIX: this WebView sits inside the outer
                      NestedScrollView above (see that view's own comment), and WebView does
                      not implement NestedScrollingChild - Android's nested-scroll dispatch
                      between it and a NestedScrollView is heuristic and unreliable, so a

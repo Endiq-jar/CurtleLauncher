@@ -3,8 +3,8 @@
 //
 #include <EGL//egl.h>
 #include <stdbool.h>
-#ifndef ASTRALAUNCHER_GL_BRIDGE_H
-#define ASTRALAUNCHER_GL_BRIDGE_H
+#ifndef CRUTLELAUNCHER_GL_BRIDGE_H
+#define CRUTLELAUNCHER_GL_BRIDGE_H
 
 typedef struct {
     char       state;
@@ -25,7 +25,7 @@ void gl_setup_window();
 void gl_swap_interval(int swapInterval);
 
 /**
- * AstraLauncher EGL improvements (see gl_bridge.c for the full rundown):
+ * CrutleLauncher EGL improvements (see gl_bridge.c for the full rundown):
  * logs the EGL vendor/version and the handful of extensions we care about once,
  * right after eglInitialize - called automatically from gl_init().
  */
@@ -33,4 +33,4 @@ void gl_log_egl_info();
 
 bool gl_low_latency_requested();
 
-#endif //ASTRALAUNCHER_GL_BRIDGE_H
+#endif //CRUTLELAUNCHER_GL_BRIDGE_H

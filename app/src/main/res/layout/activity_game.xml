@@ -104,12 +104,12 @@
 
         </LinearLayout>
 
-        <!-- AstraLauncher Control Switcher: taps through the control layouts in
+        <!-- CrutleLauncher Control Switcher: taps through the control layouts in
              PathManager.DIR_CTRLMAP_PATH without opening the game menu. Shown only when
              AllSettings.controlSwitcherEnabled is on (MainActivity applies that), and it sits
              above the Touchpad (translationZ 2dp) but below the game-menu drawer (4dp) so
              opening the menu still covers it. Icon is the keyboard's Tab key. -->
-        <com.app.astralauncher.ui.view.AnimatedIconView
+        <com.app.crutlelauncher.ui.view.AnimatedIconView
             android:id="@+id/control_switcher_button"
             android:layout_width="@dimen/_28sdp"
             android:layout_height="@dimen/_28sdp"

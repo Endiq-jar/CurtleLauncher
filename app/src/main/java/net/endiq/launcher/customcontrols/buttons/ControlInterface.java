@@ -14,8 +14,8 @@ import androidx.annotation.CallSuper;
 import androidx.annotation.NonNull;
 import androidx.core.math.MathUtils;
 
-import com.app.astralauncher.feature.log.Logging;
-import com.app.astralauncher.setting.AllSettings;
+import com.app.crutlelauncher.feature.log.Logging;
+import com.app.crutlelauncher.setting.AllSettings;
 
 import net.endiq.launcher.GrabListener;
 import net.endiq.launcher.Tools;

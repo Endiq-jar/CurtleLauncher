@@ -1,7 +1,7 @@
 package net.endiq.launcher.authenticator
 
 import android.util.Log
-import com.app.astralauncher.utils.path.PathManager
+import com.app.crutlelauncher.utils.path.PathManager
 import net.endiq.launcher.Logger
 import net.endiq.launcher.Tools
 import net.endiq.launcher.utils.DownloadUtils

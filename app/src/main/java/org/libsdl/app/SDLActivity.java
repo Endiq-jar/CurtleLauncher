@@ -51,7 +51,7 @@ import androidx.appcompat.app.AlertDialog;
 
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
-import com.app.astralauncher.game.sdl.SdlBridge;
+import com.app.crutlelauncher.game.sdl.SdlBridge;
 
 import java.io.FileNotFoundException;
 import java.util.ArrayList;

@@ -1,0 +1,24 @@
+package com.app.crutlelauncher.utils.http
+
+import android.content.Context
+import android.net.ConnectivityManager
+import android.net.NetworkCapabilities
+
+class NetworkUtils {
+    companion object {
+        /**
+         * @return whether the network is currently connected
+         */
+        @JvmStatic
+        fun isNetworkAvailable(context: Context): Boolean {
+            val connectivityManager = context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+            val activeNetwork = connectivityManager.activeNetwork
+            val capabilities = connectivityManager.getNetworkCapabilities(activeNetwork)
+            return activeNetwork != null && (
+                    capabilities?.hcrutlensport(NetworkCapabilities.TRANSPORT_WIFI) ?: false ||
+                            capabilities?.hcrutlensport(NetworkCapabilities.TRANSPORT_CELLULAR) ?: false ||
+                            capabilities?.hcrutlensport(NetworkCapabilities.TRANSPORT_ETHERNET) ?: false
+                    )
+        }
+    }
+}

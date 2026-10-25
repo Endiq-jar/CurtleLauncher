@@ -24,12 +24,12 @@ int main() {
     };
     jni.ReleaseStringChars = [](JNIEnv*, jstring, const jchar*) {};
     JNIEnv_ env{&jni};
-    std::u16string emoji = u"Astra \U0001F422";
-    assert(JStringToStd(&env, reinterpret_cast<jstring>(&emoji)) == "Astra \xF0\x9F\x90\xA2");
+    std::u16string emoji = u"Crutle \U0001F422";
+    assert(JStringToStd(&env, reinterpret_cast<jstring>(&emoji)) == "Crutle \xF0\x9F\x90\xA2");
     std::u16string unpaired(1, static_cast<char16_t>(0xD800));
     assert(JStringToStd(&env, reinterpret_cast<jstring>(&unpaired)) == "\xEF\xBF\xBD");
     auto before = std::chrono::steady_clock::now();
-    assert(Java_com_app_astralauncher_feature_discord_DiscordSocialBridge_nativeInit(nullptr, nullptr, 1560576927419338863LL));
+    assert(Java_com_app_crutlelauncher_feature_discord_DiscordSocialBridge_nativeInit(nullptr, nullptr, 1560576927419338863LL));
     assert(std::chrono::steady_clock::now() - before < std::chrono::milliseconds(150));
     // Queuing before construction completes must not lose the initial activity.
     PresenceCommand cmd; cmd.details = "Playing 1.21.1"; cmd.hasTimestamp = true; cmd.startTimestampMs = 1792140000000LL;
@@ -47,15 +47,15 @@ int main() {
     discordpp::dispatch.store(true);
     std::this_thread::sleep_for(std::chrono::milliseconds(250));
     assert(gLastResult.load() == 0);
-    Java_com_app_astralauncher_feature_discord_DiscordSocialBridge_nativeShutdown(nullptr, nullptr);
+    Java_com_app_crutlelauncher_feature_discord_DiscordSocialBridge_nativeShutdown(nullptr, nullptr);
     assert(!gRunning.load() && !gInitialized.load() && !gThread.joinable());
     assert(discordpp::drops.load() == 1);
     // Release/reacquire must construct a fresh client, never a second concurrent worker.
-    assert(Java_com_app_astralauncher_feature_discord_DiscordSocialBridge_nativeInit(nullptr, nullptr, 1560576927419338863LL));
+    assert(Java_com_app_crutlelauncher_feature_discord_DiscordSocialBridge_nativeInit(nullptr, nullptr, 1560576927419338863LL));
     queue(cmd); until([] { return gLastResult.load() == 1; });
-    Java_com_app_astralauncher_feature_discord_DiscordSocialBridge_nativeShutdown(nullptr, nullptr);
+    Java_com_app_crutlelauncher_feature_discord_DiscordSocialBridge_nativeShutdown(nullptr, nullptr);
     assert(discordpp::drops.load() == 2 && discordpp::creates.load() == 2);
-    Java_com_app_astralauncher_feature_discord_DiscordSocialBridge_nativeShutdown(nullptr, nullptr);
+    Java_com_app_crutlelauncher_feature_discord_DiscordSocialBridge_nativeShutdown(nullptr, nullptr);
     assert(!gRunning.load() && gLastResult.load() == 0);
     std::cout << "Discord native worker queue, callback generation, milliseconds and shutdown checks passed (stub SDK)\n";
 }

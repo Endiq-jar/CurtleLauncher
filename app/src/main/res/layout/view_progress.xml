@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/panel_translucent">
 
-    <com.app.astralauncher.ui.miuix.MiuixProgressBar
+    <com.app.crutlelauncher.ui.miuix.MiuixProgressBar
         android:id="@+id/progress_generic_progressbar"
         android:layout_width="@dimen/_40sdp"
         android:layout_height="@dimen/_30sdp"
@@ -19,7 +19,7 @@
         android:layout_height="0dp"
         android:gravity="center"
         android:paddingEnd="@dimen/_40sdp"
-        android:textColor="@color/astra_primary_text"
+        android:textColor="@color/crutle_primary_text"
         android:textSize="@dimen/_12ssp"
 
         app:layout_constraintBottom_toBottomOf="parent"

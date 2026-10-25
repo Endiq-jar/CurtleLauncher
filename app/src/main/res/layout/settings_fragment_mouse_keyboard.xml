@@ -16,17 +16,17 @@
         android:paddingHorizontal="@dimen/space_l"
         android:paddingVertical="@dimen/space_m">
 
-        <com.app.astralauncher.ui.view.AnimatedIconButton
+        <com.app.crutlelauncher.ui.view.AnimatedIconButton
             android:id="@+id/sub_settings_back_button"
             android:layout_width="28dp"
             android:layout_height="28dp"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:src="@drawable/ic_chevron_down"
             android:rotation="90"
-            android:tint="@color/astra_text_secondary"
+            android:tint="@color/crutle_text_secondary"
             android:contentDescription="@string/generic_return"/>
 
-        <com.app.astralauncher.ui.view.AnimatedIconView
+        <com.app.crutlelauncher.ui.view.AnimatedIconView
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:layout_marginStart="@dimen/space_s"
@@ -40,7 +40,7 @@
             android:text="@string/setting_category_mouse_keyboard"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:textColor="@color/astra_text_primary"/>
+            android:textColor="@color/crutle_text_primary"/>
     </LinearLayout>
 
     <ScrollView
@@ -72,7 +72,7 @@
                     android:text="@string/setting_category_mouse"
                     android:textColor="@color/accent_primary" />
 
-                <com.app.astralauncher.ui.layout.AnimRelativeLayout
+                <com.app.crutlelauncher.ui.layout.AnimRelativeLayout
                     android:id="@+id/physical_mouse_mode_layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -87,7 +87,7 @@
                         android:layout_marginEnd="@dimen/_8sdp"
                         android:layout_toStartOf="@+id/physical_mouse_mode"
                         android:text="@string/setting_physical_mouse_mode_title"
-                        android:textColor="@color/astra_primary_text" />
+                        android:textColor="@color/crutle_primary_text" />
 
                     <TextView
                         android:id="@+id/physical_mouse_mode_summary"
@@ -99,15 +99,15 @@
                         android:layout_toStartOf="@+id/physical_mouse_mode"
                         android:text="@string/setting_physical_mouse_mode_desc" />
 
-                    <com.app.astralauncher.ui.miuix.MiuixSwitch
+                    <com.app.crutlelauncher.ui.miuix.MiuixSwitch
                         android:id="@+id/physical_mouse_mode"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true" />
-                </com.app.astralauncher.ui.layout.AnimRelativeLayout>
+                </com.app.crutlelauncher.ui.layout.AnimRelativeLayout>
 
-                <com.app.astralauncher.ui.layout.AnimRelativeLayout
+                <com.app.crutlelauncher.ui.layout.AnimRelativeLayout
                     android:id="@+id/mouse_capture_sensitivity_layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -122,7 +122,7 @@
                         android:layout_marginHorizontal="@dimen/_12sdp"
                         android:layout_marginTop="@dimen/_12sdp"
                         android:text="@string/setting_mouse_capture_sensitivity_title"
-                        android:textColor="@color/astra_primary_text" />
+                        android:textColor="@color/crutle_primary_text" />
 
                     <TextView
                         android:id="@+id/mouse_capture_sensitivity_summary"
@@ -134,7 +134,7 @@
                         android:layout_marginHorizontal="@dimen/_12sdp"
                         android:text="@string/setting_mouse_capture_sensitivity_desc" />
 
-                    <com.app.astralauncher.ui.miuix.MiuixSlider
+                    <com.app.crutlelauncher.ui.miuix.MiuixSlider
                         android:id="@+id/mouse_capture_sensitivity"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -154,9 +154,9 @@
                         android:layout_marginVertical="@dimen/_8sdp"
                         android:layout_marginEnd="@dimen/_12sdp"
                         tools:text="0" />
-                </com.app.astralauncher.ui.layout.AnimRelativeLayout>
+                </com.app.crutlelauncher.ui.layout.AnimRelativeLayout>
 
-                <com.app.astralauncher.ui.layout.AnimRelativeLayout
+                <com.app.crutlelauncher.ui.layout.AnimRelativeLayout
                     android:id="@+id/hide_mouse_layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -171,7 +171,7 @@
                         android:layout_marginEnd="@dimen/_8sdp"
                         android:layout_toStartOf="@+id/hide_mouse"
                         android:text="@string/setting_hide_mouse_title"
-                        android:textColor="@color/astra_primary_text" />
+                        android:textColor="@color/crutle_primary_text" />
 
                     <TextView
                         android:id="@+id/hide_mouse_summary"
@@ -183,15 +183,15 @@
                         android:layout_toStartOf="@+id/hide_mouse"
                         android:text="@string/setting_hide_mouse_desc" />
 
-                    <com.app.astralauncher.ui.miuix.MiuixSwitch
+                    <com.app.crutlelauncher.ui.miuix.MiuixSwitch
                         android:id="@+id/hide_mouse"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true" />
-                </com.app.astralauncher.ui.layout.AnimRelativeLayout>
+                </com.app.crutlelauncher.ui.layout.AnimRelativeLayout>
 
-                <com.app.astralauncher.ui.layout.AnimRelativeLayout
+                <com.app.crutlelauncher.ui.layout.AnimRelativeLayout
                     android:id="@+id/mousescale_layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -206,7 +206,7 @@
                         android:layout_marginHorizontal="@dimen/_12sdp"
                         android:layout_marginTop="@dimen/_12sdp"
                         android:text="@string/mouse_settings_scale_name"
-                        android:textColor="@color/astra_primary_text" />
+                        android:textColor="@color/crutle_primary_text" />
     
                     <TextView
                         android:id="@+id/mousescale_summary"
@@ -218,7 +218,7 @@
                         android:layout_marginHorizontal="@dimen/_12sdp"
                         android:text="@string/setting_mouse_scale_desc" />
     
-                    <com.app.astralauncher.ui.miuix.MiuixSlider
+                    <com.app.crutlelauncher.ui.miuix.MiuixSlider
                         android:id="@+id/mousescale"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -238,9 +238,9 @@
                         android:layout_marginVertical="@dimen/_8sdp"
                         android:layout_marginEnd="@dimen/_12sdp"
                         tools:text="0" />
-                </com.app.astralauncher.ui.layout.AnimRelativeLayout>
+                </com.app.crutlelauncher.ui.layout.AnimRelativeLayout>
 
-                <com.app.astralauncher.ui.layout.AnimRelativeLayout
+                <com.app.crutlelauncher.ui.layout.AnimRelativeLayout
                     android:id="@+id/mousespeed_layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -255,7 +255,7 @@
                         android:layout_marginHorizontal="@dimen/_12sdp"
                         android:layout_marginTop="@dimen/_12sdp"
                         android:text="@string/mouse_settings_speed_name"
-                        android:textColor="@color/astra_primary_text" />
+                        android:textColor="@color/crutle_primary_text" />
     
                     <TextView
                         android:id="@+id/mousespeed_summary"
@@ -267,7 +267,7 @@
                         android:layout_marginHorizontal="@dimen/_12sdp"
                         android:text="@string/setting_mouse_speed_desc" />
     
-                    <com.app.astralauncher.ui.miuix.MiuixSlider
+                    <com.app.crutlelauncher.ui.miuix.MiuixSlider
                         android:id="@+id/mousespeed"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -287,9 +287,9 @@
                         android:layout_marginVertical="@dimen/_8sdp"
                         android:layout_marginEnd="@dimen/_12sdp"
                         tools:text="0" />
-                </com.app.astralauncher.ui.layout.AnimRelativeLayout>
+                </com.app.crutlelauncher.ui.layout.AnimRelativeLayout>
 
-                <com.app.astralauncher.ui.layout.AnimRelativeLayout
+                <com.app.crutlelauncher.ui.layout.AnimRelativeLayout
                     android:id="@+id/mouse_start_layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -301,7 +301,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/setting_mouse_start_title"
-                        android:textColor="@color/astra_primary_text" />
+                        android:textColor="@color/crutle_primary_text" />
     
                     <TextView
                         android:id="@+id/mouse_start_summary"
@@ -313,16 +313,16 @@
                         android:layout_toStartOf="@+id/mouse_start"
                         android:text="@string/setting_mouse_start_desc" />
     
-                    <com.app.astralauncher.ui.miuix.MiuixSwitch
+                    <com.app.crutlelauncher.ui.miuix.MiuixSwitch
                         android:id="@+id/mouse_start"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
                         android:checked="true" />
-                </com.app.astralauncher.ui.layout.AnimRelativeLayout>
+                </com.app.crutlelauncher.ui.layout.AnimRelativeLayout>
 
-                <com.app.astralauncher.ui.layout.AnimRelativeLayout
+                <com.app.crutlelauncher.ui.layout.AnimRelativeLayout
                     android:id="@+id/custom_mouse_layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -336,7 +336,7 @@
                         android:layout_alignParentStart="true"
                         android:layout_alignParentEnd="true"
                         android:text="@string/custom_mouse_title"
-                        android:textColor="@color/astra_primary_text" />
+                        android:textColor="@color/crutle_primary_text" />
     
                     <TextView
                         android:id="@+id/custom_mouse_summary"
@@ -346,7 +346,7 @@
                         android:layout_alignParentStart="true"
                         android:layout_alignParentEnd="true"
                         android:text="@string/custom_mouse_desc" />
-                </com.app.astralauncher.ui.layout.AnimRelativeLayout>
+                </com.app.crutlelauncher.ui.layout.AnimRelativeLayout>
 
             </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -367,7 +367,7 @@
                     android:text="@string/setting_category_touch_gestures"
                     android:textColor="@color/accent_primary" />
 
-                <com.app.astralauncher.ui.layout.AnimRelativeLayout
+                <com.app.crutlelauncher.ui.layout.AnimRelativeLayout
                     android:id="@+id/disableGestures_layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -382,7 +382,7 @@
                         android:layout_marginEnd="@dimen/_8sdp"
                         android:layout_toStartOf="@+id/disableGestures"
                         android:text="@string/setting_disable_gestures_title"
-                        android:textColor="@color/astra_primary_text" />
+                        android:textColor="@color/crutle_primary_text" />
     
                     <TextView
                         android:id="@+id/disableGestures_summary"
@@ -394,15 +394,15 @@
                         android:layout_toStartOf="@+id/disableGestures"
                         android:text="@string/setting_disable_gestures_desc" />
     
-                    <com.app.astralauncher.ui.miuix.MiuixSwitch
+                    <com.app.crutlelauncher.ui.miuix.MiuixSwitch
                         android:id="@+id/disableGestures"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true" />
-                </com.app.astralauncher.ui.layout.AnimRelativeLayout>
+                </com.app.crutlelauncher.ui.layout.AnimRelativeLayout>
 
-                <com.app.astralauncher.ui.layout.AnimRelativeLayout
+                <com.app.crutlelauncher.ui.layout.AnimRelativeLayout
                     android:id="@+id/disableDoubleTap_layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -417,7 +417,7 @@
                         android:layout_marginEnd="@dimen/_8sdp"
                         android:layout_toStartOf="@+id/disableDoubleTap"
                         android:text="@string/setting_disable_swap_hand_title"
-                        android:textColor="@color/astra_primary_text" />
+                        android:textColor="@color/crutle_primary_text" />
     
                     <TextView
                         android:id="@+id/disableDoubleTap_summary"
@@ -429,15 +429,15 @@
                         android:layout_toStartOf="@+id/disableDoubleTap"
                         android:text="@string/setting_disable_swap_hand_desc" />
     
-                    <com.app.astralauncher.ui.miuix.MiuixSwitch
+                    <com.app.crutlelauncher.ui.miuix.MiuixSwitch
                         android:id="@+id/disableDoubleTap"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true" />
-                </com.app.astralauncher.ui.layout.AnimRelativeLayout>
+                </com.app.crutlelauncher.ui.layout.AnimRelativeLayout>
 
-                <com.app.astralauncher.ui.layout.AnimRelativeLayout
+                <com.app.crutlelauncher.ui.layout.AnimRelativeLayout
                     android:id="@+id/timeLongPressTrigger_layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -452,7 +452,7 @@
                         android:layout_marginHorizontal="@dimen/_12sdp"
                         android:layout_marginTop="@dimen/_12sdp"
                         android:text="@string/setting_longpress_trigger_title"
-                        android:textColor="@color/astra_primary_text" />
+                        android:textColor="@color/crutle_primary_text" />
     
                     <TextView
                         android:id="@+id/timeLongPressTrigger_summary"
@@ -464,7 +464,7 @@
                         android:layout_marginHorizontal="@dimen/_12sdp"
                         android:text="@string/setting_longpress_trigger_desc" />
     
-                    <com.app.astralauncher.ui.miuix.MiuixSlider
+                    <com.app.crutlelauncher.ui.miuix.MiuixSlider
                         android:id="@+id/timeLongPressTrigger"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -484,9 +484,9 @@
                         android:layout_marginVertical="@dimen/_8sdp"
                         android:layout_marginEnd="@dimen/_12sdp"
                         tools:text="0" />
-                </com.app.astralauncher.ui.layout.AnimRelativeLayout>
+                </com.app.crutlelauncher.ui.layout.AnimRelativeLayout>
 
-                <com.app.astralauncher.ui.layout.AnimRelativeLayout
+                <com.app.crutlelauncher.ui.layout.AnimRelativeLayout
                     android:id="@+id/gesture_tap_action_layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -501,7 +501,7 @@
                         android:layout_marginEnd="@dimen/_8sdp"
                         android:layout_toStartOf="@+id/gesture_tap_action_value"
                         android:text="@string/setting_gesture_tap_action_title"
-                        android:textColor="@color/astra_primary_text" />
+                        android:textColor="@color/crutle_primary_text" />
 
                     <TextView
                         android:id="@+id/gesture_tap_action_summary"
@@ -523,9 +523,9 @@
                         android:ellipsize="end"
                         android:maxLines="1"
                         tools:text="Right button" />
-                </com.app.astralauncher.ui.layout.AnimRelativeLayout>
+                </com.app.crutlelauncher.ui.layout.AnimRelativeLayout>
 
-                <com.app.astralauncher.ui.layout.AnimRelativeLayout
+                <com.app.crutlelauncher.ui.layout.AnimRelativeLayout
                     android:id="@+id/gesture_long_press_action_layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -540,7 +540,7 @@
                         android:layout_marginEnd="@dimen/_8sdp"
                         android:layout_toStartOf="@+id/gesture_long_press_action_value"
                         android:text="@string/setting_gesture_long_press_action_title"
-                        android:textColor="@color/astra_primary_text" />
+                        android:textColor="@color/crutle_primary_text" />
 
                     <TextView
                         android:id="@+id/gesture_long_press_action_summary"
@@ -562,7 +562,7 @@
                         android:ellipsize="end"
                         android:maxLines="1"
                         tools:text="Right button" />
-                </com.app.astralauncher.ui.layout.AnimRelativeLayout>
+                </com.app.crutlelauncher.ui.layout.AnimRelativeLayout>
 
             </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -583,7 +583,7 @@
                     android:text="@string/setting_category_keyboard"
                     android:textColor="@color/accent_primary" />
 
-                <com.app.astralauncher.ui.layout.AnimRelativeLayout
+                <com.app.crutlelauncher.ui.layout.AnimRelativeLayout
                     android:id="@+id/physical_key_ime_layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -598,7 +598,7 @@
                         android:layout_marginEnd="@dimen/_8sdp"
                         android:layout_toStartOf="@+id/physical_key_ime_value"
                         android:text="@string/setting_physical_key_ime_title"
-                        android:textColor="@color/astra_primary_text" />
+                        android:textColor="@color/crutle_primary_text" />
 
                     <TextView
                         android:id="@+id/physical_key_ime_summary"
@@ -620,7 +620,7 @@
                         android:ellipsize="end"
                         android:maxLines="1"
                         tools:text="Right button" />
-                </com.app.astralauncher.ui.layout.AnimRelativeLayout>
+                </com.app.crutlelauncher.ui.layout.AnimRelativeLayout>
 
             </androidx.appcompat.widget.LinearLayoutCompat>
 

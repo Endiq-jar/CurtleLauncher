@@ -52,69 +52,69 @@
     <color name="favorite_color">#FF8A8A</color>
 
     <!-- ── Icon / Text defaults ──────────────────────────────────────── -->
-    <color name="astra_icon_color">#F2F5F0</color>
-    <color name="astra_primary_text">#F2F5F0</color>
-    <color name="astra_text_primary">#F2F5F0</color>
+    <color name="crutle_icon_color">#F2F5F0</color>
+    <color name="crutle_primary_text">#F2F5F0</color>
+    <color name="crutle_text_primary">#F2F5F0</color>
 
     <!-- ── Glass / dark surfaces ───────────────────────────────────── -->
     <color name="bg_deep">#0D0D0D</color>
     <color name="bg_card">#AA171717</color>
 
     <!-- ── Surfaces ──────────────────────────────────────────────────── -->
-    <color name="astra_surface">#CC171717</color>
-    <color name="astra_surface_variant">#88202020</color>
-    <color name="astra_divider">#1A202020</color>
-    <color name="astra_stroke">#33C7E8B0</color>
+    <color name="crutle_surface">#CC171717</color>
+    <color name="crutle_surface_variant">#88202020</color>
+    <color name="crutle_divider">#1A202020</color>
+    <color name="crutle_stroke">#33C7E8B0</color>
 
     <!-- ── Extended aliases ──────────────────────────────────────────── -->
-    <color name="astra_accent_glow">#C7E8B0</color>
-    <color name="astra_accent_dim">#9CCF93</color>
-    <color name="astra_accent_ripple">#33C7E8B0</color>
+    <color name="crutle_accent_glow">#C7E8B0</color>
+    <color name="crutle_accent_dim">#9CCF93</color>
+    <color name="crutle_accent_ripple">#33C7E8B0</color>
     <color name="launch_button_color">#C7E8B0</color>
     <color name="launch_button_hover">#9CCF93</color>
     <color name="launch_button_pressed">#9CCF93</color>
     <color name="launch_button_ripple">#33C7E8B0</color>
 
     <!-- Background layers -->
-    <color name="astra_bg_surface">#171717</color>
-    <color name="astra_bg_elevated">#202020</color>
-    <color name="astra_bg_navbar">#171717</color>
-    <color name="astra_bg_sidebar">#171717</color>
-    <color name="astra_bg_terminal">#0D0D0D</color>
+    <color name="crutle_bg_surface">#171717</color>
+    <color name="crutle_bg_elevated">#202020</color>
+    <color name="crutle_bg_navbar">#171717</color>
+    <color name="crutle_bg_sidebar">#171717</color>
+    <color name="crutle_bg_terminal">#0D0D0D</color>
 
     <!-- Text -->
-    <color name="astra_text_secondary">#A8B0A6</color>
-    <color name="astra_text_disabled">#A8B0A6</color>
-    <color name="astra_text_on_accent">#0D0D0D</color>
-    <color name="astra_text_terminal">#9CCF93</color>
+    <color name="crutle_text_secondary">#A8B0A6</color>
+    <color name="crutle_text_disabled">#A8B0A6</color>
+    <color name="crutle_text_on_accent">#0D0D0D</color>
+    <color name="crutle_text_terminal">#9CCF93</color>
 
     <!-- Borders -->
-    <color name="astra_border_subtle">#1A202020</color>
-    <color name="astra_border_default">#202020</color>
+    <color name="crutle_border_subtle">#1A202020</color>
+    <color name="crutle_border_default">#202020</color>
 
-    <color name="astra_hc_border">#F2F5F0</color>
-    <color name="astra_hc_text_secondary">#F2F5F0</color>
-    <color name="astra_hc_surface">#0D0D0D</color>
+    <color name="crutle_hc_border">#F2F5F0</color>
+    <color name="crutle_hc_text_secondary">#F2F5F0</color>
+    <color name="crutle_hc_surface">#0D0D0D</color>
 
     <!-- Semantic states -->
-    <color name="astra_error">#FF8A8A</color>
-    <color name="astra_warning">#FF8A8A</color>
-    <color name="astra_success">#9CCF93</color>
+    <color name="crutle_error">#FF8A8A</color>
+    <color name="crutle_warning">#FF8A8A</color>
+    <color name="crutle_success">#9CCF93</color>
 
     <!-- Overlays -->
-    <color name="astra_glass_overlay">#229CCF93</color>
-    <color name="astra_shadow_color">#66000000</color>
-    <color name="astra_overlay_scrim">#88000000</color>
+    <color name="crutle_glass_overlay">#229CCF93</color>
+    <color name="crutle_shadow_color">#66000000</color>
+    <color name="crutle_overlay_scrim">#88000000</color>
     
-    <color name="astra_stat_fps">#9CCF93</color>
-    <color name="astra_stat_ram">#9CCF93</color>
-    <color name="astra_stat_cpu">#FF8A8A</color>
-    <color name="astra_stat_ping">#FF8A8A</color>
+    <color name="crutle_stat_fps">#9CCF93</color>
+    <color name="crutle_stat_ram">#9CCF93</color>
+    <color name="crutle_stat_cpu">#FF8A8A</color>
+    <color name="crutle_stat_ping">#FF8A8A</color>
 
     <!-- ── Panel / overlay tokens ──────────────────────────────────── -->
     <color name="panel_translucent">#DD171717</color>
     <color name="game_panel_overlay">#80171717</color>
-    <color name="astra_highlight_subtle">#22F2F5F0</color>
+    <color name="crutle_highlight_subtle">#22F2F5F0</color>
 
     <!-- Backgrounds -->
     <color name="new_background_main">#0D0D0D</color>
@@ -223,14 +223,14 @@
     <color name="pastel_green_950">#FF0D0D0D</color>
 
     <!-- Newer semantic names (post-V3 naming) aliased onto the palette above. -->
-    <color name="astra_accent">@color/pastel_green_400</color>
-    <color name="astra_accent_bright">@color/pastel_green_200</color>
-    <color name="astra_accent_pressed">@color/pastel_green_500</color>
-    <color name="astra_accent_subtle">@color/pastel_green_900</color>
-    <color name="astra_bg_deep">#FF0D0D0D</color>
-    <color name="astra_bg_card">#FF171717</color>
-    <color name="astra_bg_input">#FF202020</color>
-    <color name="astra_border_focus">@color/pastel_green_400</color>
+    <color name="crutle_accent">@color/pastel_green_400</color>
+    <color name="crutle_accent_bright">@color/pastel_green_200</color>
+    <color name="crutle_accent_pressed">@color/pastel_green_500</color>
+    <color name="crutle_accent_subtle">@color/pastel_green_900</color>
+    <color name="crutle_bg_deep">#FF0D0D0D</color>
+    <color name="crutle_bg_card">#FF171717</color>
+    <color name="crutle_bg_input">#FF202020</color>
+    <color name="crutle_border_focus">@color/pastel_green_400</color>
     <color name="file_icon_tint">@color/palette_secondary</color>
     <color name="icon_tint">@color/palette_secondary</color>
 

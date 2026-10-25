@@ -9,8 +9,8 @@ from pathlib import Path
 
 abis = {"armeabi-v7a": (1, 40), "arm64-v8a": (2, 183), "x86": (1, 3), "x86_64": (2, 62)}
 libraries = (
-    "libdiscord_partner_sdk.so", "libastradiscordrpc.so", "libc++_shared.so",
-    "libastrafiledialogs.so", "liblwjgl_tinyfd.so", "liblwjgl_nfd.so",
+    "libdiscord_partner_sdk.so", "libcrutlediscordrpc.so", "libc++_shared.so",
+    "libcrutlefiledialogs.so", "liblwjgl_tinyfd.so", "liblwjgl_nfd.so",
     "liblwjgl_nfd_portal.so", "libSimpleFPEWrapper.so", "libmobileglues.so",
 )
 paths = [Path(p) for p in sys.argv[1:]] or list(
@@ -32,12 +32,12 @@ for path in paths:
                 assert struct.unpack_from("<H", header, 18)[0] == machine, f"{name}: wrong CPU ABI"
         notices = apk.read("assets/notices/discord/License-Notices.txt")
         assert hashlib.sha256(notices).hexdigest() == "e8afa66340c225431e69768543cc34a7240f3494a9d759189fe118620ea8eebf", "Missing/changed SDK notices"
-        guest = "assets/components/lwjgl3/astra-filedialogs.jar"
+        guest = "assets/components/lwjgl3/crutle-filedialogs.jar"
         with zipfile.ZipFile(io.BytesIO(apk.read(guest))) as jar:
-            bootstrap = jar.read("com/app/astralauncher/bridge/GameFileDialogs.class")
+            bootstrap = jar.read("com/app/crutlelauncher/bridge/GameFileDialogs.class")
             assert bootstrap[:4] == b"\xca\xfe\xba\xbe", "Invalid guest class"
             assert struct.unpack_from(">H", bootstrap, 6)[0] <= 52, "Guest bootstrap requires Java newer than 8"
-        overlay = "assets/components/lwjgl-performance/astra-performance.jar"
+        overlay = "assets/components/lwjgl-performance/crutle-performance.jar"
         with zipfile.ZipFile(io.BytesIO(apk.read(overlay))) as jar:
             glfw = jar.read("org/lwjgl/glfw/GLFW.class")
             assert struct.unpack_from(">H", glfw, 6)[0] <= 52, "Idle overlay needs Java newer than 8"

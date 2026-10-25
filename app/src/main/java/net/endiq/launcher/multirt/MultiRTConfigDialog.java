@@ -9,7 +9,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.app.astralauncher.R;
+import com.app.crutlelauncher.R;
 
 public class MultiRTConfigDialog {
     private AlertDialog mDialog;
@@ -44,7 +44,7 @@ public class MultiRTConfigDialog {
                 .setView(mDialogView)
                 .setPositiveButton(R.string.multirt_import, (dialog, which) -> installJvmLauncher.launch(null))
                 .setNegativeButton(R.string.java_download_manual, (dialog, which) ->
-                    com.app.astralauncher.ui.dialog.ManualJavaDownloadDialog.show(activity))
+                    com.app.crutlelauncher.ui.dialog.ManualJavaDownloadDialog.show(activity))
                 .setNeutralButton(R.string.multirt_delete_runtime, null)
                 .create();
 

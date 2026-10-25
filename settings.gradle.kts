@@ -14,6 +14,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Astra Launcher"
+rootProject.name = "Crutle Launcher"
 include(":jre_lwjgl3glfw")
 include(":app")

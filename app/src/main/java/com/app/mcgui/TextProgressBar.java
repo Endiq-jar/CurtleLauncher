@@ -11,8 +11,8 @@ import android.widget.ProgressBar;
 
 import androidx.annotation.StringRes;
 
-import com.app.astralauncher.ui.miuix.MiuixColorScheme;
-import com.app.astralauncher.ui.miuix.MiuixTheme;
+import com.app.crutlelauncher.ui.miuix.MiuixColorScheme;
+import com.app.crutlelauncher.ui.miuix.MiuixTheme;
 
 /**
  * Miuix-styled capsule progress bar with inline task label (`ProgressIndicator.kt`).

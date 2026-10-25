@@ -5,7 +5,7 @@ from pathlib import Path
 import xml.etree.ElementTree as ET
 
 root = Path(__file__).resolve().parents[1] / "app/src/main"
-logos = ["ic_minecraft", "ic_astra_full_animated", "ic_command_block", "app_name_title",
+logos = ["ic_minecraft", "ic_crutle_full_animated", "ic_command_block", "app_name_title",
          "ic_old_cobblestone", "ic_old_grass_block"]
 
 
@@ -22,7 +22,7 @@ def chunks(path):
     assert offset == len(data), path
 
 
-binding = (root / "java/com/app/astralauncher/utils/anim/AnimatedLogo.kt").read_text()
+binding = (root / "java/com/app/crutlelauncher/utils/anim/AnimatedLogo.kt").read_text()
 for logo in logos:
     path = root / "res/raw" / (logo + ".webp")
     parts = list(chunks(path))
@@ -36,10 +36,10 @@ for logo in logos:
     assert width <= 768 and height <= 192, (path, width, height)
     assert path.stat().st_size < 150_000
     assert f"R.raw.{logo}" in binding, f"Unwired logo {logo}"
-    original = "ic_astra_full" if logo == "ic_astra_full_animated" else logo
+    original = "ic_crutle_full" if logo == "ic_crutle_full_animated" else logo
     assert (root / "res/drawable" / (original + ".webp")).is_file(), "Original art was removed"
 
-manager = (root / "java/com/app/astralauncher/feature/background/BackgroundManager.kt").read_text()
+manager = (root / "java/com/app/crutlelauncher/feature/background/BackgroundManager.kt").read_text()
 for path in (root / "res/drawable-nodpi").glob("image_background_*.webp"):
     assert not any(kind == b"ANIM" for kind, _ in chunks(path)), "Wallpapers must remain static"
     assert f"R.drawable.{path.stem}" in manager, f"Unwired background {path.stem}"
@@ -50,9 +50,9 @@ assert "ACTION_HOVER_ENTER" in binding, "hover-to-animate wiring missing"
 assert "ACTION_DOWN" in binding, "press-to-animate wiring missing"
 assert "OnGlobalFocusChangeListener" in binding, "focus-to-animate wiring missing"
 assert "playIfVisible" not in binding, "logos must not auto-play when merely visible"
-logo_view = (root / "java/com/app/astralauncher/ui/view/LogoImageView.kt").read_text()
+logo_view = (root / "java/com/app/crutlelauncher/ui/view/LogoImageView.kt").read_text()
 assert "AnimatedLogo.playOnce" in logo_view, "standalone logos must animate on click"
-file_bean = (root / "java/com/app/astralauncher/ui/subassembly/filelist/FileItemBean.kt").read_text()
+file_bean = (root / "java/com/app/crutlelauncher/ui/subassembly/filelist/FileItemBean.kt").read_text()
 assert "animatedIconRes" in file_bean, "version-list rows must carry their animated logo"
 
 strings = ET.parse(root / "res/values/launcher_improvements.xml").getroot()

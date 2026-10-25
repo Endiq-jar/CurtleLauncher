@@ -4,11 +4,11 @@ import androidx.annotation.Keep;
 import androidx.annotation.NonNull;
 
 import com.google.gson.JsonSyntaxException;
-import com.app.astralauncher.feature.accounts.AccountsManager;
-import com.app.astralauncher.feature.log.Logging;
-import com.app.astralauncher.utils.path.PathManager;
-import com.app.astralauncher.utils.skin.SkinFileDownloader;
-import com.app.astralauncher.utils.stringutils.StringUtilsKt;
+import com.app.crutlelauncher.feature.accounts.AccountsManager;
+import com.app.crutlelauncher.feature.log.Logging;
+import com.app.crutlelauncher.utils.path.PathManager;
+import com.app.crutlelauncher.utils.skin.SkinFileDownloader;
+import com.app.crutlelauncher.utils.stringutils.StringUtilsKt;
 
 import net.endiq.launcher.Tools;
 

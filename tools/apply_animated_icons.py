@@ -2,7 +2,7 @@
 """Upgrade icon views in layouts to their animated counterparts.
 
 Every <ImageView>/<AppCompatImageView> whose src/srcCompat is an @drawable/ic_*
-resource becomes com.app.astralauncher.ui.view.AnimatedIconView, and every
+resource becomes com.app.crutlelauncher.ui.view.AnimatedIconView, and every
 such <ImageButton>/<AppCompatImageButton> becomes AnimatedIconButton, so all
 launcher icons animate on hover/press/focus/click via AnimatedIcon (WebP
 logos route to AnimatedLogo). Both replacement classes keep the original
@@ -23,12 +23,12 @@ REPO = Path(__file__).resolve().parents[1]
 LAYOUTS = REPO / "app/src/main/res/layout"
 
 SWAP = {
-    "ImageView": "com.app.astralauncher.ui.view.AnimatedIconView",
+    "ImageView": "com.app.crutlelauncher.ui.view.AnimatedIconView",
     "androidx.appcompat.widget.AppCompatImageView":
-        "com.app.astralauncher.ui.view.AnimatedIconView",
-    "ImageButton": "com.app.astralauncher.ui.view.AnimatedIconButton",
+        "com.app.crutlelauncher.ui.view.AnimatedIconView",
+    "ImageButton": "com.app.crutlelauncher.ui.view.AnimatedIconButton",
     "androidx.appcompat.widget.AppCompatImageButton":
-        "com.app.astralauncher.ui.view.AnimatedIconButton",
+        "com.app.crutlelauncher.ui.view.AnimatedIconButton",
 }
 
 TAG_RE = re.compile(

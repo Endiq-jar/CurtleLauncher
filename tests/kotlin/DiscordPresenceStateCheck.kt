@@ -1,4 +1,4 @@
-package com.app.astralauncher.feature.discord
+package com.app.crutlelauncher.feature.discord
 
 /** JVM-only regression checks; no credentials, Discord connection or Android runtime required. */
 fun main() {

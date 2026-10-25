@@ -1,6 +1,6 @@
 package net.endiq.launcher.customcontrols.mouse;
 
-import com.app.astralauncher.setting.AllSettings;
+import com.app.crutlelauncher.setting.AllSettings;
 
 import net.endiq.launcher.LwjglGlfwKeycode;
 

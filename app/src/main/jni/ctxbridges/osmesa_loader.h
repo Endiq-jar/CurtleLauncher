@@ -2,8 +2,8 @@
 // Modifile by Vera-Firefly on 28.08.2023.
 //
 
-#ifndef ASTRALAUNCHER_OSMESA_LOADER_H
-#define ASTRALAUNCHER_OSMESA_LOADER_H
+#ifndef CRUTLELAUNCHER_OSMESA_LOADER_H
+#define CRUTLELAUNCHER_OSMESA_LOADER_H
 
 #include <GL/osmesa.h>
 
@@ -23,4 +23,4 @@ extern void (*glReadBuffer_p) (GLenum mode);
 extern void* (*OSMesaGetProcAddress_p)(const char* funcName);
 
 void dlsym_OSMesa();
-#endif //ASTRALAUNCHER_OSMESA_LOADER_H
+#endif //CRUTLELAUNCHER_OSMESA_LOADER_H

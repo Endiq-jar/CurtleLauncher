@@ -34,11 +34,11 @@ import android.widget.ImageView;
 
 import androidx.core.math.MathUtils;
 
-import com.app.astralauncher.event.single.MCOptionChangeEvent;
-import com.app.astralauncher.feature.MCOptions;
-import com.app.astralauncher.setting.AllSettings;
-import com.app.astralauncher.setting.AllStaticSettings;
-import com.app.astralauncher.utils.ZHTools;
+import com.app.crutlelauncher.event.single.MCOptionChangeEvent;
+import com.app.crutlelauncher.feature.MCOptions;
+import com.app.crutlelauncher.setting.AllSettings;
+import com.app.crutlelauncher.setting.AllStaticSettings;
+import com.app.crutlelauncher.utils.ZHTools;
 
 import net.endiq.launcher.GrabListener;
 import net.endiq.launcher.LwjglGlfwKeycode;

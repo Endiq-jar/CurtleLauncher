@@ -28,7 +28,7 @@ If applicable, add log file with images or videos to help explain your problem.
  - OS: 
  - CPU architecture: 
  - Android version: 
- - Astra launcher version:
+ - Crutle launcher version:
 
 **Anything else?**
 Add any other context about the problem here.

@@ -17,8 +17,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.app.NotificationCompat;
 
-import com.app.astralauncher.InfoCenter;
-import com.app.astralauncher.R;
+import com.app.crutlelauncher.InfoCenter;
+import com.app.crutlelauncher.R;
 
 import net.endiq.launcher.MainActivity;
 import net.endiq.launcher.Tools;
@@ -27,7 +27,7 @@ import net.endiq.launcher.utils.NotificationUtils;
 public class GameService extends Service {
     private final Messenger mMessenger = new Messenger(new IncomingHandler());
     private static boolean isActive;
-    private static volatile com.app.astralauncher.feature.discord.DiscordPresenceClient discordPresence;
+    private static volatile com.app.crutlelauncher.feature.discord.DiscordPresenceClient discordPresence;
 
     public static boolean isActive() {
         return isActive;
@@ -52,7 +52,7 @@ public class GameService extends Service {
         if (discordPresence == null) {
             String version = intent != null ? intent.getStringExtra("discordVersion") : null;
             if (version == null || version.trim().isEmpty()) version = "Minecraft";
-            discordPresence = new com.app.astralauncher.feature.discord.DiscordPresenceClient(this, version);
+            discordPresence = new com.app.crutlelauncher.feature.discord.DiscordPresenceClient(this, version);
             discordPresence.connect();
         } else if (intent != null && intent.hasExtra("discordVersion")) {
             discordPresence.refresh(intent.getStringExtra("discordVersion"));
@@ -92,7 +92,7 @@ public class GameService extends Service {
     }
 
     public static void endDiscordPresence() {
-        final com.app.astralauncher.feature.discord.DiscordPresenceClient ending = discordPresence;
+        final com.app.crutlelauncher.feature.discord.DiscordPresenceClient ending = discordPresence;
         new Handler(Looper.getMainLooper()).post(() -> {
             if (discordPresence == ending) discordPresence = null;
             if (ending != null) ending.close();

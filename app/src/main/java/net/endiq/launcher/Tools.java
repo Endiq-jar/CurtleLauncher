@@ -2,7 +2,7 @@ package net.endiq.launcher;
 
 import static android.os.Build.VERSION.SDK_INT;
 import static android.os.Build.VERSION_CODES.P;
-import static com.app.astralauncher.setting.AllStaticSettings.notchSize;
+import static com.app.crutlelauncher.setting.AllStaticSettings.notchSize;
 import android.app.Activity;
 import android.app.ActivityManager;
 import android.app.NotificationChannel;
@@ -31,20 +31,20 @@ import androidx.core.view.WindowInsetsControllerCompat;
 import androidx.fragment.app.FragmentActivity;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.app.astralauncher.InfoDistributor;
-import com.app.astralauncher.R;
-import com.app.astralauncher.context.ContextExecutor;
-import com.app.astralauncher.utils.LauncherProfiles;
-import com.app.astralauncher.feature.customprofilepath.ProfilePathHome;
-import com.app.astralauncher.feature.log.Logging;
-import com.app.astralauncher.feature.version.Version;
-import com.app.astralauncher.task.Task;
-import com.app.astralauncher.ui.activity.BaseActivity;
-import com.app.astralauncher.ui.dialog.EditTextDialog;
-import com.app.astralauncher.utils.path.PathManager;
-import com.app.astralauncher.utils.ZHTools;
-import com.app.astralauncher.utils.runtime.SelectRuntimeUtils;
-import com.app.astralauncher.utils.stringutils.StringUtils;
+import com.app.crutlelauncher.InfoDistributor;
+import com.app.crutlelauncher.R;
+import com.app.crutlelauncher.context.ContextExecutor;
+import com.app.crutlelauncher.utils.LauncherProfiles;
+import com.app.crutlelauncher.feature.customprofilepath.ProfilePathHome;
+import com.app.crutlelauncher.feature.log.Logging;
+import com.app.crutlelauncher.feature.version.Version;
+import com.app.crutlelauncher.task.Task;
+import com.app.crutlelauncher.ui.activity.BaseActivity;
+import com.app.crutlelauncher.ui.dialog.EditTextDialog;
+import com.app.crutlelauncher.utils.path.PathManager;
+import com.app.crutlelauncher.utils.ZHTools;
+import com.app.crutlelauncher.utils.runtime.SelectRuntimeUtils;
+import com.app.crutlelauncher.utils.stringutils.StringUtils;
 import net.endiq.launcher.fragments.MainMenuFragment;
 import net.endiq.launcher.lifecycle.ContextExecutorTask;
 import net.endiq.launcher.memory.MemoryHoleFinder;
@@ -77,14 +77,14 @@ public final class Tools {
     public static final String NOTIFICATION_CHANNEL_DEFAULT = "channel_id";
     public static final float BYTE_TO_MB = 1024f * 1024f;
     public static final Gson GLOBAL_GSON = new GsonBuilder().setPrettyPrinting().create();
-    public static final String LAUNCHERPROFILES_RTPREFIX = "astra://";
+    public static final String LAUNCHERPROFILES_RTPREFIX = "crutle://";
     private final static boolean isClientFirst = false;
     public static int DEVICE_ARCHITECTURE;
     // New since 3.0.0
     public static String DIRNAME_HOME_JRE = "lib";
 
     /**
-     * Checks if the Astra's storage root is accessible and read-writable
+     * Checks if the Crutle's storage root is accessible and read-writable
      * @return true if storage is fine, false if storage is not accessible
      */
     public static boolean checkStorageRoot() {
@@ -161,7 +161,7 @@ public final class Tools {
         StringBuilder libStr = new StringBuilder();
         // Only the three wait methods are patched; the original compatibility jar stays
         // intact. Classpath order must be explicit, not File.listFiles() dependent.
-        File idleOverlay = new File(PathManager.DIR_GAME_HOME, "lwjgl-performance/astra-performance.jar");
+        File idleOverlay = new File(PathManager.DIR_GAME_HOME, "lwjgl-performance/crutle-performance.jar");
         if (idleOverlay.isFile()) libStr.append(idleOverlay.getAbsolutePath()).append(":");
         File lwjgl3Folder = new File(PathManager.DIR_GAME_HOME, "lwjgl3");
         File[] lwjgl3Files = lwjgl3Folder.listFiles();
@@ -450,7 +450,7 @@ public final class Tools {
                 libItem.downloads.artifact.sha1 = "9e98cf55be371cafdb9c70c35d04ec2a8c2b42ac";
                 libItem.downloads.artifact.url = "https://repo1.maven.org/maven2/com/github/oshi/oshi-core/6.3.0/oshi-core-6.3.0.jar";
             } else if (libItem.name.startsWith("org.ow2.asm:asm-all:")) {
-                // Early versions of the ASM library get repalced with 5.0.4 because Astra's LWJGL is compiled for
+                // Early versions of the ASM library get repalced with 5.0.4 because Crutle's LWJGL is compiled for
                 // Java 8, which is not supported by old ASM versions. Mod loaders like Forge, which depend on this
                 // library, often include lwjgl in their class transformations, which causes errors with old ASM versions.
                 if (version.length < 1 || parseVersionPart(version[0]) < 0 || parseVersionPart(version[0]) >= 5) continue;
@@ -498,7 +498,7 @@ public final class Tools {
     public enum LwjglMode { NEW_SDL, LEGACY }
 
     public static LwjglMode resolveLwjglMode(JMinecraftVersionList.Version info) {
-        String override = com.app.astralauncher.setting.AllSettings.getLwjglCompatMode().getValue();
+        String override = com.app.crutlelauncher.setting.AllSettings.getLwjglCompatMode().getValue();
         if ("new".equals(override)) return LwjglMode.NEW_SDL;
         if ("legacy".equals(override)) return LwjglMode.LEGACY;
         return versionUsesLwjglSdl(info) ? LwjglMode.NEW_SDL : LwjglMode.LEGACY;

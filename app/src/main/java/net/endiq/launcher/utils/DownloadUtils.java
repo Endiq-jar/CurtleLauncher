@@ -2,10 +2,10 @@ package net.endiq.launcher.utils;
 
 import androidx.annotation.Nullable;
 
-import com.app.astralauncher.feature.log.Logging;
-import com.app.astralauncher.utils.path.PathManager;
-import com.app.astralauncher.utils.ZHTools;
-import com.app.astralauncher.utils.path.UrlManager;
+import com.app.crutlelauncher.feature.log.Logging;
+import com.app.crutlelauncher.utils.path.PathManager;
+import com.app.crutlelauncher.utils.ZHTools;
+import com.app.crutlelauncher.utils.path.UrlManager;
 
 import net.endiq.launcher.Tools;
 

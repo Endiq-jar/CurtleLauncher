@@ -293,7 +293,7 @@ public class HIDDeviceManager {
             0x0b05, // ASUS
             0x0e6f, // PDP
             0x0f0d, // Hori
-            0x10f5, // Astra Beach
+            0x10f5, // Crutle Beach
             0x1532, // Razer Wildcat
             0x20d6, // PowerA
             0x24c6, // PowerA

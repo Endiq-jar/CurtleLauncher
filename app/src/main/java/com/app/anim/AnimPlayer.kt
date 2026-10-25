@@ -5,7 +5,7 @@ import android.animation.AnimatorSet
 import android.animation.ObjectAnimator
 import android.view.View
 import com.app.anim.animations.Animations
-import com.app.astralauncher.setting.AllSettings
+import com.app.crutlelauncher.setting.AllSettings
 
 
 class AnimPlayer {

@@ -14,14 +14,14 @@ import androidx.annotation.Nullable;
 
 import com.app.anim.AnimPlayer;
 import com.app.anim.animations.Animations;
-import com.app.astralauncher.event.single.MCOptionChangeEvent;
-import com.app.astralauncher.event.single.RefreshHotbarEvent;
-import com.app.astralauncher.event.value.HotbarChangeEvent;
-import com.app.astralauncher.feature.MCOptions;
-import com.app.astralauncher.setting.AllSettings;
-import com.app.astralauncher.setting.AllStaticSettings;
-import com.app.astralauncher.ui.subassembly.hotbar.HotbarType;
-import com.app.astralauncher.ui.subassembly.hotbar.HotbarUtils;
+import com.app.crutlelauncher.event.single.MCOptionChangeEvent;
+import com.app.crutlelauncher.event.single.RefreshHotbarEvent;
+import com.app.crutlelauncher.event.value.HotbarChangeEvent;
+import com.app.crutlelauncher.feature.MCOptions;
+import com.app.crutlelauncher.setting.AllSettings;
+import com.app.crutlelauncher.setting.AllStaticSettings;
+import com.app.crutlelauncher.ui.subassembly.hotbar.HotbarType;
+import com.app.crutlelauncher.ui.subassembly.hotbar.HotbarUtils;
 
 import net.endiq.launcher.GrabListener;
 import net.endiq.launcher.LwjglGlfwKeycode;

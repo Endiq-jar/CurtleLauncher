@@ -1,4 +1,4 @@
-import com.app.astralauncher.feature.astra.PingTracker
+import com.app.crutlelauncher.feature.crutle.PingTracker
 import java.net.ServerSocket
 import java.util.concurrent.atomic.AtomicInteger
 import kotlin.concurrent.thread
@@ -27,7 +27,7 @@ fun checkPingTracker() {
         check(PingTracker.getPingMs() == -1)
         PingTracker.start()
         Thread.sleep(100)
-        val dormant = Thread.getAllStackTraces().keys.filter { it.name == "AstraPingTracker" && it.isAlive }
+        val dormant = Thread.getAllStackTraces().keys.filter { it.name == "CrutlePingTracker" && it.isAlive }
         check(dormant.size == 1) { "Duplicate ping workers: ${dormant.size}" }
         check(dormant.single().state == Thread.State.WAITING) { "No-target worker should sleep without polling" }
         PingTracker.stop()

@@ -11,9 +11,9 @@ import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 import com.app.anim.animations.Animations;
-import com.app.astralauncher.databinding.ViewLoggerBinding;
-import com.app.astralauncher.setting.AllSettings;
-import com.app.astralauncher.utils.anim.ViewAnimUtils;
+import com.app.crutlelauncher.databinding.ViewLoggerBinding;
+import com.app.crutlelauncher.setting.AllSettings;
+import com.app.crutlelauncher.utils.anim.ViewAnimUtils;
 
 import net.endiq.launcher.Logger;
 
@@ -26,7 +26,7 @@ public class LoggerView extends ConstraintLayout {
     private ViewLoggerBinding binding;
     private boolean isShowing = false;
 
-    // AstraLauncher v10: raw, unfiltered log lines kept separately so the regex/text
+    // CrutleLauncher v10: raw, unfiltered log lines kept separately so the regex/text
     // filter can be applied and cleared without losing history that arrived before it.
     private final StringBuilder rawLogBuffer = new StringBuilder();
     private java.util.regex.Pattern activeFilter = null;
@@ -97,7 +97,7 @@ public class LoggerView extends ConstraintLayout {
                 });
         binding.toggleLog.setChecked(false);
 
-        // AstraLauncher v10: share the current log content via the Android share sheet.
+        // CrutleLauncher v10: share the current log content via the Android share sheet.
         binding.shareLog.setOnClickListener(v -> {
             String text = rawLogBuffer.toString();
             if (text.isEmpty()) text = binding.logView.getText().toString();
@@ -109,7 +109,7 @@ public class LoggerView extends ConstraintLayout {
             getContext().startActivity(chooser);
         });
 
-        // AstraLauncher v10: regex/plain-text log filter. Empty = show everything.
+        // CrutleLauncher v10: regex/plain-text log filter. Empty = show everything.
         // Accepts a plain substring, or a /regex/ wrapped pattern for full regex filtering.
         binding.logFilter.addTextChangedListener(new android.text.TextWatcher() {
             @Override public void beforeTextChanged(CharSequence s, int start, int count, int after) {}

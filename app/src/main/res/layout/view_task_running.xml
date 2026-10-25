@@ -12,7 +12,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <com.app.astralauncher.ui.miuix.MiuixProgressBar
+        <com.app.crutlelauncher.ui.miuix.MiuixProgressBar
             android:id="@+id/progressBar3"
             style="?android:attr/progressBarStyle"
             android:layout_width="wrap_content"

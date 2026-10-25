@@ -4,8 +4,8 @@ import static org.lwjgl.glfw.CallbackBridge.sendKeyPress;
 
 import net.endiq.launcher.LwjglGlfwKeycode;
 
-import com.app.astralauncher.game.sdl.SdlBridge;
-import com.app.astralauncher.game.sdl.SdlTextSender;
+import com.app.crutlelauncher.game.sdl.SdlBridge;
+import com.app.crutlelauncher.game.sdl.SdlTextSender;
 
 import org.lwjgl.glfw.CallbackBridge;
 

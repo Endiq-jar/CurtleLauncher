@@ -3,8 +3,8 @@
 //
 #include <android/native_window.h>
 #include <stdbool.h>
-#ifndef ASTRALAUNCHER_OSM_BRIDGE_H
-#define ASTRALAUNCHER_OSM_BRIDGE_H
+#ifndef CRUTLELAUNCHER_OSM_BRIDGE_H
+#define CRUTLELAUNCHER_OSM_BRIDGE_H
 #include "osmesa_loader.h"
 
 
@@ -26,4 +26,4 @@ void osm_swap_buffers();
 void osm_setup_window();
 void osm_swap_interval(int swapInterval);
 
-#endif //ASTRALAUNCHER_OSM_BRIDGE_H
+#endif //CRUTLELAUNCHER_OSM_BRIDGE_H

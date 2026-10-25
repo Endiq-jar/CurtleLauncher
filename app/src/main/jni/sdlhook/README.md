@@ -55,8 +55,8 @@ for `arm64-v8a`, `armeabi-v7a`, `x86`, `x86_64` and the resulting
 `libsdlhook.so` files are committed to `app/src/main/jniLibs/<abi>/`.
 
 Java side: `SdlHook` loads the library and calls `nativeInit()`; see
-`com.app.astralauncher.launch.SdlHook` and
-`com.app.astralauncher.game.sdl.SdlBridge`.
+`com.app.crutlelauncher.launch.SdlHook` and
+`com.app.crutlelauncher.game.sdl.SdlBridge`.
 
 ## Origin
 

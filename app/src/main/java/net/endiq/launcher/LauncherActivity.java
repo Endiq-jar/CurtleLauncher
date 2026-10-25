@@ -1,6 +1,6 @@
 package net.endiq.launcher;
 
-import static com.app.astralauncher.launch.LaunchGame.preLaunch;
+import static com.app.crutlelauncher.launch.LaunchGame.preLaunch;
 import static net.endiq.launcher.Tools.currentDisplayMetrics;
 import android.Manifest;
 import android.app.NotificationManager;
@@ -26,64 +26,64 @@ import androidx.palette.graphics.Palette;
 import com.app.mcgui.ProgressLayout;
 import com.app.anim.AnimPlayer;
 import com.app.anim.animations.Animations;
-import com.app.astralauncher.InfoDistributor;
-import com.app.astralauncher.R;
-import com.app.astralauncher.context.ContextExecutor;
-import com.app.astralauncher.databinding.ActivityLauncherBinding;
-import com.app.astralauncher.event.single.LaunchGameEvent;
-import com.app.astralauncher.event.single.MainBackgroundChangeEvent;
-import com.app.astralauncher.event.single.PageOpacityChangeEvent;
-import com.app.astralauncher.event.single.SwapToLoginEvent;
-import com.app.astralauncher.event.sticky.MinecraftVersionValueEvent;
-import com.app.astralauncher.event.value.AddFragmentEvent;
-import com.app.astralauncher.event.value.DownloadProgressKeyEvent;
-import com.app.astralauncher.event.value.InstallGameEvent;
-import com.app.astralauncher.event.value.InstallLocalModpackEvent;
-import com.app.astralauncher.event.value.LocalLoginEvent;
-import com.app.astralauncher.event.value.MicrosoftLoginEvent;
-import com.app.astralauncher.event.value.OtherLoginEvent;
-import com.app.astralauncher.feature.accounts.AccountType;
-import com.app.astralauncher.feature.accounts.AccountsManager;
-import com.app.astralauncher.feature.accounts.LocalAccountUtils;
-import com.app.astralauncher.feature.background.BackgroundManager;
-import com.app.astralauncher.feature.background.BackgroundType;
-import com.app.astralauncher.feature.download.item.ModLoaderWrapper;
-import com.app.astralauncher.feature.log.Logging;
-import com.app.astralauncher.feature.mod.modpack.install.InstallExtra;
-import com.app.astralauncher.feature.mod.modpack.install.InstallLocalModPack;
-import com.app.astralauncher.feature.mod.modpack.install.ModPackInfo;
-import com.app.astralauncher.feature.mod.modpack.install.ModPackUtils;
-import com.app.astralauncher.feature.notice.CheckNewNotice;
-import com.app.astralauncher.feature.notice.NoticeInfo;
-import com.app.astralauncher.feature.update.UpdateUtils;
-import com.app.astralauncher.feature.version.Version;
-import com.app.astralauncher.feature.version.VersionsManager;
-import com.app.astralauncher.feature.version.install.GameInstaller;
-import com.app.astralauncher.feature.version.install.InstallTask;
-import com.app.astralauncher.plugins.renderer.RendererPlugin;
-import com.app.astralauncher.plugins.renderer.RendererPluginManager;
-import com.app.astralauncher.setting.AllSettings;
-import com.app.astralauncher.task.Task;
-import com.app.astralauncher.task.TaskExecutors;
-import com.app.astralauncher.ui.activity.BaseActivity;
-import com.app.astralauncher.ui.activity.ErrorActivity;
-import com.app.astralauncher.ui.dialog.EditTextDialog;
-import com.app.astralauncher.ui.dialog.TipDialog;
-import com.app.astralauncher.ui.fragment.AccountFragment;
-import com.app.astralauncher.ui.fragment.BaseFragment;
-import com.app.astralauncher.ui.fragment.DownloadFragment;
-import com.app.astralauncher.ui.fragment.DownloadModFragment;
-import com.app.astralauncher.ui.fragment.settings.SettingsFragment;
-import com.app.astralauncher.ui.subassembly.settingsbutton.ButtonType;
-import com.app.astralauncher.ui.subassembly.settingsbutton.SettingsButtonWrapper;
-import com.app.astralauncher.ui.subassembly.view.DraggableViewWrapper;
-import com.app.astralauncher.utils.StoragePermissionsUtils;
-import com.app.astralauncher.utils.ZHTools;
-import com.app.astralauncher.utils.anim.ViewAnimUtils;
-import com.app.astralauncher.utils.file.FileTools;
-import com.app.astralauncher.utils.image.ImageUtils;
-import com.app.astralauncher.utils.stringutils.ShiftDirection;
-import com.app.astralauncher.utils.stringutils.StringUtils;
+import com.app.crutlelauncher.InfoDistributor;
+import com.app.crutlelauncher.R;
+import com.app.crutlelauncher.context.ContextExecutor;
+import com.app.crutlelauncher.databinding.ActivityLauncherBinding;
+import com.app.crutlelauncher.event.single.LaunchGameEvent;
+import com.app.crutlelauncher.event.single.MainBackgroundChangeEvent;
+import com.app.crutlelauncher.event.single.PageOpacityChangeEvent;
+import com.app.crutlelauncher.event.single.SwapToLoginEvent;
+import com.app.crutlelauncher.event.sticky.MinecraftVersionValueEvent;
+import com.app.crutlelauncher.event.value.AddFragmentEvent;
+import com.app.crutlelauncher.event.value.DownloadProgressKeyEvent;
+import com.app.crutlelauncher.event.value.InstallGameEvent;
+import com.app.crutlelauncher.event.value.InstallLocalModpackEvent;
+import com.app.crutlelauncher.event.value.LocalLoginEvent;
+import com.app.crutlelauncher.event.value.MicrosoftLoginEvent;
+import com.app.crutlelauncher.event.value.OtherLoginEvent;
+import com.app.crutlelauncher.feature.accounts.AccountType;
+import com.app.crutlelauncher.feature.accounts.AccountsManager;
+import com.app.crutlelauncher.feature.accounts.LocalAccountUtils;
+import com.app.crutlelauncher.feature.background.BackgroundManager;
+import com.app.crutlelauncher.feature.background.BackgroundType;
+import com.app.crutlelauncher.feature.download.item.ModLoaderWrapper;
+import com.app.crutlelauncher.feature.log.Logging;
+import com.app.crutlelauncher.feature.mod.modpack.install.InstallExtra;
+import com.app.crutlelauncher.feature.mod.modpack.install.InstallLocalModPack;
+import com.app.crutlelauncher.feature.mod.modpack.install.ModPackInfo;
+import com.app.crutlelauncher.feature.mod.modpack.install.ModPackUtils;
+import com.app.crutlelauncher.feature.notice.CheckNewNotice;
+import com.app.crutlelauncher.feature.notice.NoticeInfo;
+import com.app.crutlelauncher.feature.update.UpdateUtils;
+import com.app.crutlelauncher.feature.version.Version;
+import com.app.crutlelauncher.feature.version.VersionsManager;
+import com.app.crutlelauncher.feature.version.install.GameInstaller;
+import com.app.crutlelauncher.feature.version.install.InstallTask;
+import com.app.crutlelauncher.plugins.renderer.RendererPlugin;
+import com.app.crutlelauncher.plugins.renderer.RendererPluginManager;
+import com.app.crutlelauncher.setting.AllSettings;
+import com.app.crutlelauncher.task.Task;
+import com.app.crutlelauncher.task.TaskExecutors;
+import com.app.crutlelauncher.ui.activity.BaseActivity;
+import com.app.crutlelauncher.ui.activity.ErrorActivity;
+import com.app.crutlelauncher.ui.dialog.EditTextDialog;
+import com.app.crutlelauncher.ui.dialog.TipDialog;
+import com.app.crutlelauncher.ui.fragment.AccountFragment;
+import com.app.crutlelauncher.ui.fragment.BaseFragment;
+import com.app.crutlelauncher.ui.fragment.DownloadFragment;
+import com.app.crutlelauncher.ui.fragment.DownloadModFragment;
+import com.app.crutlelauncher.ui.fragment.settings.SettingsFragment;
+import com.app.crutlelauncher.ui.subassembly.settingsbutton.ButtonType;
+import com.app.crutlelauncher.ui.subassembly.settingsbutton.SettingsButtonWrapper;
+import com.app.crutlelauncher.ui.subassembly.view.DraggableViewWrapper;
+import com.app.crutlelauncher.utils.StoragePermissionsUtils;
+import com.app.crutlelauncher.utils.ZHTools;
+import com.app.crutlelauncher.utils.anim.ViewAnimUtils;
+import com.app.crutlelauncher.utils.file.FileTools;
+import com.app.crutlelauncher.utils.image.ImageUtils;
+import com.app.crutlelauncher.utils.stringutils.ShiftDirection;
+import com.app.crutlelauncher.utils.stringutils.StringUtils;
 import net.endiq.launcher.authenticator.microsoft.MicrosoftBackgroundLogin;
 import net.endiq.launcher.contracts.OpenDocumentWithExtension;
 import net.endiq.launcher.fragments.MainMenuFragment;
@@ -366,7 +366,7 @@ public class LauncherActivity extends BaseActivity {
         // Startup/background music (see the Music screen's "Enable Startup Music" +
         // playback scope). Gated internally on AllSettings.musicEnabled and a track
         // actually being set, so this is a no-op otherwise.
-        com.app.astralauncher.feature.music.MusicManager.INSTANCE.onLauncherStarted();
+        com.app.crutlelauncher.feature.music.MusicManager.INSTANCE.onLauncherStarted();
 
         // Show What's New dialog on first launch of this version
         //showWhatsNewIfNeeded();
@@ -428,15 +428,15 @@ public class LauncherActivity extends BaseActivity {
             if (sharedLogPath != null || sharedAudioPath != null) {
                 bundle = new Bundle();
                 if (sharedLogPath != null) {
-                    bundle.putString(com.app.astralauncher.ui.fragment.AiChatFragment.ARG_SHARED_LOG_PATH, sharedLogPath);
+                    bundle.putString(com.app.crutlelauncher.ui.fragment.AiChatFragment.ARG_SHARED_LOG_PATH, sharedLogPath);
                 }
                 if (sharedAudioPath != null) {
-                    bundle.putString(com.app.astralauncher.ui.fragment.AiChatFragment.ARG_SHARED_AUDIO_PATH, sharedAudioPath);
+                    bundle.putString(com.app.crutlelauncher.ui.fragment.AiChatFragment.ARG_SHARED_AUDIO_PATH, sharedAudioPath);
                 }
             }
             ZHTools.swapFragmentWithAnim(currentFragment,
-                com.app.astralauncher.ui.fragment.AiChatFragment.class,
-                com.app.astralauncher.ui.fragment.AiChatFragment.TAG, bundle);
+                com.app.crutlelauncher.ui.fragment.AiChatFragment.class,
+                com.app.crutlelauncher.ui.fragment.AiChatFragment.TAG, bundle);
         });
     }
 
@@ -490,11 +490,11 @@ public class LauncherActivity extends BaseActivity {
                 if (storageFragment != null) {
                     ViewAnimUtils.setViewAnim(binding.storageButton, Animations.Pulse);
                     Bundle bundle = new Bundle();
-                    bundle.putString(com.app.astralauncher.ui.fragment.FilesFragment.BUNDLE_LIST_PATH,
-                        com.app.astralauncher.utils.path.PathManager.DIR_GAME_HOME);
+                    bundle.putString(com.app.crutlelauncher.ui.fragment.FilesFragment.BUNDLE_LIST_PATH,
+                        com.app.crutlelauncher.utils.path.PathManager.DIR_GAME_HOME);
                     ZHTools.swapFragmentWithAnim(storageFragment,
-                        com.app.astralauncher.ui.fragment.FilesFragment.class,
-                        com.app.astralauncher.ui.fragment.FilesFragment.TAG, bundle);
+                        com.app.crutlelauncher.ui.fragment.FilesFragment.class,
+                        com.app.crutlelauncher.ui.fragment.FilesFragment.TAG, bundle);
                 }
             });
         }
@@ -570,15 +570,15 @@ public class LauncherActivity extends BaseActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        com.app.astralauncher.plugins.PluginLoader.rescanIfPluginsChanged(this);
-        com.app.astralauncher.utils.anim.AstraTransitions.onResume();
-        com.app.astralauncher.task.TaskExecutors.setGameSessionActive(false);
-        com.app.astralauncher.feature.astra.BackgroundServiceManager.onGameSessionEnd();
+        com.app.crutlelauncher.plugins.PluginLoader.rescanIfPluginsChanged(this);
+        com.app.crutlelauncher.utils.anim.CrutleTransitions.onResume();
+        com.app.crutlelauncher.task.TaskExecutors.setGameSessionActive(false);
+        com.app.crutlelauncher.feature.crutle.BackgroundServiceManager.onGameSessionEnd();
         setPageOpacity(AllSettings.getPageOpacity().getValue());
         VersionsManager.INSTANCE.refresh("LauncherActivity:onResume", false);
-        com.app.astralauncher.feature.astra.AssetPrefetcher.prefetch(this);
-        com.app.astralauncher.feature.astra.LauncherWarmStart.warmStart(this);
-        com.app.astralauncher.feature.maintenance.AutoCleanup.runIfDue();
+        com.app.crutlelauncher.feature.crutle.AssetPrefetcher.prefetch(this);
+        com.app.crutlelauncher.feature.crutle.LauncherWarmStart.warmStart(this);
+        com.app.crutlelauncher.feature.maintenance.AutoCleanup.runIfDue();
 
         Task.runTask(() -> {
             UpdateUtils.checkDownloadedPackage(this, false, true);
@@ -595,8 +595,8 @@ public class LauncherActivity extends BaseActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == com.app.astralauncher.feature.terracotta.TerracottaVpnService.VPN_PERMISSION_REQUEST_CODE) {
-            com.app.astralauncher.feature.terracotta.Terracotta.onVpnPermissionResult(this, resultCode == RESULT_OK);
+        if (requestCode == com.app.crutlelauncher.feature.terracotta.TerracottaVpnService.VPN_PERMISSION_REQUEST_CODE) {
+            com.app.crutlelauncher.feature.terracotta.Terracotta.onVpnPermissionResult(this, resultCode == RESULT_OK);
         }
     }
 
@@ -618,7 +618,7 @@ public class LauncherActivity extends BaseActivity {
 
     private void launchGame(Version version) {
         // Stop launcher music unless the scope is set to keep playing into the game too.
-        com.app.astralauncher.feature.music.MusicManager.INSTANCE.onGameLaunching();
+        com.app.crutlelauncher.feature.music.MusicManager.INSTANCE.onGameLaunching();
         LocalAccountUtils.checkUsageAllowed(new LocalAccountUtils.CheckResultListener() {
             @Override
             public void onUsageAllowed() {
@@ -805,7 +805,7 @@ public class LauncherActivity extends BaseActivity {
         String shownVersion = AllSettings.getWhatsNewShownVersion().getValue();
         if (!CURRENT_VERSION.equals(shownVersion)) {
             AllSettings.getWhatsNewShownVersion().put(CURRENT_VERSION).save();
-            new com.app.astralauncher.ui.dialog.WhatsNewDialog(this).show();
+            new com.app.crutlelauncher.ui.dialog.WhatsNewDialog(this).show();
         }
     }
 }

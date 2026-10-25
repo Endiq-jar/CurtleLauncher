@@ -2,7 +2,7 @@ package net.endiq.launcher.customcontrols.gamepad;
 
 import android.content.Context;
 
-import com.app.astralauncher.R;
+import com.app.crutlelauncher.R;
 
 import net.endiq.launcher.LwjglGlfwKeycode;
 

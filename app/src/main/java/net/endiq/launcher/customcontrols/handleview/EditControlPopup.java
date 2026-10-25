@@ -29,12 +29,12 @@ import androidx.activity.result.ActivityResultLauncher;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 import com.app.DefocusableScrollView;
-import com.app.astralauncher.R;
-import com.app.astralauncher.feature.log.Logging;
-import com.app.astralauncher.listener.SimpleTextWatcher;
-import com.app.astralauncher.ui.dialog.KeyboardDialog;
-import com.app.astralauncher.ui.dialog.PixelEditorDialog;
-import com.app.astralauncher.utils.path.PathManager;
+import com.app.crutlelauncher.R;
+import com.app.crutlelauncher.feature.log.Logging;
+import com.app.crutlelauncher.listener.SimpleTextWatcher;
+import com.app.crutlelauncher.ui.dialog.KeyboardDialog;
+import com.app.crutlelauncher.ui.dialog.PixelEditorDialog;
+import com.app.crutlelauncher.utils.path.PathManager;
 
 import net.endiq.launcher.EfficientAndroidLWJGLKeycode;
 import net.endiq.launcher.colorselector.ColorSelector;

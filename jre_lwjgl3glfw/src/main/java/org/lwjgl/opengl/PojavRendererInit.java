@@ -22,7 +22,7 @@ public class PojavRendererInit {
             rendererName = System.getProperty("org.lwjgl.opengl.libname");
         }
         if(!isValidString(rendererName)) {
-            System.out.println("PojavRendererInit: Failed to find Astra renderer name! " +
+            System.out.println("PojavRendererInit: Failed to find Crutle renderer name! " +
                                 "Renderer-specific initialization may not work properly");
         }
         // NOTE: hardcoded gl4es libname
