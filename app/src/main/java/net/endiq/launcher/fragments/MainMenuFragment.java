@@ -203,12 +203,7 @@ public class MainMenuFragment extends FragmentWithAnim {
         binding.bottomNavBar.navProfile.setOnClickListener(v ->
                 ZHTools.swapFragmentWithAnim(this, AccountFragment.class, AccountFragment.TAG, null));
 
-        binding.bottomNavBar.navNews.setOnClickListener(v -> {
-            android.content.Context toastContext = getContext();
-            if (toastContext != null) {
-                Toast.makeText(toastContext, R.string.main_nav_news_coming_soon, Toast.LENGTH_SHORT).show();
-            }
-        });
+        binding.bottomNavBar.navNews.setOnClickListener(v -> openUrl("https://app-jar.github.io/app-shop/"));
     }
 
     /** Resets all four bottom-nav tabs to inactive, then marks Play active
@@ -235,8 +230,8 @@ public class MainMenuFragment extends FragmentWithAnim {
 
     /** Cubiq-style top tab strip: Play / Installations / Skins / Patch Notes.
      *  Additive only. This screen is the "Play" tab's content so Play stays
-     *  active here; Installations and Skins route to the closest existing
-     *  screen/dialog, Patch Notes has no backing screen yet so it toasts. */
+     *  active here; the other three route to the closest existing screen/dialog
+     *  (VersionsListFragment, WardrobeDialog, WhatsNewDialog). */
     private void setupHomeTabs() {
         // tabPlay: already this screen, nothing to do on tap.
 
@@ -256,12 +251,8 @@ public class MainMenuFragment extends FragmentWithAnim {
                     (androidx.appcompat.app.AppCompatActivity) requireActivity(), account).show();
         });
 
-        binding.tabPatchNotes.setOnClickListener(v -> {
-            android.content.Context toastContext = getContext();
-            if (toastContext != null) {
-                Toast.makeText(toastContext, R.string.main_tab_patch_notes_coming_soon, Toast.LENGTH_SHORT).show();
-            }
-        });
+        binding.tabPatchNotes.setOnClickListener(v ->
+                new com.app.crutlelauncher.ui.dialog.WhatsNewDialog(requireContext()).show());
     }
 
     @Override
