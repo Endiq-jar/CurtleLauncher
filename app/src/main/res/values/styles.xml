@@ -69,10 +69,29 @@
         <!-- Fullscreen & Edge-to-Edge -->
         <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
         <item name="android:windowFullscreen">true</item>
-        <item name="android:navigationBarColor">@color/miuix_surface</item>
-        <item name="android:statusBarColor">@color/miuix_surface</item>
+        <!-- Cubiq chrome: system bars one step darker than the content surface (#141414 vs
+             #1E1E20), and windowContentOverlay cleared exactly as Cubiq's AppTheme.CubiqLauncher
+             does, so no legacy title-bar shadow is drawn under the bars. -->
+        <item name="android:navigationBarColor">@color/cubiq_chrome</item>
+        <item name="android:statusBarColor">@color/cubiq_chrome</item>
+        <item name="android:windowContentOverlay">@null</item>
         <item name="android:scrollbarThumbVertical">@drawable/scrollbar_thumb</item>
         <item name="android:scrollbarSize">3dp</item>
+    </style>
+
+    <!--
+        Cubiq's AppTheme.Fullscreen, ported additively. Cubiq drops the game window onto pure
+        black (#000000) with no content overlay; this repo's own fullscreen path keeps its
+        existing theme so nothing currently on screen changes, and this style is available to
+        the game/renderer activities as they are migrated in the later phases of the port.
+    -->
+    <style name="AppTheme.CrutleFullscreen" parent="AppTheme">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowBackground">@color/cubiq_fullscreen_background</item>
+        <item name="android:colorBackground">@color/cubiq_fullscreen_background</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:navigationBarColor">@color/cubiq_fullscreen_background</item>
+        <item name="android:statusBarColor">@color/cubiq_fullscreen_background</item>
     </style>
 
     <!-- Miuix SeekBar / Slider Style -->
