@@ -15,9 +15,9 @@ class NetworkUtils {
             val activeNetwork = connectivityManager.activeNetwork
             val capabilities = connectivityManager.getNetworkCapabilities(activeNetwork)
             return activeNetwork != null && (
-                    capabilities?.hcrutlensport(NetworkCapabilities.TRANSPORT_WIFI) ?: false ||
-                            capabilities?.hcrutlensport(NetworkCapabilities.TRANSPORT_CELLULAR) ?: false ||
-                            capabilities?.hcrutlensport(NetworkCapabilities.TRANSPORT_ETHERNET) ?: false
+                    capabilities?.hasTransport(NetworkCapabilities.TRANSPORT_WIFI) ?: false ||
+                            capabilities?.hasTransport(NetworkCapabilities.TRANSPORT_CELLULAR) ?: false ||
+                            capabilities?.hasTransport(NetworkCapabilities.TRANSPORT_ETHERNET) ?: false
                     )
         }
     }
