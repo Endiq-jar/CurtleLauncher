@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.result.ActivityResultLauncher;
@@ -39,6 +40,7 @@ import com.app.crutlelauncher.ui.fragment.FilesFragment;
 import com.app.crutlelauncher.ui.fragment.FragmentWithAnim;
 import com.app.crutlelauncher.ui.fragment.LogViewerFragment;
 import com.app.crutlelauncher.ui.fragment.AccountFragment;
+import com.app.crutlelauncher.ui.fragment.DownloadFragment;
 import com.app.crutlelauncher.ui.fragment.VersionsListFragment;
 import com.app.crutlelauncher.ui.subassembly.version.VersionManagerDropdown;
 import com.app.crutlelauncher.feature.accounts.AccountsManager;
@@ -92,6 +94,7 @@ public class MainMenuFragment extends FragmentWithAnim {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         binding.aboutText.setText(InfoCenter.replaceName(requireActivity(), R.string.about_tab));
+        setupBottomNav();
         binding.aboutButton.setOnClickListener(v -> ZHTools.swapFragmentWithAnim(this, AboutFragment.class, AboutFragment.TAG, null));
         binding.customControlButton.setOnClickListener(v -> ZHTools.swapFragmentWithAnim(this, ControlButtonFragment.class, ControlButtonFragment.TAG, null));
         binding.installJarButton.setOnClickListener(v -> runInstallerWithConfirmation(false));
@@ -184,6 +187,49 @@ public class MainMenuFragment extends FragmentWithAnim {
 
         populateFeaturePlugins();
         refreshCurrentVersion();
+    }
+
+    /** Cubiq-style bottom nav: News / Play / Mods / Profile. Additive only — doesn't
+     *  remove or replace any existing navigation path, just offers another one.
+     *  This screen (fragment_launcher) is itself the "Play" destination, so Play
+     *  is always shown active here; the other three tabs swap to their screen. */
+    private void setupBottomNav() {
+        markOnlyPlayTabActive();
+
+        binding.bottomNavBar.navMods.setOnClickListener(v ->
+                ZHTools.swapFragmentWithAnim(this, DownloadFragment.class, DownloadFragment.TAG, null));
+
+        binding.bottomNavBar.navProfile.setOnClickListener(v ->
+                ZHTools.swapFragmentWithAnim(this, AccountFragment.class, AccountFragment.TAG, null));
+
+        binding.bottomNavBar.navNews.setOnClickListener(v -> {
+            android.content.Context toastContext = getContext();
+            if (toastContext != null) {
+                Toast.makeText(toastContext, R.string.main_nav_news_coming_soon, Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+    /** Resets all four bottom-nav tabs to inactive, then marks Play active
+     *  (green label + tint + underline), matching the reference UI. */
+    private void markOnlyPlayTabActive() {
+        if (binding == null) return;
+        int accent = ContextCompat.getColor(requireContext(), R.color.accent_primary);
+        int inactive = ContextCompat.getColor(requireContext(), R.color.crutle_text_secondary);
+
+        android.widget.ImageView[] tintableIcons = {binding.bottomNavBar.navNewsIcon,
+                binding.bottomNavBar.navModsIcon, binding.bottomNavBar.navProfileIcon};
+        TextView[] labels = {binding.bottomNavBar.navNewsLabel, binding.bottomNavBar.navModsLabel,
+                binding.bottomNavBar.navProfileLabel};
+        View[] indicators = {binding.bottomNavBar.navNewsIndicator, binding.bottomNavBar.navModsIndicator,
+                binding.bottomNavBar.navProfileIndicator};
+
+        for (android.widget.ImageView icon : tintableIcons) icon.setColorFilter(inactive);
+        for (TextView label : labels) label.setTextColor(inactive);
+        for (View indicator : indicators) indicator.setVisibility(View.INVISIBLE);
+
+        binding.bottomNavBar.navPlayLabel.setTextColor(accent);
+        binding.bottomNavBar.navPlayIndicator.setVisibility(View.VISIBLE);
     }
 
     @Override

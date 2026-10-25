@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Bottom navigation bar styled after the Cubiq reference UI: four tabs
+  (News / Play / Mods / Profile) with a pixel-style icon, label, and a
+  green underline + tint on the active tab. Purely additive component —
+  included into existing screens, nothing from those screens is removed.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_nav_bar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@color/background_menu_top"
+    android:paddingTop="@dimen/space_s"
+    android:paddingBottom="@dimen/space_s"
+    android:elevation="8dp"
+    tools:ignore="ContentDescription">
+
+    <LinearLayout
+        android:id="@+id/nav_news"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/nav_news_icon"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:src="@drawable/ic_mc_book_and_quill"
+            android:tint="@color/crutle_text_secondary"/>
+
+        <TextView
+            android:id="@+id/nav_news_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/minecraft"
+            android:text="@string/main_nav_news"
+            android:textColor="@color/crutle_text_secondary"
+            android:textSize="11sp"/>
+
+        <View
+            android:id="@+id/nav_news_indicator"
+            android:layout_width="24dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="3dp"
+            android:background="@color/accent_primary"
+            android:visibility="invisible"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/nav_play"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/nav_play_icon"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:src="@drawable/img_old_grass_block"/>
+
+        <TextView
+            android:id="@+id/nav_play_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/minecraft"
+            android:text="@string/main_nav_play"
+            android:textColor="@color/accent_primary"
+            android:textSize="11sp"/>
+
+        <View
+            android:id="@+id/nav_play_indicator"
+            android:layout_width="24dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="3dp"
+            android:background="@color/accent_primary"
+            android:visibility="visible"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/nav_mods"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/nav_mods_icon"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:src="@drawable/ic_mc_pickaxe"
+            android:tint="@color/crutle_text_secondary"/>
+
+        <TextView
+            android:id="@+id/nav_mods_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/minecraft"
+            android:text="@string/main_nav_mods"
+            android:textColor="@color/crutle_text_secondary"
+            android:textSize="11sp"/>
+
+        <View
+            android:id="@+id/nav_mods_indicator"
+            android:layout_width="24dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="3dp"
+            android:background="@color/accent_primary"
+            android:visibility="invisible"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/nav_profile"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/nav_profile_icon"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:src="@drawable/ic_mc_steve_head"
+            android:tint="@color/crutle_text_secondary"/>
+
+        <TextView
+            android:id="@+id/nav_profile_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/minecraft"
+            android:text="@string/main_nav_profile"
+            android:textColor="@color/crutle_text_secondary"
+            android:textSize="11sp"/>
+
+        <View
+            android:id="@+id/nav_profile_indicator"
+            android:layout_width="24dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="3dp"
+            android:background="@color/accent_primary"
+            android:visibility="invisible"/>
+    </LinearLayout>
+
+</LinearLayout>

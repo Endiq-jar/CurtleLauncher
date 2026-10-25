@@ -526,6 +526,11 @@
     <string name="main_nav_cursor">Cursor</string>
     <string name="main_nav_settings">Settings</string>
     <string name="main_nav_assistant">Assistant</string>
+    <string name="main_nav_news">News</string>
+    <string name="main_nav_play">Play</string>
+    <string name="main_nav_mods">Mods</string>
+    <string name="main_nav_profile">Profile</string>
+    <string name="main_nav_news_coming_soon">News is coming soon</string>
     <string name="main_tasks_dialog_title">Running tasks</string>
     <string name="main_tasks_dialog_empty">No tasks running right now.</string>
     <string name="main_section_quick_actions">Quick Actions</string>

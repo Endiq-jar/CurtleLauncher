@@ -178,10 +178,11 @@
 
     <!-- LEFT PANEL -->
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/left_panel"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@color/background_app"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_nav_bar"
         app:layout_constraintEnd_toStartOf="@+id/play_layout"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/home_top_bar">
@@ -615,7 +616,7 @@
         android:paddingHorizontal="@dimen/space_m"
         android:paddingTop="@dimen/space_m"
         android:paddingBottom="@dimen/space_m"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_nav_bar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/home_top_bar">
 
@@ -733,5 +734,15 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Cubiq-style bottom nav: News / Play / Mods / Profile -->
+    <include
+        android:id="@+id/bottom_nav_bar"
+        layout="@layout/view_bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
