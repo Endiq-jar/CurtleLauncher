@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Night-sky gradient behind the crutle, matching the logo artwork -->
+<!-- Near-black fill matching the CURTLE Launcher logo artwork -->
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
     android:shape="rectangle">
-    <gradient
-        android:angle="270"
-        android:startColor="#FF66AAB1"
-        android:endColor="#FF17494A"
-        android:type="linear" />
+    <solid android:color="#FF06090B" />
 </shape>
