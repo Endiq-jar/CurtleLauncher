@@ -31,10 +31,11 @@ import android.app.ActivityManager
 import android.content.Context
 import com.app.crutlelauncher.feature.crutle.HudRefreshPolicy
 
-class GameMenuViewWrapper(
+class GameMenuViewWrapper @JvmOverloads constructor(
     private val activity: Activity,
     private val listener: View.OnClickListener,
-    private val showInfo: Boolean
+    private val showInfo: Boolean,
+    private val buttonGravityOverride: FxGravity? = null
 ) {
     companion object {
         private const val TAG = "GameMenuViewWrapper"
@@ -83,7 +84,7 @@ class GameMenuViewWrapper(
 
                 override fun detached(view: View) {}
             })
-            setGravity(getCurrentGravity())
+            setGravity(buttonGravityOverride ?: getCurrentGravity())
         }.build().toControl(activity)
     }
 
