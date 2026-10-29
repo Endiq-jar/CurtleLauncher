@@ -91,6 +91,7 @@ jobs:
           python3 tests/check_resources.py
           python3 tests/check_launcher_art.py
           python3 tests/check_glfw_overlay.py
+          python3 tests/check_guest_bootstrap.py
           tests/native/run.sh
           tests/native/run-discord.sh
 

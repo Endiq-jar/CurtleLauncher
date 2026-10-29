@@ -182,24 +182,43 @@ abstract class FullScreenDialog(context: Context) : Dialog(context, R.style.Full
      */
     protected fun checkHeight(root: View, content: View, scrollView: View, dpValue: Int = 50) {
         root.post {
-            val wm = requireNotNull(window?.windowManager) { "WindowManager is null" }
-            val point = Point()
-            wm.defaultDisplay.getSize(point)
-            val maxHeight = (point.y - dpValue * context.resources.displayMetrics.density + 0.5f).toInt()
-
-            val isRootHeightLessThanMax = root.measuredHeight < maxHeight
-            val layoutParams = scrollView.layoutParams
-
-            if (isRootHeightLessThanMax) {
-                layoutParams.height = content.measuredHeight
-                scrollView.layoutParams = layoutParams
-                window?.setLayout(
-                    WindowManager.LayoutParams.WRAP_CONTENT,
-                    WindowManager.LayoutParams.WRAP_CONTENT
-                )
+            val win = window ?: return@post
+            val wm = win.windowManager ?: return@post
+            val density = context.resources.displayMetrics.density
+            val (availableWidth, availableHeight) = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+                val bounds = wm.currentWindowMetrics.bounds
+                bounds.width() to bounds.height()
             } else {
-                window?.setLayout(WindowManager.LayoutParams.WRAP_CONTENT, maxHeight)
+                val point = Point()
+                @Suppress("DEPRECATION")
+                wm.defaultDisplay.getSize(point)
+                point.x to point.y
             }
+            val marginPx = (dpValue * density + 0.5f).toInt()
+            val horizontalMargin = (24 * density + 0.5f).toInt()
+            val maxWidth = (720 * density + 0.5f).toInt()
+            val dialogWidth = minOf(maxWidth, (availableWidth - 2 * horizontalMargin).coerceAtLeast(1))
+            val maxHeight = (availableHeight - marginPx).coerceAtLeast(1)
+
+            // root/scrollView/content were measured by whichever pass ran before this
+            // post{} callback fired - typically the dialog's initial FLAG_FULLSCREEN pass,
+            // i.e. the full window width, not dialogWidth. Trusting those heights and only
+            // shrinking the window afterwards computes the fixed scroll height against the
+            // wrong width; re-measure explicitly at dialogWidth first so it's accurate.
+            val widthSpec = View.MeasureSpec.makeMeasureSpec(dialogWidth, View.MeasureSpec.EXACTLY)
+            val naturalHeightSpec = View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED)
+            root.measure(widthSpec, naturalHeightSpec)
+
+            // Bound the scroll region itself. Limiting only the window leaves its
+            // WRAP_CONTENT children laid out at their full height, which can clip the
+            // title and buttons (or leave an apparently empty dialog) on short windows.
+            val nonScrollHeight = (root.measuredHeight - scrollView.measuredHeight).coerceAtLeast(0)
+            val maxScrollHeight = (maxHeight - nonScrollHeight).coerceAtLeast(1)
+            val layoutParams = scrollView.layoutParams
+            layoutParams.height = content.measuredHeight.coerceIn(1, maxScrollHeight)
+            scrollView.layoutParams = layoutParams
+
+            win.setLayout(dialogWidth, WindowManager.LayoutParams.WRAP_CONTENT)
         }
     }
 }

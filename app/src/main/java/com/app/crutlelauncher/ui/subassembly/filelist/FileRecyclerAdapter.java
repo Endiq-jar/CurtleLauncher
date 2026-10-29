@@ -276,10 +276,16 @@ public class FileRecyclerAdapter extends RecyclerView.Adapter<FileRecyclerAdapte
             if (file != null && file.isFile() && ImageUtils.isImage(file)) {
                 AnimatedLogo.clear(binding.image);
                 AnimatedIcon.clear(binding.image);
-                Glide.with(context).load(file)
-                        .override(binding.image.getWidth(), binding.image.getHeight())
-                        .centerCrop()
-                        .into(new DrawableImageViewTarget(binding.image));
+                if (context instanceof android.app.Activity && (((android.app.Activity) context).isFinishing() || ((android.app.Activity) context).isDestroyed())) {
+                    return;
+                }
+                int width = binding.image.getWidth();
+                int height = binding.image.getHeight();
+                com.bumptech.glide.RequestBuilder<android.graphics.drawable.Drawable> request = Glide.with(context).load(file);
+                if (width > 0 && height > 0) {
+                    request = request.override(width, height);
+                }
+                request.centerCrop().into(new DrawableImageViewTarget(binding.image));
             } else if (fileItemBean.animatedIconRes != 0) {
                 // Version-era logos: static poster until the row is hovered/pressed/focused.
                 AnimatedLogo.bind(binding.image, fileItemBean.animatedIconRes);
